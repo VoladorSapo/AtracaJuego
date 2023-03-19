@@ -97,7 +97,7 @@ public class GridController : MonoBehaviour
     {
         print(grid.WorldToCell(position).x);
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy], nodos[grid.WorldToCell(mouseWorldPos).x - ogx, grid.WorldToCell(mouseWorldPos).y - ogy], nodos, ogx, ogy);
+        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy], nodos[grid.WorldToCell(previousMousePos).x - ogx, grid.WorldToCell(previousMousePos).y - ogy], nodos, ogx, ogy);
         return camino;
     }
     Vector3Int GetMousePosition()

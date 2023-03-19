@@ -71,7 +71,7 @@ public class pathFinder : MonoBehaviour
         {
             list.Add(nodos[nodo.pos.x - ogx - 1, nodo.pos.y - ogy]);
         }
-        if (nodo.pos.y -ogy + 1 <= nodos.GetLength(0))
+        if (nodo.pos.y -ogy + 1 <= nodos.GetLength(1))
         {
             list.Add(nodos[nodo.pos.x - ogx, nodo.pos.y - ogy + 1]);
         }
