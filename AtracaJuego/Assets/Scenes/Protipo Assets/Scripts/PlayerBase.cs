@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerBase : MonoBehaviour
 {
     private Grid grid;
-
-
+    private tunController _turnController;
+    bool turn;
+    bool moving;
+    List<Node> nodes;
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
@@ -20,20 +22,43 @@ public class PlayerBase : MonoBehaviour
     {
         
         if(Input.GetMouseButtonDown(0)){
-            MoveClick();
+            if (turn)
+            {
+                MoveClick();
+            }
+        }
+        if (moving)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
+            if (Vector3.Distance(grid.CellToWorld( nodes[0].pos) + new Vector3(0.5f,0.5f,0), transform.position) < 0.01f)
+            {
+                transform.position = nodes[0].pos + new Vector3(0.5f, 0.5f, 0);
+                nodes.RemoveAt(0);
+                if (nodes.Count <= 0)
+                {
+                    moving = false;
+                    Turn();
+                    //_turnController.nextTurn(this);
+                }
+            }
         }
     }
 
     //Teletransporta(de momento) al jugador a la posición indicada
     protected virtual void MoveClick(){
-        Vector3 newPos = GetMousePosition();
-        newPos += new Vector3(0.5f,0.3f,0f);
-        transform.position=newPos;
+        List<Node> newPos = GetMousePosition();
+        nodes = newPos;
+        moving = true;
+        turn = false;
+    }
+    public virtual void Turn()
+    {
+        turn = true;
     }
 
     /*Calcula la posición del ratón en coordenadas de la Grid*/
-    Vector3Int GetMousePosition(){
+    List<Node> GetMousePosition(){
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return grid.WorldToCell(mouseWorldPos);
+        return grid.GetComponent<GridController>().GetPath(this.transform.position);
     }
 }

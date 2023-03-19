@@ -26,9 +26,11 @@ public class GridController : MonoBehaviour
     private Vector3Int previousMousePos = new Vector3Int();
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        distanceRun=0;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+        distanceRun =0;
         _path = GetComponent<pathFinder>();
         grid = gameObject.GetComponent<Grid>();
         canMoveHere = true;
@@ -76,9 +78,9 @@ public class GridController : MonoBehaviour
             }
         }
         
-        if (Input.GetMouseButtonDown(0))
+      /*  if (Input.GetMouseButtonDown(0))
         {
-            List<Node> camino = _path.findPath(nodos[2, 2], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
+            List<Node> camino = _path.findPath(nodos[0, 0], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
             print(grid.WorldToCell(mousePos).x+" "+ grid.WorldToCell(mousePos).y);
             distanceRun=0;
             foreach (Node nodo in camino)
@@ -87,10 +89,17 @@ public class GridController : MonoBehaviour
                 distanceRun++;
             }
             print(distanceRun);
-        }
+        }*/
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
+    public List<Node> GetPath(Vector3 position)
+    {
+        print(grid.WorldToCell(position).x);
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy], nodos[grid.WorldToCell(mouseWorldPos).x - ogx, grid.WorldToCell(mouseWorldPos).y - ogy], nodos, ogx, ogy);
+        return camino;
+    }
     Vector3Int GetMousePosition()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
