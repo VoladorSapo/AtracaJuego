@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBase : MonoBehaviour
 {
     private Grid grid;
+
+
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
@@ -16,6 +18,7 @@ public class PlayerBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetMouseButtonDown(0)){
             MoveClick();
         }

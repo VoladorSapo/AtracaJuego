@@ -190,8 +190,11 @@ MonoBehaviour:
   hoverTile: {fileID: 11400000, guid: aed8c3e5cbbf4984896b3c68b4f7e9b1, type: 2}
   hoverTileNope: {fileID: 11400000, guid: 6393baf3ad915a24989d617a5e35a810, type: 2}
   hoverTilePlayer: {fileID: 11400000, guid: a332d85a6ce95bb45814fbd515bc7b51, type: 2}
-  pathTile: {fileID: 11400000, guid: bf2358c5c2f0db94fa5d836d4a40e942, type: 2}
   _path: {fileID: 0}
+  ogx: 0
+  ogy: 0
+  distanceRun: 0
+  posArrayPlayers: []
   canMoveHere: 0
 --- !u!114 &195986142
 MonoBehaviour:
@@ -449,8 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f21540b6d372b34fa0eb46e2b354357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 195986139}
   SPM: {fileID: 507543182}
   GC: {fileID: 195986141}
+  MaxDistance: 5
 --- !u!61 &877809186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -570,7 +575,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -9
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -665,7 +670,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 2147483649
+      m_AllTileFlags: 1
   - first: {x: 7, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -899,7 +904,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -3797,6 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPM: {fileID: 507543182}
   GC: {fileID: 195986141}
+  MaxDistance: 2
 --- !u!212 &1839479773
 SpriteRenderer:
   m_ObjectHideFlags: 0

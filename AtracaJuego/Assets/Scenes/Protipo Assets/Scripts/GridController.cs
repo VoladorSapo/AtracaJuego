@@ -15,9 +15,11 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
-    [SerializeField] private pathFinder _path = null;
-    int ogx,ogy;
+    public pathFinder _path = null;
+    public int ogx,ogy;
+    public int distanceRun;
     public Node[,] nodos;
+    public Vector2[] posArrayPlayers;
     Tile TileToPlace;
     public bool canMoveHere;
 
@@ -26,6 +28,7 @@ public class GridController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        distanceRun=0;
         _path = GetComponent<pathFinder>();
         grid = gameObject.GetComponent<Grid>();
         canMoveHere = true;
@@ -72,14 +75,18 @@ public class GridController : MonoBehaviour
                 previousMousePos = mousePos;
             }
         }
+        
         if (Input.GetMouseButtonDown(0))
         {
-            List<Node> camino = _path.findPath(nodos[0, 0], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
+            List<Node> camino = _path.findPath(nodos[2, 2], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
             print(grid.WorldToCell(mousePos).x+" "+ grid.WorldToCell(mousePos).y);
+            distanceRun=0;
             foreach (Node nodo in camino)
             {
                 print(nodo.pos.x + " " + nodo.pos.y);
+                distanceRun++;
             }
+            print(distanceRun);
         }
     }
 

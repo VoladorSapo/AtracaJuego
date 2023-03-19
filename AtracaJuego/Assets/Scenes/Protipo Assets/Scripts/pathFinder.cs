@@ -8,6 +8,8 @@ public class pathFinder : MonoBehaviour
     private List<Node> openList;
     private List<Node> closeList;
     public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy)
+    
+
     {
         print("hola");
         List<Node> list = new List<Node>();

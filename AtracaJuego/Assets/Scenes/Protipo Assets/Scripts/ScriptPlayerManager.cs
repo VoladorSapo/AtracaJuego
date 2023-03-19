@@ -13,4 +13,6 @@ public class ScriptPlayerManager : MonoBehaviour
 
     void Update(){
     }
+
+    
 }
