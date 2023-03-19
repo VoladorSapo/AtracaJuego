@@ -24,7 +24,8 @@ public class pathFinder : MonoBehaviour
         startNode.gCost = 0;
         startNode.hCost = Distance(startNode,endNode);
         startNode.CalculateF();
-
+        
+        //Usar raycast para decidir si hacer el pathfinder o no
         while(openList.Count > 0)
         {
             print("zum");

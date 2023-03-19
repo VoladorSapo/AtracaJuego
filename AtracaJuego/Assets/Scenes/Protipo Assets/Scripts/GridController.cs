@@ -15,7 +15,6 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
-    [SerializeField] private RuleTile pathTile = null;
     [SerializeField] private pathFinder _path = null;
     int ogx,ogy;
     public Node[,] nodos;
@@ -54,7 +53,7 @@ public class GridController : MonoBehaviour
         {
             Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             objectHit = Physics2D.Raycast(mousePos2, Vector2.zero);
-
+            TileToPlace=hoverTile;
             canMoveHere = true;
             if (objectHit.collider != null)
             {
