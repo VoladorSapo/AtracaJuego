@@ -27,6 +27,7 @@ public class PlayerBase : MonoBehaviour
     //Teletransporta(de momento) al jugador a la posición indicada
     protected virtual void MoveClick(){
         Vector3 newPos = GetMousePosition();
+
         newPos += new Vector3(0.5f,0.3f,0f);
         transform.position=newPos;
     }
@@ -36,4 +37,6 @@ public class PlayerBase : MonoBehaviour
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
     }
+
+
 }

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class GridController : MonoBehaviour
 {
-    private Grid grid;
+    public Grid grid;
     RaycastHit2D objectHit;
 
     [SerializeField] private Tilemap interactiveMap = null;
@@ -16,6 +16,8 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
     public pathFinder _path = null;
+
+    public int oPlayerx=0, oPlayery=0;
     public int ogx,ogy;
     public int distanceRun;
     public Node[,] nodos;
@@ -27,7 +29,7 @@ public class GridController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {  
         distanceRun=0;
         _path = GetComponent<pathFinder>();
         grid = gameObject.GetComponent<Grid>();
@@ -78,7 +80,7 @@ public class GridController : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            List<Node> camino = _path.findPath(nodos[2, 2], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
+            List<Node> camino = _path.findPath(nodos[oPlayerx, oPlayery], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
             print(grid.WorldToCell(mousePos).x+" "+ grid.WorldToCell(mousePos).y);
             distanceRun=0;
             foreach (Node nodo in camino)
