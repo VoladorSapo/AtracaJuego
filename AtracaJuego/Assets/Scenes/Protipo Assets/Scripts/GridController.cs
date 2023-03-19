@@ -7,11 +7,13 @@ using UnityEngine.UIElements;
 public class GridController : MonoBehaviour
 {
     private Grid grid;
+    public MapManager _mapManager; //Para obtener referencias de las tiles y sus propiedades
     RaycastHit2D objectHit;
 
     [SerializeField] private Tilemap interactiveMap = null;
     [SerializeField] private Tilemap pathMap = null;
     [SerializeField] private Tilemap Top1 = null;
+    [SerializeField] private Tilemap ground = null;
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
@@ -42,7 +44,7 @@ public class GridController : MonoBehaviour
         {
             for (int j = 0; j <  pathMap.size.y; j++)
             {
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), !Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)));
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (!Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)) && ground.HasTile(new Vector3Int(i+ ogx, j + ogy))));
             }
 
         }
@@ -56,21 +58,21 @@ public class GridController : MonoBehaviour
         Vector3Int mousePos = GetMousePosition();
         if (!mousePos.Equals(previousMousePos))
         {
+
             Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             objectHit = Physics2D.Raycast(mousePos2, Vector2.zero);
             TileToPlace=hoverTile;
             canMoveHere = true;
             if (objectHit.collider != null)
             {
-                switch (objectHit.collider.name)
+                switch (objectHit.collider.tag)
                 {
                     case "Top1": TileToPlace = hoverTileNope; canMoveHere = false; break;
-                    case "Player1": TileToPlace = hoverTilePlayer; break;
-                    case "Player2": TileToPlace = hoverTilePlayer; break;
-                        //Faltan los otros player o usar mejor tags pero bueno
+                    case "Player": TileToPlace = hoverTilePlayer; break;
                 }
             }
-            if (canMoveHere)
+
+            if (_mapManager.walkable)
             {
                 interactiveMap.SetTile(previousMousePos, null); //Quita la anterior tile de indicación
                 interactiveMap.SetTile(mousePos, TileToPlace);

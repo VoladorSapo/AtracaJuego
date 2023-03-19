@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player2 : PlayerBase
 {
-    //public ScriptPlayerManager SPM;
+    //public ScriptPlayerManager SPM
     public ScriptPlayerManager SPM;
     public GridController GC;
     [SerializeField] private int MaxDistance = 2;
@@ -18,5 +18,6 @@ public class Player2 : PlayerBase
     void OnMouseDown(){
         SPM.Player1=false;
         SPM.Player2=true;
+        SPM.Player3=false;
     }
 }

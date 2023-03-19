@@ -7,11 +7,9 @@ public class pathFinder : MonoBehaviour
 {
     private List<Node> openList;
     private List<Node> closeList;
-    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy)
     
-
+    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy)
     {
-        print("hola");
         List<Node> list = new List<Node>();
         openList = new List<Node> { startNode};
         closeList = new List<Node> ();
@@ -27,14 +25,11 @@ public class pathFinder : MonoBehaviour
         startNode.hCost = Distance(startNode,endNode);
         startNode.CalculateF();
         
-        //Usar raycast para decidir si hacer el pathfinder o no
         while(openList.Count > 0)
         {
-            print("zum");
             Node currentNode = LowestFCost(openList);
             if (currentNode == endNode)
             {
-                print("jii");
                 return fullPath(currentNode);
             }
             openList.Remove(currentNode);
@@ -57,7 +52,6 @@ public class pathFinder : MonoBehaviour
                 }
             }
         }
-        print("wac");
         return null;
     }
     private List<Node> nodosAdyacentes(Node nodo,Node[,] nodos,int ogx,int ogy)

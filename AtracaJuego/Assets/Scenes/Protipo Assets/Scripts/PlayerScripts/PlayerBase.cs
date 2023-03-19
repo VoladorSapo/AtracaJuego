@@ -6,6 +6,7 @@ public class PlayerBase : MonoBehaviour
 {
     private Grid grid;
     private tunController _turnController;
+
     bool turn;
     bool moving;
     List<Node> nodes;
@@ -37,14 +38,14 @@ public class PlayerBase : MonoBehaviour
                 if (nodes.Count <= 0)
                 {
                     moving = false;
-                    Turn();
-                    //_turnController.nextTurn(this);
+                    //Turn();
+                    _turnController.nextTurn(this);
                 }
             }
         }
     }
 
-    //Teletransporta(de momento) al jugador a la posición indicada
+    //Mueve al jugador a la posición indicada
     protected virtual void MoveClick(){
         List<Node> newPos = GetMousePosition();
         nodes = newPos;

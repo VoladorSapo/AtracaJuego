@@ -6,6 +6,7 @@ public class tunController : MonoBehaviour
 {
     public List<PlayerBase> jugadores;
     public List<PlayerBase> enemigos;
+    
     public PlayerBase[] alljugadores;
     public PlayerBase[] allenemigos;
     GridController _grid;
@@ -29,6 +30,7 @@ public class tunController : MonoBehaviour
         jugadores.AddRange(allenemigos);
         startTurn();
     }
+
     public void startTurn()
     {
         if (jugadores.Count > 0)
@@ -44,6 +46,7 @@ public class tunController : MonoBehaviour
             startRound();
         }
     }
+
     public void nextTurn(PlayerBase personaje)
     {
         if (jugadores.Contains(personaje))
