@@ -21,15 +21,22 @@ public class GridController : MonoBehaviour
     public int ogx,ogy;
     public int distanceRun;
     public Node[,] nodos;
+
     public Vector2[] posArrayPlayers;
     Tile TileToPlace;
     public bool canMoveHere;
 
     private Vector3Int previousMousePos = new Vector3Int();
 
-    // Start is called before the first frame update
+    public CustomTileClass[,] tiles;
+    public TileSpriteTable tileTable;
+    [SerializeField] private Vector3Int mousePos;
     void Awake()
     {
+        //Metodos de otros scripts
+        tileTable=GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
+
+        //De este script
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
         distanceRun =0;
@@ -41,22 +48,55 @@ public class GridController : MonoBehaviour
         ogx = pathMap.origin.x;
         ogy = pathMap.origin.y;
         print(nodos.GetLength(1));
+
+        tiles=new CustomTileClass[pathMap.size.x, pathMap.size.y];
+
         for (int i = 0 ; i < pathMap.size.x; i++)
         {
             for (int j = 0; j <  pathMap.size.y; j++)
             {
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (!Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)) && ground.HasTile(new Vector3Int(i+ ogx, j + ogy))));
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (ground.HasTile(new Vector3Int(i+ ogx, j + ogy)))); //Lo dejo así de forma Temporal 
+                //nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (!Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)) && ground.HasTile(new Vector3Int(i+ ogx, j + ogy)))); Salta error
+
+                Vector3Int posTiles=new Vector3Int(i + ogx ,j + ogy,0);
+                Tile actualTile = ground.GetTile<Tile>(posTiles);
+
+                int[] stats=tileTable.GetTileStats(actualTile);
+                print("Tile en: "+(i + ogx)+","+(j + ogy)+" es tiene el sprite: "+stats[0]);
+                tiles[i,j]= new CustomTileClass(stats[0],stats[1]);
             }
 
         }
+
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Mouse over -> highlight tile
+        if(Input.GetKeyDown("a")){
+            mousePos = GetMousePosition();
+            int difX=mousePos.x-ogx;
+            int difY=mousePos.y-ogy;
+            
+            print("Tile en: "+(0 + difX)+","+(0 + difY)+" tiene el sprite: "+tiles[0 + difX, 0 + difY].tileSpriteId+" y tiene las propiedades "+tiles[0 + difX, 0 + difY].tileState);
+        }
 
-        Vector3Int mousePos = GetMousePosition();
+        if(Input.GetKeyDown("s")){
+            mousePos = GetMousePosition();
+            int difX=mousePos.x-ogx;
+            int difY=mousePos.y-ogy;
+            print("s");
+            tiles[0 + difX, 0 + difY].SetTileStats(1,1);
+            Vector3Int pos=new Vector3Int(mousePos.x,mousePos.y,0);
+            Tile newTileToPlace=tileTable.SetNewTile(1);
+            ground.SetTile(pos,newTileToPlace);
+            ground.RefreshTile(pos);
+
+        }
+
+        mousePos = GetMousePosition();
         if (!mousePos.Equals(previousMousePos))
         {
 
@@ -72,12 +112,12 @@ public class GridController : MonoBehaviour
                     case "Player": TileToPlace = hoverTilePlayer; break;
                 }
             }
-
-            if (_mapManager.walkable)
-            {
                 interactiveMap.SetTile(previousMousePos, null); //Quita la anterior tile de indicación
                 interactiveMap.SetTile(mousePos, TileToPlace);
                 previousMousePos = mousePos;
+            if (_mapManager.walkable)
+            {
+                
             }
         }
         
