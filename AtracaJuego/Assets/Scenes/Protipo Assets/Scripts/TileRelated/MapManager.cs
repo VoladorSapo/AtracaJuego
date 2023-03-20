@@ -24,7 +24,7 @@ public class MapManager : MonoBehaviour
             Vector3Int gridPosition=gridMouseCalculate();
             Tile clickedTile = map.GetTile<Tile>(gridPosition);
             
-            Debug.Log("Hay en "+gridPosition+" una "+clickedTile);
+            //Debug.Log("Hay en "+gridPosition+" una "+clickedTile);
             }
 
             

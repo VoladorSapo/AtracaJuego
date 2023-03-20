@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class tunController : MonoBehaviour
 {
-    public List<PlayerBase> jugadores;
-    public List<PlayerBase> enemigos;
-    
-    public PlayerBase[] alljugadores;
-    public PlayerBase[] allenemigos;
+    public ScriptPlayerManager[] Managers;
+    public int currentManager;
     GridController _grid;
     public void startGame()
     {
-        jugadores = new List<PlayerBase>();
-        enemigos = new List<PlayerBase>();
         startRound();
     }
     private void Update()
@@ -26,20 +21,22 @@ public class tunController : MonoBehaviour
     // Start is called before the first frame update
     public void startRound()
     {
-        jugadores.AddRange(alljugadores);
-        jugadores.AddRange(allenemigos);
-        startTurn();
+        currentManager = -1;
+        startTurns();
     }
 
-    public void startTurn()
+    public void startTurns()
     {
-        if (jugadores.Count > 0)
+        currentManager++;
+        if(currentManager < Managers.Length)
         {
-            jugadores[0].Turn() ;
-        }
-        else if (jugadores.Count > 0)
-        {
-            enemigos[0].Turn();
+            print("caca");
+            for (int i = 0; i < Managers.Length; i++)
+            {
+                Managers[i].Activated = false;
+            }
+            Managers[currentManager].Activated = true;
+            Managers[currentManager].StartTurns();
         }
         else
         {
@@ -49,14 +46,6 @@ public class tunController : MonoBehaviour
 
     public void nextTurn(PlayerBase personaje)
     {
-        if (jugadores.Contains(personaje))
-        {
-            jugadores.Remove(personaje);
-        }
-        else
-        {
-            enemigos.Remove(personaje);
-        }
-        startTurn();
+     
     }
 }

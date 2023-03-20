@@ -55,7 +55,8 @@ public class GridController : MonoBehaviour
         {
             for (int j = 0; j <  pathMap.size.y; j++)
             {
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (ground.HasTile(new Vector3Int(i+ ogx, j + ogy)))); //Lo dejo así de forma Temporal 
+                print(i + ogx);
+                
                 //nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (!Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)) && ground.HasTile(new Vector3Int(i+ ogx, j + ogy)))); Salta error
 
                 Vector3Int posTiles=new Vector3Int(i + ogx ,j + ogy,0);
@@ -64,6 +65,7 @@ public class GridController : MonoBehaviour
                 int[] stats=tileTable.GetTileStats(actualTile);
                 print("Tile en: "+(i + ogx)+","+(j + ogy)+" es tiene el sprite: "+stats[0]);
                 tiles[i,j]= new CustomTileClass(stats[0],stats[1]);
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isWakable(new Vector3Int(i + ogx, j + ogy))); //Lo dejo así de forma Temporal 
             }
 
         }
@@ -136,16 +138,30 @@ public class GridController : MonoBehaviour
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
-    public List<Node> GetPath(Vector3 position)
+    public List<Node> GetPath(Vector3 startpos,Vector3 endpos)
     {
         //print(grid.WorldToCell(position).x);
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy], nodos[grid.WorldToCell(previousMousePos).x - ogx, grid.WorldToCell(previousMousePos).y - ogy], nodos, ogx, ogy);
+        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy);
         return camino;
     }
     Vector3Int GetMousePosition()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
+    }
+    public bool isWakable(Vector3 position)
+    {
+        print(position.x);
+        print(grid.WorldToCell(position).x - ogx);
+        print(tiles.GetLength(0));
+        print(position.y);
+        print(grid.WorldToCell(position).y - ogy);
+        print(tiles.GetLength(1));
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 1)
+        {
+            return false;
+        }
+        return true;
     }
 }

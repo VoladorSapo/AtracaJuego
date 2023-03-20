@@ -298,8 +298,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -317,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205844220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: 6.53, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -333,13 +333,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 205844220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee8007b917135a41b048c67e9786319, type: 3}
+  m_Script: {fileID: 11500000, guid: 92abd63f7acbdbc4b92b27af3eac8c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turnController: {fileID: 642901472}
-  SPM: {fileID: 642901473}
+  grid: {fileID: 0}
   GC: {fileID: 195986141}
-  MaxDistance: 3
+  _turnController: {fileID: 642901472}
+  SPM: {fileID: 1088530369}
+  teamNumb: 0
 --- !u!1 &621275992
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,13 +471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6759bc3bf5152174f88ba7c2464781e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadores: []
-  enemigos: []
-  alljugadores:
-  - {fileID: 877809185}
-  - {fileID: 205844225}
-  allenemigos:
-  - {fileID: 1839479772}
+  Managers:
+  - {fileID: 642901473}
+  - {fileID: 1088530369}
+  currentManager: 0
 --- !u!114 &642901473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,12 +487,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f32ed659c20f14681d5df0a39a48ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: 0000000000
-  Player1: 0
-  Player2: 1
-  Player3: 0
-  Player4: 0
-  Player5: 0
+  _turn: {fileID: 642901472}
+  PlayersMoved: 0000
+  players:
+  - {fileID: 877809185}
+  - {fileID: 1839479772}
+  Activated: 0
+  currentPlayer: 0
 --- !u!114 &642901474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,13 +501,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642901470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f74ee564632384f9e5820f24f16fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  GC: {fileID: 195986141}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
+  teamNumb: 0
 --- !u!1 &659085978
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877809182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: -3.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,9 +758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f21540b6d372b34fa0eb46e2b354357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  GC: {fileID: 195986141}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
-  GC: {fileID: 195986141}
+  teamNumb: 0
   MaxDistance: 5
 --- !u!61 &877809186
 BoxCollider2D:
@@ -1474,6 +1478,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1088530368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088530370}
+  - component: {fileID: 1088530369}
+  m_Layer: 0
+  m_Name: EnemyController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1088530369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088530368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f32ed659c20f14681d5df0a39a48ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _turn: {fileID: 642901472}
+  PlayersMoved: 00
+  players:
+  - {fileID: 205844225}
+  Activated: 0
+  currentPlayer: 0
+--- !u!4 &1088530370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088530368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.015423, y: 1.1444815, z: 0.03478595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484169940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,9 +4317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55b1a31b5eb0fe45aad18af03eca6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  GC: {fileID: 195986141}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
-  GC: {fileID: 195986141}
+  teamNumb: 1
   MaxDistance: 2
 --- !u!212 &1839479773
 SpriteRenderer:
@@ -4327,7 +4383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839479771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: -4.43, y: -2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

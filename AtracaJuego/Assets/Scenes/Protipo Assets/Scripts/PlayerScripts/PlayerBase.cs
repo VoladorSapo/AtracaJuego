@@ -4,31 +4,36 @@ using UnityEngine;
 
 public class PlayerBase : MonoBehaviour
 {
-    private Grid grid;
-    [SerializeField]private tunController _turnController;
-    public ScriptPlayerManager SPM;
+    [SerializeField] private Grid grid;
+    public GridController GC;
+
+    [SerializeField] private tunController _turnController;
+    [SerializeField] protected ScriptPlayerManager SPM;
     bool turn;
-    bool moving;
+    protected bool moving;
+    public int teamNumb;//El numero del jugador dentro del equipo
     List<Node> nodes;
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
     void Start()
     {
-        grid=GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        GC = grid.GetComponent<GridController>();
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
-        
-        if(Input.GetMouseButtonDown(0)){  
-                MoveClick();
-        }
+       
         if (moving)
         {
+            print(grid.CellToWorld(nodes[0].pos));
             transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
-            if (Vector3.Distance(grid.CellToWorld( nodes[0].pos) + new Vector3(0.5f,0.5f,0), transform.position) < 0.01f)
+
+
+            //transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
+            if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), transform.position) < 0.01f)
             {
                 transform.position = nodes[0].pos + new Vector3(0.5f, 0.5f, 0);
                 nodes.RemoveAt(0);
@@ -36,18 +41,28 @@ public class PlayerBase : MonoBehaviour
                 {
                     moving = false;
                     //Turn();
-                    _turnController.nextTurn(this);
+                    SPM.endTurn(teamNumb);
                 }
             }
         }
     }
-
+    public virtual void startTurn() 
+    { }
     //Mueve al jugador a la posición indicada
-    protected virtual void MoveClick(){
-        List<Node> newPos = GetMousePosition();
-        nodes = newPos;
-        moving = true;
-        turn = false;
+    protected virtual void Move(Vector3 position)
+    {
+        
+            List<Node> newPos = GC.GetPath(this.transform.position,position);
+        if (newPos.Count > 0)
+        {
+            print(newPos[0].pos.x);
+            print(newPos[0].pos.y);
+            nodes = newPos;
+            moving = true;
+            print("oi");
+            turn = false;
+        }
+
     }
     public virtual void Turn()
     {
@@ -55,8 +70,4 @@ public class PlayerBase : MonoBehaviour
     }
 
     /*Calcula la posición del ratón en coordenadas de la Grid*/
-    List<Node> GetMousePosition(){
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return grid.GetComponent<GridController>().GetPath(this.transform.position);
-    }
 }

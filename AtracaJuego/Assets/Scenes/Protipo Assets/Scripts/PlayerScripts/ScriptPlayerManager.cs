@@ -5,14 +5,55 @@ using UnityEngine;
 public class ScriptPlayerManager : MonoBehaviour
 {
     //Contiene el control sobre los scripts de los demás personajes
-    public bool[] Players = new bool[5];
-    public bool Player1=false;
-    public bool Player2=true;
-    public bool Player3=false;
-    public bool Player4=false;
-    public bool Player5=false;
-
+    public tunController _turn;
+    public bool[] PlayersMoved;
+    public PlayerBase[] players;
+    public bool Activated;
+    public int currentPlayer;
     void Update(){
 
+    }
+    public void StartTurns()
+    {
+        
+        for (int i = 0; i < PlayersMoved.Length; i++)
+        {
+            PlayersMoved[i] = false;
+        }
+        currentPlayer = 0;
+        players[0].startTurn();
+        if (PlayersMoved.Length <= 0)
+        {
+            _turn.startRound();
+        }
+    }
+    public void ChangePlayer(int player)
+    {
+        if (!PlayersMoved[player])
+        {
+            currentPlayer = player;
+            print("startturn");
+            players[player].startTurn();
+        }
+    }
+    public void endTurn(int player)
+    {
+        print("filip");
+        PlayersMoved[player] = true;
+        currentPlayer = -1;
+        for (int i = 0; i < PlayersMoved.Length; i++)
+        {
+            if(PlayersMoved[i] == false){
+                currentPlayer = i;
+                print("startturn");
+                players[i].startTurn();
+                break;
+            }
+        }
+        if(currentPlayer == -1)
+        {
+            print("jij");
+            _turn.startTurns();
+        }
     }
 }
