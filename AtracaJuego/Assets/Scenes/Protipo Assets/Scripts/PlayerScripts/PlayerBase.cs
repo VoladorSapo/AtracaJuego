@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerBase : MonoBehaviour
 {
     private Grid grid;
-    private tunController _turnController;
-
+    [SerializeField]private tunController _turnController;
+    public ScriptPlayerManager SPM;
     bool turn;
     bool moving;
     List<Node> nodes;
@@ -22,11 +22,8 @@ public class PlayerBase : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetMouseButtonDown(0)){
-            if (turn)
-            {
+        if(Input.GetMouseButtonDown(0)){  
                 MoveClick();
-            }
         }
         if (moving)
         {

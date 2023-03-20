@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player2 : PlayerBase
 {
     //public ScriptPlayerManager SPM
-    public ScriptPlayerManager SPM;
+    //public ScriptPlayerManager SPM;
     public GridController GC;
     [SerializeField] private int MaxDistance = 2;
 

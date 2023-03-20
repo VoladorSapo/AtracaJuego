@@ -40,6 +40,7 @@ public class GridController : MonoBehaviour
         nodos = new Node[pathMap.size.x, pathMap.size.y];
         ogx = pathMap.origin.x;
         ogy = pathMap.origin.y;
+        print(nodos.GetLength(1));
         for (int i = 0 ; i < pathMap.size.x; i++)
         {
             for (int j = 0; j <  pathMap.size.y; j++)
@@ -97,7 +98,7 @@ public class GridController : MonoBehaviour
     //Transforma la posición del ratón a coordenadas dentro de la Grid
     public List<Node> GetPath(Vector3 position)
     {
-        print(grid.WorldToCell(position).x);
+        //print(grid.WorldToCell(position).x);
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         List<Node> camino = _path.findPath(nodos[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy], nodos[grid.WorldToCell(previousMousePos).x - ogx, grid.WorldToCell(previousMousePos).y - ogy], nodos, ogx, ogy);
         return camino;

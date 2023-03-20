@@ -57,7 +57,7 @@ public class pathFinder : MonoBehaviour
     private List<Node> nodosAdyacentes(Node nodo,Node[,] nodos,int ogx,int ogy)
     {
         List<Node> list = new List<Node>();
-        if(nodo.pos.x - ogx + 1 <= nodos.GetLength(0))
+        if(nodo.pos.x - ogx + 1 < nodos.GetLength(0))
         {
             list.Add(nodos[nodo.pos.x - ogx + 1, nodo.pos.y - ogy]);
         }
@@ -65,8 +65,9 @@ public class pathFinder : MonoBehaviour
         {
             list.Add(nodos[nodo.pos.x - ogx - 1, nodo.pos.y - ogy]);
         }
-        if (nodo.pos.y -ogy + 1 <= nodos.GetLength(1))
+        if (nodo.pos.y -ogy + 1 < nodos.GetLength(1))
         {
+            print(nodo.pos.y - ogy + 1);
             list.Add(nodos[nodo.pos.x - ogx, nodo.pos.y - ogy + 1]);
         }
         if (nodo.pos.y -ogy - 1 >= 0)
