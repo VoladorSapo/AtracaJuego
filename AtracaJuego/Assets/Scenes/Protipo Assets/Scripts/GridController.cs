@@ -61,10 +61,12 @@ public class GridController : MonoBehaviour
 
                 Vector3Int posTiles=new Vector3Int(i + ogx ,j + ogy,0);
                 Tile actualTile = ground.GetTile<Tile>(posTiles);
+                Vector3Int posTileInGrid= new Vector3Int (i,j,0);
 
                 int[] stats=tileTable.GetTileStats(actualTile);
-                print("Tile en: "+(i + ogx)+","+(j + ogy)+" es tiene el sprite: "+stats[0]);
-                tiles[i,j]= new CustomTileClass(stats[0],stats[1]);
+                print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
+                tiles[i,j]= new CustomTileClass(stats[0],stats[1],stats[2],posTileInGrid);
+                print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
                 nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isWakable(new Vector3Int(i + ogx, j + ogy))); //Lo dejo así de forma Temporal 
             }
 
@@ -82,7 +84,8 @@ public class GridController : MonoBehaviour
             int difX=mousePos.x-ogx;
             int difY=mousePos.y-ogy;
             
-            print("Tile en: "+(0 + difX)+","+(0 + difY)+" tiene el sprite: "+tiles[0 + difX, 0 + difY].tileSpriteId+" y tiene las propiedades "+tiles[0 + difX, 0 + difY].tileState);
+            print("Tile en: "+(0 + difX)+","+(0 + difY)+" tiene el sprite: "+tiles[0 + difX, 0 + difY].tileSpriteId+" y tiene las propiedades "+tiles[0 + difX, 0 + difY].tileState+" y "+tiles[0 + difX, 0 + difY].tileEffect);
+            print("y "+tiles[difX,difY].tilePos);
         }
 
         if(Input.GetKeyDown("s")){
@@ -90,7 +93,7 @@ public class GridController : MonoBehaviour
             int difX=mousePos.x-ogx;
             int difY=mousePos.y-ogy;
             print("s");
-            tiles[0 + difX, 0 + difY].SetTileStats(1,1);
+            tiles[0 + difX, 0 + difY].SetTileStats(1,1,0);
             Vector3Int pos=new Vector3Int(mousePos.x,mousePos.y,0);
             Tile newTileToPlace=tileTable.SetNewTile(1);
             ground.SetTile(pos,newTileToPlace);
