@@ -11,7 +11,7 @@ public class MapManager : MonoBehaviour
 
  
 
-    public bool walkable;
+    //public bool walkable;
 
     private void Awake(){
 

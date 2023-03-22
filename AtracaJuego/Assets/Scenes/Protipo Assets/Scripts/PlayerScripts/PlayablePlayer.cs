@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayablePlayer : PlayerBase
 {
-    [SerializeField] private int MaxDistance = 5;
+    
 
-        
-     public override void Update()
-     {
+
+    public override void Update()
+    {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (GC.isWakable(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
+                if (GC.isWakable(Camera.main.ScreenToWorldPoint(Input.mousePosition),true))
                 {
                     Move(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 }
@@ -28,6 +28,12 @@ public class PlayablePlayer : PlayerBase
         if (SPM.Activated)
         {
             SPM.ChangePlayer(teamNumb);
+            //GC.setReachablePos(transform.position, MaxDistance, true);
         }
+    }
+    public override void startTurn()
+    {
+        GC.setReachablePos(transform.position, MaxDistance, true,true);
+
     }
 }

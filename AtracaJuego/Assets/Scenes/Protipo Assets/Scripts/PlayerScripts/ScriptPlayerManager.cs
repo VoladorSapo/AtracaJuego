@@ -32,27 +32,23 @@ public class ScriptPlayerManager : MonoBehaviour
         if (!PlayersMoved[player])
         {
             currentPlayer = player;
-            print("startturn");
             players[player].startTurn();
         }
     }
     public void endTurn(int player)
     {
-        print("filip");
         PlayersMoved[player] = true;
         currentPlayer = -1;
         for (int i = 0; i < PlayersMoved.Length; i++)
         {
             if(PlayersMoved[i] == false){
                 currentPlayer = i;
-                print("startturn");
                 players[i].startTurn();
                 break;
             }
         }
         if(currentPlayer == -1)
         {
-            print("jij");
             _turn.startTurns();
         }
     }

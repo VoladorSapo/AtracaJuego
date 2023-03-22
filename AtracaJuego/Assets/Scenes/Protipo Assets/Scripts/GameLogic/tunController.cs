@@ -30,7 +30,6 @@ public class tunController : MonoBehaviour
         currentManager++;
         if(currentManager < Managers.Length)
         {
-            print("caca");
             for (int i = 0; i < Managers.Length; i++)
             {
                 Managers[i].Activated = false;

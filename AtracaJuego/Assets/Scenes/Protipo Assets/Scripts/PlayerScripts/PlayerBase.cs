@@ -9,6 +9,7 @@ public class PlayerBase : MonoBehaviour
 
     [SerializeField] private tunController _turnController;
     [SerializeField] protected ScriptPlayerManager SPM;
+    [SerializeField] protected int MaxDistance = 5;
     bool turn;
     protected bool moving;
     public int teamNumb;//El numero del jugador dentro del equipo
@@ -28,7 +29,6 @@ public class PlayerBase : MonoBehaviour
        
         if (moving)
         {
-            print(grid.CellToWorld(nodes[0].pos));
             transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
 
 
@@ -52,14 +52,12 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Move(Vector3 position)
     {
         
-            List<Node> newPos = GC.GetPath(this.transform.position,position);
+        List<Node> newPos = GC.GetPath(this.transform.position,position);
+        print(newPos.Count);
         if (newPos.Count > 0)
         {
-            print(newPos[0].pos.x);
-            print(newPos[0].pos.y);
             nodes = newPos;
             moving = true;
-            print("oi");
             turn = false;
         }
 

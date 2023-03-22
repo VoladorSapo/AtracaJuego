@@ -7,7 +7,7 @@ public class pathFinder : MonoBehaviour
 {
     private List<Node> openList;
     private List<Node> closeList;
-    
+    public GridController GC;
     public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy)
     {
         List<Node> list = new List<Node>();
@@ -74,6 +74,39 @@ public class pathFinder : MonoBehaviour
             list.Add(nodos[nodo.pos.x - ogx, nodo.pos.y- ogy - 1]);
         }
 
+        return list;
+    }
+    public List<Node> nodosEnDistancia(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
+    {
+        List<Node> list = new List<Node>();
+        List<Node> borderList = new List<Node>();
+        list.Add(nodo);
+        borderList.Add(nodo);
+        int vueltas = 0;
+        int tilesoftype = 0;
+        bool Continue = isDist ? vueltas < var : tilesoftype <= 0;
+        while (Continue)
+        {
+            tilesoftype = 0;
+            List<Node> newBorderList = new List<Node>(); ;
+            foreach (Node nodoBorde in borderList)
+            {
+                List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
+                for (int i = 0; i < supportList.Count; i++)
+                {
+                    bool shouldAdd = isDist ? GC.isWakable(supportList[i].pos,false) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    if(!list.Contains(supportList[i]) && shouldAdd){
+                        newBorderList.Add(supportList[i]);
+                        tilesoftype++;
+                    }
+                }
+            }
+            list.AddRange(newBorderList);
+            borderList.Clear();
+            borderList.AddRange(newBorderList);
+            vueltas++;
+            Continue = isDist ? vueltas < var : tilesoftype <= 0;
+        }
         return list;
     }
     private List<Node> fullPath(Node endNode)
