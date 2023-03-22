@@ -50,20 +50,12 @@ public class GasEffect : MonoBehaviour
                 //condiciones a 0 de momento, hay que organizar la tabla
                 if(_GC.tiles[(i1),(j1)].GetTileEffect()==0 && _GC.tiles[(i1),(j1)].GetTileState()==0){
 
-                   _GC.tiles[(i1),(j1)].SetTileEffect(1);
+                   _GC.tiles[(i1),(j1)].SetTileEffect(1); //Cuando se tengan sprites de humo hacer SetTileStats
                 }
             }
         }
         
 
-        }
-
-        if(Input.GetKeyDown("f") && tilesCopy!=null){
-        for(int i=0; i<tilesCopy.GetLength(0); i++){
-            for(int j=0; j<tilesCopy.GetLength(1); j++){
-                print(tilesCopy[i,j].tileEffect);
-            }
-        }
         }
 
     }

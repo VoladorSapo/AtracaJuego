@@ -19,7 +19,7 @@ public class TileSpriteTable : MonoBehaviour
         return tileChange;
     }
 
-    //Solo sed usa para inicializar el array del mapa
+    //Solo se usa para inicializar el array del mapa
     public int[] GetTileStats(Tile actualTile){
         int[] id=new int[3];
         //[Sprite, caracteristicas]

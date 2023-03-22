@@ -127,18 +127,6 @@ public class GridController : MonoBehaviour
             previousMousePos = mousePos;
         }
 
-        /*  if (Input.GetMouseButtonDown(0))
-          {
-              List<Node> camino = _path.findPath(nodos[0, 0], nodos[grid.WorldToCell(mousePos).x-ogx, grid.WorldToCell(mousePos).y- ogy], nodos,ogx,ogy);
-              print(grid.WorldToCell(mousePos).x+" "+ grid.WorldToCell(mousePos).y);
-              distanceRun=0;
-              foreach (Node nodo in camino)
-              {
-                  print(nodo.pos.x + " " + nodo.pos.y);
-                  distanceRun++;
-              }
-              print(distanceRun);
-          }*/
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
@@ -149,11 +137,13 @@ public class GridController : MonoBehaviour
         List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy);
         return camino;
     }
+
     Vector3Int GetMousePosition()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
     }
+
     public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles)
     {
         Vector3Int convertedPos = grid.WorldToCell(pos);
@@ -173,6 +163,7 @@ public class GridController : MonoBehaviour
         freeCursor = false;
 
     }
+
     public bool isWakable(Vector3 position, bool wantMove) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
     {
 

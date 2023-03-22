@@ -48,6 +48,8 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void startTurn() 
     { }
+
+    
     //Mueve al jugador a la posición indicada
     protected virtual void Move(Vector3 position)
     {
