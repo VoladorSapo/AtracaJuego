@@ -6,8 +6,9 @@ public class ScriptPlayerManager : MonoBehaviour
 {
     //Contiene el control sobre los scripts de los demás personajes
     public tunController _turn;
+    [SerializeField] gameController _gameController;
     public bool[] PlayersMoved;
-    public PlayerBase[] players;
+    public List<PlayerBase> players;
     public bool Activated;
     public int currentPlayer;
     void Update(){
@@ -15,10 +16,11 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void StartTurns()
     {
-        
+        PlayersMoved = new bool[players.Count];
         for (int i = 0; i < PlayersMoved.Length; i++)
         {
             PlayersMoved[i] = false;
+            players[i].teamNumb = i;
         }
         currentPlayer = 0;
         players[0].startTurn();
@@ -33,6 +35,17 @@ public class ScriptPlayerManager : MonoBehaviour
         {
             currentPlayer = player;
             players[player].startTurn();
+        }
+    }
+    public void playerDie(PlayerBase player)
+    {
+        if (players.Contains(player))
+        {
+            players.Remove(player);
+        }
+        if(players.Count == 0)
+        {
+            _gameController.teamDie(this);
         }
     }
     public void endTurn(int player)

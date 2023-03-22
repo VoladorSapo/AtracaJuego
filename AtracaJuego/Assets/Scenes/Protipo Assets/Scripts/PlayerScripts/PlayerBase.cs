@@ -13,6 +13,9 @@ public class PlayerBase : MonoBehaviour
     bool turn;
     protected bool moving;
     public int teamNumb;//El numero del jugador dentro del equipo
+    [SerializeField] protected bool alive;
+    [SerializeField] protected int maxHealth;
+    [SerializeField] protected int currentHealth;
     List<Node> nodes;
     //Método Principal
     /*Método Secundario*/
@@ -68,6 +71,30 @@ public class PlayerBase : MonoBehaviour
     {
         turn = true;
     }
+    public virtual bool GetAlive()
+    {
+        return alive;
+    }
 
+    public void Die()
+    {
+        alive = false;
+    }
+    public void loseHealth(int health)
+    {
+        currentHealth -= health;
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    public virtual int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+    public virtual int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
     /*Calcula la posición del ratón en coordenadas de la Grid*/
 }
