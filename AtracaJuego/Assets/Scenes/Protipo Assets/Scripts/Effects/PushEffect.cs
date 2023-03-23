@@ -55,15 +55,18 @@ public class PushEffect : MonoBehaviour
                                 if( _GC.tiles[x+(distance-1-i)+1+j,y].GetTileState()<1){ //En realidad seria 8 pero falta adaptar el pathfinding a cada update
                                 nextX=x+(distance-1-i)+1+j;
                                 actX=x+(distance-1-i)+j;
+
+                                if(_GC.tiles[actX,y].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[actX,y].tilePos.x+1, _GC.tiles[actX,y].tilePos.y, 0);
                                 _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[actX,y].GetTileEffect()==1){_GC.tiles[actX,y].SetTileEffect(0);} //Revisar estos
                                 else if(_GC.tiles[actX,y].GetTileEffect()==10){_GC.tiles[actX,y].SetTileEffect(6);}
+                                }
                                 }else{
                                     //break; //paron en seco
-                                    distanceMoved-=(distanceMoved-j); //colapso
+                                    distance-=distance-j; //colapso
                                 }
                                 
                             }
@@ -74,7 +77,7 @@ public class PushEffect : MonoBehaviour
                             }
                             /*if hay personaje... más simple de hacer*/
                             /*if hay objeto...*/
-                            distanceMoved=5;
+                            distance=2;
                             break;
 
                 case 2:     
@@ -93,15 +96,18 @@ public class PushEffect : MonoBehaviour
                                 if( _GC.tiles[x-(distance+1+i)-1-j,y].GetTileState()<1){ //En realidad seria 8 pero falta adaptar el pathfinding a cada update
                                 nextX=x-(distance+1+i)-1-j;
                                 actX=x-(distance+1+i)-j;
+
+                                if(_GC.tiles[actX,y].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[actX,y].tilePos.x-1, _GC.tiles[actX,y].tilePos.y, 0);
                                 _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[actX,y].GetTileEffect()==1){_GC.tiles[actX,y].SetTileEffect(0);} //Revisar estos
                                 else if(_GC.tiles[actX,y].GetTileEffect()==10){_GC.tiles[actX,y].SetTileEffect(6);}
+                                }
                                 }else{
                                     //break; //paron en seco
-                                    distanceMoved-=(distanceMoved-j); //colapso
+                                    distance-=distance+j; //colapso
                                 }
                                 
                             }
@@ -111,7 +117,7 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
-                            distanceMoved=5;
+                            distance=2;
                             break;
 
                 case 3:     
@@ -122,7 +128,7 @@ public class PushEffect : MonoBehaviour
                             for(int i=0; i<distance; i++){if(_GC.tiles[x,y+i].GetTileEffect()==1 || _GC.tiles[x,y+i].GetTileEffect()==10){hayGas=true;}}
 
                             if(hayGas){
-
+                            print("@a");
                             for(int j=0; j<distanceMoved; j++){
                                 
                             for(int i=0; i<distance; i++){
@@ -130,15 +136,18 @@ public class PushEffect : MonoBehaviour
                                 if( _GC.tiles[x,y+(distance-1-i)+1+j].GetTileState()<1){ //En realidad seria 8 pero falta adaptar el pathfinding a cada update
                                 nextY=y+(distance-1-i)+1+j;
                                 actY=y+(distance-1-i)+j;
+
+                                if(_GC.tiles[x,actY].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[x,actY].tilePos.x, _GC.tiles[x,actY].tilePos.y+1, 0);
                                 _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[x,actY].GetTileEffect()==1){_GC.tiles[x,actY].SetTileEffect(0);} //Revisar estos
                                 else if(_GC.tiles[x,actY].GetTileEffect()==10){_GC.tiles[x,actY].SetTileEffect(6);}
+                                }
                                 }else{
                                     //break; //paron en seco
-                                    distanceMoved-=(distanceMoved-j); //colapso
+                                    distance-=distance-j;; //colapso
                                 }
                                 
                             }
@@ -148,7 +157,7 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
-                            distanceMoved=5;
+                            distance=2;
                             break;
                 case 4:     
 
@@ -166,15 +175,18 @@ public class PushEffect : MonoBehaviour
                                 if( _GC.tiles[x,y-(distance+1+i)-1-j].GetTileState()<1){ //En realidad seria 8 pero falta adaptar el pathfinding a cada update
                                 nextY=y-(distance+1+i)-1-j;
                                 actY=y-(distance+1+i)-j;
+
+                                if(_GC.tiles[x,actY].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[x,actY].tilePos.x, _GC.tiles[x,actY].tilePos.y-1, 0);
                                 _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[x,actY].GetTileEffect()==1){_GC.tiles[x,actY].SetTileEffect(0);} //Revisar estos
                                 else if(_GC.tiles[x,actY].GetTileEffect()==10){_GC.tiles[x,actY].SetTileEffect(6);}
+                                }
                                 }else{
                                     //break; //paron en seco
-                                    distanceMoved-=(distanceMoved-j); //colapso
+                                    distance-=distance+j; //colapso
                                 }
                                 
                             }
@@ -184,7 +196,7 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
-                            distanceMoved=5;
+                            distance=2;
                             break;
             }
         }
