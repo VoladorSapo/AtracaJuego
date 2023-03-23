@@ -6,12 +6,13 @@ public class PlayerBase : MonoBehaviour
 {
     [SerializeField] private Grid grid;
     public GridController GC;
-
+    public gameController _gamecontroller;
     [SerializeField] private tunController _turnController;
     [SerializeField] protected ScriptPlayerManager SPM;
     [SerializeField] protected int MaxDistance = 5;
     bool turn;
     protected bool moving;
+    private bool hasTurn;
     public int teamNumb;//El numero del jugador dentro del equipo
     [SerializeField] protected bool alive;
     [SerializeField] protected int maxHealth;
@@ -24,6 +25,7 @@ public class PlayerBase : MonoBehaviour
     {
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         GC = grid.GetComponent<GridController>();
+        startGame();
     }
 
     // Update is called once per frame
@@ -44,7 +46,10 @@ public class PlayerBase : MonoBehaviour
                 {
                     moving = false;
                     //Turn();
-                    SPM.endTurn(teamNumb);
+                    Vector3Int tilepos= grid.WorldToCell(transform.position- new Vector3(0.5f +GC.ogx, GC.ogy+ 0.5f, 0));
+                    CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+                    tile.setPlayer(this);
+                    SPM.endTurn(teamNumb,false);
                 }
             }
         }
@@ -75,14 +80,30 @@ public class PlayerBase : MonoBehaviour
     {
         return alive;
     }
+    public virtual void pressWinTile()
+    {
 
+    }
     public void Die()
     {
         alive = false;
+        Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(0.5f + GC.ogx, GC.ogy + 0.5f, 0));
+        CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+        tile.setPlayer(null);
+        GetComponent<SpriteRenderer>().enabled = false;
+        SPM.playerDie(this);
+    }
+    public void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            loseHealth(1);
+        }
     }
     public void loseHealth(int health)
     {
         currentHealth -= health;
+        print(currentHealth);
         if(currentHealth <= 0)
         {
             Die();
@@ -95,6 +116,18 @@ public class PlayerBase : MonoBehaviour
     public virtual int GetCurrentHealth()
     {
         return currentHealth;
+    }
+    public virtual void startGame()
+    {
+        currentHealth = maxHealth;
+    }
+    public bool getTurn()
+    {
+        return hasTurn;
+    }
+    public void setTurn(bool newTurn)
+    {
+        hasTurn = newTurn;
     }
     /*Calcula la posición del ratón en coordenadas de la Grid*/
 }

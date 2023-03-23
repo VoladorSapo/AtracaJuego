@@ -5,6 +5,7 @@ using UnityEngine;
 public class gameController : MonoBehaviour
 {
     [SerializeField] tunController _turn;
+    [SerializeField] TextController _text;
     [SerializeField] private int winCondition;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,11 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*if (Input.GetKeyDown("l"))
+        {
+            print("oki");
+            _text.StartCoroutine("Escribir", "Hola nena veo que estás <b><i><color=" +"\""+"red" +"\""+ "> encendida </b></i></color>");
+        }*/
     }
     public void winTilePressed()
     {
@@ -31,7 +36,10 @@ public class gameController : MonoBehaviour
         }
         else
         {
-            winRound();
+            if (winCondition == 0)
+            {
+                winRound();
+            }
         }
     }
     public void winRound()

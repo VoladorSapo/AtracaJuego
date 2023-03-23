@@ -31,6 +31,10 @@ public class PlayablePlayer : PlayerBase
             //GC.setReachablePos(transform.position, MaxDistance, true);
         }
     }
+    public override void pressWinTile()
+    {
+        _gamecontroller.winTilePressed();
+    }
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true,true);

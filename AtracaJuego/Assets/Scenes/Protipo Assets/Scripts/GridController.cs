@@ -105,6 +105,15 @@ public class GridController : MonoBehaviour
             ground.RefreshTile(pos);
 
         }
+        if (Input.GetKeyDown("w"))
+        {
+            mousePos = GetMousePosition();
+            int difX = mousePos.x - ogx;
+            int difY = mousePos.y - ogy;
+            print("w");
+            tiles[0 + difX, 0 + difY].SetTileState(8);
+
+        }
 
         mousePos = GetMousePosition();
         if (!mousePos.Equals(previousMousePos))

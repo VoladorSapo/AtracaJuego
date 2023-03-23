@@ -6,32 +6,31 @@ public class ScriptPlayerManager : MonoBehaviour
 {
     //Contiene el control sobre los scripts de los demás personajes
     public tunController _turn;
-    [SerializeField] gameController _gameController;
-    public bool[] PlayersMoved;
+    public gameController _gameController;
     public List<PlayerBase> players;
     public bool Activated;
     public int currentPlayer;
+    public int deadPlayer;
     void Update(){
 
     }
     public void StartTurns()
     {
-        PlayersMoved = new bool[players.Count];
-        for (int i = 0; i < PlayersMoved.Length; i++)
+        for (int i = 0; i < players.Count; i++)
         {
-            PlayersMoved[i] = false;
+           players[i].setTurn(false);
             players[i].teamNumb = i;
         }
         currentPlayer = 0;
         players[0].startTurn();
-        if (PlayersMoved.Length <= 0)
+        if (players.Count <= 0)
         {
             _turn.startRound();
         }
     }
     public void ChangePlayer(int player)
     {
-        if (!PlayersMoved[player])
+        if (!players[player].getTurn())
         {
             currentPlayer = player;
             players[player].startTurn();
@@ -41,20 +40,32 @@ public class ScriptPlayerManager : MonoBehaviour
     {
         if (players.Contains(player))
         {
+            deadPlayer = players.IndexOf(player);
             players.Remove(player);
+            for (int i = 0; i < players.Count-1; i++)
+            {
+                players[i].teamNumb = i;
+            }
+            if (Activated)
+            {
+                endTurn(0, true);
+            }
         }
         if(players.Count == 0)
         {
             _gameController.teamDie(this);
         }
     }
-    public void endTurn(int player)
+    public void endTurn(int player,bool die)
     {
-        PlayersMoved[player] = true;
-        currentPlayer = -1;
-        for (int i = 0; i < PlayersMoved.Length; i++)
+        if (!die)
         {
-            if(PlayersMoved[i] == false){
+            players[player].setTurn(true);
+        }
+        currentPlayer = -1;
+        for (int i = 0; i < players.Count; i++)
+        {
+            if(!players[i].getTurn()){
                 currentPlayer = i;
                 players[i].startTurn();
                 break;

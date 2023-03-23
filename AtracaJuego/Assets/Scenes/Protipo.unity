@@ -345,12 +345,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 1088530369}
   MaxDistance: 5
   teamNumb: 0
   alive: 0
-  maxHealth: 0
+  maxHealth: 3
   currentHealth: 0
 --- !u!1 &384387085
 GameObject:
@@ -655,8 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turn: {fileID: 642901472}
-  _gameController: {fileID: 0}
-  PlayersMoved: 0000000000
+  _gameController: {fileID: 642901474}
   players:
   - {fileID: 877809185}
   - {fileID: 1839479772}
@@ -665,6 +665,7 @@ MonoBehaviour:
   - {fileID: 672308686}
   Activated: 0
   currentPlayer: 0
+  deadPlayer: 0
 --- !u!114 &642901474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,20 +673,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642901470}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f74ee564632384f9e5820f24f16fb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dca50a928fc1974683a9c6f736ab142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  GC: {fileID: 195986141}
-  _turnController: {fileID: 642901472}
-  SPM: {fileID: 642901473}
-  MaxDistance: 5
-  teamNumb: 0
-  alive: 0
-  maxHealth: 0
-  currentHealth: 0
+  _turn: {fileID: 642901472}
+  _text: {fileID: 0}
+  winCondition: 0
 --- !u!1 &659085978
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 6
@@ -936,12 +932,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 7
   teamNumb: 2
   alive: 0
-  maxHealth: 0
+  maxHealth: 3
   currentHealth: 0
 --- !u!61 &812507727
 BoxCollider2D:
@@ -1201,12 +1198,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 3
   teamNumb: 0
   alive: 0
-  maxHealth: 0
+  maxHealth: 3
   currentHealth: 0
 --- !u!61 &877809186
 BoxCollider2D:
@@ -2013,14 +2011,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turn: {fileID: 642901472}
-  _gameController: {fileID: 0}
-  PlayersMoved: 000000
+  _gameController: {fileID: 642901474}
   players:
   - {fileID: 205844225}
   - {fileID: 2105103685}
   - {fileID: 1422654228}
   Activated: 0
   currentPlayer: 0
+  deadPlayer: 0
 --- !u!4 &1088530370
 Transform:
   m_ObjectHideFlags: 0
@@ -2069,12 +2067,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 1088530369}
   MaxDistance: 5
   teamNumb: 2
   alive: 0
-  maxHealth: 0
+  maxHealth: 3
   currentHealth: 0
 --- !u!61 &1422654229
 BoxCollider2D:
@@ -4650,6 +4649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 7
@@ -4783,6 +4783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 6
@@ -4916,12 +4917,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   GC: {fileID: 195986141}
+  _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 1088530369}
   MaxDistance: 5
   teamNumb: 1
   alive: 0
-  maxHealth: 0
+  maxHealth: 3
   currentHealth: 0
 --- !u!61 &2105103686
 BoxCollider2D:

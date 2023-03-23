@@ -8,7 +8,7 @@ public class CustomTileClass
     public int tileSpriteId;
     public int tileState;
     public int tileEffect;
-    
+    public PlayerBase player;
     public CustomTileClass(int SpriId, int state, int effect, Vector3Int pos){
         tilePos=pos;
         tileSpriteId=SpriId;
@@ -53,6 +53,15 @@ public class CustomTileClass
     public void SetTileEffect(int effect){
         tileEffect=effect;
     }
-
+    public void setPlayer(PlayerBase newplayer)
+    {
+        player = newplayer;
+        Debug.Log("ou");
+        if(tileState == 8)
+        {
+            Debug.Log("uo");
+            player.pressWinTile();
+        }
+    }
 
 }
