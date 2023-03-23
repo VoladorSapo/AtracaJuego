@@ -13,12 +13,12 @@ public class GasEffect : MonoBehaviour
 
 
     void Awake(){
-
+        w=transform.localScale.x;
+        h=transform.localScale.y;
     }
 
     void Update(){
-        w=transform.localScale.x;
-        h=transform.localScale.y;
+        
         /*Cuando se hagan los scripts con un script padre, este metodo se hace override*/
 
         if(Input.GetKeyDown("e")){
