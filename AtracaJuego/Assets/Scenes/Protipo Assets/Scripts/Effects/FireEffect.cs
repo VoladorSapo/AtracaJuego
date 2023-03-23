@@ -9,6 +9,7 @@ public class FireEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _GC=GameObject.Find("Grid").GetComponent<GridController>();
         _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
     }
 
@@ -26,7 +27,7 @@ public class FireEffect : MonoBehaviour
             print(x+","+y);
             if(_GC.tiles[x,y].GetTileEffect()==1){
                 print("f");
-                _GC.tiles[x,y].SetTileStats(2,1,2);
+                _GC.tiles[x,y].SetTileStats(2,1,2,1); //Sprite 2, estado 1, efecto 2, fade 1 //Todos valores temporales que hay que ajustar en la tabla
                 _MM.SpreadFireEffect(x,y);
             }
         }

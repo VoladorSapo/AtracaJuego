@@ -68,7 +68,7 @@ public class GridController : MonoBehaviour
 
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
-                tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid);
+                tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
                 nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isWakable(new Vector3Int(i + ogx, j + ogy), false)); //Lo dejo así de forma Temporal 
             }
@@ -98,7 +98,7 @@ public class GridController : MonoBehaviour
             int difX = mousePos.x - ogx;
             int difY = mousePos.y - ogy;
             print("s");
-            tiles[0 + difX, 0 + difY].SetTileStats(1, 1, 0);
+            tiles[0 + difX, 0 + difY].SetTileStats(1, 1, 0, 0);
             Vector3Int pos = new Vector3Int(mousePos.x, mousePos.y, 0);
             Tile newTileToPlace = tileTable.SetNewTile(1);
             ground.SetTile(pos, newTileToPlace);

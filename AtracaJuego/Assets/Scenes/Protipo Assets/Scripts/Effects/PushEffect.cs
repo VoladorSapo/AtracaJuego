@@ -58,7 +58,7 @@ public class PushEffect : MonoBehaviour
 
                                 if(_GC.tiles[actX,y].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[actX,y].tilePos.x+1, _GC.tiles[actX,y].tilePos.y, 0);
-                                _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos);
+                                _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos, _GC.tiles[actX,y].tileFadeEffect);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[actX,y].GetTileEffect()==1){_GC.tiles[actX,y].SetTileEffect(0);} //Revisar estos
@@ -99,7 +99,7 @@ public class PushEffect : MonoBehaviour
 
                                 if(_GC.tiles[actX,y].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[actX,y].tilePos.x-1, _GC.tiles[actX,y].tilePos.y, 0);
-                                _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos);
+                                _GC.tiles[nextX,y]=Clone(_GC.tiles[actX,y].tileSpriteId,_GC.tiles[actX,y].tileState,_GC.tiles[actX,y].tileEffect, nextPos, _GC.tiles[actX,y].tileFadeEffect);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[actX,y].GetTileEffect()==1){_GC.tiles[actX,y].SetTileEffect(0);} //Revisar estos
@@ -139,7 +139,7 @@ public class PushEffect : MonoBehaviour
 
                                 if(_GC.tiles[x,actY].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[x,actY].tilePos.x, _GC.tiles[x,actY].tilePos.y+1, 0);
-                                _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos);
+                                _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos, _GC.tiles[x,actY].tileFadeEffect);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[x,actY].GetTileEffect()==1){_GC.tiles[x,actY].SetTileEffect(0);} //Revisar estos
@@ -178,7 +178,7 @@ public class PushEffect : MonoBehaviour
 
                                 if(_GC.tiles[x,actY].GetTileState()<1){
                                 nextPos= new Vector3Int (_GC.tiles[x,actY].tilePos.x, _GC.tiles[x,actY].tilePos.y-1, 0);
-                                _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos);
+                                _GC.tiles[x,nextY]=Clone(_GC.tiles[x,actY].tileSpriteId,_GC.tiles[x,actY].tileState,_GC.tiles[x,actY].tileEffect, nextPos, _GC.tiles[x,actY].tileFadeEffect);
                                 //SetTiles en el mapa superior de efectos
 
                                 if(_GC.tiles[x,actY].GetTileEffect()==1){_GC.tiles[x,actY].SetTileEffect(0);} //Revisar estos
@@ -203,8 +203,8 @@ public class PushEffect : MonoBehaviour
     }
     
 
-    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos){
-        CustomTileClass n = new CustomTileClass(sprite, state, effect, pos);
+    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
+        CustomTileClass n = new CustomTileClass(sprite, state, effect, pos, fade);
         return n;
     }
 }

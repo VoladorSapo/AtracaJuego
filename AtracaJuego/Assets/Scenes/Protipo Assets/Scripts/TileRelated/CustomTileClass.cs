@@ -9,11 +9,14 @@ public class CustomTileClass
     public int tileState;
     public int tileEffect;
     public PlayerBase player;
-    public CustomTileClass(int SpriId, int state, int effect, Vector3Int pos){
+    public int tileFadeEffect;
+
+    public CustomTileClass(int SpriId, int state, int effect, Vector3Int pos, int fade){
         tilePos=pos;
         tileSpriteId=SpriId;
         tileState=state;
         tileEffect=effect;
+        tileFadeEffect=fade;
     }
 
     public void DisplayStats(){
@@ -36,10 +39,15 @@ public class CustomTileClass
         return tilePos;
     }
 
-    public void SetTileStats(int sprite, int state, int effect){
+    public int GetTileFade(){
+        return tileFadeEffect;
+    }
+
+    public void SetTileStats(int sprite, int state, int effect, int fade){
         tileSpriteId=sprite;
         tileState=state;
         tileEffect=effect;
+        tileFadeEffect=fade;
     }
 
     public void SetTileSprite(int sprite){
@@ -52,6 +60,19 @@ public class CustomTileClass
 
     public void SetTileEffect(int effect){
         tileEffect=effect;
+    }
+
+    public void SetTileFade(int fade){
+        tileFadeEffect=fade;
+    }
+
+    public void LowerFade(){
+        if(tileFadeEffect>0){
+        tileFadeEffect--; //Cuando llegue a 0 el effecto se pone a 0
+        if(tileFadeEffect==0){
+            SetTileEffect(0);
+        }
+        }
     }
     public void setPlayer(PlayerBase newplayer)
     {

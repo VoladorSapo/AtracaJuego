@@ -15,6 +15,7 @@ public class GasEffect : MonoBehaviour
     void Awake(){
         w=transform.localScale.x;
         h=transform.localScale.y;
+        _GC=GameObject.Find("Grid").GetComponent<GridController>();
     }
 
     void Update(){
@@ -45,12 +46,14 @@ public class GasEffect : MonoBehaviour
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
 
-                tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos);
+                tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos, _GC.tiles[i1,j1].tileFadeEffect);
 
                 //condiciones a 0 de momento, hay que organizar la tabla
                 if(_GC.tiles[(i1),(j1)].GetTileEffect()==0 && _GC.tiles[(i1),(j1)].GetTileState()==0){
 
-                   _GC.tiles[(i1),(j1)].SetTileEffect(1); //Cuando se tengan sprites de humo hacer SetTileStats
+                   _GC.tiles[(i1),(j1)].SetTileEffect(1);
+                   _GC.tiles[(i1),(j1)].SetTileFade(3); //3 por ejemplo
+                   //Cuando se tengan sprites de humo hacer SetTile en la capa de effectos
                 }
             }
         }
@@ -60,8 +63,8 @@ public class GasEffect : MonoBehaviour
 
     }
 
-    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos){
-        CustomTileClass n = new CustomTileClass(sprite, state, effect, pos);
+    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
+        CustomTileClass n = new CustomTileClass(sprite, state, effect, pos, fade);
         return n;
     }
 }
