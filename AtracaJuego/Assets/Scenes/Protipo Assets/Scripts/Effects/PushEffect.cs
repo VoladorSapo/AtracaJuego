@@ -11,6 +11,7 @@ public class PushEffect : MonoBehaviour
     public MapManager _MM;
     [SerializeField] private int distance=2; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
     [SerializeField] private int distanceMoved=5; //Mueve n tiles
+    [SerializeField] private int distancePush=10;
 
     public int direction; //1:Derecha 2:Izquierda 3:Arriba 4:Abajo
 
@@ -75,7 +76,23 @@ public class PushEffect : MonoBehaviour
                             }
 
                             }
-                            /*if hay personaje... más simple de hacer*/
+
+                            if(_GC.tiles[x,y].GetPlayer()!=null){
+                                switch(_GC.tiles[x,y].GetPlayer().name){
+                                    case "Player1":
+
+                                        for(int i=0; i<distancePush; i++){
+                                        Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
+                                        if(_GC.tiles[x+i+1,y].GetTileState()<1){
+                                                oldPosPlayer.position += (new Vector3(1,0,0));
+                                        }else{
+                                            break;
+                                        }
+                                        }
+                                        break;
+                                }
+                            }
+                            
                             /*if hay objeto...*/
                             distance=2;
                             break;
@@ -201,7 +218,6 @@ public class PushEffect : MonoBehaviour
             }
         }
     }
-    
 
     private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
         CustomTileClass n = new CustomTileClass(sprite, state, effect, pos, fade);

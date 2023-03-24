@@ -10,6 +10,8 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private tunController _turnController;
     [SerializeField] protected ScriptPlayerManager SPM;
     [SerializeField] protected int MaxDistance = 5;
+    private int[] prevX= new int[5];
+    private int[] prevY= new int[5];
     bool turn;
     protected bool moving;
     private bool hasTurn;
@@ -71,19 +73,38 @@ public class PlayerBase : MonoBehaviour
             turn = false;
         }
 
+        int newX = Mathf.RoundToInt(this.transform.position.x) - GC.ogx;
+        int newY = Mathf.RoundToInt(this.transform.position.y) - GC.ogy;
+        
+
+        GC.tiles[newX,newY].setPlayer(this);
+        
+        /*switch(this.name){
+            case "Player1": GC.tiles[newX,newY].SetPlayerOnTop(name); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].SetPlayerOnTop("null");} prevX[i]=newX; prevY[i]=newY; break;
+            case "Player2": ChangeOnTop(newX, newY, "p2", 1); break;
+            case "Player3": ChangeOnTop(newX, newY, "p3", 2); break;
+            case "Player4": ChangeOnTop(newX, newY, "p4", 3); break;
+            case "Player5": ChangeOnTop(newX, newY, "p5", 4); break;
+        }*/
+        //Hablar con Diego
+        
     }
+
     public virtual void Turn()
     {
         turn = true;
     }
+
     public virtual bool GetAlive()
     {
         return alive;
     }
+
     public virtual void pressWinTile()
     {
 
     }
+
     public void Die()
     {
         alive = false;
@@ -93,6 +114,7 @@ public class PlayerBase : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         SPM.playerDie(this);
     }
+
     public void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1))
@@ -100,6 +122,7 @@ public class PlayerBase : MonoBehaviour
             loseHealth(1);
         }
     }
+
     public void loseHealth(int health)
     {
         currentHealth -= health;
@@ -109,25 +132,35 @@ public class PlayerBase : MonoBehaviour
             Die();
         }
     }
+
     public virtual int GetMaxHealth()
     {
         return maxHealth;
     }
+
     public virtual int GetCurrentHealth()
     {
         return currentHealth;
     }
+
     public virtual void startGame()
     {
         currentHealth = maxHealth;
     }
+
     public bool getTurn()
     {
         return hasTurn;
     }
+
     public void setTurn(bool newTurn)
     {
         hasTurn = newTurn;
     }
-    /*Calcula la posición del ratón en coordenadas de la Grid*/
+
+
+    /*Intercambia los valores playerOnTop de las tiles*/
+    private void ChangeOnTop(int newX, int newY, string name, int i){
+        GC.tiles[newX,newY].SetPlayerOnTop(name); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].SetPlayerOnTop("null");} prevX[i]=newX; prevY[i]=newY;
+    }
 }
