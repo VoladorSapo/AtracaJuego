@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Tilemap map;
     [SerializeField] private List<TileData> tileDatas;
     public GridController _GC;
+    
  
 
     //public bool walkable;
@@ -30,6 +31,7 @@ public class MapManager : MonoBehaviour
     //Extiende el fuego si se le llama
     public void SpreadFireEffect(int x, int y){
         print("g");
+        
         _GC.tiles[x,y].SetTileStats(2,1,2,1); //2 por ejemplo es explosion
 
         int up1= y+1;

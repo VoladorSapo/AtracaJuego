@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Player2 : PlayablePlayer
 {
-    //public ScriptPlayerManager SPM
-    //public ScriptPlayerManager SPM;
+
 }

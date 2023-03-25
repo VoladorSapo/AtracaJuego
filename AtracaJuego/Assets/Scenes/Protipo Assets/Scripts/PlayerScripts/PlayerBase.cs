@@ -77,7 +77,6 @@ public class PlayerBase : MonoBehaviour
         int newY = Mathf.RoundToInt(this.transform.position.y) - GC.ogy;
         
 
-        GC.tiles[newX,newY].setPlayer(this);
         
         /*switch(this.name){
             case "Player1": GC.tiles[newX,newY].SetPlayerOnTop(name); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].SetPlayerOnTop("null");} prevX[i]=newX; prevY[i]=newY; break;

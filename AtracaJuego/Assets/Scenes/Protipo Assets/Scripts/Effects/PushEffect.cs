@@ -22,15 +22,12 @@ public class PushEffect : MonoBehaviour
         _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
         w=transform.localScale.x;
         h=transform.localScale.y;
-        //el valor de direction lo ajusta al llamar al prefab
-        //temporalmente lo implementare usando
-        direction=1;
     }
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        if(Input.GetKeyDown("p")){
+        
             posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
             Vector3Int tileO = Vector3Int.RoundToInt(posBL);
             bool hayGas=false;
@@ -80,15 +77,7 @@ public class PushEffect : MonoBehaviour
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 switch(_GC.tiles[x,y].GetPlayer().name){
                                     case "Player1":
-
-                                        for(int i=0; i<distancePush; i++){
-                                        Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
-                                        if(_GC.tiles[x+i+1,y].GetTileState()<1){
-                                                oldPosPlayer.position += (new Vector3(1,0,0));
-                                        }else{
-                                            break;
-                                        }
-                                        }
+                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush));
                                         break;
                                 }
                             }
@@ -145,7 +134,7 @@ public class PushEffect : MonoBehaviour
                             for(int i=0; i<distance; i++){if(_GC.tiles[x,y+i].GetTileEffect()==1 || _GC.tiles[x,y+i].GetTileEffect()==10){hayGas=true;}}
 
                             if(hayGas){
-                            print("@a");
+                            
                             for(int j=0; j<distanceMoved; j++){
                                 
                             for(int i=0; i<distance; i++){
@@ -216,7 +205,28 @@ public class PushEffect : MonoBehaviour
                             distance=2;
                             break;
             }
+
+            StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+    }
+
+    IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush){
+        WaitForSeconds wfs=new WaitForSeconds(sec);
+        Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
+        for(int i=0; i<distancePush; i++){
+            if(_GC.tiles[x+i+1,y].GetTileState()<1){
+                oldPosPlayer.position += (new Vector3(1,0,0));
+            }else{
+                break;
+            }
+        yield return wfs;
         }
+    }
+
+    
+    IEnumerator DestroyEffect(float sec){
+        WaitForSeconds wfs=new WaitForSeconds(sec);
+        yield return wfs;
+        Destroy(this.gameObject);
     }
 
     private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){

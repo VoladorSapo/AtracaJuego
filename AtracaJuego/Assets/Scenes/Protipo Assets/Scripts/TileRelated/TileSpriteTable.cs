@@ -25,7 +25,7 @@ public class TileSpriteTable : MonoBehaviour
         //[Sprite, caracteristicas]
         switch(actualTile.name){
             case "sheet_160": id[0]=0; id[1]=0; id[2]=0; break; //0 es que no tiene ningun effecto
-            case "sheet_191": id[0]=1; id[1]=1; id[2]=0; break;
+            case "sheet_191": id[0]=1; id[1]=8; id[2]=0; break;
         }
 
         return id;
