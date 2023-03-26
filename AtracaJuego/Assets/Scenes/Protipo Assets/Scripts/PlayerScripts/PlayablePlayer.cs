@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayablePlayer : PlayerBase
 {
@@ -16,9 +17,9 @@ public class PlayablePlayer : PlayerBase
     {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                if (GC.isWakable(Camera.main.ScreenToWorldPoint(Input.mousePosition),true))
+                if (GC.isEmpty(Camera.main.ScreenToWorldPoint(Input.mousePosition),true))
                 {
                     Move(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 }
@@ -44,7 +45,7 @@ public class PlayablePlayer : PlayerBase
 
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true,true);
+        GC.setReachablePos(transform.position, MaxDistance, true,true,team);
 
     }
 

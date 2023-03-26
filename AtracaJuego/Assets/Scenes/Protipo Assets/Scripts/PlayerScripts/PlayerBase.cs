@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerBase : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int MaxDistance = 5;
     private int[] prevX= new int[5];
     private int[] prevY= new int[5];
-    bool turn;
+    protected bool team;
     protected bool moving;
     private bool hasTurn;
     public int teamNumb;//El numero del jugador dentro del equipo
@@ -64,13 +65,13 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Move(Vector3 position)
     {
         
-        List<Node> newPos = GC.GetPath(this.transform.position,position);
+        List<Node> newPos = GC.GetPath(this.transform.position,position,team);
         print(newPos.Count);
         if (newPos.Count > 0)
         {
             nodes = newPos;
             moving = true;
-            turn = false;
+            //turn = false;
         }
 
         int newX = Mathf.RoundToInt(this.transform.position.x) - GC.ogx;
@@ -91,7 +92,7 @@ public class PlayerBase : MonoBehaviour
 
     public virtual void Turn()
     {
-        turn = true;
+        //turn = true;
     }
 
     public virtual bool GetAlive()
@@ -116,7 +117,8 @@ public class PlayerBase : MonoBehaviour
 
     public void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1))
+
+        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
         {
             loseHealth(1);
         }
@@ -151,7 +153,10 @@ public class PlayerBase : MonoBehaviour
     {
         return hasTurn;
     }
-
+    public bool getTeam()
+    {
+        return team;
+    }
     public void setTurn(bool newTurn)
     {
         hasTurn = newTurn;
@@ -160,6 +165,6 @@ public class PlayerBase : MonoBehaviour
 
     /*Intercambia los valores playerOnTop de las tiles*/
     private void ChangeOnTop(int newX, int newY, string name, int i){
-        GC.tiles[newX,newY].SetPlayerOnTop(name); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].SetPlayerOnTop("null");} prevX[i]=newX; prevY[i]=newY;
+        GC.tiles[newX,newY].setPlayer(this); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].setPlayer(null);} prevX[i]=newX; prevY[i]=newY;
     }
 }

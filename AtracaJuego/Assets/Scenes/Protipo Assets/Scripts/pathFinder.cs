@@ -7,8 +7,9 @@ public class pathFinder : MonoBehaviour
 {
     private List<Node> openList;
     private List<Node> closeList;
+    private List<Node> nearList;
     public GridController GC;
-    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy)
+    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team)
     {
         List<Node> list = new List<Node>();
         openList = new List<Node> { startNode};
@@ -76,11 +77,11 @@ public class pathFinder : MonoBehaviour
 
         return list;
     }
-    public List<Node> nodosEnDistancia(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
+    public List<Node> nodosEnDistancia(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist,bool team)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
     {
-        List<Node> list = new List<Node>();
+        nearList = new List<Node>();
         List<Node> borderList = new List<Node>();
-        list.Add(nodo);
+        nearList.Add(nodo);
         borderList.Add(nodo);
         int vueltas = 0;
         int tilesoftype = 0;
@@ -94,20 +95,20 @@ public class pathFinder : MonoBehaviour
                 List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
                 for (int i = 0; i < supportList.Count; i++)
                 {
-                    bool shouldAdd = isDist ? GC.isWakable(supportList[i].pos,false) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
-                    if(!list.Contains(supportList[i]) && shouldAdd){
+                    bool shouldAdd = isDist ? GC.isWalkable(supportList[i].pos,false,team) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    if(!nearList.Contains(supportList[i]) && shouldAdd){
                         newBorderList.Add(supportList[i]);
                         tilesoftype++;
                     }
                 }
             }
-            list.AddRange(newBorderList);
+            nearList.AddRange(newBorderList);
             borderList.Clear();
             borderList.AddRange(newBorderList);
             vueltas++;
             Continue = isDist ? vueltas < var : tilesoftype <= 0;
         }
-        return list;
+        return nearList;
     }
     private List<Node> fullPath(Node endNode)
     {

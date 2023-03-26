@@ -10,7 +10,7 @@ public class EnemyCharacter : PlayerBase
 
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, false,team);
         print("hei");
         int i = 0;
         bool poswalkable;
@@ -19,7 +19,7 @@ public class EnemyCharacter : PlayerBase
         {
             pos = new Vector3( Random.Range(GC.ogx, GC.tiles.GetLength(0)+GC.ogx), Random.Range(GC.ogy, GC.tiles.GetLength(1)+GC.ogy));
             
-            poswalkable = GC.isWakable(pos,true);
+            poswalkable = GC.isEmpty(pos,true);
             
 
             i++;

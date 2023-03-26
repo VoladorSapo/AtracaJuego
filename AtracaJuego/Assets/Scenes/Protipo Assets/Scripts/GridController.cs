@@ -70,7 +70,7 @@ public class GridController : MonoBehaviour
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isWakable(new Vector3Int(i + ogx, j + ogy), false)); //Lo dejo así de forma Temporal 
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(new Vector3Int(i + ogx, j + ogy), false)); //Lo dejo así de forma Temporal 
             }
 
         }
@@ -140,11 +140,11 @@ public class GridController : MonoBehaviour
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
-    public List<Node> GetPath(Vector3 startpos, Vector3 endpos)
+    public List<Node> GetPath(Vector3 startpos, Vector3 endpos,bool team)
     {
         //print(grid.WorldToCell(position).x);
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy);
+        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy,team);
         return camino;
     }
 
@@ -154,10 +154,10 @@ public class GridController : MonoBehaviour
         return grid.WorldToCell(mouseWorldPos);
     }
 
-    public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles)
+    public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles,bool team)
     {
         Vector3Int convertedPos = grid.WorldToCell(pos);
-        List<Node> reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist);
+        List<Node> reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist,team);
         ReachablePos = new Vector3Int[reachableNodes.Count];
         canMove.ClearAllTiles();
 
@@ -174,13 +174,22 @@ public class GridController : MonoBehaviour
 
     }
 
-    public bool isWakable(Vector3 position, bool wantMove) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
+    public bool isEmpty(Vector3 position, bool wantMove) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
     {
 
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 1 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove))
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove)|| tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
         {
             return false;
         }
         return true;
     }
+    public bool isWalkable(Vector3 position, bool wantMove, bool team) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
+    {
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) || (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team))
+        {
+            return false;
+        }
+        return true;
+    }
+
 }

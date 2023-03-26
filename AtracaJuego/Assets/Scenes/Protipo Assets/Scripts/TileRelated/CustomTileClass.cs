@@ -9,7 +9,7 @@ public class CustomTileClass
     public int tileState;
     public int tileEffect;
     public PlayerBase player;
-    public string playerOnTop;
+    //public string playerOnTop;
     public int tileFadeEffect;
 
     public CustomTileClass(int SpriId, int state, int effect, Vector3Int pos, int fade){
@@ -52,9 +52,9 @@ public class CustomTileClass
         return player;
     }
 
-    public string GetPlayerOnTop(){
-        return playerOnTop;
-    }
+    //public string GetPlayerOnTop(){
+    //    return playerOnTop;
+    //}
 
     public void SetTileStats(int sprite, int state, int effect, int fade){
         tileSpriteId=sprite;
@@ -88,16 +88,16 @@ public class CustomTileClass
         }
     }
 
-    public void SetPlayerOnTop(string player){
-        Debug.Log("ass");
-        playerOnTop=player;
-    }
+    //public void SetPlayerOnTop(string player){
+    //    Debug.Log("ass");
+    //    playerOnTop=player;
+    //}
 
     public void setPlayer(PlayerBase newplayer)
     {
         player = newplayer;
         Debug.Log("ou");
-        if(tileState == 8)
+        if(tileState == 13)
         {
             Debug.Log("uo");
             player.pressWinTile();
