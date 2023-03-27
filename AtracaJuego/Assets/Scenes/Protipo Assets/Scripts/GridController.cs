@@ -55,7 +55,7 @@ public class GridController : MonoBehaviour
 
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
 
-        for (int i = 0; i < pathMap.size.x; i++)
+        for (int i = 0; i < pathMap.size.x;i++)
         {
             for (int j = 0; j < pathMap.size.y; j++)
             {
@@ -70,7 +70,7 @@ public class GridController : MonoBehaviour
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(new Vector3Int(i + ogx, j + ogy), false)); //Lo dejo así de forma Temporal 
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false)); //Lo dejo así de forma Temporal 
             }
 
         }
@@ -176,12 +176,23 @@ public class GridController : MonoBehaviour
 
     public bool isEmpty(Vector3 position, bool wantMove) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
     {
-
+        print(position);
+        print(pathMap.size);
+        print(ogx);
+        print(tiles.GetLength(0));
+        print(tiles.GetLength(1));
+        print(grid.WorldToCell(position).x);
+        print(tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState);
         if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove)|| tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
         {
             return false;
         }
         return true;
+        /*if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove)|| tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
+        {
+            return false;
+        }
+        return true;*/
     }
     public bool isWalkable(Vector3 position, bool wantMove, bool team) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
     {
