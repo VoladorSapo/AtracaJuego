@@ -1,0 +1,1963 @@
+fileFormatVersion: 2
+guid: 7933667d3591d084984bb687217872b9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ignacio_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee90297357ed4a240984f2cc221701ab
+      internalID: 2069133705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_2
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa13d2d9e7929b489b1ba1104fee6b9
+      internalID: -625990292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_3
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce54dc6dcbd8e164085c876307fe47b2
+      internalID: 1611621296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_4
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141cbf69e8f3d5748b27499feb3ffb26
+      internalID: -1984576019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_5
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2963b8a8f0c5384890eeca58f6e5cd3
+      internalID: 1926004986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_6
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dacb4d6871ed3459e5d90bb3cdf588
+      internalID: 34454572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_7
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57572a2af195d13409dc4650c0cc04e3
+      internalID: 249484610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80895382c0de6c94e9012a5fc9b57a6d
+      internalID: -3854946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_9
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3656
+        width: 252
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f896f7ffef081a48aa8508b2d998223
+      internalID: -478196382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f954c3ef495d1c942a76c645bd5da637
+      internalID: 619272062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_11
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12bb3a291c8c63409660c1f6efa2530
+      internalID: 1142688982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_12
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a0631e2d852c94a8746306a8c53e16
+      internalID: -800784045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_13
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0030fde00541449b0ca7ed71c79957
+      internalID: 1289900129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_14
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3234efa4a0332854d9f82e7b06bd1b47
+      internalID: 1199902468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_15
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 3656
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcac458e3fef95842a7d5f96064386ae
+      internalID: 1372035510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570d259653f60fc47a62784c326b45fe
+      internalID: 1156720148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f7615e155238b42934258d32b7d4ff
+      internalID: -397084362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_18
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe85bfbf678143c48841f5e5afa808df
+      internalID: 2099665535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_19
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c325c945092a564cb2eccac5512edfe
+      internalID: -2086094255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_20
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f491514e416833a4bb0b6d9d2b7e1cf2
+      internalID: 1511798242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_21
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16cdac2b40225f4b87344bec97fce46
+      internalID: -179688885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_22
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111a099834afd3e479e6f6fde2054437
+      internalID: 1368096627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_23
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 3436
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8112fe1ff82b4014e9b7f4bab37cb373
+      internalID: 1477330154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f5e461ffeab37468e3f7c8738686fc
+      internalID: 1122679185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_25
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fe6203915257442a22bb5f01026b15
+      internalID: -2080449327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_26
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31233954856b03e46967205097495aef
+      internalID: 1035368456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_27
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d0d059dc05f184e848dd2f5aefcb91
+      internalID: 1122858941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_28
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6400fa4768171a4eb113da878403d76
+      internalID: 1017459855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_29
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 3217
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4745415ff57fd344a281d5a09e44548
+      internalID: 1187884045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_30
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 3216
+        width: 252
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43328740c74a284e9c2efcbb9e07d5f
+      internalID: -1971889199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_31
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 3216
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b99755393f521439d96974e19cd91e
+      internalID: 1284303073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f6153dfd25d0c42980e0df550812da
+      internalID: -143910734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_33
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e51575117a4e341826906d5c3cbb40
+      internalID: -306593552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_34
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ae052fa6e9ccf4a8ada5eef94771c8
+      internalID: -1457650942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_35
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e83b8777e78814ab9803431d05c4ee
+      internalID: -666333569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_36
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b2ba24c245ddd42a7dca4f4c265be8
+      internalID: 74204892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_37
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816f65bd613219d498e719e818224c0f
+      internalID: -1474225070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_38
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6086346ad9d27429698be4261a2a1a
+      internalID: 26418707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_39
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 2996
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0943dafb504a84bb6bbaafc82c8ef8
+      internalID: -1048531118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2776
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ea4af6c13550040951cf01b0b82572
+      internalID: -1258616277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_43
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 2776
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30ffa8efbeba5c4bb4e908e87d35ab5
+      internalID: -421392686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_46
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2776
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc6a1737d3bd724aad991375bc902ee
+      internalID: 1662451291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_47
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 2776
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dc3fa942454744180b02370d837760
+      internalID: -761087586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_48
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2731
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a4a0f5acc318f45b36e41367742599
+      internalID: 1645244035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_49
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 2731
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9bd5393791ff546a537ae026c7e42a
+      internalID: 945119891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_50
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2731
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224fefd3d8a2e59419d66ea3076f3db7
+      internalID: 514402914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fa91b8eca132c479a069538a443cad
+      internalID: 416481444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_63
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0848f2601ab4cb64e91f67b613384515
+      internalID: 996598182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_64
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4f7c2d5a92fa14380a2510c352abf2
+      internalID: -322552961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_65
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1f116f36f98924ab1ca0b5eb5fadd3
+      internalID: -2076287169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_66
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8363e94541e81394eb922c8318e1162b
+      internalID: 1901578235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_67
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 2466
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60974e0439895d4448da5c586e031922
+      internalID: -1257737345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2201
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6afa7918ac48f541967989b234476ac
+      internalID: -434761424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_69
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 2201
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6a6a4609cfec946ac596ba0c63b147
+      internalID: -671291137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_70
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 2201
+        width: 303
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2864b8b5d9e647142bafb7d15f82cc00
+      internalID: -2085971168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_71
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 2201
+        width: 303
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ac31f0c786e8a41aa5e1f9cfc62c8a
+      internalID: 1707316554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3876
+        width: 251
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c559cfc5c253c47ab99c87a3ba856c
+      internalID: -1517749067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_73
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9b164ff4a033943931cfc15c6b241c
+      internalID: -1860974655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_74
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 0
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deeee3ef43d4a5040bdea5e9e22cd3d7
+      internalID: -579476421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_75
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f41de5fb68f8b4ba73d8aaac0a5d06
+      internalID: -852071919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_76
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b4d7977145d57418ad0fb14155252d
+      internalID: 1547242392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_77
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9705fd39e6a33d947a5815a287ca3616
+      internalID: -1112815824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccddb9758970c0347af8f51b2d531877
+      internalID: -1397765275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_79
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eee4e87f9eefe04b937b4ea48df6ebe
+      internalID: -820081332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_80
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c53e65d1e63314b885883ed4d29fe8
+      internalID: -2046868701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_81
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416a0ca8a99ebaa468e9cdca53c6b57f
+      internalID: 1828691381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_82
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf47959b0440064295a576fc6419566
+      internalID: -1536814990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_83
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24684c564b561a4c8a03ceba30d3200
+      internalID: 1948216476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_84
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fe90bf2ad344c4fb1ee8565c50afeb
+      internalID: -1222784609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_85
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a856de84659ce4aa76270e74ac9aa9
+      internalID: -561364597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_86
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d4c0cfe5c2fbf4f8e43583885ba68e
+      internalID: 1720146693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_87
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1980
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7257611952ed98546bff6bd30748d9e5
+      internalID: -2131501888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_88
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1978
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097038b25a7115d40b9512afb099c931
+      internalID: 1060652230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_89
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1978
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbebab39943df3245b2fcd06a318c686
+      internalID: 1072976565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_90
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 1978
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ca66ade9e381e4a945da105448b3b9
+      internalID: 1528598655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_91
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1979
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a134428c40e0fcb43beae7eb2241e217
+      internalID: 942796715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1757
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03a67d0d281b0a489545f1a87668d44
+      internalID: 1196545986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_93
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1757
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d4515193976a24eac585e557899f70
+      internalID: -356270646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_94
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1757
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136ae8ea595080e488078873a33f6159
+      internalID: 988975610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_95
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1757
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2f42bcbe1d19146be2998781ae1238
+      internalID: 872111891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_96
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1757
+        width: 161
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a602e39a48210064eb8f39a9d12e20ba
+      internalID: -1050548019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_72
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73e2ec75959ef24b9353626bebc3ebf
+      internalID: 57215085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ignacio_41
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 2245
+        width: 137
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a606146caaa95aa4381a4f18c41a777a
+      internalID: 293445647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ignacio_0: -1517749067
+      ignacio_1: 2069133705
+      ignacio_10: 619272062
+      ignacio_11: 1142688982
+      ignacio_12: -800784045
+      ignacio_13: 1289900129
+      ignacio_14: 1199902468
+      ignacio_15: 1372035510
+      ignacio_16: 1156720148
+      ignacio_17: -397084362
+      ignacio_18: 2099665535
+      ignacio_19: -2086094255
+      ignacio_2: -625990292
+      ignacio_20: 1511798242
+      ignacio_21: -179688885
+      ignacio_22: 1368096627
+      ignacio_23: 1477330154
+      ignacio_24: 1122679185
+      ignacio_25: -2080449327
+      ignacio_26: 1035368456
+      ignacio_27: 1122858941
+      ignacio_28: 1017459855
+      ignacio_29: 1187884045
+      ignacio_3: 1611621296
+      ignacio_30: -1971889199
+      ignacio_31: 1284303073
+      ignacio_32: -143910734
+      ignacio_33: -306593552
+      ignacio_34: -1457650942
+      ignacio_35: -666333569
+      ignacio_36: 74204892
+      ignacio_37: -1474225070
+      ignacio_38: 26418707
+      ignacio_39: -1048531118
+      ignacio_4: -1984576019
+      ignacio_40: -1258616277
+      ignacio_41: 293445647
+      ignacio_42: -252309927
+      ignacio_43: -421392686
+      ignacio_44: 649589733
+      ignacio_45: 1076142857
+      ignacio_46: 1662451291
+      ignacio_47: -761087586
+      ignacio_48: 1645244035
+      ignacio_49: 945119891
+      ignacio_5: 1926004986
+      ignacio_50: 514402914
+      ignacio_51: -171722165
+      ignacio_52: 1874038132
+      ignacio_53: -1770813573
+      ignacio_54: 1177906381
+      ignacio_55: -337553514
+      ignacio_56: 758549625
+      ignacio_57: 1717909337
+      ignacio_58: 1432873274
+      ignacio_59: -525492069
+      ignacio_6: 34454572
+      ignacio_60: 320939785
+      ignacio_61: 1226947663
+      ignacio_62: 416481444
+      ignacio_63: 996598182
+      ignacio_64: -322552961
+      ignacio_65: -2076287169
+      ignacio_66: 1901578235
+      ignacio_67: -1257737345
+      ignacio_68: -434761424
+      ignacio_69: -671291137
+      ignacio_7: 249484610
+      ignacio_70: -2085971168
+      ignacio_71: 1707316554
+      ignacio_72: 293445647
+      ignacio_73: -1860974655
+      ignacio_74: -579476421
+      ignacio_75: -852071919
+      ignacio_76: 1547242392
+      ignacio_77: -1112815824
+      ignacio_78: -1397765275
+      ignacio_79: -820081332
+      ignacio_8: -3854946
+      ignacio_80: -2046868701
+      ignacio_81: 1828691381
+      ignacio_82: -1536814990
+      ignacio_83: 1948216476
+      ignacio_84: -1222784609
+      ignacio_85: -561364597
+      ignacio_86: 1720146693
+      ignacio_87: -2131501888
+      ignacio_88: 1060652230
+      ignacio_89: 1072976565
+      ignacio_9: -478196382
+      ignacio_90: 1528598655
+      ignacio_91: 942796715
+      ignacio_92: 1196545986
+      ignacio_93: -356270646
+      ignacio_94: 988975610
+      ignacio_95: 872111891
+      ignacio_96: -1050548019
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
