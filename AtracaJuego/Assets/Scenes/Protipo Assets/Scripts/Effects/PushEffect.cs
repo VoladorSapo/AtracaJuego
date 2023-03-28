@@ -75,11 +75,7 @@ public class PushEffect : MonoBehaviour
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                switch(_GC.tiles[x,y].GetPlayer().name){
-                                    case "Player1":
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush));
-                                        break;
-                                }
+                            StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush, 1));
                             }
                             
                             /*if hay objeto...*/
@@ -123,6 +119,10 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
+                            if(_GC.tiles[x,y].GetPlayer()!=null){
+                            StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush, 2));
+                            }
+
                             distance=2;
                             break;
 
@@ -163,6 +163,10 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
+                            if(_GC.tiles[x,y].GetPlayer()!=null){
+                            StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush, 3));
+                            }
+
                             distance=2;
                             break;
                 case 4:     
@@ -202,6 +206,10 @@ public class PushEffect : MonoBehaviour
 
                             }
                             
+                            if(_GC.tiles[x,y].GetPlayer()!=null){
+                            StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush, 4));
+                            }
+
                             distance=2;
                             break;
             }
@@ -209,16 +217,50 @@ public class PushEffect : MonoBehaviour
             StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
-    IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush){
+    IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush, int dir){
         WaitForSeconds wfs=new WaitForSeconds(sec);
         Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
+
+        switch(dir){
+        case 1:
         for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x+i+1,y].GetTileState()<1){
+            if(_GC.tiles[x+i+1,y].GetTileState()<5){
                 oldPosPlayer.position += (new Vector3(1,0,0));
             }else{
                 break;
             }
         yield return wfs;
+        } break;
+
+        case 2: 
+        for(int i=0; i<distancePush; i++){
+            if(_GC.tiles[x-i-1,y].GetTileState()<5){
+                oldPosPlayer.position -= (new Vector3(1,0,0));
+            }else{
+                break;
+            }
+        yield return wfs;
+        } break;
+
+        case 3:
+        for(int i=0; i<distancePush; i++){
+            if(_GC.tiles[x,y+i+1].GetTileState()<5){
+                oldPosPlayer.position += (new Vector3(0,1,0));
+            }else{
+                break;
+            }
+        yield return wfs;
+        } break;
+
+        case 4:
+        for(int i=0; i<distancePush; i++){
+            if(_GC.tiles[x,y-i-1].GetTileState()<5){
+                oldPosPlayer.position -= (new Vector3(0,1,0));
+            }else{
+                break;
+            }
+        yield return wfs;
+        } break;
         }
     }
 

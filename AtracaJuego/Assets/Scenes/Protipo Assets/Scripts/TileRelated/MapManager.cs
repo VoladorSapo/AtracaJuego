@@ -30,7 +30,6 @@ public class MapManager : MonoBehaviour
 
     //Extiende el fuego si se le llama
     public void SpreadFireEffect(int x, int y){
-        print("g");
         
         _GC.tiles[x,y].SetTileStats(2,1,2,1); //2 por ejemplo es explosion
 
