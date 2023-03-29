@@ -38,11 +38,11 @@ public class PlayerBase : MonoBehaviour
         if (moving)
         {
            
-            transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), 0.1f);
-
+            transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), 0.8f);
             //transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
-            if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.01f)
+            if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
+                print("Batido PLeNysHakE" + this.name);
                // print(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0));
                 //print(nodes[0].pos);
                 //print(grid.CellToWorld(nodes[0].pos));
@@ -55,7 +55,7 @@ public class PlayerBase : MonoBehaviour
                     //Turn();
                     Vector3Int tilepos= grid.WorldToCell(transform.position- new Vector3(5f, 5f, 0))-new Vector3Int(GC.ogx,GC.ogy);
 
-                    print(tilepos);
+                    //print(tilepos);
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
                     SPM.endTurn(teamNumb,false);
@@ -72,11 +72,12 @@ public class PlayerBase : MonoBehaviour
     {
         
         List<Node> newPos = GC.GetPath(this.transform.position,position,team);
+        Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         print(newPos.Count);
         if (newPos.Count > 0)
         {
             
-            print(newPos[newPos.Count-1].pos);
+            print(newPos.Count);
             nodes = newPos;
             moving = true;
             //turn = false;

@@ -16,11 +16,11 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown("l"))
-        {
-            print("oki");
-            _text.StartCoroutine("Escribir", "Hola nena veo que estás <b><i><color=" +"\""+"red" +"\""+ "> encendida </b></i></color>");
-        }*/
+        //if (Input.GetKeyDown("l"))
+        //{
+        //    print("oki");
+        //    _text.StartCoroutine("Escribir", "Estoy un poco intranquilo mientras el género urbano vigilo Asomando la mirada como un cocodrilo en el río Nilo Ajustando un par de cuenta' Pendiente' ante' de que llegue Milo Sentado en una silla bajo una sombrilla en camisilla Con el perro mordiéndome la' zapatilla' Eructando tortilla' y las tostadas con mantequilla Apuntando al horizonte con un rifle sin mirilla Mientras hablo solo como Don Quijote");
+        //}
     }
     public void winTilePressed()
     {

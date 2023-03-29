@@ -111,10 +111,6 @@ public class pathFinder : MonoBehaviour
             Continue = isDist ? vueltas < var : tilesoftype <= 0;
         }
         print(nearList.Count);
-        for (int i = 0; i < nearList.Count; i++)
-        {
-            print(nearList[i].pos);
-        }
         return nearList;
     }
     private List<Node> fullPath(Node endNode)
