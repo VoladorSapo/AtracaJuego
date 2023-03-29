@@ -1378,7 +1378,7 @@ MonoBehaviour:
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
-  MaxDistance: 2
+  MaxDistance: 50
   teamNumb: 0
   alive: 0
   maxHealth: 3
@@ -6512,7 +6512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819482700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: -4, z: 0}
+  m_LocalPosition: {x: -0.43, y: 6.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
