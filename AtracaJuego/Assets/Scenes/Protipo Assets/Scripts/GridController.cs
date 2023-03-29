@@ -7,7 +7,7 @@ using System.Linq;
 
 public class GridController : MonoBehaviour
 {
-    private Grid grid;
+    public Grid grid;
     public MapManager _mapManager; //Para obtener referencias de las tiles y sus propiedades
     RaycastHit2D objectHit;
 
@@ -64,11 +64,13 @@ public class GridController : MonoBehaviour
 
                 Vector3Int posTiles = new Vector3Int(i + ogx, j + ogy, 0);
                 Tile actualTile = ground.GetTile<Tile>(posTiles);
+                
                 Vector3Int posTileInGrid = new Vector3Int(i, j, 0);
-
+ 
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
+                
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
                 nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false)); //Lo dejo así de forma Temporal 
             }
@@ -85,9 +87,8 @@ public class GridController : MonoBehaviour
         if (Input.GetKeyDown("a"))
         {
             mousePos = GetMousePosition();
-            int difX = grid.WorldToCell(mousePos).x - ogx;
-            int difY = grid.WorldToCell(mousePos).y - ogy;
-
+            int difX = mousePos.x - ogx;
+            int difY = mousePos.y - ogy;
             tiles[difX, difY].DisplayStats();
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);

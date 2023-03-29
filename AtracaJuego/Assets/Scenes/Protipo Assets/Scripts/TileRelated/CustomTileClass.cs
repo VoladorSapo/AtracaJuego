@@ -63,6 +63,13 @@ public class CustomTileClass
         tileFadeEffect=fade;
     }
 
+    public void SetTileStatsWith(CustomTileClass n){
+        tileSpriteId=n.tileSpriteId;
+        tileState=n.tileState;
+        tileEffect=n.tileEffect;
+        if(n.tileFadeEffect>tileFadeEffect){tileFadeEffect=n.tileFadeEffect;}
+    }
+
     public void SetTileSprite(int sprite){
         tileSpriteId=sprite;
     }

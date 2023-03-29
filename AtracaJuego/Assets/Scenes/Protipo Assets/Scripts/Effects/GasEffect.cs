@@ -34,22 +34,22 @@ public class GasEffect : MonoBehaviour
             }
 
         posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
-        int filas=Mathf.RoundToInt(w);
-        int columnas=Mathf.RoundToInt(h);
-        Vector3Int tileO = Vector3Int.RoundToInt(posBL);
-
-        tilesCopy= new CustomTileClass[filas,columnas];
-        
+        int filas=Mathf.RoundToInt(w/10); //w/tamaño tiles
+        int columnas=Mathf.RoundToInt(h/10); //h/tamaño tiles
+        Vector3Int tileO = _GC.grid.WorldToCell(posBL);
+        print((tileO.x-_GC.ogx)+" y "+(tileO.y-_GC.ogy));
+        print(filas);
+        //tilesCopy= new CustomTileClass[filas,columnas];
 
         for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
 
-                tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos, _GC.tiles[i1,j1].tileFadeEffect);
+                //tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos, _GC.tiles[i1,j1].tileFadeEffect);
 
                 //condiciones a 0 de momento, hay que organizar la tabla
-                if(_GC.tiles[(i1),(j1)].GetTileEffect()==0 && _GC.tiles[(i1),(j1)].GetTileState()==0){
+                if(_GC.tiles[(i1),(j1)].GetTileEffect()==0 && _GC.tiles[(i1),(j1)].GetTileState()<5){
 
                    _GC.tiles[(i1),(j1)].SetTileEffect(1);
                    _GC.tiles[(i1),(j1)].SetTileFade(3); //3 por ejemplo

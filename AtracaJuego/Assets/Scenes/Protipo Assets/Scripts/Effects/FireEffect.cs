@@ -15,8 +15,8 @@ public class FireEffect : MonoBehaviour
     void Start()
     {
         //Este código va en start pero por razones de testeo de momento lo pongo aquí
-        Vector3 posBL=new Vector3(transform.position.x - 0.5f, transform.position.y-0.5f,0f);
-        Vector3Int posInted= Vector3Int.RoundToInt(posBL);
+        
+        Vector3Int posInted= _GC.grid.WorldToCell(transform.position);
         int x=posInted.x-_GC.ogx;
         int y=posInted.y-_GC.ogy;
             
