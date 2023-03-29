@@ -8,9 +8,6 @@ public class PlayablePlayer : PlayerBase
 
     protected int directionPush;
 
-    void Start(){
-        
-    }
 
 
     public override void Update()

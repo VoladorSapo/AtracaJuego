@@ -16,16 +16,19 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void StartTurns()
     {
-        for (int i = 0; i < players.Count; i++)
-        {
-           players[i].setTurn(false);
-            players[i].teamNumb = i;
-        }
-        currentPlayer = 0;
-        players[0].startTurn();
         if (players.Count <= 0)
         {
             _turn.startRound();
+        }
+        else
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                players[i].setTurn(false);
+                players[i].teamNumb = i;
+            }
+            currentPlayer = 0;
+            players[0].startTurn();
         }
     }
     public void ChangePlayer(int player)

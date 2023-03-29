@@ -16,6 +16,8 @@ public class PlayerBase : MonoBehaviour
     protected bool team;
     protected bool moving;
     private bool hasTurn;
+   public Animator animator;
+    public SpriteRenderer sprite;
     public int teamNumb;//El numero del jugador dentro del equipo
     [SerializeField] protected bool alive;
     [SerializeField] protected int maxHealth;
@@ -26,7 +28,10 @@ public class PlayerBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("madremiawilliam" );
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        animator = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         GC = grid.GetComponent<GridController>();
         startGame();
     }
@@ -52,6 +57,7 @@ public class PlayerBase : MonoBehaviour
                 if (nodes.Count <= 0)
                 {
                     moving = false;
+                    animator.SetInteger("Anim", 0);
                     //Turn();
                     Vector3Int tilepos= grid.WorldToCell(transform.position- new Vector3(5f, 5f, 0))-new Vector3Int(GC.ogx,GC.ogy);
 
@@ -59,6 +65,20 @@ public class PlayerBase : MonoBehaviour
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
                     SPM.endTurn(teamNumb,false);
+                }
+                else
+                {
+                    print("icamefromalanddownunder");
+                    print(-grid.WorldToCell(transform.position).y);
+                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
+                    if (nodes[0].pos.x > grid.WorldToCell(transform.position).x)
+                    {
+                        sprite.flipX = false;
+                    }
+                    else if(nodes[0].pos.x < grid.WorldToCell(transform.position).x)
+                    {
+                        sprite.flipX = true;
+                    }
                 }
             }
         }
@@ -76,7 +96,11 @@ public class PlayerBase : MonoBehaviour
         print(newPos.Count);
         if (newPos.Count > 0)
         {
-            
+            Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+            CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+            tile.setPlayer(null);
+            print(name);
+            animator.SetInteger("Anim", 1);
             print(newPos.Count);
             nodes = newPos;
             moving = true;
