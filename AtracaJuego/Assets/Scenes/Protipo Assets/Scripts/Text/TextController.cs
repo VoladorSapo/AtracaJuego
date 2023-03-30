@@ -5,67 +5,69 @@ using TMPro;
 
 public class TextController : MonoBehaviour
 {
-    public TextMeshProUGUI TextDisplay;
-    public TextMeshProUGUI TextDisplayFull;
+    public TMP_Text TextDisplay;
+    TMP_TextInfo textinfo;
+    DialogueController _dialogcontroller;
     public bool escribiendo;
     public bool terminado;
     public string texto;
+    public WaitForSeconds delay;
+    public int currentChar;
+    float charpersec;
     // Start is called before the first frame update
     void Awake()
     {
         escribiendo = false;
         terminado = false;
+        _dialogcontroller = GetComponent<DialogueController>();
         texto = "";
+        charpersec = 20f;
+
     }
-    public IEnumerator Escribir(string txt)
+    public void StartText( string txt)
     {
-        print("doki");
-        if (!escribiendo)
-        {
-            texto = txt;
-            TextDisplay.enabled = true;
-            TextDisplay.text = txt;
-            TextDisplay.color = Color.white;
-            TextDisplayFull.enabled = false;
-            TextDisplayFull.text = txt;
-            escribiendo = true;
-            terminado = false;
-            for (int i = 0; i < txt.ToCharArray().Length; i++)
-            {
-                if (!terminado)
-                {
-                    TextDisplay.maxVisibleCharacters = i + 1;
-                    if (TextDisplay.maxVisibleCharacters >= txt.ToCharArray().Length)
-                    {
-                        terminado = true;
-                    }
-                    yield return new WaitForSecondsRealtime(0.01f);
-                }
-                else
-                {
-                    TextDisplay.maxVisibleCharacters = txt.ToCharArray().Length;
-                    terminado = true;
-                    break;
-                }
-            }
-            terminado = true;
-        }
-        else
-        {
-            TextDisplay.text = txt;
-            terminado = true;
-            escribiendo = true;
-        }
-    }
-    public void StopTalk()
-    {
-        TextDisplay.text = "";
+        //TextDisplay.ForceMeshUpdate();
+        currentChar = 0;
+        texto = txt;
+        TextDisplay.enabled = true;
+        TextDisplay.text = txt;
+        TextDisplay.maxVisibleCharacters = 0;
+        textinfo = TextDisplay.textInfo;
+        print(TextDisplay.text);
+        TextDisplay.ForceMeshUpdate();
+        print(textinfo.characterCount);
+        //TextDisplay.color = Color.white;
+        escribiendo = true;
         terminado = false;
-        escribiendo = false;
+        delay = new WaitForSeconds(1/charpersec);
+        StartCoroutine("Escribir");
+    }
+    public IEnumerator Escribir()
+    {
+        //yield return new WaitForSeconds(0.05f);
+        print(textinfo.characterCount);
+        while (currentChar < textinfo.characterCount)
+        {
+            TextDisplay.maxVisibleCharacters++;
+            yield return delay;
+            //yield return new WaitForSecondsRealtime(0.2f) ;
+            currentChar++;
+        }
+        terminado = true;
+    }
+    public void SkipTalk()
+    {
+        StopCoroutine("Escribir");
+        print(terminado);
+        terminado = true;
+        TextDisplay.maxVisibleCharacters = TextDisplay.textInfo.characterCount;
     }
     // Update is called once per frame
     void Update()
-    {
-
+    { 
+        //if (Input.GetMouseButtonDown(0) && escribiendo && !terminado) {
+        //    print("chip");
+        //SkipTalk();
+        //}
     }
 }
