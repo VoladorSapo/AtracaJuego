@@ -12,7 +12,7 @@ public class pathFinder : MonoBehaviour
     public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team)
     {
         List<Node> list = new List<Node>();
-        openList = new List<Node> { startNode};
+        openList = new List<Node> {startNode};
         closeList = new List<Node> ();
         for (int i =0; i < nodos.GetLength(0); i++)
         {
@@ -124,7 +124,7 @@ public class pathFinder : MonoBehaviour
         bool Continue = isDist ? vueltas < var : tilesoftype <= 0;
         
         switch(playerMode){
-        case 1:
+        case 1: //Fuego y empuje
         while (Continue)
         {
             tilesoftype = 0;
@@ -150,21 +150,46 @@ public class pathFinder : MonoBehaviour
             vueltas++;
             Continue = isDist ? vueltas < var : tilesoftype <= 0;
         }
+        break;
         
-        nearList.Remove(nodo); break;
-        
-        case 2:
-        Vector3Int posBL=nodo.pos-new Vector3Int(2,2,0); //Tamaño del prefab/2
-        for(int i=0; i<5; i++){
-            for(int j=0; j<5; j++){
-                if(GC.tiles[posBL.x - ogx +i, posBL.y - ogy +j].GetTileState()<8){
-                nearList.Add(nodos[posBL.x - ogx + i, posBL.y - ogy + j]);
+        case 2: //Gas
+        Vector3Int posG=nodo.pos-new Vector3Int(3,3,0); //offset de Rango del ataque/2
+        for(int i=0; i<7; i++){
+            for(int j=0; j<7; j++){
+                if(GC.tiles[posG.x - ogx +i, posG.y - ogy +j].GetTileState()<8){
+                if((i==3 || j==3) && i!=j){
+                print(i+","+j);
+                nearList.Add(nodos[posG.x - ogx + i, posG.y - ogy + j]);
+                }
                 }
             }
         }
+        
+        break;
+
+        case 3: //Hielo
+        Vector3Int posH=nodo.pos-new Vector3Int(2,2,0);
+        
+        for(int i=0; i<5; i++){
+            for(int j=0; j<5; j++){
+                if(GC.tiles[posH.x - ogx +i, posH.y - ogy +j].GetTileState()<8){
+                nearList.Add(nodos[posH.x - ogx + i, posH.y - ogy + j]);
+                }
+            }
+        }
+        
+        break;
+
+        case 4: //Electricidad
+        Vector3Int posE=nodo.pos-new Vector3Int(2,2,0);
+        if(GC.tiles[posE.x - ogx +2, posE.y - ogy].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy]);}
+        if(GC.tiles[posE.x - ogx, posE.y - ogy +2].GetTileState()<5){nearList.Add(nodos[posE.x - ogx, posE.y - ogy +2]);}
+        if(GC.tiles[posE.x - ogx +2, posE.y - ogy +4].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy +4]);}
+        if(GC.tiles[posE.x - ogx +4, posE.y - ogy +2].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +4, posE.y - ogy +2]);}
 
         break;
         }
+
         return nearList;
     }
 

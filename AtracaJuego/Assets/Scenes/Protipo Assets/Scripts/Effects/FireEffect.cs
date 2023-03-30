@@ -23,11 +23,11 @@ public class FireEffect : MonoBehaviour
         print(x+","+y);
         if(_GC.tiles[x,y].GetTileEffect()==1){
             print("f");
-            _GC.tiles[x,y].SetTileStats(2,1,2,1); //Sprite 2, estado 1, efecto 2, fade 1 //Todos valores temporales que hay que ajustar en la tabla
+            _GC.tiles[x,y].SetTileStats(2,8,2,1,1); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
             _MM.SpreadFireEffect(x,y);
         }
 
-        StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+        //StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
     IEnumerator DestroyEffect(float sec){

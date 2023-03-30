@@ -40,6 +40,7 @@ public class GridController : MonoBehaviour
     [SerializeField] private Vector3Int mousePos;
     void Awake()
     {
+        grid = gameObject.GetComponent<Grid>();
         freeCursor = true;
         //Metodos de otros scripts
         tileTable = GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
@@ -49,7 +50,7 @@ public class GridController : MonoBehaviour
         Application.targetFrameRate = 60;
         distanceRun = 0;
         _path = GetComponent<pathFinder>();
-        grid = gameObject.GetComponent<Grid>();
+        
         canMoveHere = true;
         TileToPlace = hoverTile;
         nodos = new Node[pathMap.size.x, pathMap.size.y];
@@ -95,29 +96,6 @@ public class GridController : MonoBehaviour
             tiles[difX, difY].DisplayStats();
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);
-        }
-
-        if (Input.GetKeyDown("s"))
-        {
-            mousePos = GetMousePosition();
-            int difX = grid.WorldToCell(mousePos).x - ogx;
-            int difY = grid.WorldToCell(mousePos).y - ogy;
-            print("s");
-            tiles[0 + difX, 0 + difY].SetTileStats(1, 1, 0, 0);
-            Vector3Int pos = new Vector3Int(mousePos.x, mousePos.y, 0);
-            Tile newTileToPlace = tileTable.SetNewTile(1);
-            ground.SetTile(pos, newTileToPlace);
-            ground.RefreshTile(pos);
-
-        }
-        if (Input.GetKeyDown("w"))
-        {
-            mousePos = GetMousePosition();
-            int difX = grid.WorldToCell(mousePos).x - ogx;
-            int difY = grid.WorldToCell(mousePos).y - ogy;
-            print("w");
-            tiles[0 + difX, 0 + difY].SetTileState(8);
-
         }
 
         mousePos = GetMousePosition();
@@ -188,7 +166,7 @@ public class GridController : MonoBehaviour
         AttackPos = new Vector3Int[attackableNodes.Count];
         CanAttackMap.ClearAllTiles();
         print("jajaja");
-        for (int i = 0; i < attackableNodes.Count; i++)
+        for (int i = 1; i < attackableNodes.Count; i++)
         {
             AttackPos[i] = attackableNodes[i].pos;
             if (showTiles)

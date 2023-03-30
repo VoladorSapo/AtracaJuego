@@ -9,6 +9,7 @@ public class GasEffect : MonoBehaviour
     [SerializeField] private float w;
     [SerializeField] private float h;
     public GridController _GC;
+    public MapManager _MM;
     public CustomTileClass[,] tilesCopy;
 
 
@@ -16,6 +17,7 @@ public class GasEffect : MonoBehaviour
         w=transform.localScale.x;
         h=transform.localScale.y;
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
+        _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
     }
 
     void Start(){
@@ -33,13 +35,17 @@ public class GasEffect : MonoBehaviour
                 int j1=tileO.y+j-_GC.ogy;
 
                 //tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos, _GC.tiles[i1,j1].tileFadeEffect);
-
-                //condiciones a 0 de momento, hay que organizar la tabla
-                if(_GC.tiles[(i1),(j1)].GetTileEffect()==0 && _GC.tiles[(i1),(j1)].GetTileState()<5){
-
-                   _GC.tiles[(i1),(j1)].SetTileEffect(1);
-                   _GC.tiles[(i1),(j1)].SetTileFade(3); //3 por ejemplo
-                   //Cuando se tengan sprites de humo hacer SetTile en la capa de effectos
+                if(_GC.tiles[(i1),(j1)].GetTileState()<8){
+                    switch(_GC.tiles[(i1),(j1)].GetTileEffect()){
+                        case 0: _GC.tiles[(i1),(j1)].SetTileEffect(1); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
+                        case 1: _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
+                        case 2: _GC.tiles[(i1),(j1)].SetTileEffect(14); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
+                        case 3: _GC.tiles[(i1),(j1)].SetTileEffect(17); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
+                        case 5: _MM.SpreadFireEffect(i1,j1); break;
+                        case 6: _GC.tiles[(i1),(j1)].SetTileEffect(11); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
+                        case 7: _GC.tiles[(i1),(j1)].SetTileEffect(18); break;
+                        case 9:  _GC.tiles[(i1),(j1)].SetTileEffect(19); break;
+                    }
                 }
             }
         }

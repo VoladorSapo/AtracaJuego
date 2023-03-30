@@ -75,7 +75,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     print("icamefromalanddownunder");
                     print(-grid.WorldToCell(transform.position).y);
-                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
+                    //sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
                     if (nodes[0].pos.x > grid.WorldToCell(transform.position).x)
                     {
                         sprite.flipX = false;
