@@ -18,21 +18,7 @@ public class GasEffect : MonoBehaviour
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
     }
 
-    void Update(){
-        
-        /*Cuando se hagan los scripts con un script padre, este metodo se hace override*/
-
-        if(Input.GetKeyDown("e")){
-            print("bruh");
-            if(tilesCopy!=null){
-                for(int i=0; i<tilesCopy.GetLength(0); i++){
-                    for(int j=0; j<tilesCopy.GetLength(1); j++){
-                        print("Estaban guardadas las tiles: "+tilesCopy[i,j].tilePos.x+", "+tilesCopy[i,j].tilePos.y);
-                        _GC.tiles[tilesCopy[i,j].tilePos.x, tilesCopy[i,j].tilePos.y]=tilesCopy[i,j];
-                    }
-                }
-            }
-
+    void Start(){
         posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
         int filas=Mathf.RoundToInt(w/10); //w/tamaño tiles
         int columnas=Mathf.RoundToInt(h/10); //h/tamaño tiles
@@ -57,14 +43,17 @@ public class GasEffect : MonoBehaviour
                 }
             }
         }
-        
-
-        }
-
+        StartCoroutine(DestroyEffect(2));
     }
 
-    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
+    /*private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
         CustomTileClass n = new CustomTileClass(sprite, state, effect, pos, fade);
         return n;
+    }*/
+
+    IEnumerator DestroyEffect(float sec){
+        WaitForSeconds wfs=new WaitForSeconds(sec);
+        yield return wfs;
+        Destroy(this.gameObject);
     }
 }

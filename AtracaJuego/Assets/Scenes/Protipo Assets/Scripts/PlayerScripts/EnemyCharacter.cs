@@ -19,7 +19,7 @@ public class EnemyCharacter : PlayerBase
         {
             pos = new Vector3( Random.Range(GC.ogx, GC.tiles.GetLength(0)+GC.ogx), Random.Range(GC.ogy, GC.tiles.GetLength(1)+GC.ogy));
             
-            poswalkable = GC.isEmpty(pos,true);
+            poswalkable = GC.isEmpty(pos,true,0);
             
 
             i++;

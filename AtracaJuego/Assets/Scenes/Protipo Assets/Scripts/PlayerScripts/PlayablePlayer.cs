@@ -16,7 +16,7 @@ public class PlayablePlayer : PlayerBase
         {
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                if (GC.isEmpty(Camera.main.ScreenToWorldPoint(Input.mousePosition),true))
+                if (GC.isEmpty(Camera.main.ScreenToWorldPoint(Input.mousePosition),true,0))
                 {
                     Move(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 }

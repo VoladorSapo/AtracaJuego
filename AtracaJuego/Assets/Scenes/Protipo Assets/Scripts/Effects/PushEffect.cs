@@ -54,56 +54,13 @@ public class PushEffect : MonoBehaviour
                             }}
 
                             print(dist1+";"+dist0+";"+dist_);
+
                             if(hayGas){
-                            
-                            for(int j=0; j<distanceMoved; j++){
-
-                            if(_GC.tiles[x+(dist1-1)+1+j,y+1].GetTileState()<8){
-                            _GC.tiles[x+(dist1-1)+1+j,y+1].SetTileEffect(_GC.tiles[x+(dist1-1)+j,y+1].GetTileEffect());
-                            _GC.tiles[x+(dist1-1)+1+j,y+1].SetTileFade(_GC.tiles[x+(dist1-1)+j,y+1].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x+j+1,y+1].GetTileState()<8){
-                                    switch(_GC.tiles[x+j,y+1].GetTileEffect()){
-                                        case 1: _GC.tiles[x+j,y+1].SetTileEffect(0); _GC.tiles[x+j,y+1].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x+j,y+1].SetTileEffect(6); _GC.tiles[x+j,y+1].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x+j,y+1].SetTileEffect(2); _GC.tiles[x+j,y+1].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x+(dist0-1)+1+j,y].GetTileState()<8){
-                            _GC.tiles[x+(dist0-1)+1+j,y].SetTileEffect(_GC.tiles[x+(dist0-1)+j,y].GetTileEffect());
-                            _GC.tiles[x+(dist0-1)+1+j,y].SetTileFade(_GC.tiles[x+(dist0-1)+j,y].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x+j+1,y].GetTileState()<8){
-                                    switch(_GC.tiles[x+j,y].GetTileEffect()){
-                                        case 1: _GC.tiles[x+j,y].SetTileEffect(0); _GC.tiles[x+j,y].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x+j,y].SetTileEffect(6); _GC.tiles[x+j,y].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x+j,y].SetTileEffect(2); _GC.tiles[x+j,y].SetTileFade(0); break;
-                                    }
-                            }
-
-                            
-                            if(_GC.tiles[x+(dist_-1)+1+j,y-1].GetTileState()<8){
-                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileEffect(_GC.tiles[x+(dist_-1)+j,y-1].GetTileEffect());
-                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileFade(_GC.tiles[x+(dist_-1)+j,y-1].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x+j+1,y-1].GetTileState()<8){
-                                    switch(_GC.tiles[x+j,y-1].GetTileEffect()){
-                                        case 1: _GC.tiles[x+j,y-1].SetTileEffect(0); _GC.tiles[x+j,y-1].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x+j,y-1].SetTileEffect(6); _GC.tiles[x+j,y-1].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x+j,y-1].SetTileEffect(2); _GC.tiles[x+j,y-1].SetTileFade(0); break;
-                                    }
-                            }
-
-                            }
-                            
+                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,1));
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,1));
+                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,1));
                             }
                             
                             /*if hay objeto...*/
@@ -130,49 +87,11 @@ public class PushEffect : MonoBehaviour
 
                             print(dist1+";"+dist0+";"+dist_);
                             if(hayGas){
-
-                            
-                            for(int j=0; j<distanceMoved; j++){
-
-                            if(_GC.tiles[x-(dist1-1)-1-j,y+1].GetTileState()<8){
-                            _GC.tiles[x-(dist1-1)-1-j,y+1].SetTileStatsWith(_GC.tiles[x-(dist1-1)-j,y+1]);
-                            }
-                            if(_GC.tiles[x-j-1,y+1].GetTileState()<8){
-                                    switch(_GC.tiles[x-j,y+1].GetTileEffect()){
-                                        case 1: _GC.tiles[x-j,y+1].SetTileEffect(0); _GC.tiles[x-j,y+1].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x-j,y+1].SetTileEffect(6); _GC.tiles[x-j,y+1].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x-j,y+1].SetTileEffect(2); _GC.tiles[x-j,y+1].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x-(dist0-1)-1-j,y].GetTileState()<8){
-                            _GC.tiles[x-(dist0-1)-1-j,y].SetTileStatsWith(_GC.tiles[x-(dist0-1)-j,y]);
-                            }
-                            if(_GC.tiles[x-j-1,y].GetTileState()<8){
-                                    switch(_GC.tiles[x-j,y].GetTileEffect()){
-                                        case 1: _GC.tiles[x-j,y].SetTileEffect(0); _GC.tiles[x-j,y].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x-j,y].SetTileEffect(6); _GC.tiles[x-j,y].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x-j,y].SetTileEffect(2); _GC.tiles[x-j,y].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x-(dist_-1)-1-j,y-1].GetTileState()<8){
-                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileStatsWith(_GC.tiles[x+(dist_-1)+1+j,y-1]);
-                            }
-                            if(_GC.tiles[x-j-1,y-1].GetTileState()<8){
-                                    switch(_GC.tiles[x-j,y-1].GetTileEffect()){
-                                        case 1: _GC.tiles[x-j,y-1].SetTileEffect(0); _GC.tiles[x-j,y-1].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x-j,y-1].SetTileEffect(6); _GC.tiles[x-j,y-1].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x-j,y-1].SetTileEffect(2); _GC.tiles[x-j,y-1].SetTileFade(0); break;
-                                    }
-                            }
-
-                            }
-
+                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,2));
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,2));
+                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,2));
                             }
                             distance=auxDist;
                             break;
@@ -194,56 +113,11 @@ public class PushEffect : MonoBehaviour
 
                             print(dist1+";"+dist0+";"+dist_);
                             if(hayGas){
-
-                            
-                            for(int j=0; j<distanceMoved; j++){
-
-                            if(_GC.tiles[x+1,y+(dist1-1)+1+j].GetTileState()<8){
-                            _GC.tiles[x+1,y+(dist1-1)+1+j].SetTileEffect(_GC.tiles[x+1,y+(dist1-1)+j].GetTileEffect());
-                            _GC.tiles[x+1,y+(dist1-1)+1+j].SetTileFade(_GC.tiles[x+1,y+(dist1-1)+j].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x+1,y+j+1].GetTileState()<8){
-                                    switch(_GC.tiles[x+1,y+j].GetTileEffect()){
-                                        case 1: _GC.tiles[x+1,y+j].SetTileEffect(0); _GC.tiles[x+1,y+j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x+1,y+j].SetTileEffect(6); _GC.tiles[x+1,y+j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x+1,y+j].SetTileEffect(2); _GC.tiles[x+1,y+j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x,y+(dist0-1)+1+j].GetTileState()<8){
-                            _GC.tiles[x,y+(dist0-1)+1+j].SetTileEffect(_GC.tiles[x,y+(dist0-1)+j].GetTileEffect());
-                            _GC.tiles[x,y+(dist0-1)+1+j].SetTileFade(_GC.tiles[x,y+(dist0-1)+j].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x,y+j+1].GetTileState()<8){
-                                    switch(_GC.tiles[x,y+j].GetTileEffect()){
-                                        case 1: _GC.tiles[x,y+j].SetTileEffect(0); _GC.tiles[x,y+j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x,y+j].SetTileEffect(6); _GC.tiles[x,y+j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x,y+j].SetTileEffect(2); _GC.tiles[x,y+j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            
-                            if(_GC.tiles[x-1,y+(dist_-1)+1+j].GetTileState()<8){
-                            _GC.tiles[x-1,y+(dist_-1)+1+j].SetTileEffect(_GC.tiles[x-1,y+(dist_-1)+j].GetTileEffect());
-                            _GC.tiles[x-1,y+(dist_-1)+1+j].SetTileFade(_GC.tiles[x-1,y+(dist_-1)+j].GetTileFade());
-                            //Falta cambiar sprite
-                            }
-                            if(_GC.tiles[x-1,y+j+1].GetTileState()<8){
-                                    switch(_GC.tiles[x-1,y+j].GetTileEffect()){
-                                        case 1: _GC.tiles[x-1,y+j].SetTileEffect(0); _GC.tiles[x-1,y+j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x-1,y+j].SetTileEffect(6); _GC.tiles[x-1,y+j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x-1,y+j].SetTileEffect(2); _GC.tiles[x-1,y+j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            }
-
+                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,3));
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,3));
+                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,3));
                             }
                             distance=auxDist;
                             break;
@@ -263,56 +137,18 @@ public class PushEffect : MonoBehaviour
 
                             print(dist1+";"+dist0+";"+dist_);
                             if(hayGas){
-
-                            
-                            for(int j=0; j<distanceMoved; j++){
-
-                            if(_GC.tiles[x+1,y-(dist1-1)-1-j].GetTileState()<8){
-                            _GC.tiles[x+1,y-(dist1-1)-1-j].SetTileStatsWith(_GC.tiles[x+1,y-(dist1-1)-j]);
-                            }
-                            if(_GC.tiles[x+1,y-j-1].GetTileState()<8){
-                                    switch(_GC.tiles[x+1,y-j].GetTileEffect()){
-                                        case 1: _GC.tiles[x+1,y-j].SetTileEffect(0); _GC.tiles[x+1,y-j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x+1,y-j].SetTileEffect(6); _GC.tiles[x+1,y-j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x+1,y-j].SetTileEffect(2); _GC.tiles[x+1,y-j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x,y-(dist0-1)-1-j].GetTileState()<8){
-                            _GC.tiles[x,y-(dist0-1)-1-j].SetTileStatsWith(_GC.tiles[x,y-(dist0-1)-j]);
-                            }
-                            if(_GC.tiles[x,y-j-1].GetTileState()<8){
-                                    switch(_GC.tiles[x,y-j].GetTileEffect()){
-                                        case 1: _GC.tiles[x,y-j].SetTileEffect(0); _GC.tiles[x,y-j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x,y-j].SetTileEffect(6); _GC.tiles[x,y-j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x,y-j].SetTileEffect(2); _GC.tiles[x,y-j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            if(_GC.tiles[x-1,y-(dist_-1)-1-j].GetTileState()<8){
-                            _GC.tiles[x-1,y-(dist_-1)-1-j].SetTileStatsWith(_GC.tiles[x-1,y-(dist_-1)-j]);
-                            }
-                            if(_GC.tiles[x-1,y-j-1].GetTileState()<8){
-                                    switch(_GC.tiles[x-1,y-j].GetTileEffect()){
-                                        case 1: _GC.tiles[x-1,y-j].SetTileEffect(0); _GC.tiles[x-1,y-j].SetTileFade(0); break;
-                                        case 10:_GC.tiles[x-1,y-j].SetTileEffect(6); _GC.tiles[x-1,y-j].SetTileFade(0); break;
-                                        case 13:_GC.tiles[x-1,y-j].SetTileEffect(2); _GC.tiles[x-1,y-j].SetTileFade(0); break;
-                                    }
-                            }
-
-                            }
-
+                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,4));
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,3));
+                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,4));
                             }
                             break;
 
 
             }
 
-            StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+            //StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
     IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush, int dir){
@@ -362,7 +198,207 @@ public class PushEffect : MonoBehaviour
         }
     }
 
+    IEnumerator PushGas(float sec,int dist1,int dist0,int dist_,int x,int y, int dir){
+        WaitForSeconds wfs=new WaitForSeconds(sec);
+        switch(dir){
+        case 1:
+                            for(int j=0; j<distanceMoved; j++){
+                            
+                            if(_GC.tiles[x+1,y+1].GetTileState()<8){
+                            if(_GC.tiles[x+(dist1-1)+1+j,y+1].GetTileState()<8){
+                            _GC.tiles[x+(dist1-1)+1+j,y+1].SetTileEffect(_GC.tiles[x+(dist1-1)+j,y+1].GetTileEffect());
+                            _GC.tiles[x+(dist1-1)+1+j,y+1].SetTileFade(_GC.tiles[x+(dist1-1)+j,y+1].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x+j+1,y+1].GetTileState()<8){
+                                    switch(_GC.tiles[x+j,y+1].GetTileEffect()){
+                                        case 1: _GC.tiles[x+j,y+1].SetTileEffect(0); _GC.tiles[x+j,y+1].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x+j,y+1].SetTileEffect(6); _GC.tiles[x+j,y+1].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x+j,y+1].SetTileEffect(2); _GC.tiles[x+j,y+1].SetTileFade(0); break;
+                                    }
+                            }
+                            
+                            }
+
+                            if(_GC.tiles[x+1,y].GetTileState()<8){
+                            if(_GC.tiles[x+(dist0-1)+1+j,y].GetTileState()<8){
+                            _GC.tiles[x+(dist0-1)+1+j,y].SetTileEffect(_GC.tiles[x+(dist0-1)+j,y].GetTileEffect());
+                            _GC.tiles[x+(dist0-1)+1+j,y].SetTileFade(_GC.tiles[x+(dist0-1)+j,y].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x+j+1,y].GetTileState()<8){
+                                    switch(_GC.tiles[x+j,y].GetTileEffect()){
+                                        case 1: _GC.tiles[x+j,y].SetTileEffect(0); _GC.tiles[x+j,y].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x+j,y].SetTileEffect(6); _GC.tiles[x+j,y].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x+j,y].SetTileEffect(2); _GC.tiles[x+j,y].SetTileFade(0); break;
+                                    }
+                            }
+                            
+                            }
+                            
+                            if(_GC.tiles[x+1,y-1].GetTileState()<8){
+                            if(_GC.tiles[x+(dist_-1)+1+j,y-1].GetTileState()<8){
+                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileEffect(_GC.tiles[x+(dist_-1)+j,y-1].GetTileEffect());
+                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileFade(_GC.tiles[x+(dist_-1)+j,y-1].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x+j+1,y-1].GetTileState()<8){
+                                    switch(_GC.tiles[x+j,y-1].GetTileEffect()){
+                                        case 1: _GC.tiles[x+j,y-1].SetTileEffect(0); _GC.tiles[x+j,y-1].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x+j,y-1].SetTileEffect(6); _GC.tiles[x+j,y-1].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x+j,y-1].SetTileEffect(2); _GC.tiles[x+j,y-1].SetTileFade(0); break;
+                                    }
+                            }
+                            
+                            }
+                            yield return wfs;   
+                            }
+                            break;
+        case 2:
+                            for(int j=0; j<distanceMoved; j++){
+                            
+                            if(_GC.tiles[x-1,y+1].GetTileState()<8){
+                            if(_GC.tiles[x-(dist1-1)-1-j,y+1].GetTileState()<8){
+                            _GC.tiles[x-(dist1-1)-1-j,y+1].SetTileStatsWith(_GC.tiles[x-(dist1-1)-j,y+1]);
+                            }
+                            if(_GC.tiles[x-j-1,y+1].GetTileState()<8){
+                                    switch(_GC.tiles[x-j,y+1].GetTileEffect()){
+                                        case 1: _GC.tiles[x-j,y+1].SetTileEffect(0); _GC.tiles[x-j,y+1].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x-j,y+1].SetTileEffect(6); _GC.tiles[x-j,y+1].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x-j,y+1].SetTileEffect(2); _GC.tiles[x-j,y+1].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x-1,y].GetTileState()<8){
+                            if(_GC.tiles[x-(dist0-1)-1-j,y].GetTileState()<8){
+                            _GC.tiles[x-(dist0-1)-1-j,y].SetTileStatsWith(_GC.tiles[x-(dist0-1)-j,y]);
+                            }
+                            if(_GC.tiles[x-j-1,y].GetTileState()<8){
+                                    switch(_GC.tiles[x-j,y].GetTileEffect()){
+                                        case 1: _GC.tiles[x-j,y].SetTileEffect(0); _GC.tiles[x-j,y].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x-j,y].SetTileEffect(6); _GC.tiles[x-j,y].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x-j,y].SetTileEffect(2); _GC.tiles[x-j,y].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x-1,y-1].GetTileState()<8){
+                            if(_GC.tiles[x-(dist_-1)-1-j,y-1].GetTileState()<8){
+                            _GC.tiles[x+(dist_-1)+1+j,y-1].SetTileStatsWith(_GC.tiles[x+(dist_-1)+1+j,y-1]);
+                            }
+                            if(_GC.tiles[x-j-1,y-1].GetTileState()<8){
+                                    switch(_GC.tiles[x-j,y-1].GetTileEffect()){
+                                        case 1: _GC.tiles[x-j,y-1].SetTileEffect(0); _GC.tiles[x-j,y-1].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x-j,y-1].SetTileEffect(6); _GC.tiles[x-j,y-1].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x-j,y-1].SetTileEffect(2); _GC.tiles[x-j,y-1].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+                            yield return wfs; 
+                            }
+        
+                            break;
+        case 3:             
+                            for(int j=0; j<distanceMoved; j++){
+                            
+                            if(_GC.tiles[x+1,y+1].GetTileState()<8){
+                            if(_GC.tiles[x+1,y+(dist1-1)+1+j].GetTileState()<8){
+                            _GC.tiles[x+1,y+(dist1-1)+1+j].SetTileEffect(_GC.tiles[x+1,y+(dist1-1)+j].GetTileEffect());
+                            _GC.tiles[x+1,y+(dist1-1)+1+j].SetTileFade(_GC.tiles[x+1,y+(dist1-1)+j].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x+1,y+j+1].GetTileState()<8){
+                                    switch(_GC.tiles[x+1,y+j].GetTileEffect()){
+                                        case 1: _GC.tiles[x+1,y+j].SetTileEffect(0); _GC.tiles[x+1,y+j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x+1,y+j].SetTileEffect(6); _GC.tiles[x+1,y+j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x+1,y+j].SetTileEffect(2); _GC.tiles[x+1,y+j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x,y+1].GetTileState()<8){
+                            if(_GC.tiles[x,y+(dist0-1)+1+j].GetTileState()<8){
+                            _GC.tiles[x,y+(dist0-1)+1+j].SetTileEffect(_GC.tiles[x,y+(dist0-1)+j].GetTileEffect());
+                            _GC.tiles[x,y+(dist0-1)+1+j].SetTileFade(_GC.tiles[x,y+(dist0-1)+j].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x,y+j+1].GetTileState()<8){
+                                    switch(_GC.tiles[x,y+j].GetTileEffect()){
+                                        case 1: _GC.tiles[x,y+j].SetTileEffect(0); _GC.tiles[x,y+j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x,y+j].SetTileEffect(6); _GC.tiles[x,y+j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x,y+j].SetTileEffect(2); _GC.tiles[x,y+j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x-1,y+1].GetTileState()<8){
+                            if(_GC.tiles[x-1,y+(dist_-1)+1+j].GetTileState()<8){
+                            _GC.tiles[x-1,y+(dist_-1)+1+j].SetTileEffect(_GC.tiles[x-1,y+(dist_-1)+j].GetTileEffect());
+                            _GC.tiles[x-1,y+(dist_-1)+1+j].SetTileFade(_GC.tiles[x-1,y+(dist_-1)+j].GetTileFade());
+                            //Falta cambiar sprite
+                            }
+                            if(_GC.tiles[x-1,y+j+1].GetTileState()<8){
+                                    switch(_GC.tiles[x-1,y+j].GetTileEffect()){
+                                        case 1: _GC.tiles[x-1,y+j].SetTileEffect(0); _GC.tiles[x-1,y+j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x-1,y+j].SetTileEffect(6); _GC.tiles[x-1,y+j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x-1,y+j].SetTileEffect(2); _GC.tiles[x-1,y+j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+                            yield return wfs;
+                            }
+                            break;
+        case 4:             
+                            for(int j=0; j<distanceMoved; j++){
+                            
+                            if(_GC.tiles[x+1,y-1].GetTileState()<8){
+                            if(_GC.tiles[x+1,y-(dist1-1)-1-j].GetTileState()<8){
+                            _GC.tiles[x+1,y-(dist1-1)-1-j].SetTileStatsWith(_GC.tiles[x+1,y-(dist1-1)-j]);
+                            }
+                            if(_GC.tiles[x+1,y-j-1].GetTileState()<8){
+                                    switch(_GC.tiles[x+1,y-j].GetTileEffect()){
+                                        case 1: _GC.tiles[x+1,y-j].SetTileEffect(0); _GC.tiles[x+1,y-j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x+1,y-j].SetTileEffect(6); _GC.tiles[x+1,y-j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x+1,y-j].SetTileEffect(2); _GC.tiles[x+1,y-j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x,y-1].GetTileState()<8){
+                            if(_GC.tiles[x,y-(dist0-1)-1-j].GetTileState()<8){
+                            _GC.tiles[x,y-(dist0-1)-1-j].SetTileStatsWith(_GC.tiles[x,y-(dist0-1)-j]);
+                            }
+                            if(_GC.tiles[x,y-j-1].GetTileState()<8){
+                                    switch(_GC.tiles[x,y-j].GetTileEffect()){
+                                        case 1: _GC.tiles[x,y-j].SetTileEffect(0); _GC.tiles[x,y-j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x,y-j].SetTileEffect(6); _GC.tiles[x,y-j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x,y-j].SetTileEffect(2); _GC.tiles[x,y-j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+
+                            if(_GC.tiles[x-1,y-1].GetTileState()<8){
+                            if(_GC.tiles[x-1,y-(dist_-1)-1-j].GetTileState()<8){
+                            _GC.tiles[x-1,y-(dist_-1)-1-j].SetTileStatsWith(_GC.tiles[x-1,y-(dist_-1)-j]);
+                            }
+                            if(_GC.tiles[x-1,y-j-1].GetTileState()<8){
+                                    switch(_GC.tiles[x-1,y-j].GetTileEffect()){
+                                        case 1: _GC.tiles[x-1,y-j].SetTileEffect(0); _GC.tiles[x-1,y-j].SetTileFade(0); break;
+                                        case 10:_GC.tiles[x-1,y-j].SetTileEffect(6); _GC.tiles[x-1,y-j].SetTileFade(0); break;
+                                        case 13:_GC.tiles[x-1,y-j].SetTileEffect(2); _GC.tiles[x-1,y-j].SetTileFade(0); break;
+                                    }
+                            }
+                            }
+                                yield return wfs;
+                            }
+                            break;
+        }
+    }
     
+    private void PushGas(){
+
+    }
     IEnumerator DestroyEffect(float sec){
         WaitForSeconds wfs=new WaitForSeconds(sec);
         yield return wfs;

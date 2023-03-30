@@ -16,10 +16,12 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tilemap Top1 = null;
     [SerializeField] private Tilemap ground = null;
     [SerializeField] private Tilemap canMove = null;
+    [SerializeField] private Tilemap CanAttackMap = null;
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
     [SerializeField] private Tile canMoveTile = null;
+    [SerializeField] private Tile attackTile=null;
     public pathFinder _path = null;
     public int ogx, ogy;
     public int distanceRun;
@@ -31,6 +33,7 @@ public class GridController : MonoBehaviour
 
     private Vector3Int previousMousePos = new Vector3Int();
     public Vector3Int[] ReachablePos; //Basicamente la lista de tiles que puedes seleccionar. Puede ser hasta donde te mueves o donde puedes hacer un ataque
+    public Vector3Int[] AttackPos;
     public bool freeCursor; //El cursor solo esta limitado cuando tienen que elegir una posicion. En otros casos lo puedes mover donde sea.
     public CustomTileClass[,] tiles;
     public TileSpriteTable tileTable;
@@ -72,7 +75,7 @@ public class GridController : MonoBehaviour
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
                 
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
-                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false)); //Lo dejo así de forma Temporal 
+                nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false, 1)); //Lo dejo así de forma Temporal 
             }
 
         }
@@ -149,7 +152,7 @@ public class GridController : MonoBehaviour
         return camino;
     }
 
-    Vector3Int GetMousePosition()
+    public Vector3Int GetMousePosition()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
@@ -174,18 +177,59 @@ public class GridController : MonoBehaviour
         freeCursor = false;
 
     }
+
+    //
+    public List<Node> setAttackPos(Vector3 pos, int range, bool isDist, bool showTiles, bool team, int playerMode, bool reset)
+    {
+        List<Node> attackableNodes;
+        if(!reset){
+        Vector3Int convertedPos = grid.WorldToCell(pos);
+        attackableNodes = _path.nodosEnAtaque(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, range, isDist, team, playerMode);
+        AttackPos = new Vector3Int[attackableNodes.Count];
+        CanAttackMap.ClearAllTiles();
+        print("jajaja");
+        for (int i = 0; i < attackableNodes.Count; i++)
+        {
+            AttackPos[i] = attackableNodes[i].pos;
+            if (showTiles)
+            {
+                CanAttackMap.SetTile(AttackPos[i], attackTile);
+            }
+        }
+        CanAttackMap.RefreshAllTiles();
+        freeCursor = false;
+        }else{CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); print("kok"); attackableNodes=null;}
+        return attackableNodes;
+    }
+
+    //
    /* public void cvv(Vector3Int pos){
                 List<Node> reachableNodes = _path.nodosEnDistancia(nodos[pos.x - ogx, pos.y - ogy], nodos, tiles, ogx, ogy, tiles[pos.x - ogx, pos.y - ogy].GetTileEffect(), false, false);
 
     }*/
-public bool isEmpty(Vector3 position, bool wantMove) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
+public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve para diferenciar cuando te quieres mover a la tile a cuando quieres saber si es accesible
     {
-       
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove)|| tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
+        //mode=1 Funciones para moverse
+        //mode=2 Funciones para atacar
+        bool empty=true;
+        Vector3Int posInted;
+        switch(mode){
+        case 1:
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 5 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) || tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
         {
-            return false;
+            empty=false;
+        }else{empty=true;} break;
+
+        case 2:
+        posInted= new Vector3Int(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), 0);
+        if (AttackPos.Contains(posInted))
+        {
+            empty=false;
+        }else{empty=true;} break;
         }
-        return true;
+
+        return empty;
+       
         /*if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove)|| tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
         {
             return false;

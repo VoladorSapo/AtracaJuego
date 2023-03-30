@@ -16,7 +16,9 @@ public class PlayerBase : MonoBehaviour
     protected bool team;
     protected bool moving;
     private bool hasTurn;
-   public Animator animator;
+
+    public int Cooldowns=0;
+    public Animator animator;
     public SpriteRenderer sprite;
     public int teamNumb;//El numero del jugador dentro del equipo
     [SerializeField] protected bool alive;
@@ -26,6 +28,9 @@ public class PlayerBase : MonoBehaviour
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
+    void Awake(){
+
+    }
     void Start()
     {
         print("madremiawilliam" );
@@ -106,20 +111,6 @@ public class PlayerBase : MonoBehaviour
             moving = true;
             //turn = false;
         }
-
-        int newX = Mathf.RoundToInt(this.transform.position.x) - GC.ogx;
-        int newY = Mathf.RoundToInt(this.transform.position.y) - GC.ogy;
-        
-
-        
-        /*switch(this.name){
-            case "Player1": GC.tiles[newX,newY].SetPlayerOnTop(name); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].SetPlayerOnTop("null");} prevX[i]=newX; prevY[i]=newY; break;
-            case "Player2": ChangeOnTop(newX, newY, "p2", 1); break;
-            case "Player3": ChangeOnTop(newX, newY, "p3", 2); break;
-            case "Player4": ChangeOnTop(newX, newY, "p4", 3); break;
-            case "Player5": ChangeOnTop(newX, newY, "p5", 4); break;
-        }*/
-        //Hablar con Diego
         
     }
 

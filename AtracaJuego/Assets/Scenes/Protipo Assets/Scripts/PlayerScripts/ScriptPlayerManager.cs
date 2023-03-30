@@ -16,6 +16,7 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void StartTurns()
     {
+
         if (players.Count <= 0)
         {
             _turn.startRound();
@@ -26,6 +27,7 @@ public class ScriptPlayerManager : MonoBehaviour
             {
                 players[i].setTurn(false);
                 players[i].teamNumb = i;
+                
             }
             currentPlayer = 0;
             players[0].startTurn();

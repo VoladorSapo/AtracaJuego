@@ -60,7 +60,7 @@ public class pathFinder : MonoBehaviour
         List<Node> list = new List<Node>();
         if(nodo.pos.x - ogx + 1 < nodos.GetLength(0))
         {
-            list.Add(nodos[nodo.pos.x - ogx + 1, nodo.pos.y - ogy]);
+            list.Add(nodos[nodo.pos.x - ogx + 1, nodo.pos.y - ogy] );
         }
         if (nodo.pos.x -ogx - 1 >= 0)
         {
@@ -95,7 +95,7 @@ public class pathFinder : MonoBehaviour
                 List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
                 for (int i = 0; i < supportList.Count; i++)
                 {
-                    bool shouldAdd = isDist ? GC.isEmpty(GC.grid.CellToWorld(supportList[i].pos),false) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    bool shouldAdd = isDist ? GC.isEmpty(GC.grid.CellToWorld(supportList[i].pos),false,0) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
                     //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
                     if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
                         newBorderList.Add(supportList[i]);
@@ -112,6 +112,62 @@ public class pathFinder : MonoBehaviour
         }
         return nearList;
     }
+
+    public List<Node> nodosEnAtaque(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist,bool team, int playerMode)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
+    {
+        nearList = new List<Node>();
+        List<Node> borderList = new List<Node>();
+        nearList.Add(nodo);
+        borderList.Add(nodo);
+        int vueltas = 0;
+        int tilesoftype = 0;
+        bool Continue = isDist ? vueltas < var : tilesoftype <= 0;
+        
+        switch(playerMode){
+        case 1:
+        while (Continue)
+        {
+            tilesoftype = 0;
+            List<Node> newBorderList = new List<Node>();
+            foreach (Node nodoBorde in borderList)
+            {
+                List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
+                for (int i = 0; i < supportList.Count; i++)
+                {
+                    bool shouldAdd = isDist ? GC.isEmpty(GC.grid.CellToWorld(supportList[i].pos),false,0) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
+                    if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
+                        newBorderList.Add(supportList[i]);
+                        
+                        //print(supportList[i].pos);
+                        tilesoftype++;
+                    }
+                }
+            }
+            nearList.AddRange(newBorderList);
+            borderList.Clear();
+            borderList.AddRange(newBorderList);
+            vueltas++;
+            Continue = isDist ? vueltas < var : tilesoftype <= 0;
+        }
+        
+        nearList.Remove(nodo); break;
+        
+        case 2:
+        Vector3Int posBL=nodo.pos-new Vector3Int(2,2,0); //Tamaño del prefab/2
+        for(int i=0; i<5; i++){
+            for(int j=0; j<5; j++){
+                if(GC.tiles[posBL.x - ogx +i, posBL.y - ogy +j].GetTileState()<8){
+                nearList.Add(nodos[posBL.x - ogx + i, posBL.y - ogy + j]);
+                }
+            }
+        }
+
+        break;
+        }
+        return nearList;
+    }
+
     private List<Node> fullPath(Node endNode)
     {
         List<Node> list = new List<Node>();
