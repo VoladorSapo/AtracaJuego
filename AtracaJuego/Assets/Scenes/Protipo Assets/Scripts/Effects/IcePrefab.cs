@@ -20,18 +20,13 @@ public class IcePrefab : MonoBehaviour
     {
         posGrid=_GC.grid.WorldToCell(transform.position);
         FreezeTile();
-        if(Input.GetKeyDown("e")){
-            print("e");
-            StartCoroutine(Melting(0.25f,posGrid));
-            StartCoroutine(DestroyEffect(2.0f));
-        }
     }
 
     public void FreezeTile(){
         if(_GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].GetTileState()==0){
-            _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].SetTileEffect(6); _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].SetTileFade(5,2); //2 de momento
+            _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].SetTileEffect(6); _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].SetTileFade(2); //2 de momento
         }else if(_GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].GetTileState()==5){
-            _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].SetTileStats(10,4,5,5,2);
+            _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].addEffect(4,false);
         }
     }
     public void MeltCube(){
@@ -41,16 +36,11 @@ public class IcePrefab : MonoBehaviour
 
     }
 
-    private void onCollisionEnter2D(Collider2D other){
-        Debug.Log("aj");
-    }
-    private void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("ch");
-        switch (other.name)
-        {
-            case "FirePrefab":
-                StartCoroutine(Melting(0.25f, posGrid));
-                StartCoroutine(DestroyEffect(2.0f)); break;
+    void OnTriggerEnter2D(Collider2D other){
+
+        switch(other.name){
+            case "FirePrefab(Clone)":  StartCoroutine(Melting(0.25f,posGrid));
+                                StartCoroutine(DestroyEffect(2.0f)); break;
         }
     }
 

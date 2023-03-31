@@ -14,7 +14,6 @@ public class FireEffect : MonoBehaviour
     }
     void Start()
     {
-        //Este código va en start pero por razones de testeo de momento lo pongo aquí
         
         Vector3Int posInted= _GC.grid.WorldToCell(transform.position);
         int x=posInted.x-_GC.ogx;
@@ -23,8 +22,7 @@ public class FireEffect : MonoBehaviour
         print(x+","+y);
         if(_GC.tiles[x,y].GetTileEffect()==1){
             print("f");
-            _GC.tiles[x,y].SetTileStats(2,8,2,1,1); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
-            _MM.SpreadFireEffect(x,y);
+            _GC.tiles[x,y].addEffect(2,true); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
         }
 
         //StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion

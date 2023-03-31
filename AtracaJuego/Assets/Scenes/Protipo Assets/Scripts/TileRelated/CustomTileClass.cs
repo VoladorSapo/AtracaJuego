@@ -9,8 +9,8 @@ public class CustomTileClass
     public int tileState;
     public int tileEffect;
     public PlayerBase player;
-    //public string playerOnTop;
-    public int[] tileFadeEffect; //i: 0=gas, 1=mojado, 2=gasolina, 3=deadlygas, 4=fuego, 5=hielo, 6=electricwet, 7=electricgas, 8=iceSpiked
+    public MapManager _MM;
+    public int tileFadeEffect; //i: 0=gas, 1=mojado, 2=gasolina, 3=deadlygas, 4=fuego, 5=hielo, 6=electricwet, 7=electricgas, 8=iceSpiked
 
 
     public CustomTileClass(int SpriId, int state, int effect, Vector3Int pos, int fade){
@@ -18,11 +18,12 @@ public class CustomTileClass
         tileSpriteId=SpriId;
         tileState=state;
         tileEffect=effect;
-        tileFadeEffect=new int[10];
+        _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
+        tileFadeEffect=fade;
     }
 
     public void DisplayStats(){
-        Debug.Log("La Tile tiene el sprite "+tileSpriteId+" y el estado "+tileState+" con el efecto "+tileEffect);
+        Debug.Log("La Tile tiene el sprite "+tileSpriteId+" y el estado "+tileState+" con el efecto "+tileEffect+" y "+tileFadeEffect);
         Debug.Log("Su pos es: "+tilePos);
         Debug.Log(GetPlayer());
         if(player!=null){
@@ -46,8 +47,8 @@ public class CustomTileClass
         return tilePos;
     }
 
-    public int GetTileFade(int i){
-        return tileFadeEffect[i];
+    public int GetTileFade(){
+        return tileFadeEffect;
     }
 
     public PlayerBase GetPlayer(){
@@ -58,11 +59,11 @@ public class CustomTileClass
     //    return playerOnTop;
     //}
 
-    public void SetTileStats(int sprite, int state, int effect, int i, int fade){
+    public void SetTileStats(int sprite, int state, int effect, int fade){
         tileSpriteId=sprite;
         tileState=state;
         tileEffect=effect;
-        tileFadeEffect[i]=fade;
+        tileFadeEffect=fade;
     }
 
     public void SetTileStatsWith(CustomTileClass n){
@@ -84,19 +85,12 @@ public class CustomTileClass
         tileEffect=effect;
     }
 
-    public void SetTileFade(int i, int fade){
-        tileFadeEffect[i]=fade;
+    public void SetTileFade(int fade){
+        tileFadeEffect=fade;
     }
 
     public void LowerFade(){
-        for(int i=0; i<tileFadeEffect.Length; i++){
-        if(tileFadeEffect[i]>0){
-        tileFadeEffect[i]--; //Cuando llegue a 0 el effecto se pone a 0
-        if(tileFadeEffect[i]==0){
-            //switch con todos los casos del fade
-        }
-        }
-        }
+        tileFadeEffect--;
     }
 
     //public void SetPlayerOnTop(string player){
@@ -115,20 +109,69 @@ public class CustomTileClass
         }
     }
 
-    public void addEffect(int effect){
+    public void addEffect(int effect, bool bypass){
+        //Faltan implementar cambios de sprites y FadeEffects
 
         //Implmentar combinaciones del excel aqui
-        switch(effect){
+        switch(effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec
             case 0:
+                    Debug.Log("0"); tileEffect=0; tileFadeEffect=0; break;
             case 1:
+                    if(tileState<8){
+                    switch(tileEffect){
+                        case 0: tileEffect=1; break;
+                        //case 2: cambio de sprite a nube mojada pero con propiedades nulas?
+                        //case 3: cambio de sprite pero propiedades iguales que un gas normal?
+                        case 4: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,1,2); break;
+                        case 5: tileEffect=3; break;
+                        case 6: tileEffect=7; break;
+                        case 12: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,2); break;
+                        case 13: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,3,2); break;
+                    }} break;
             case 2:
+                    if(tileEffect!=4 && tileEffect!=12 && tileEffect!=13 || bypass){
+                    switch(tileEffect){
+                        case 1: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,1,2); break;
+                        case 2: tileEffect=0; break;
+                        case 3: tileEffect=12; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,2); break; 
+                        case 5: tileEffect=2; break;
+                        case 6: tileEffect=0; break;
+                        case 7: tileEffect=0; break; //Explota el gas y hace mas daño //_MM.Explode()
+                        case 8: tileEffect=1; break;
+                        case 9: tileEffect=3; break;
+                        case 10: tileEffect=3; break;
+                        case 11: tileEffect=13; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,3,2); break;
+                        case 14: tileEffect=11; break;
+                        case 15: tileEffect=11; break;
+                    }} break;
             case 3:
+                    switch(tileEffect){
+                        case 5: tileEffect=8; break;
+                        case 9: tileEffect=10; break;
+                        case 14: tileEffect=15; break;
+                    } break;
             case 4:
+                    switch(tileEffect){
+                        case 0: tileEffect=5; break;
+                        case 1: tileEffect=3; break;
+                        case 2: tileEffect=5; break;
+                        case 3: tileEffect=9; break;
+                        case 4: tileEffect=2; break;
+                        case 6: tileEffect=5; break;
+                        case 7: tileEffect=6; break;
+                        case 11: tileEffect=14; break;
+                    } break;
             case 5:
-            case 6:
-            case 7:
-            case 8: break;
+                    if(tileEffect==1 && tileEffect==2 && tileEffect==3 || bypass){
+                    switch(tileEffect){
+                        case 1: tileEffect=7; break;
+                        case 2: tileEffect=6; break; //_MM.SpreadElec(tilePos.x,tilePos.y);
+                        case 3: tileEffect=11; break;
+                        //case 6: resetea el fade?
+                        //case 7: resetea el fade?
+                    }}break;
+                    }
         }
     }
 
-}
+

@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877809182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4cb452b56f1c034982263b355ccc78e, type: 3}
   m_Name: 
@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877809182}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e909efacadab5f74abb0dc284564ff02, type: 3}
   m_Name: 
@@ -4498,8 +4498,8 @@ Tilemap:
   - first: {x: 0, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6917,16 +6917,16 @@ Tilemap:
       m_AllTileFlags: 2147483649
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 284
+  - m_RefCount: 285
     m_Data: {fileID: 11400000, guid: 6f71d72bebabc4e488d5c5189d5e1cf1, type: 2}
-  - m_RefCount: 46
+  - m_RefCount: 45
     m_Data: {fileID: 11400000, guid: e5b077d94997140478b224f57e43e725, type: 2}
   - m_RefCount: 61
     m_Data: {fileID: 11400000, guid: 183975fac2751f647b27d1aab47ce534, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 284
+  - m_RefCount: 285
     m_Data: {fileID: 1847519609, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
-  - m_RefCount: 46
+  - m_RefCount: 45
     m_Data: {fileID: -1858351124, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
   - m_RefCount: 61
     m_Data: {fileID: -1129575271, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
@@ -8051,7 +8051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308625642246918409, guid: f17f5877e3fc4364fa429eccb2152a74, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6061833641692751692, guid: f17f5877e3fc4364fa429eccb2152a74, type: 3}
       propertyPath: m_IsTrigger

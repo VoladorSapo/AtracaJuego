@@ -22,31 +22,18 @@ public class GasEffect : MonoBehaviour
 
     void Start(){
         posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
-        int filas=Mathf.RoundToInt(w/10); //w/tamaño tiles
-        int columnas=Mathf.RoundToInt(h/10); //h/tamaño tiles
+        int filas=Mathf.RoundToInt(w/10); // w/tamaño tiles
+        int columnas=Mathf.RoundToInt(h/10); // h/tamaño tiles
         Vector3Int tileO = _GC.grid.WorldToCell(posBL);
         print((tileO.x-_GC.ogx)+" y "+(tileO.y-_GC.ogy));
         print(filas);
-        //tilesCopy= new CustomTileClass[filas,columnas];
+
 
         for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
-
-                //tilesCopy[i,j]=Clone(_GC.tiles[i1,j1].tileSpriteId,_GC.tiles[i1,j1].tileState,_GC.tiles[i1,j1].tileEffect,_GC.tiles[i1,j1].tilePos, _GC.tiles[i1,j1].tileFadeEffect);
-                if(_GC.tiles[(i1),(j1)].GetTileState()<8){
-                    switch(_GC.tiles[(i1),(j1)].GetTileEffect()){
-                        case 0: _GC.tiles[(i1),(j1)].SetTileEffect(1); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
-                        case 1: _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
-                        case 2: _GC.tiles[(i1),(j1)].SetTileEffect(14); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
-                        case 3: _GC.tiles[(i1),(j1)].SetTileEffect(17); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
-                        case 5: _MM.SpreadFireEffect(i1,j1); break;
-                        case 6: _GC.tiles[(i1),(j1)].SetTileEffect(11); _GC.tiles[(i1),(j1)].SetTileFade(0,3); break;
-                        case 7: _GC.tiles[(i1),(j1)].SetTileEffect(18); break;
-                        case 9:  _GC.tiles[(i1),(j1)].SetTileEffect(19); break;
-                    }
-                }
+                _GC.tiles[i1,j1].addEffect(1,false);
             }
         }
         StartCoroutine(DestroyEffect(2));
