@@ -22,6 +22,10 @@ public class tunController : MonoBehaviour
     public void startRound()
     {
         currentManager = -1;
+        for (int i = 0; i < Managers.Length; i++)
+        {
+            Managers[i].setGame();
+        }
         startTurns();
     }
 

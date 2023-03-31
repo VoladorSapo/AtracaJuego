@@ -14,6 +14,15 @@ public class ScriptPlayerManager : MonoBehaviour
     void Update(){
 
     }
+    public void setGame()
+    {
+        for(int i = 0; i < players.Count; i++)
+            {
+            players[i].setGame();
+            players[i].teamNumb = i;
+
+        }
+    }
     public void StartTurns()
     {
 
