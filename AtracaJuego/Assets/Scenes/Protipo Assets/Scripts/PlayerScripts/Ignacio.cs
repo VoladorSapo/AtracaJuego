@@ -18,15 +18,15 @@ public class Ignacio : MonoBehaviour
 
     void Start()
     {
-    
+        Vector3Int posGrid = _GC.grid.WorldToCell(transform.position);
+       //_GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].setPlayer(this); //Hacer esto para inicializar
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(1)){
-            if(AttackMode){AttackMode=false; _GC.setAttackPos(transform.position, 1, true, true, false, 1, true);}
-            else{AttackMode=true;  _GC.setAttackPos(transform.position, 1, true, true, false, 1, false);}
+            ChangeMapShown();
         }
 
         if(Input.GetMouseButtonDown(0) && FireCooldown==0 && _SPM.currentPlayer==0 && AttackMode){
@@ -38,5 +38,10 @@ public class Ignacio : MonoBehaviour
                 //_SPM.CanAttack[0]=false;
             }
         }
-        }
+    }
+
+    private void ChangeMapShown(){
+            if(AttackMode){AttackMode=false; _GC.setAttackPos(transform.position, 1, true, true, false, 1, true); _GC.setReachablePos(transform.position, 5, true,true,false,false);}
+            else{AttackMode=true; _GC.setAttackPos(transform.position, 1, true, true, false, 1, false); _GC.setReachablePos(transform.position, 5, true,true,true,true);}
+    }
     }

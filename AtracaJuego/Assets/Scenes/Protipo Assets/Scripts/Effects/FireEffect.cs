@@ -18,14 +18,11 @@ public class FireEffect : MonoBehaviour
         Vector3Int posInted= _GC.grid.WorldToCell(transform.position);
         int x=posInted.x-_GC.ogx;
         int y=posInted.y-_GC.ogy;
-            
-        print(x+","+y);
-        if(_GC.tiles[x,y].GetTileEffect()==1){
-            print("f");
-            _GC.tiles[x,y].addEffect(2,true); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
-        }
+        print(x+","+y); 
+        _GC.tiles[x,y].addEffect(2,true); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
+        if(_GC.tiles[x,y].player!=null){_GC.tiles[x,y].player.loseHealth(1);}
 
-        //StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+        StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
     IEnumerator DestroyEffect(float sec){

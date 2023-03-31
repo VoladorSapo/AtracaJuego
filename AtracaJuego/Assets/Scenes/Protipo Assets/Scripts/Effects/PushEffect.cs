@@ -148,7 +148,7 @@ public class PushEffect : MonoBehaviour
 
             }
 
-            //StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+            StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
     IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush, int dir){

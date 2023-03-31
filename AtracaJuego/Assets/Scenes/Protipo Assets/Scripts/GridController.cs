@@ -10,13 +10,12 @@ public class GridController : MonoBehaviour
     public Grid grid;
     public MapManager _mapManager; //Para obtener referencias de las tiles y sus propiedades
     RaycastHit2D objectHit;
-
     [SerializeField] private Tilemap interactiveMap = null;
     [SerializeField] private Tilemap pathMap = null;
     [SerializeField] private Tilemap Top1 = null;
     [SerializeField] private Tilemap ground = null;
-    [SerializeField] private Tilemap canMove = null;
-    [SerializeField] private Tilemap CanAttackMap = null;
+    public Tilemap canMove = null;
+    public Tilemap CanAttackMap = null;
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
@@ -147,16 +146,22 @@ public class GridController : MonoBehaviour
         return null;
         }
 
+    //Cambio visual para el mapa de tiles entre mover o atacar
+    public void changeAttackOrMove(bool displayMode){ //Falso, mover. True, atacar
+        if(displayMode){CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles();}else{canMove.ClearAllTiles(); canMove.RefreshAllTiles();}
+    }
     public Vector3Int GetMousePosition()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
     }
 
-    public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles, bool team)
-    {
+    public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles, bool team, bool reset)
+    {   
+        List<Node> reachableNodes;
+        if(!reset){
         Vector3Int convertedPos = grid.WorldToCell(pos);
-        List<Node> reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
+        reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
         ReachablePos = new Vector3Int[reachableNodes.Count];
         canMove.ClearAllTiles();
         print("jijijiji");
@@ -170,7 +175,7 @@ public class GridController : MonoBehaviour
         }
         canMove.RefreshAllTiles();
         freeCursor = false;
-
+        }else{canMove.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); reachableNodes=null;}
     }
 
     //
@@ -193,7 +198,7 @@ public class GridController : MonoBehaviour
         }
         CanAttackMap.RefreshAllTiles();
         freeCursor = false;
-        }else{CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); print("kok"); attackableNodes=null;}
+        }else{CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); attackableNodes=null;}
         return attackableNodes;
     }
 

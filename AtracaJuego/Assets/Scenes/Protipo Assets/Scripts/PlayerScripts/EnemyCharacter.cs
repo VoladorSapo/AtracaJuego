@@ -9,7 +9,7 @@ public class EnemyCharacter : PlayerBase
     // Update is called once per frame
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, false,team);
+        GC.setReachablePos(transform.position, MaxDistance, true, false,team,false);
         print("hei");
         int i = 0;
         bool poswalkable;
@@ -25,4 +25,5 @@ public class EnemyCharacter : PlayerBase
         } while (!poswalkable && i < 200000);
        Move(pos);
     }
+
 }

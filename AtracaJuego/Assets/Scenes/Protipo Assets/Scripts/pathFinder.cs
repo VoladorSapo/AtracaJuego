@@ -133,31 +133,11 @@ public class pathFinder : MonoBehaviour
         
         switch(playerMode){
         case 1: //Fuego y empuje
-        while (Continue)
-        {
-            tilesoftype = 0;
-            List<Node> newBorderList = new List<Node>();
-            foreach (Node nodoBorde in borderList)
-            {
-                List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
-                for (int i = 0; i < supportList.Count; i++)
-                {
-                    bool shouldAdd = isDist ? GC.isEmpty(GC.grid.CellToWorld(supportList[i].pos),false,0) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
-                    //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
-                    if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
-                        newBorderList.Add(supportList[i]);
-                        
-                        //print(supportList[i].pos);
-                        tilesoftype++;
-                    }
-                }
-            }
-            nearList.AddRange(newBorderList);
-            borderList.Clear();
-            borderList.AddRange(newBorderList);
-            vueltas++;
-            Continue = isDist ? vueltas < var : tilesoftype <= 0;
-        }
+        Vector3Int posFE=nodo.pos;
+        if(GC.tiles[posFE.x - ogx +1, posFE.y - ogy].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx +1, posFE.y - ogy]);}
+        if(GC.tiles[posFE.x - ogx -1, posFE.y - ogy].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx -1, posFE.y - ogy]);}
+        if(GC.tiles[posFE.x - ogx , posFE.y - ogy +1].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx , posFE.y - ogy +1]);}
+        if(GC.tiles[posFE.x - ogx , posFE.y - ogy -1].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx , posFE.y - ogy -1]);}
         break;
         
         case 2: //Gas

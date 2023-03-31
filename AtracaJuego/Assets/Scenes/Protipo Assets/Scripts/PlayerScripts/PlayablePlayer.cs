@@ -5,11 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PlayablePlayer : PlayerBase
 {
-
     protected int directionPush;
-
-
-
     public override void Update()
     {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving)
@@ -42,8 +38,9 @@ public class PlayablePlayer : PlayerBase
 
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true,true,team);
-
+        GC.setReachablePos(transform.position, MaxDistance, true,true,team,false);
     }
+
+    
 
 }

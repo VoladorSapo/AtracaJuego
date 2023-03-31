@@ -16,7 +16,7 @@ public class PlayerBase : MonoBehaviour
     protected bool team;
     protected bool moving;
     private bool hasTurn;
-
+    protected bool AttackMode=false;
     public int Cooldowns=0;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -29,22 +29,24 @@ public class PlayerBase : MonoBehaviour
     /*Método Secundario*/
     // Start is called before the first frame update
     void Awake(){
-
-    }
-    void Start()
-    {
-        print("madremiawilliam" );
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         GC = grid.GetComponent<GridController>();
+    }
+    void Start()
+    {
+        print("madremiawilliam" );
+        
         startGame();
+
+        Vector3Int posGrid = grid.WorldToCell(transform.position);
+        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-       
         if (moving)
         {
            
@@ -93,6 +95,9 @@ public class PlayerBase : MonoBehaviour
     { }
 
     
+
+
+    
     //Mueve al jugador a la posición indicada
     protected virtual void Move(Vector3 position)
     {
@@ -132,10 +137,10 @@ public class PlayerBase : MonoBehaviour
     public void Die()
     {
         alive = false;
-        Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(0.5f + GC.ogx, GC.ogy + 0.5f, 0));
-        CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+        Vector3Int tilepos = grid.WorldToCell(transform.position);
+        CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         tile.setPlayer(null);
-        GetComponent<SpriteRenderer>().enabled = false;
+        sprite.enabled = false;
         SPM.playerDie(this);
     }
 
@@ -148,10 +153,9 @@ public class PlayerBase : MonoBehaviour
         }
     }
 
-    public void loseHealth(int health)
+    public virtual void loseHealth(int health)
     {
         currentHealth -= health;
-        print(currentHealth);
         if(currentHealth <= 0)
         {
             Die();
@@ -188,7 +192,4 @@ public class PlayerBase : MonoBehaviour
 
 
     /*Intercambia los valores playerOnTop de las tiles*/
-    private void ChangeOnTop(int newX, int newY, string name, int i){
-        GC.tiles[newX,newY].setPlayer(this); if(prevX[i]!=null){GC.tiles[prevX[i],prevY[i]].setPlayer(null);} prevX[i]=newX; prevY[i]=newY;
-    }
 }
