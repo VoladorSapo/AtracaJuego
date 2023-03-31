@@ -106,7 +106,7 @@ public class pathFinder : MonoBehaviour
             }
             foreach(Node nodor in newBorderList)
             {
-               print( GC.isEmpty(GC.grid.CellToWorld(nodor.pos), false, 1));
+               ogx loco
                 if (GC.isEmpty(GC.grid.CellToWorld(nodor.pos), false, 1) || !isDist)
                 {
                 
