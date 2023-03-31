@@ -135,9 +135,12 @@ public class GridController : MonoBehaviour
         if (ReachablePos.Contains(grid.WorldToCell(endpos)))
         {
             //print(grid.WorldToCell(position).x);
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team);
-            return camino;
+            Vector3 mouseWorldPos = endpos;
+            if (tiles[grid.WorldToCell(mouseWorldPos).x - ogx, grid.WorldToCell(mouseWorldPos).y - ogy].GetPlayer() == null || team)
+            {
+                List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team);
+                return camino;
+            }
         }
         else
         {
@@ -218,7 +221,7 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
         if ((tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 5) || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||(tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null))
         {
             empty=false;
-        }else { Debug.LogWarning(tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer()); empty =true;} break;
+        }else { empty =true;} break;
 
         case 2:
         posInted= new Vector3Int(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), 0);
@@ -238,7 +241,7 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
     }
     public bool isWalkable(Vector3 position, bool wantMove, bool team) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
     {
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) || (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team))
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||*/ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team))
         {
             return false;
         }

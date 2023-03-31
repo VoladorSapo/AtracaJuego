@@ -13,7 +13,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int MaxDistance = 5;
     private int[] prevX= new int[5];
     private int[] prevY= new int[5];
-    protected bool team;
+    public bool team;
     protected bool moving;
     private bool hasTurn;
     protected bool AttackMode=false;
@@ -133,7 +133,15 @@ public class PlayerBase : MonoBehaviour
     {
 
     }
-
+    public void setGame()
+    {
+       /* Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
+        print(transform.position);
+        print(tilepos + name);
+        CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+        sprite.sortingOrder = -(tilepos.y);
+        tile.setPlayer(this);*/
+    }
     public void Die()
     {
         alive = false;

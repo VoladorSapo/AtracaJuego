@@ -38,7 +38,7 @@ public class pathFinder : MonoBehaviour
             foreach (Node nodoAdayacente in nodosAdyacentes(currentNode,nodos,ogx,ogy))
             {
                 if (closeList.Contains(nodoAdayacente)) continue;
-                if (!nodoAdayacente.canWalk) continue;
+                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team)) continue;
                 int tempG = currentNode.gCost + Distance(currentNode, nodoAdayacente);
                 if(tempG < nodoAdayacente.gCost)
                 {
@@ -106,11 +106,9 @@ public class pathFinder : MonoBehaviour
             }
             foreach(Node nodor in newBorderList)
             {
-               //ogx loco
                 if (GC.isEmpty(GC.grid.CellToWorld(nodor.pos), false, 1) || !isDist)
                 {
-                
-                    nearList.AddRange(newBorderList);
+                    nearList.Add(nodor);
                 }
             }
             borderList.Clear();
