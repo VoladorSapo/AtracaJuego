@@ -7,7 +7,6 @@ public class EnemyCharacter : PlayerBase
     // Start is called before the first frame update
 
     // Update is called once per frame
-
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false,team);
@@ -19,7 +18,7 @@ public class EnemyCharacter : PlayerBase
         {
             pos = new Vector3( Random.Range(GC.ogx, GC.tiles.GetLength(0)+GC.ogx), Random.Range(GC.ogy, GC.tiles.GetLength(1)+GC.ogy));
             
-            poswalkable = GC.isEmpty(pos,true,0);
+            poswalkable = GC.isEmpty(pos,true,1);
             
 
             i++;

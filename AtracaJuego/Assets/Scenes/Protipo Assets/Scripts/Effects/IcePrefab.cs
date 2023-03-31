@@ -44,12 +44,14 @@ public class IcePrefab : MonoBehaviour
     private void onCollisionEnter2D(Collider2D other){
         Debug.Log("aj");
     }
-    private void onTriggerEnter2D(Collider2D other){
+    private void OnTriggerEnter2D(Collider2D other){
         Debug.Log("ch");
-        /*switch(other.name){
-            case "FirePrefab":  StartCoroutine(Melting(0.25f,posGrid));
-                                StartCoroutine(DestroyEffect(2.0f)); break;
-        }*/
+        switch (other.name)
+        {
+            case "FirePrefab":
+                StartCoroutine(Melting(0.25f, posGrid));
+                StartCoroutine(DestroyEffect(2.0f)); break;
+        }
     }
 
     IEnumerator Melting(float sec, Vector3Int posGrid){

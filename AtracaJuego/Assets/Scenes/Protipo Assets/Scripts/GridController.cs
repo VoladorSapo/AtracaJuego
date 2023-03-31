@@ -97,7 +97,16 @@ public class GridController : MonoBehaviour
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);
         }
-
+        if (Input.GetKeyDown("t"))
+        {
+            mousePos = GetMousePosition();
+            int difX = mousePos.x - ogx;
+            int difY = mousePos.y - ogy;
+            print(isEmpty(grid.CellToWorld(mousePos),false,1));
+            print(tiles[difX, difY].GetPlayer());
+            //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
+            //print("y " + tiles[difX, difY].tilePos);
+        }
         mousePos = GetMousePosition();
         if (!mousePos.Equals(previousMousePos))
         {
@@ -124,11 +133,19 @@ public class GridController : MonoBehaviour
     //Transforma la posición del ratón a coordenadas dentro de la Grid
     public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team)
     {
-        //print(grid.WorldToCell(position).x);
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team);
-        return camino;
-    }
+        if (ReachablePos.Contains(grid.WorldToCell(endpos)))
+        {
+            //print(grid.WorldToCell(position).x);
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team);
+            return camino;
+        }
+        else
+        {
+            print("quien es ese wachin");
+        }
+        return null;
+        }
 
     public Vector3Int GetMousePosition()
     {
@@ -193,10 +210,10 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
         Vector3Int posInted;
         switch(mode){
         case 1:
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 5 || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) || tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
+        if ((tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 5) || (!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||(tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null))
         {
             empty=false;
-        }else{empty=true;} break;
+        }else { Debug.LogWarning(tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer()); empty =true;} break;
 
         case 2:
         posInted= new Vector3Int(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), 0);

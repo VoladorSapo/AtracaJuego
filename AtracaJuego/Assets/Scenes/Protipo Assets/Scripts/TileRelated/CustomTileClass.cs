@@ -24,6 +24,7 @@ public class CustomTileClass
     public void DisplayStats(){
         Debug.Log("La Tile tiene el sprite "+tileSpriteId+" y el estado "+tileState+" con el efecto "+tileEffect);
         Debug.Log("Su pos es: "+tilePos);
+        Debug.Log(GetPlayer());
         if(player!=null){
             Debug.Log(" y el jugador "+player.name+" encima");
         }

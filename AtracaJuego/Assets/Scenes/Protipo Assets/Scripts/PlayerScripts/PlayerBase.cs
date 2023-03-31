@@ -63,8 +63,9 @@ public class PlayerBase : MonoBehaviour
                 {
                     moving = false;
                     animator.SetInteger("Anim", 0);
+                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
                     //Turn();
-                    Vector3Int tilepos= grid.WorldToCell(transform.position- new Vector3(5f, 5f, 0))-new Vector3Int(GC.ogx,GC.ogy);
+                    Vector3Int tilepos = grid.WorldToCell(transform.position- new Vector3(5f, 5f, 0))-new Vector3Int(GC.ogx,GC.ogy);
 
                     //print(tilepos);
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
@@ -75,7 +76,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     print("icamefromalanddownunder");
                     print(-grid.WorldToCell(transform.position).y);
-                    //sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
+                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
                     if (nodes[0].pos.x > grid.WorldToCell(transform.position).x)
                     {
                         sprite.flipX = false;
@@ -98,8 +99,7 @@ public class PlayerBase : MonoBehaviour
         
         List<Node> newPos = GC.GetPath(this.transform.position,position,team);
         Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
-        print(newPos.Count);
-        if (newPos.Count > 0)
+        if (newPos != null &&  newPos.Count > 0)
         {
             Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];

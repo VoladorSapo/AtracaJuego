@@ -95,7 +95,7 @@ public class pathFinder : MonoBehaviour
                 List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
                 for (int i = 0; i < supportList.Count; i++)
                 {
-                    bool shouldAdd = isDist ? GC.isEmpty(GC.grid.CellToWorld(supportList[i].pos),false,0) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    bool shouldAdd = isDist ? GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos),false,team) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
                     //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
                     if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
                         newBorderList.Add(supportList[i]);
@@ -104,7 +104,15 @@ public class pathFinder : MonoBehaviour
                     }
                 }
             }
-            nearList.AddRange(newBorderList);
+            foreach(Node nodor in newBorderList)
+            {
+               print( GC.isEmpty(GC.grid.CellToWorld(nodor.pos), false, 1));
+                if (GC.isEmpty(GC.grid.CellToWorld(nodor.pos), false, 1) || !isDist)
+                {
+                
+                    nearList.AddRange(newBorderList);
+                }
+            }
             borderList.Clear();
             borderList.AddRange(newBorderList);
             vueltas++;
