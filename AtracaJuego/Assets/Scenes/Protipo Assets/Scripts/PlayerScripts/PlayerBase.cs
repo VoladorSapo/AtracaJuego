@@ -10,7 +10,7 @@ public class PlayerBase : MonoBehaviour
     public gameController _gamecontroller;
     [SerializeField] private tunController _turnController;
     [SerializeField] protected ScriptPlayerManager SPM;
-    [SerializeField] protected int MaxDistance = 5;
+    [SerializeField] protected int MaxDistance;
     private int[] prevX= new int[5];
     private int[] prevY= new int[5];
     public bool team;
@@ -29,9 +29,12 @@ public class PlayerBase : MonoBehaviour
     // Start is called before the first frame update
     void Awake(){
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        GC = grid.GetComponent<GridController>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        GC = grid.GetComponent<GridController>();
+        _turnController= GameObject.Find("Controller").GetComponent<tunController>();
+        SPM= GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
+        _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
     }
     void Start()
     {
@@ -134,6 +137,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void setGame()
     {
+        
         Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
         print(transform.position);
         print(tilepos + name);

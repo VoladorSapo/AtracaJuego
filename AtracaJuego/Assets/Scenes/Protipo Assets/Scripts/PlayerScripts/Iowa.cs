@@ -2,43 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Iowa : MonoBehaviour
+public class Iowa : PlayablePlayer
 {
     
     public GameObject PushPrefab;
-    public GridController _GC;
-    private Vector3 posBase;
-    public int PushCooldown;
-    public ScriptPlayerManager _SPM;
     private int x,y;
-    [SerializeField] private bool AttackMode;
-    void Awake(){
-        AttackMode=false;
-        PushCooldown=0;
-    }
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-        Vector3Int tileO = _GC.grid.WorldToCell(transform.position);
+    public override void Update()
+    {   
 
-        x=tileO.x-_GC.ogx;
-        y=tileO.y-_GC.ogy;
-
-        if(Input.GetMouseButtonDown(1)){ //&& _SPM.currentPlayer==0
-            ChangeMapShown();
-        }
-
-        if(Input.GetMouseButtonDown(0) && PushCooldown==0 && AttackMode){
-            Vector3Int posMouse=_GC.GetMousePosition();
-            if(!_GC.isEmpty(posMouse, false, 2)){
+        base.Update();
+        Vector3Int tileO = GC.grid.WorldToCell(transform.position);
+        x=tileO.x-GC.ogx;
+        y=tileO.y-GC.ogy;
+        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && AttackMode){
+            Vector3Int posMouse=GC.GetMousePosition();
+            if(!GC.isEmpty(posMouse, false, 2)){
                 Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
 
-                Vector3 directionVec=posMouse-_GC.grid.WorldToCell(transform.position);
+                Vector3 directionVec=posMouse-GC.grid.WorldToCell(transform.position);
                 int x=(int) directionVec.x;
                 int y=(int) directionVec.y;
                 Vector2 dir=new Vector2(x,y);
@@ -65,9 +48,9 @@ public class Iowa : MonoBehaviour
         }
         }
 
-        private void ChangeMapShown(){
-            if(AttackMode){AttackMode=false; _GC.setAttackPos(transform.position, 1, true, true, false, 1, true); _GC.setReachablePos(transform.position, 5, true,true,false,false);}
-            else{AttackMode=true; _GC.setAttackPos(transform.position, 1, true, true, false, 1, false); _GC.setReachablePos(transform.position, 5, true,true,true,true);}
+        protected override void ChangeMapShown(){
+            if(AttackMode){AttackMode=false; GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
+            else{AttackMode=true; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}
         }
         
     }

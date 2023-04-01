@@ -23,12 +23,9 @@ public class IcePrefab : MonoBehaviour
     }
 
     public void FreezeTile(){
-        _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].addEffect(4, false);
+        _GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].addEffect(4, false,0);
     }
     public void MeltCube(){
-
-    }
-    public void PushCube(){
 
     }
 
@@ -37,6 +34,7 @@ public class IcePrefab : MonoBehaviour
         switch(other.name){
             case "FirePrefab(Clone)":  StartCoroutine(Melting(0.25f,posGrid));
                                         StartCoroutine(DestroyEffect(2.0f)); break;
+            case "PushPrefab(Clone)": StartCoroutine(PushCube(other.GetComponent<PushEffect>().direction)); break;
         }
     }
 
@@ -50,7 +48,7 @@ public class IcePrefab : MonoBehaviour
 
         
         for(int i=1; i<=(25); i++){
-            _GC.tiles[x,y].addEffect(6,false);
+            _GC.tiles[x,y].addEffect(6,false,0);
             
 
             switch(rot){
@@ -80,5 +78,27 @@ public class IcePrefab : MonoBehaviour
         _GC.tiles[posGrid.x-_GC.ogx,posGrid.y-_GC.ogy].SetTileEffect(2);
         Destroy(this.gameObject);
         
+    }
+
+    IEnumerator PushCube(int direction){
+        _GC.tiles[posGrid.x-_GC.ogx ,posGrid.y-_GC.ogy].SetTileEffect(5);
+        int dx=0, dy=0;
+        switch(direction){
+            case 1: dx=1; break;
+            case 2: dx=-1; break;
+            case 3: dy=1; break;
+            case 4: dy=-1; break;
+        }
+        WaitForSeconds wfs=new WaitForSeconds(0);
+        int speed=50;
+        bool stop=false;
+        Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
+        while(!stop){
+            transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);
+            if(transform.position==newPos && _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()<5){newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
+            else if(transform.position==newPos && _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5){stop=true;}
+            
+            yield return wfs;
+        }
     }
 }

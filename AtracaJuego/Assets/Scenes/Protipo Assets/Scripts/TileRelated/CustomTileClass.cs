@@ -101,7 +101,6 @@ public class CustomTileClass
     public void setPlayer(PlayerBase newplayer)
     {
         player = newplayer;
-        Debug.Log("ou");
         if(tileState == 13)
         {
             Debug.Log("uo");
@@ -109,47 +108,48 @@ public class CustomTileClass
         }
     }
 
-    public void addEffect(int effect, bool bypass){
+    public void addEffect(int effect, bool bypass, int direction){
         //Faltan implementar cambios de sprites y FadeEffects
 
         //Implmentar combinaciones del excel aqui
         switch(effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet
             case 0:
-                    Debug.Log("0"); tileEffect=0; tileFadeEffect=0; break;
+                    if(tileEffect!=16){tileEffect=0; tileFadeEffect=0;} break;
             case 1:
                     if(tileEffect!=16){
                     switch(tileEffect){
                         case 0: tileEffect=1; break;
                         //case 2: cambio de sprite a nube mojada pero con propiedades nulas?
                         //case 3: cambio de sprite pero propiedades iguales que un gas normal?
-                        case 4: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2); break;
+                        case 4: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); break;
                         case 5: tileEffect=3; break;
-                        case 6: tileEffect=7; break;
-                        case 12: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2); break;
-                        case 13: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2); break;
+                        case 6: tileEffect=7; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
+                        case 7: _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
+                        case 12: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); break;
+                        case 13: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); break;
                     }} break;
             case 2:
                     if(tileEffect!=16){
                     switch(tileEffect){
-                        case 1: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2); _MM.Damage(0,tilePos.x,tilePos.y); break;
+                        case 1: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); _MM.Damage(0,tilePos.x,tilePos.y); break;
                         case 2: tileEffect=0; break;
-                        case 3: tileEffect=12; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2); _MM.Damage(1,tilePos.x,tilePos.y); break; 
-                        case 5: tileEffect=2; _MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5); break;
+                        case 3: tileEffect=12; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); _MM.Damage(1,tilePos.x,tilePos.y); break; 
+                        case 5: tileEffect=2; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0);} break;
                         case 6: tileEffect=0; break;
                         case 7: tileEffect=0; break; 
                         case 8: tileEffect=1; break;
                         case 9: tileEffect=3; break;
                         case 10: tileEffect=3; break;
-                        case 11: tileEffect=4; _MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5); _MM.Damage(2,tilePos.x,tilePos.y); break;
-                        case 14: tileEffect=11; break;
-                        case 15: tileEffect=11; break;
+                        case 11: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); _MM.Damage(2,tilePos.x,tilePos.y); break;
+                        case 14: tileEffect=11; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0);} break;
+                        case 15: tileEffect=11; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0);} break;
                     }} break;
             case 3:
                     if(tileEffect!=16){
                     switch(tileEffect){
-                        case 5: tileEffect=8; break;
-                        case 9: tileEffect=10; break;
-                        case 14: tileEffect=15; break;
+                        case 5: tileEffect=8; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction); _MM.Damage(3,tilePos.x,tilePos.y);} break;
+                        case 9: tileEffect=10; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction); _MM.Damage(3,tilePos.x,tilePos.y);} break;
+                        case 14: tileEffect=15; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction); _MM.Damage(3,tilePos.x,tilePos.y);} break;
                     }} break;
             case 4:
                     if(tileEffect!=16){
@@ -177,17 +177,45 @@ public class CustomTileClass
                     switch(tileEffect){
                         case 0: tileEffect=2; break;
                         case 4: tileEffect=0; break;
-                        case 6: tileEffect=6; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5); break;
-                        case 7: tileEffect=7; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5); break;
+                        case 6: tileEffect=6; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
+                        case 7: tileEffect=7; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
                         case 12: tileEffect=0; break;
                         case 13: tileEffect=0; break;
                     }}break;
                     }
         }
 
-        public void loseHealth(int hp){
-            player.loseHealth(hp);
+        public bool canAddEffect(int effect){
+        //Faltan implementar cambios de sprites y FadeEffects
+
+        //Implmentar combinaciones del excel aqui
+        switch(effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet
+            case 0:
+                    if(tileEffect!=16){return true;}else{return false;}
+            case 1:
+                    if(tileEffect!=16 && tileEffect==0 || tileEffect==4 || tileEffect==5 || tileEffect==6 || tileEffect==7 ||
+                    tileEffect==12 || tileEffect==13){
+                    return true;}else{return false;}
+            case 2:
+                    if(tileEffect!=16 && tileEffect==1 || tileEffect==2 || tileEffect==3 || tileEffect==5 || tileEffect==6 || tileEffect==7 ||
+                    tileEffect==8 || tileEffect==9 || tileEffect==10 || tileEffect==11|| tileEffect==14 || tileEffect==15){
+                    return true;}else{return false;}
+            case 3:
+                    if(tileEffect!=16 && tileEffect==5 || tileEffect==9 || tileEffect==14){
+                    return true;}else{return false;}
+            case 4:
+                    if(tileEffect!=16 && tileEffect==0 || tileEffect==1 || tileEffect==2 || tileEffect==3 || tileEffect==4 || tileEffect==6 || tileEffect==7 || tileEffect==11){
+                    return true;}else{return false;}
+            case 5:
+                    if(tileEffect!=16 && tileEffect==1 || tileEffect==2 || tileEffect==3){
+                    return true;}else{return false;}
+            case 6: 
+                    if(tileEffect!=16 && tileEffect==4 || tileEffect==6 || tileEffect==7 || tileEffect==12 || tileEffect==13){
+                    return true;}else{return false;}
+            }
+        return false;
         }
+        
     }
 
 
