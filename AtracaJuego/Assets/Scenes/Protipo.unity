@@ -1235,7 +1235,7 @@ Animator:
   m_GameObject: {fileID: 578498878}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: fd61650230739fe48bc1444c023bf11e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1287,7 +1287,7 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
+  m_Sprite: {fileID: 1479903750, guid: 54ba0cd71920d8a439b63868c47e58ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7465,7 +7465,7 @@ MonoBehaviour:
   team: 0
   Cooldowns: 0
   animator: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite: {fileID: 578498881}
   teamNumb: 1
   alive: 0
   maxHealth: 0
