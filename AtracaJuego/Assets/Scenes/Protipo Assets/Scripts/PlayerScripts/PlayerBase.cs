@@ -16,7 +16,6 @@ public class PlayerBase : MonoBehaviour
     public bool team;
     protected bool moving;
     private bool hasTurn;
-    protected bool AttackMode=false;
     public int Cooldowns=0;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -65,7 +64,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     moving = false;
                     animator.SetInteger("Anim", 0);
-                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
+                    sprite.sortingOrder = -(grid.WorldToCell(transform.position).y- GC.ogy);
                     //Turn();
                     Vector3Int tilepos = grid.WorldToCell(transform.position- new Vector3(5f, 5f, 0))-new Vector3Int(GC.ogx,GC.ogy);
 
@@ -78,7 +77,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     print("icamefromalanddownunder");
                     print(-grid.WorldToCell(transform.position).y);
-                    sprite.sortingOrder = -grid.WorldToCell(transform.position).y;
+                    sprite.sortingOrder = -(grid.WorldToCell(transform.position).y - GC.ogy);
                     if (nodes[0].pos.x > grid.WorldToCell(transform.position).x)
                     {
                         sprite.flipX = false;
@@ -133,14 +132,14 @@ public class PlayerBase : MonoBehaviour
     {
 
     }
-    public void setGame()
+    public virtual void setGame()
     {
-       /* Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
+        Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
         print(transform.position);
         print(tilepos + name);
         CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
         sprite.sortingOrder = -(tilepos.y);
-        tile.setPlayer(this);*/
+        tile.setPlayer(this);
     }
     public void Die()
     {
