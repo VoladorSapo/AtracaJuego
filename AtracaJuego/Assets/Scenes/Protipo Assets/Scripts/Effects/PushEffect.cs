@@ -9,6 +9,8 @@ public class PushEffect : MonoBehaviour
     [SerializeField] private float h;
     public GridController _GC;
     public MapManager _MM;
+
+    public GameObject IcePrefab;
     [SerializeField] private int distance=5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
     [SerializeField] private int distanceMoved=5; //Mueve n tiles
     [SerializeField] private int distancePush=10;
@@ -37,8 +39,6 @@ public class PushEffect : MonoBehaviour
             int dist1=0, dist0=0, dist_=0;
             switch(direction){
                 case 1:     
-                            /*if hay personaje... más simple de hacer*/
-                            /*if hay objeto...*/
                             
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
@@ -62,6 +62,9 @@ public class PushEffect : MonoBehaviour
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,1));
                             }
+
+                            
+                            _GC.tiles[x,y].addEffect(3,true,1);
                             
                             /*if hay objeto...*/
                             distance=auxDist;
@@ -153,12 +156,13 @@ public class PushEffect : MonoBehaviour
 
     IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush, int dir){
         WaitForSeconds wfs=new WaitForSeconds(sec);
+        
         Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
 
         switch(dir){
         case 1:
         for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x+i+1,y].GetTileState()<1){
+            if(_GC.tiles[x+i+1,y].GetTileState()<5){
                 oldPosPlayer.position += (new Vector3(10,0,0));
             }else{
                 break;
@@ -168,7 +172,7 @@ public class PushEffect : MonoBehaviour
 
         case 2:
         for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x-i-1,y].GetTileState()<1){
+            if(_GC.tiles[x-i-1,y].GetTileState()<5){
                 oldPosPlayer.position -= (new Vector3(10,0,0));
             }else{
                 break;
@@ -179,7 +183,7 @@ public class PushEffect : MonoBehaviour
 
         case 3:
         for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x,y+i+1].GetTileState()<1){
+            if(_GC.tiles[x,y+i+1].GetTileState()<5){
                 oldPosPlayer.position += (new Vector3(0,10,0));
             }else{
                 break;
@@ -188,7 +192,7 @@ public class PushEffect : MonoBehaviour
         } break;
         case 4:
         for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x,y-i-1].GetTileState()<1){
+            if(_GC.tiles[x,y-i-1].GetTileState()<5){
                 oldPosPlayer.position -= (new Vector3(0,10,0));
             }else{
                 break;
@@ -208,19 +212,19 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist1 && _GC.tiles[x+(dist1-1)+j+1,y+1].GetTileState()<8){
                                 switch(_GC.tiles[x+(dist1-1)+j,y+1].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(1,false); break;
+                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(7,false); break;
+                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist1 && _GC.tiles[x+1+j,y+1].GetTileState()<8){
                                 switch(_GC.tiles[x+1+j,y+1].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x+1+j,y+1].addEffect(1,false);
-                                _GC.tiles[x+j,y+1].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y+1].addEffect(1,false,0);
+                                _GC.tiles[x+j,y+1].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x+1+j,y+1].addEffect(7,false);
-                                _GC.tiles[x+j,y+1].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y+1].addEffect(7,false,0);
+                                _GC.tiles[x+j,y+1].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -228,38 +232,38 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist0 && _GC.tiles[x+(dist0-1)+j+1,y].GetTileState()<8){
                                 switch(_GC.tiles[x+(dist0-1)+j,y].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(1,false); break;
+                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(7,false); break;
+                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist0 && _GC.tiles[x+1+j,y].GetTileState()<8){
                                 switch(_GC.tiles[x+1+j,y].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x+1+j,y].addEffect(1,false);
-                                _GC.tiles[x+j,y].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y].addEffect(1,false,0);
+                                _GC.tiles[x+j,y].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x+1+j,y].addEffect(7,false);
-                                _GC.tiles[x+j,y].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y].addEffect(7,false,0);
+                                _GC.tiles[x+j,y].addEffect(0,false,0); break;
                                 }
                             }
 
                             if(j<=dist_ && _GC.tiles[x+(dist_-1)+j+1,y-1].GetTileState()<8){
                                 switch(_GC.tiles[x+(dist_-1)+j,y-1].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(1,false); break;
+                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(7,false); break;
+                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist_ && _GC.tiles[x+1+j,y-1].GetTileState()<8){
                                 switch(_GC.tiles[x+1+j,y-1].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x+1+j,y-1].addEffect(1,false);
-                                _GC.tiles[x+j,y-1].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y-1].addEffect(1,false,0);
+                                _GC.tiles[x+j,y-1].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x+1+j,y-1].addEffect(7,false);
-                                _GC.tiles[x+j,y-1].addEffect(0,false); break;
+                                _GC.tiles[x+1+j,y-1].addEffect(7,false,0);
+                                _GC.tiles[x+j,y-1].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -272,19 +276,19 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist1 && _GC.tiles[x-(dist1-1)-1-j,y+1].GetTileState()<8){
                                 switch(_GC.tiles[x-(dist1-1)-j,y+1].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(1,false); break;
+                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(7,false); break;
+                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist1 && _GC.tiles[x-1-j,y+1].GetTileState()<8){
                                 switch(_GC.tiles[x-1-j,y+1].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x-1-j,y+1].addEffect(1,false);
-                                _GC.tiles[x-j,y+1].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y+1].addEffect(1,false,0);
+                                _GC.tiles[x-j,y+1].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x-1-j,y+1].addEffect(7,false);
-                                _GC.tiles[x-j,y+1].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y+1].addEffect(7,false,0);
+                                _GC.tiles[x-j,y+1].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -292,38 +296,38 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist0 && _GC.tiles[x-(dist0-1)-j-1,y].GetTileState()<8){
                                 switch(_GC.tiles[x-(dist0-1)-j,y].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(1,false); break;
+                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(7,false); break;
+                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist0 && _GC.tiles[x-1-j,y].GetTileState()<8){
                                 switch(_GC.tiles[x-1-j,y].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x-1-j,y].addEffect(1,false);
-                                _GC.tiles[x-j,y].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y].addEffect(1,false,0);
+                                _GC.tiles[x-j,y].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x-1-j,y].addEffect(7,false);
-                                _GC.tiles[x-j,y].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y].addEffect(7,false,0);
+                                _GC.tiles[x-j,y].addEffect(0,false,0); break;
                                 }
                             }
 
                             if(j<=dist_ && _GC.tiles[x-(dist_-1)-j-1,y-1].GetTileState()<8){
                                 switch(_GC.tiles[x-(dist_-1)-j,y-1].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(1,false); break;
+                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(7,false); break;
+                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist_ && _GC.tiles[x-1-j,y-1].GetTileState()<8){
                                 switch(_GC.tiles[x-1-j,y-1].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x-1-j,y-1].addEffect(1,false);
-                                _GC.tiles[x-j,y-1].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y-1].addEffect(1,false,0);
+                                _GC.tiles[x-j,y-1].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x-1-j,y-1].addEffect(7,false);
-                                _GC.tiles[x-j,y-1].addEffect(0,false); break;
+                                _GC.tiles[x-1-j,y-1].addEffect(7,false,0);
+                                _GC.tiles[x-j,y-1].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -337,19 +341,19 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist1 && _GC.tiles[x+1,y+(dist1-1)+j+1].GetTileState()<8){
                                 switch(_GC.tiles[x+1,y+(dist1-1)+j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(1,false); break;
+                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(7,false); break;
+                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist1 && _GC.tiles[x+1,y+1+j].GetTileState()<8){
                                 switch(_GC.tiles[x+1,y+1+j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x+1,y+1+j].addEffect(1,false);
-                                _GC.tiles[x+1,y+j].addEffect(0,false); break;
+                                _GC.tiles[x+1,y+1+j].addEffect(1,false,0);
+                                _GC.tiles[x+1,y+j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x+1,y+1+j].addEffect(7,false);
-                                _GC.tiles[x+1,y+j].addEffect(0,false); break;
+                                _GC.tiles[x+1,y+1+j].addEffect(7,false,0);
+                                _GC.tiles[x+1,y+j].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -357,38 +361,38 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist0 && _GC.tiles[x,y+(dist0-1)+j+1].GetTileState()<8){
                                 switch(_GC.tiles[x,y+(dist0-1)+j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(1,false); break;
+                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(7,false); break;
+                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist0 && _GC.tiles[x,y+1+j].GetTileState()<8){
                                 switch(_GC.tiles[x,y+1+j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x,y+1+j].addEffect(1,false);
-                                _GC.tiles[x,y+j].addEffect(0,false); break;
+                                _GC.tiles[x,y+1+j].addEffect(1,false,0);
+                                _GC.tiles[x,y+j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x,y+1+j].addEffect(7,false);
-                                _GC.tiles[x,y+j].addEffect(0,false); break;
+                                _GC.tiles[x,y+1+j].addEffect(7,false,0);
+                                _GC.tiles[x,y+j].addEffect(0,false,0); break;
                                 }
                             }
 
                             if(j<=dist_ && _GC.tiles[x-1,y+(dist_-1)+j+1].GetTileState()<8){
                                 switch(_GC.tiles[x-1,y+(dist_-1)+j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(1,false); break;
+                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(7,false); break;
+                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist_ && _GC.tiles[x-1,y+1+j].GetTileState()<8){
                                 switch(_GC.tiles[x-1,y+1+j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x-1,y+1+j].addEffect(1,false);
-                                _GC.tiles[x-1,y+j].addEffect(0,false); break;
+                                _GC.tiles[x-1,y+1+j].addEffect(1,false,0);
+                                _GC.tiles[x-1,y+j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x-1,y+1+j].addEffect(7,false);
-                                _GC.tiles[x-1,y+j].addEffect(0,false); break;
+                                _GC.tiles[x-1,y+1+j].addEffect(7,false,0);
+                                _GC.tiles[x-1,y+j].addEffect(0,false,0); break;
                                 }
                             }
 
@@ -401,19 +405,19 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist1 && _GC.tiles[x+1,y-(dist1-1)-1-j].GetTileState()<8){
                                 switch(_GC.tiles[x+1,y-(dist1-1)-j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(1,false); break;
+                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(7,false); break;
+                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist1 && _GC.tiles[x+1,y-1-j].GetTileState()<8){
                                 switch(_GC.tiles[x+1,y-1-j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x+1,y-1-j].addEffect(1,false);
-                                _GC.tiles[x+1,y-j].addEffect(0,false); break;
+                                _GC.tiles[x+1,y-1-j].addEffect(1,false,0);
+                                _GC.tiles[x+1,y-j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x+1,y-1-j].addEffect(7,false);
-                                _GC.tiles[x+1,y-j].addEffect(0,false); break;
+                                _GC.tiles[x+1,y-1-j].addEffect(7,false,0);
+                                _GC.tiles[x+1,y-j].addEffect(0,false,0); break;
                                 }
                             }
                             
@@ -421,38 +425,38 @@ public class PushEffect : MonoBehaviour
                             if(j<=dist0 && _GC.tiles[x,y-(dist0-1)-j-1].GetTileState()<8){
                                 switch(_GC.tiles[x,y-(dist0-1)-j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(1,false); break;
+                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(7,false); break;
+                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist0 && _GC.tiles[x,y-1-j].GetTileState()<8){
                                 switch(_GC.tiles[x,y-1-j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x,y-1-j].addEffect(1,false);
-                                _GC.tiles[x,y-j].addEffect(0,false); break;
+                                _GC.tiles[x,y-1-j].addEffect(1,false,0);
+                                _GC.tiles[x,y-j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x,y-1-j].addEffect(7,false);
-                                _GC.tiles[x,y-j].addEffect(0,false); break;
+                                _GC.tiles[x,y-1-j].addEffect(7,false,0);
+                                _GC.tiles[x,y-j].addEffect(0,false,0); break;
                                 }
                             }
 
                             if(j<=dist_ && _GC.tiles[x-1,y-(dist_-1)-j-1].GetTileState()<8){
                                 switch(_GC.tiles[x-1,y-(dist_-1)-j].GetTileEffect()){
                                     case 1:
-                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(1,false); break;
+                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(1,false,0); break;
                                     case 7:
-                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(7,false); break;
+                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(7,false,0); break;
                                 }
                             }
                             if(j<=dist_ && _GC.tiles[x-1,y-1-j].GetTileState()<8){
                                 switch(_GC.tiles[x-1,y-1-j].GetTileEffect()){
                                 case 1:
-                                _GC.tiles[x-1,y-1-j].addEffect(1,false);
-                                _GC.tiles[x-1,y-j].addEffect(0,false); break;
+                                _GC.tiles[x-1,y-1-j].addEffect(1,false,0);
+                                _GC.tiles[x-1,y-j].addEffect(0,false,0); break;
                                 case 7:
-                                _GC.tiles[x-1,y-1-j].addEffect(7,false);
-                                _GC.tiles[x-1,y-j].addEffect(0,false); break;
+                                _GC.tiles[x-1,y-1-j].addEffect(7,false,0);
+                                _GC.tiles[x-1,y-j].addEffect(0,false,0); break;
                                 }
                             }
 
@@ -461,7 +465,6 @@ public class PushEffect : MonoBehaviour
                             break;
         }
     }
-    
     private void PushGas(){
 
     }

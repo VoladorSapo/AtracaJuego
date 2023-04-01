@@ -30,41 +30,48 @@ public class MapManager : MonoBehaviour
     }
 
     //Extiende el fuego si se le llama
-    public void SpreadEffectNoLimit(int x, int y, int effect){
+    public void SpreadEffectNoLimit(int x, int y, int effect, int direction){
         int up1= y+1;
         int down1= y-1;
         int left1= x-1;
         int right1= x+1;
 
-        _GC.tiles[x,up1].addEffect(effect,false);
-        _GC.tiles[x,down1].addEffect(effect,false);
-        _GC.tiles[x,y].addEffect(effect,false);
-        _GC.tiles[left1,y].addEffect(effect,false);
-        _GC.tiles[right1,y].addEffect(effect,false);
+        _GC.tiles[x,up1].addEffect(effect,false,direction);
+        _GC.tiles[x,down1].addEffect(effect,false,direction);
+        _GC.tiles[x,y].addEffect(effect,false,direction);
+        _GC.tiles[left1,y].addEffect(effect,false,direction);
+        _GC.tiles[right1,y].addEffect(effect,false,direction);
     }
 
-    public void SpreadEffectLimit(int x,int y,int effect, int Range,int MaxRange){
+    public void SpreadEffectLimit(int x,int y,int effect, int Range,int MaxRange, int direction){
         int up1= y+1;
         int down1= y-1;
         int left1= x-1;
         int right1= x+1;
         
-        _GC.tiles[x,y].addEffect(effect,false);
+        _GC.tiles[x,y].addEffect(effect,false,direction);
+        print("@"+Range);
         if(Range<=MaxRange){
         Range++;
-        SpreadEffectLimit(x,up1,effect,Range,MaxRange);
-        SpreadEffectLimit(x,down1,effect,Range,MaxRange);
-        SpreadEffectLimit(left1,y,effect,Range,MaxRange);
-        SpreadEffectLimit(right1,y,effect,Range,MaxRange);
+
+        if(direction!=4 && _GC.tiles[x,up1].canAddEffect(effect) ){SpreadEffectLimit(x,up1,effect,Range,MaxRange,direction);}
+
+        if(direction!=3 && _GC.tiles[x,down1].canAddEffect(effect) ){SpreadEffectLimit(x,down1,effect,Range,MaxRange,direction);}
+        
+        if(direction!=1 && _GC.tiles[left1,y].canAddEffect(effect) ){SpreadEffectLimit(left1,y,effect,Range,MaxRange,direction);}
+        print("@"+_GC.tiles[right1,y].canAddEffect(effect));
+        if(direction!=2 && _GC.tiles[right1,y].canAddEffect(effect) ){SpreadEffectLimit(right1,y,effect,Range,MaxRange,direction);}
         }
 
     }
 
     public void Damage(int codeDamage, int x, int y){
+        PlayerBase p=_GC.tiles[x,y].player;
         switch(codeDamage){
-            case 0: if(_GC.tiles[x,y].player!=null){_GC.tiles[x,y].player.loseHealth(1);} break;
-            case 1: if(_GC.tiles[x,y].player!=null){_GC.tiles[x,y].player.loseHealth(1);} break;
-            case 2: if(_GC.tiles[x,y].player!=null){_GC.tiles[x,y].player.loseHealth(2);} break;
+            case 0: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(3);}} break;
+            case 1: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(4);}} break;
+            case 2: if(p!=null){if(p.tag=="Player"){p.loseHealth(2);}else{p.loseHealth(7);}} break;
+            case 3: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(2);}} break;
         }
     }
 
