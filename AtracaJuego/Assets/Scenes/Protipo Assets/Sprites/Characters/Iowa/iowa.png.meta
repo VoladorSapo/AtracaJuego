@@ -1,0 +1,1763 @@
+fileFormatVersion: 2
+guid: 0de47b43ef6c6e24d9185e8061133310
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: iowa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d350f83bd4c234d839c59f2b8e18a5
+      internalID: 1809504117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc9463c5fa4ff944ac197ad86f7f684
+      internalID: -87496637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_2
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9067afaea902ac04e965f17371f84ad9
+      internalID: -788348658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_3
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0829948dcf99ada40bc381f21f2ade96
+      internalID: -1779467971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32ea0585d8d7ce4eb1131bc76238667
+      internalID: 220317464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_5
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1471a94fda324e341a6a26ae616d6ef8
+      internalID: -495602469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_6
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bdb1e37eaf43c4e8728f326d8d11c7
+      internalID: -1959860877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_7
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c8170ba55c7814aa5c1e00d95e3e07
+      internalID: 2139442493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_8
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 3667
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcb15c4fe65c22419fd5ca9f0940f34
+      internalID: 85048521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c824a9d8b0b374ab5ebfa5f7dd8afa
+      internalID: -1141159927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_10
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585ac4c3af2794c4db549e8b544e1aed
+      internalID: -1448993505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_11
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cccd20f974044146bac535c25df9ba8
+      internalID: 34211588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_12
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c1a731f70353a46be7c568f7438eaa
+      internalID: -1047247999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_13
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078f8c61fb4770d449da2775d594c239
+      internalID: 1226603318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_14
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7726c2913bda3440851d885f4d1388a
+      internalID: -413224288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_15
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e123b60ab519f9a40a046a8e81b1deb7
+      internalID: -866431267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_16
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a30b59515064af4d812c471ed59ffe1
+      internalID: -1320583688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_17
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 3238
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d292c725e45816546b8b25cff93b3021
+      internalID: -792401898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b20398c56d160449424603b38410bf
+      internalID: 1733516318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_19
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788a4864fa3f7594284d96b63537fa6d
+      internalID: -711262211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_20
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bc0c46018ed2748b59895a55c4c5de
+      internalID: -1703363304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_21
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba3a0bec5682eb408f339da83c36c3f
+      internalID: -1034784971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_22
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f991987585a09644b6474a62675ca2d
+      internalID: 2082331934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_23
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec7b0af1de76f24d872470288db2440
+      internalID: 2034361491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_24
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc41089057585645806c437f43a89ee
+      internalID: -1497971533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_25
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444962a32f86325498074258b74d7252
+      internalID: -1676436896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_26
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2809
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf8dd1fb361f644aa68c88d326f896e
+      internalID: 282567342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2380
+        width: 411
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358ac3242e7734b4785ddd73d1d864ec
+      internalID: 1975632195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_28
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ceb389396d8e3449991e71450b3f01
+      internalID: -1844232391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_29
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b778f9954b0c3d5478541903622f8b3a
+      internalID: 48495566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_30
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b855495152d0c8448a43371dc9cece12
+      internalID: 1193072414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_31
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69123c7f5827c745983be35638a8d8e
+      internalID: 1517121175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_32
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403f6238ab775da48ae528a4daed9beb
+      internalID: -1533916245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_33
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4146de97ddc3141a627d0f33cbc2e8
+      internalID: 528754372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_34
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0228465ad2feb934c8d89bd0025321a1
+      internalID: -1254378175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_35
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784fcc79422c40241be3ddf5a576c381
+      internalID: -1067891712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_36
+      rect:
+        serializedVersion: 2
+        x: 2795
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2760d8b8bf91ba143aa7c54c3aea2863
+      internalID: 680588133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_37
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6ce67c1681ac045b3b0a67f5ac4acc
+      internalID: -1002021773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_38
+      rect:
+        serializedVersion: 2
+        x: 3391
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e6f684832d6fb4b9974b859ce2ee47
+      internalID: -1455435121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_39
+      rect:
+        serializedVersion: 2
+        x: 3689
+        y: 2559
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee36fbdfc177e04ea8d44db164e6ca7
+      internalID: -282878076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb7a80043011c478303e86e1d2e506
+      internalID: 1690236642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_41
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366ea5ecef9ece642acb71d7c048d560
+      internalID: -1934993449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_42
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97bbdc89a36b8b4abb5a74e46f0bfd1
+      internalID: 1818794188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_43
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcef8d142519d24ea977938a0e5f016
+      internalID: -1598365289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_44
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07488f901d6623e4990fc3c1a7c97651
+      internalID: -2123621602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_45
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 2130
+        width: 298
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dc2bab98c9f2d4abb759190bf2db05
+      internalID: 1198428980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_46
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e474211d2d9b87743a3822c01c02210f
+      internalID: 2125195850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_47
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed24fb26d94b434898e7777d6a03fd2
+      internalID: 1323307862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_48
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874fc0f7ff7de2f4aa745b2a7063f433
+      internalID: 963754714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_49
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69a549b078f91a439637c80f33069dd
+      internalID: -577829764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_50
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7585ccf559359c64cbedd01bb27ec804
+      internalID: 1449728825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_51
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436a958ebd1648c409d8d42d46bcfadc
+      internalID: -1348329245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_52
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bd1d4e26f02804da87e35a3eb90512
+      internalID: -69544245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_53
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1730ff4b1b7db564e93832cbdac0f09c
+      internalID: 2111202871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_54
+      rect:
+        serializedVersion: 2
+        x: 2796
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e80e2c75d3b344a9fc9924a06449e2
+      internalID: -1336156403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_55
+      rect:
+        serializedVersion: 2
+        x: 2922
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badcaa2cb5c6e5349a2295801b1ee8db
+      internalID: -465291304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_56
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bee0b5a7e6848549b108988f707ab43
+      internalID: 452654142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_57
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e162d757f7ffaa4ca6d52824d49a97c
+      internalID: 2050155285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_58
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c311e25c6e4a83f48a3e02e2483189e6
+      internalID: 2108750406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_59
+      rect:
+        serializedVersion: 2
+        x: 3426
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb620d961e56f84bb47fa4b29b07e8a
+      internalID: -1462122316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_60
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c6b3b7972b5de48b1fa7b68fbbfe47
+      internalID: 666496025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_61
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0641c765ca1e6cc47bb4874a69b5fe1e
+      internalID: 1488460153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_62
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a10292002aabe49a29840ca43dd663
+      internalID: 210288923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_63
+      rect:
+        serializedVersion: 2
+        x: 3930
+        y: 2159
+        width: 126
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015a104e0877e4b4ba5aa2a7c583e5ee
+      internalID: 810480803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2599e83cff6c3a4197f53f55ad48c1c
+      internalID: 782554830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_65
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3301591390a83b4fa5d70d4d7419075
+      internalID: 76195751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_66
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5f25343027e1f4497176e211d13a6d
+      internalID: -187038616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_67
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940c6a3dac25a774f97864d21b67e4b2
+      internalID: 1657866317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_68
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c3cc0a403405e4aac103a52945ba67
+      internalID: 513793835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_69
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ed78269ba16b34a909cbe8078ff209
+      internalID: -1453768346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_70
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f5c32499e359245a4dccd2f7f84064
+      internalID: 91070141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_71
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1907
+        width: 159
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9e780b6b1c6ea4d8052a29d8f0f188
+      internalID: 93888526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_72
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1586f85d7d63e94aac3df5bdc755e8b
+      internalID: 1110112732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa_73
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1907
+        width: 159
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69b3325f7e44a94ca10ee187d2986d1
+      internalID: 1888158470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      iowa_0: 1113655091
+      iowa_1: 1209102798
+      iowa_10: 1830927723
+      iowa_11: 1952606491
+      iowa_12: -557561067
+      iowa_13: -107912123
+      iowa_14: -1214133895
+      iowa_15: 253339697
+      iowa_16: -1645307515
+      iowa_17: -2018543361
+      iowa_18: -980909680
+      iowa_19: -321252377
+      iowa_2: 683925138
+      iowa_20: 1592304063
+      iowa_21: -375144344
+      iowa_22: -466474934
+      iowa_23: -574990531
+      iowa_24: 1052012942
+      iowa_25: -1283076183
+      iowa_26: 1239969651
+      iowa_27: 1484787679
+      iowa_28: -2099328094
+      iowa_29: 1581757832
+      iowa_3: 978352137
+      iowa_30: 420893597
+      iowa_31: 216321482
+      iowa_32: 241893821
+      iowa_33: -1366483545
+      iowa_34: -439721363
+      iowa_35: 331530029
+      iowa_36: 912915000
+      iowa_37: 2130707732
+      iowa_38: -916744354
+      iowa_39: 1950502041
+      iowa_4: 45220795
+      iowa_40: -930015243
+      iowa_41: 1678011702
+      iowa_42: -1529105656
+      iowa_43: -1799108392
+      iowa_44: 785992407
+      iowa_45: 2001691175
+      iowa_46: -1855005328
+      iowa_47: -862044002
+      iowa_48: -1651714285
+      iowa_49: 1721402761
+      iowa_5: 579187370
+      iowa_50: -358038675
+      iowa_51: 1590356622
+      iowa_52: 717277866
+      iowa_53: 959073272
+      iowa_54: 1405246656
+      iowa_55: 1720567652
+      iowa_56: -1340992932
+      iowa_57: 459845535
+      iowa_58: 1918221293
+      iowa_59: 1922806049
+      iowa_6: -100882347
+      iowa_60: -1553990751
+      iowa_61: -1054165583
+      iowa_62: -1029409164
+      iowa_63: 926752414
+      iowa_64: 1487749752
+      iowa_65: -946468779
+      iowa_66: 271863004
+      iowa_67: 1412575118
+      iowa_68: -1635387421
+      iowa_69: -1327879845
+      iowa_7: 105770902
+      iowa_70: -933032628
+      iowa_71: -1771827586
+      iowa_72: 1303157936
+      iowa_73: -557816152
+      iowa_8: 1756826351
+      iowa_9: 559551835
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
