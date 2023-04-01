@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
+    [SerializeField] protected bool AttackMode;
+    protected int Cooldown;
     public override void Update()
     {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving)
@@ -18,6 +20,10 @@ public class PlayablePlayer : PlayerBase
                 }
 
             }
+        }
+        if (Input.GetMouseButtonDown(1))
+        { //&& _SPM.currentPlayer==x
+            ChangeMapShown();
         }
         base.Update();
     }
@@ -35,10 +41,20 @@ public class PlayablePlayer : PlayerBase
     {
         _gamecontroller.winTilePressed();
     }
+    public override void setGame()
+    {
+        base.setGame();
+        Cooldown = 0;
+    }
+    protected virtual void ChangeMapShown()
+    {
 
+    }
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true,true,team,false);
+        AttackMode = false;
+        if (Cooldown > 0) { Cooldown--; }
     }
 
     
