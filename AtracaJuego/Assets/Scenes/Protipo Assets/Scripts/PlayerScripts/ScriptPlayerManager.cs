@@ -11,8 +11,6 @@ public class ScriptPlayerManager : MonoBehaviour
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
-
-    public int[] MaxDistancePlayers={5,6,4,3,8}; //Ignacio,Iowa,Marl,Nev,Paul
     void Update(){
 
     }

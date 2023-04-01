@@ -10,7 +10,7 @@ public class PlayablePlayer : PlayerBase
     protected int Cooldown;
     public override void Update()
     {
-        if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving && !AttackMode)
+        if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving)
         {
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
@@ -21,7 +21,7 @@ public class PlayablePlayer : PlayerBase
 
             }
         }
-        if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb)
+        if (Input.GetMouseButtonDown(1))
         { //&& _SPM.currentPlayer==x
             ChangeMapShown();
         }
@@ -50,10 +50,9 @@ public class PlayablePlayer : PlayerBase
     {
 
     }
-
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,team,false);
+        GC.setReachablePos(transform.position, MaxDistance, true,true,team,false);
         AttackMode = false;
         if (Cooldown > 0) { Cooldown--; }
     }

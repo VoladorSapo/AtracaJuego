@@ -19,7 +19,7 @@ public class FireEffect : MonoBehaviour
         int x=posInted.x-_GC.ogx;
         int y=posInted.y-_GC.ogy;
         print(x+","+y); 
-        _GC.tiles[x,y].addEffect(2,true,0); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
+        _GC.tiles[x,y].addEffect(2,true); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
         if(_GC.tiles[x,y].player!=null){_GC.tiles[x,y].player.loseHealth(1);}
 
         StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion

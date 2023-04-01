@@ -33,7 +33,7 @@ public class GasEffect : MonoBehaviour
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
-                _GC.tiles[i1,j1].addEffect(1,false,0);
+                _GC.tiles[i1,j1].addEffect(1,false);
             }
         }
         StartCoroutine(DestroyEffect(2));
