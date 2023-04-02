@@ -1,0 +1,1587 @@
+fileFormatVersion: 2
+guid: 5ecbc20c8d06dac4d80d758ab20503d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nev_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3781
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66faedf53f1ee954fbd617c4828a6892
+      internalID: 348258406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3781
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6be164a96dc72841bf33e14a25cb1ca
+      internalID: 1837714103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_2
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 3781
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabca48e2947fc348958ac03f3f078d8
+      internalID: 1426258935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_3
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 3781
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd640c36c7e221d4da2d753588c59e88
+      internalID: 1950745086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_4
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 3781
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00556c3f165f1144f94d832c4606148c
+      internalID: -437682898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3466
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745eea6250aa36c43af7a33941a7517e
+      internalID: 824447861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3466
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee3377cd03fb2b4aa5c5397eb0939b3
+      internalID: 629313939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_7
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 3466
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ecfd02798d66b4caac41fa49e21699
+      internalID: -1554102560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_8
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 3466
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34008b7ca1c34a442abaf8ee01f2a41f
+      internalID: -1842409937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_9
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 3466
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd83a59a5dc7d644b1248654711f9f6
+      internalID: -446748350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3151
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39ba46166260284fb2a20d5adc859a4
+      internalID: -1425998171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_11
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3151
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bad7d54fddd0e4ebe146cbd8d5952b
+      internalID: -945356961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_12
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 3151
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8c2bdaeb4531743b35255a451fda57
+      internalID: -1129506400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_13
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 3151
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958df2c9ff7138047b0a7fd81f2a2528
+      internalID: 1290275120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_14
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 3151
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630981b240bd5e14ab3cbb4c8ee2840c
+      internalID: -1067164736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2836
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1d19f0d58077f419be7a05d0da8442
+      internalID: 1308227379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2836
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d500f4a2d22f40e4ca1c3bf3ebc60c83
+      internalID: -531656650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_17
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 2836
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb79788bad9b2294aa8dbd73773ac385
+      internalID: 740655379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_18
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2836
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49be64a597be4194a82d4936daa27989
+      internalID: -1416939878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_19
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 2836
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9b3e3f478627b40ad4c503d2d73c59
+      internalID: 628526328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2521
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbb31d1e08236a46a355e1bb767675b
+      internalID: -1136233221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_21
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2521
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374b96d90ad7f58468cd845bbb415037
+      internalID: 2114170898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_22
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 2521
+        width: 395
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d46804637d03994f9f6889613106420
+      internalID: -1317263135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_23
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2603
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80111e2d4a08224eb2786c4701fcb20
+      internalID: 770843550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_24
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 2603
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069860ef93c60ad44972dc7978003260
+      internalID: 1617164506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_25
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 2603
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b302fc0392641a94c9a4b2b3f819844b
+      internalID: -1727372971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d899694153e3f35479c1a21e9d0a4c7a
+      internalID: 255096934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_27
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79201c1b722024479967fb216344cd2
+      internalID: -225048280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_28
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0505c5e8c3c1e43b50d1728a183945
+      internalID: -565026668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_29
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e87d2ed6814f945ae593404858d0f3
+      internalID: -504131090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_30
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c429cd461b8eabc408e3af332f263747
+      internalID: -32344953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_31
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d19ec4958359247a83beb18294f02f
+      internalID: 1747730028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_32
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 2288
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f39ec07d7096c6409996ad238575b80
+      internalID: -1905723364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2055
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dae254c4531d849a7cf099563cf26b
+      internalID: -2129084087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_34
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 2055
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f91dc93d7e22724db212b8d40149888
+      internalID: 1825691164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_35
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2055
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689e9731946586847b5e96f0a093d6af
+      internalID: -169284874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_36
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 2055
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45284f4369af5f42b4a266de1ac2d79
+      internalID: 1869191348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_37
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 2055
+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48af7b91eb5744d459ba1eca67c64c52
+      internalID: 27375837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_38
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2064
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd64aa42a1c7354d99efb383f241a4a
+      internalID: 1189093213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_39
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 2064
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1745b752776d34f92175f2dd56e4ff
+      internalID: -1903207554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_40
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 2064
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794c81a425ca0e441adf6bcf29304bf5
+      internalID: -14082650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_41
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2064
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efc50e5e7545ab42961411126daa85f
+      internalID: -1882512087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e711c869ae622a44a6941da322b74a4
+      internalID: 1190046102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_43
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050adc80806c0d4449cc82e42503ee3d
+      internalID: 858913262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_44
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed1ee7ec72cad9459bb1de73c39921f
+      internalID: 2113698672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_45
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506c79a8ca268d044a01fe7d06c9ac3b
+      internalID: -1538622423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_46
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5c25b4c568bd74aa6e4268905ef9a6
+      internalID: 1915405214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_47
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bdc65c73838a14b90ebabf9e652145
+      internalID: 1852605190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_48
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1c5c49276fef84a99e97ddc85c1b64
+      internalID: 1632330828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_49
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3019d7e67c2353a45bd09381b4c68926
+      internalID: -631374438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_50
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40470b15747a242428df48c3bbb05275
+      internalID: -1468533782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_51
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e29c32a87f474e9235e3a80f71f05
+      internalID: -1035912299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_52
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a1411d4f391684aa13a73738c9e3fa
+      internalID: 1239807924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_53
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7321224be43948b65d0087a5d5a70
+      internalID: -227845115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_54
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1831
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc63a46a8f41c44eb802d01d2531d8f
+      internalID: -690425032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1607
+        width: 153
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbfa3076517c2446ad1598923aa9d17
+      internalID: -522933887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_56
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c57f306f560434397f550aa91c8508
+      internalID: 1468850901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_57
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437f89250a412614ba03d75cc96191cb
+      internalID: 1942277391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_58
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ce2bd0a39024f489e4e4c56a17cb57
+      internalID: -764300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_59
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd66945dc73d193479cef2ab56db6a1e
+      internalID: 100536321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_60
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfd77387998bae49a38ecad5331ccbf
+      internalID: 1191172005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_61
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b78a7095d2cb84ebe0bea976f41a8d
+      internalID: 1778976183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_62
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b65170d7ccd2346a4f5189da71a427
+      internalID: -1409532865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_63
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b32a0e0169f886428cdefb11f1f50bf
+      internalID: -1496416566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_64
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f34779b79793b24abacaf2dd3f56f88
+      internalID: -721902971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nev_65
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1607
+        width: 159
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee739358971bc0d4a97713e072fa1c8d
+      internalID: 1473509314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      nev_0: 348258406
+      nev_1: 1837714103
+      nev_10: -1425998171
+      nev_11: -945356961
+      nev_12: -1129506400
+      nev_13: 1290275120
+      nev_14: -1067164736
+      nev_15: 1308227379
+      nev_16: -531656650
+      nev_17: 740655379
+      nev_18: -1416939878
+      nev_19: 628526328
+      nev_2: 1426258935
+      nev_20: -1136233221
+      nev_21: 2114170898
+      nev_22: -1317263135
+      nev_23: 770843550
+      nev_24: 1617164506
+      nev_25: -1727372971
+      nev_26: 255096934
+      nev_27: -225048280
+      nev_28: -565026668
+      nev_29: -504131090
+      nev_3: 1950745086
+      nev_30: -32344953
+      nev_31: 1747730028
+      nev_32: -1905723364
+      nev_33: -2129084087
+      nev_34: 1825691164
+      nev_35: -169284874
+      nev_36: 1869191348
+      nev_37: 27375837
+      nev_38: 1189093213
+      nev_39: -1903207554
+      nev_4: -437682898
+      nev_40: -14082650
+      nev_41: -1882512087
+      nev_42: 1190046102
+      nev_43: 858913262
+      nev_44: 2113698672
+      nev_45: -1538622423
+      nev_46: 1915405214
+      nev_47: 1852605190
+      nev_48: 1632330828
+      nev_49: -631374438
+      nev_5: 824447861
+      nev_50: -1468533782
+      nev_51: -1035912299
+      nev_52: 1239807924
+      nev_53: -227845115
+      nev_54: -690425032
+      nev_55: -522933887
+      nev_56: 1468850901
+      nev_57: 1942277391
+      nev_58: -764300358
+      nev_59: 100536321
+      nev_6: 629313939
+      nev_60: 1191172005
+      nev_61: 1778976183
+      nev_62: -1409532865
+      nev_63: -1496416566
+      nev_64: -721902971
+      nev_65: 1473509314
+      nev_7: -1554102560
+      nev_8: -1842409937
+      nev_9: -446748350
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

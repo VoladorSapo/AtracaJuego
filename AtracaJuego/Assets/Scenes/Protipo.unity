@@ -266,7 +266,7 @@ Animator:
   m_GameObject: {fileID: 22375510}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: fd61650230739fe48bc1444c023bf11e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -318,7 +318,7 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
+  m_Sprite: {fileID: 1479903750, guid: 54ba0cd71920d8a439b63868c47e58ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -415,7 +416,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!1 &165424098
 GameObject:
@@ -460,7 +460,7 @@ Animator:
   m_GameObject: {fileID: 165424098}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: a225ca905a0b439438a7a13519d2c154, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -512,8 +512,8 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
-  m_Color: {r: 0, g: 0.87220883, b: 1, a: 1}
+  m_Sprite: {fileID: 269770287, guid: 2cd27294a35aa8e44854906049e11272, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -787,7 +787,7 @@ Animator:
   m_GameObject: {fileID: 318123293}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: a225ca905a0b439438a7a13519d2c154, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -839,8 +839,8 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
-  m_Color: {r: 0, g: 0.87220883, b: 1, a: 1}
+  m_Sprite: {fileID: 269770287, guid: 2cd27294a35aa8e44854906049e11272, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1163,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -1176,7 +1177,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!1 &578498878
 GameObject:
@@ -1388,6 +1388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -1675,6 +1676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -1703,6 +1705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -1716,7 +1719,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &711030137
 BoxCollider2D:
@@ -1806,6 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -1832,6 +1835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -1845,7 +1849,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
 --- !u!1 &843505700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +1990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -2000,7 +2004,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &877809188
 MonoBehaviour:
@@ -2015,6 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -2028,7 +2032,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!114 &877809189
 MonoBehaviour:
@@ -2043,6 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -2056,7 +2060,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
-  AttackMode: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!114 &877809190
 MonoBehaviour:
@@ -2071,6 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -2084,7 +2088,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!1 &1003061663
 GameObject:
@@ -2787,6 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -2800,7 +2804,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
-  AttackMode: 0
 --- !u!4 &1019147421
 Transform:
   m_ObjectHideFlags: 0
@@ -2897,7 +2900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221975809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: 6.94, z: 0}
+  m_LocalPosition: {x: -0.43, y: 6.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2914,7 +2917,7 @@ Animator:
   m_GameObject: {fileID: 1221975809}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec4992de7a7477848af1bc8f80a28f75, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2966,7 +2969,7 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
+  m_Sprite: {fileID: 1189093213, guid: 5ecbc20c8d06dac4d80d758ab20503d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7223,6 +7226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -7251,6 +7255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -7264,7 +7269,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &1703157582
 BoxCollider2D:
@@ -7487,6 +7491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -7500,7 +7505,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!1 &1868186001
 GameObject:
@@ -7545,7 +7549,7 @@ Animator:
   m_GameObject: {fileID: 1868186001}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: a225ca905a0b439438a7a13519d2c154, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7597,8 +7601,8 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
-  m_Color: {r: 0, g: 0.87220883, b: 1, a: 1}
+  m_Sprite: {fileID: 269770287, guid: 2cd27294a35aa8e44854906049e11272, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7732,6 +7736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -7745,7 +7750,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &2050588221
 MonoBehaviour:
@@ -7760,6 +7764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -7773,7 +7778,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
-  AttackMode: 0
 --- !u!212 &2050588222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7874,6 +7878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
@@ -7902,6 +7907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
@@ -7915,7 +7921,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &2069479884
 BoxCollider2D:
