@@ -27,7 +27,7 @@ public class Ignacio : PlayablePlayer
                 }
                 else
                 {
-                    ChangeMapShown();
+                    ChangeMapShown(1);
                 }
                 //FireCooldown++;
                 //_SPM.CanAttack[0]=false;
@@ -35,19 +35,21 @@ public class Ignacio : PlayablePlayer
         }
     }
 
-    protected override void ChangeMapShown(){
-        if (Mode == 2)
+    protected override void ChangeMapShown(int setMode){
+        Mode = setMode;
+        if (Mode == 1)
         {
-            Mode = 1;
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
             GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
         }
-        else if (Mode == 1) { print("move"); Mode = 2; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
         else
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
     }
+    /* if(AttackMode){AttackMode=false; GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
+            else{AttackMode=true; GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}*/
 }
     

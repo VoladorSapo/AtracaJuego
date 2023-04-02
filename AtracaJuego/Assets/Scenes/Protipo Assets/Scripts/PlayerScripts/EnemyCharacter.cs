@@ -6,9 +6,12 @@ public class EnemyCharacter : PlayerBase
 {
     [SerializeField] protected PlayerBase Objetivo; //El personaje al que quiere pegar
         [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
-    // Start is called before the first frame update
+    protected override void Awake()
+    {
+        base.Awake();
+        SPM = GameObject.Find("EnemyController").GetComponent<ScriptPlayerManager>();
 
-    // Update is called once per frame
+    }
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false,team,false);

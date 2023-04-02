@@ -16,7 +16,7 @@ public class PlayerBase : MonoBehaviour
     private int[] prevY= new int[5];
     public bool team;
     protected bool moving;
-    protected bool hasTurn;
+   [SerializeField] protected bool hasTurn;
     protected bool hasMove;
     protected bool hasAttack;
     public int Cooldowns=0;
@@ -30,18 +30,16 @@ public class PlayerBase : MonoBehaviour
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
-    void Awake(){
+    protected virtual void Awake(){
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         GC = grid.GetComponent<GridController>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
-        SPM= GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
         _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
     }
     void Start()
     {
-        print("madremiawilliam" );
         
         startGame();
 
@@ -85,7 +83,7 @@ public class PlayerBase : MonoBehaviour
                     }
                     else
                     {
-                        ChangeMapShown();
+                        ChangeMapShown(2);
                     }
                 }
                 else
@@ -107,7 +105,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void startTurn() 
     { }
-    protected virtual void ChangeMapShown() { }
+    protected virtual void ChangeMapShown(int setMode) { }
     
 
 
@@ -120,6 +118,14 @@ public class PlayerBase : MonoBehaviour
         Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         if (newPos != null &&  newPos.Count > 0)
         {
+            startMove(newPos);
+        }
+        
+    }
+    protected virtual void startMove(List<Node> newPos)
+    {
+        if (newPos != null && newPos.Count > 0)
+        {
             Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             tile.setPlayer(null);
@@ -130,9 +136,7 @@ public class PlayerBase : MonoBehaviour
             moving = true;
             //turn = false;
         }
-        
     }
-
     public virtual void Turn()
     {
         //turn = true;

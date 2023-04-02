@@ -6,15 +6,16 @@ using UnityEngine.UIElements;
 
 public class Player1 : PlayablePlayer
 {   
-    protected override void ChangeMapShown()
+    protected override void ChangeMapShown(int setMode)
     {
-        if (Mode == 2)
+        Mode = setMode;
+        if (Mode == 1)
         {
-            Mode = 1;
+            print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
             GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
         }
-        else if (Mode == 1) { Mode = 2; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
         else
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);

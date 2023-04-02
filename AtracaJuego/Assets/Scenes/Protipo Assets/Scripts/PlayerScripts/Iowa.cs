@@ -47,7 +47,7 @@ public class Iowa : PlayablePlayer
                 }
                 else
                 {
-                    ChangeMapShown();
+                    ChangeMapShown(1);
                 }
                 //else{} Las diagonales
 
@@ -58,14 +58,20 @@ public class Iowa : PlayablePlayer
         }
         }
 
-        protected override void ChangeMapShown(){
-            if(Mode == 2){Mode=1; 
-            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); 
-            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
-            else if(Mode == 1){Mode=2; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}
-        else  {GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+        protected override void ChangeMapShown(int setMode){
+        Mode = setMode;
+        if (Mode == 1)
+        {
+            print("move");
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
+            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
         }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else
+        {
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
+    }
         
     }
 
