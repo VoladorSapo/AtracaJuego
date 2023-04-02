@@ -38,7 +38,7 @@ public class pathFinder : MonoBehaviour
             foreach (Node nodoAdayacente in nodosAdyacentes(currentNode,nodos,ogx,ogy))
             {
                 if (closeList.Contains(nodoAdayacente)) continue;
-                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team)) continue;
+                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team) && nodoAdayacente != endNode) continue;
                 int tempG = currentNode.gCost + Distance(currentNode, nodoAdayacente);
                 if(tempG < nodoAdayacente.gCost)
                 {

@@ -20,6 +20,7 @@ public class ScriptPlayerManager : MonoBehaviour
     {
         for(int i = 0; i < players.Count; i++)
             {
+            print(name);
             players[i].setGame();
             players[i].teamNumb = i;
 
@@ -60,7 +61,7 @@ public class ScriptPlayerManager : MonoBehaviour
         {
             deadPlayer = players.IndexOf(player);
             players.Remove(player);
-            for (int i = 0; i < players.Count-1; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 players[i].teamNumb = i;
             }
@@ -81,9 +82,12 @@ public class ScriptPlayerManager : MonoBehaviour
             players[player].setTurn(true);
         }
         currentPlayer = -1;
+        print(players.Count);
         for (int i = 0; i < players.Count; i++)
         {
+            print("ai");
             if(!players[i].getTurn()){
+                print("Noa");
                 currentPlayer = i;
                 players[i].startTurn();
                 break;
@@ -91,6 +95,7 @@ public class ScriptPlayerManager : MonoBehaviour
         }
         if(currentPlayer == -1)
         {
+            print("nextteam");
             _turn.startTurns();
         }
     }

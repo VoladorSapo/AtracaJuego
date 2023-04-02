@@ -132,7 +132,7 @@ public class GridController : MonoBehaviour
     //Transforma la posición del ratón a coordenadas dentro de la Grid
     public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team)
     {
-        if (ReachablePos.Contains(grid.WorldToCell(endpos)))
+        if (ReachablePos.Contains(grid.WorldToCell(endpos))||team)
         {
             //print(grid.WorldToCell(position).x);
             Vector3 mouseWorldPos = endpos;
@@ -201,7 +201,7 @@ public class GridController : MonoBehaviour
         }
         CanAttackMap.RefreshAllTiles();
         freeCursor = false;
-        }else{ print("David"); CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); attackableNodes=null;}
+        }else{  CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); attackableNodes=null;}
         return attackableNodes;
     }
 

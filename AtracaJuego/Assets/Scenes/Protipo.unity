@@ -402,12 +402,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -415,7 +417,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!1 &165424098
 GameObject:
@@ -1163,12 +1164,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1176,7 +1179,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!1 &578498878
 GameObject:
@@ -1355,7 +1357,6 @@ MonoBehaviour:
   - {fileID: 1839479776}
   - {fileID: 50655427}
   - {fileID: 549352403}
-  - {fileID: 1019147420}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -1388,12 +1389,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1653,8 +1656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711030138}
   - component: {fileID: 711030137}
-  - component: {fileID: 711030136}
-  - component: {fileID: 711030135}
+  - component: {fileID: 711030139}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -1662,62 +1664,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &711030135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711030134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92abd63f7acbdbc4b92b27af3eac8c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 195986139}
-  GC: {fileID: 195986141}
-  _gamecontroller: {fileID: 642901474}
-  _turnController: {fileID: 642901472}
-  SPM: {fileID: 1088530369}
-  MaxDistance: 5
-  team: 1
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 3
-  currentHealth: 0
-  Objetivo: {fileID: 0}
-  protas: {fileID: 0}
---- !u!114 &711030136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711030134}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b45af4ae026e994bb46d2dcb69fb0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  GC: {fileID: 0}
-  _gamecontroller: {fileID: 0}
-  _turnController: {fileID: 0}
-  SPM: {fileID: 0}
-  MaxDistance: 0
-  team: 0
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 0
-  currentHealth: 0
-  AttackMode: 0
-  PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &711030137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1752,7 +1698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711030134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.8, y: -4.8, z: 0}
+  m_LocalPosition: {x: 15.3, y: -5.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1760,6 +1706,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711030139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711030134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 5
+  team: 0
+  hasTurn: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 0
+  alive: 0
+  maxHealth: 3
+  currentHealth: 0
+  Objetivo: {fileID: 0}
+  protas: {fileID: 642901473}
 --- !u!1 &775033544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,12 +1782,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1832,12 +1810,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 5
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1845,7 +1825,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
 --- !u!1 &843505700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877809182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 4.9, z: 0}
+  m_LocalPosition: {x: 4.8, y: -25.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1987,12 +1966,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2000,7 +1981,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &877809188
 MonoBehaviour:
@@ -2015,12 +1995,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2028,7 +2010,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!114 &877809189
 MonoBehaviour:
@@ -2043,12 +2024,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 5
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 1819482702}
@@ -2056,7 +2039,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
-  AttackMode: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!114 &877809190
 MonoBehaviour:
@@ -2071,12 +2053,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2084,7 +2068,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!1 &1003061663
 GameObject:
@@ -2787,12 +2770,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 4
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2800,7 +2785,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
-  AttackMode: 0
 --- !u!4 &1019147421
 Transform:
   m_ObjectHideFlags: 0
@@ -2849,9 +2833,9 @@ MonoBehaviour:
   _turn: {fileID: 642901472}
   _gameController: {fileID: 642901474}
   players:
-  - {fileID: 711030135}
-  - {fileID: 2069479882}
-  - {fileID: 1703157580}
+  - {fileID: 711030139}
+  - {fileID: 2069479886}
+  - {fileID: 1703157584}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -7201,8 +7185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703157583}
   - component: {fileID: 1703157582}
-  - component: {fileID: 1703157581}
-  - component: {fileID: 1703157580}
+  - component: {fileID: 1703157584}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Enemy
@@ -7210,62 +7193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1703157580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703157579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92abd63f7acbdbc4b92b27af3eac8c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 195986139}
-  GC: {fileID: 195986141}
-  _gamecontroller: {fileID: 642901474}
-  _turnController: {fileID: 642901472}
-  SPM: {fileID: 1088530369}
-  MaxDistance: 5
-  team: 1
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 3
-  currentHealth: 0
-  Objetivo: {fileID: 0}
-  protas: {fileID: 0}
---- !u!114 &1703157581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703157579}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b45af4ae026e994bb46d2dcb69fb0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  GC: {fileID: 0}
-  _gamecontroller: {fileID: 0}
-  _turnController: {fileID: 0}
-  SPM: {fileID: 0}
-  MaxDistance: 0
-  team: 0
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 0
-  currentHealth: 0
-  AttackMode: 0
-  PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &1703157582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7308,6 +7235,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703157584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703157579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 5
+  team: 0
+  hasTurn: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 2
+  alive: 0
+  maxHealth: 3
+  currentHealth: 0
+  Objetivo: {fileID: 0}
+  protas: {fileID: 642901473}
 --- !u!1 &1819482700
 GameObject:
   m_ObjectHideFlags: 0
@@ -7487,12 +7444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -7500,7 +7459,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!1 &1868186001
 GameObject:
@@ -7732,12 +7690,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
+  Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -7745,7 +7705,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
-  AttackMode: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &2050588221
 MonoBehaviour:
@@ -7760,12 +7719,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 195986139}
+  Mode: 0
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
   SPM: {fileID: 642901473}
   MaxDistance: 10
   team: 0
+  hasTurn: 0
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -7773,7 +7734,6 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
-  AttackMode: 0
 --- !u!212 &2050588222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7852,8 +7812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069479885}
   - component: {fileID: 2069479884}
-  - component: {fileID: 2069479883}
-  - component: {fileID: 2069479882}
+  - component: {fileID: 2069479886}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -7861,62 +7820,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2069479882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069479881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92abd63f7acbdbc4b92b27af3eac8c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 195986139}
-  GC: {fileID: 195986141}
-  _gamecontroller: {fileID: 642901474}
-  _turnController: {fileID: 642901472}
-  SPM: {fileID: 1088530369}
-  MaxDistance: 5
-  team: 1
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 3
-  currentHealth: 0
-  Objetivo: {fileID: 0}
-  protas: {fileID: 0}
---- !u!114 &2069479883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069479881}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b45af4ae026e994bb46d2dcb69fb0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  GC: {fileID: 0}
-  _gamecontroller: {fileID: 0}
-  _turnController: {fileID: 0}
-  SPM: {fileID: 0}
-  MaxDistance: 0
-  team: 0
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 0
-  currentHealth: 0
-  AttackMode: 0
-  PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
 --- !u!61 &2069479884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7959,6 +7862,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069479886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069479881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 5
+  team: 0
+  hasTurn: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 1
+  alive: 0
+  maxHealth: 3
+  currentHealth: 0
+  Objetivo: {fileID: 0}
+  protas: {fileID: 642901473}
 --- !u!1 &2128748377
 GameObject:
   m_ObjectHideFlags: 0
