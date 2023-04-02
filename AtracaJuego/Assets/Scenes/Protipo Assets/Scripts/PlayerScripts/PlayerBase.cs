@@ -103,6 +103,9 @@ public class PlayerBase : MonoBehaviour
             }
         }
     }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other){}
+
     public virtual void startTurn() 
     { }
     protected virtual void ChangeMapShown(int setMode) { }
@@ -166,7 +169,7 @@ public class PlayerBase : MonoBehaviour
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
-        tile.setPlayer(null);
+        //tile.setPlayer(null);
         sprite.enabled = false;
         SPM.playerDie(this);
     }
@@ -201,6 +204,7 @@ public class PlayerBase : MonoBehaviour
 
     public virtual void startGame()
     {
+        alive = true;
         currentHealth = maxHealth;
     }
 

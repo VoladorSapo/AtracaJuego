@@ -59,6 +59,7 @@ public class MapManager : MonoBehaviour
         if(direction!=3 && _GC.tiles[x,down1].canAddEffect(effect) ){SpreadEffectLimit(x,down1,effect,Range,MaxRange,direction);}
         
         if(direction!=1 && _GC.tiles[left1,y].canAddEffect(effect) ){SpreadEffectLimit(left1,y,effect,Range,MaxRange,direction);}
+        
         print("@"+_GC.tiles[right1,y].canAddEffect(effect));
         if(direction!=2 && _GC.tiles[right1,y].canAddEffect(effect) ){SpreadEffectLimit(right1,y,effect,Range,MaxRange,direction);}
         }
@@ -72,6 +73,8 @@ public class MapManager : MonoBehaviour
             case 1: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(4);}} break;
             case 2: if(p!=null){if(p.tag=="Player"){p.loseHealth(2);}else{p.loseHealth(7);}} break;
             case 3: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(2);}} break;
+            case 4: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(5);}} break;
+            case 5: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(2);}} break;
         }
     }
 

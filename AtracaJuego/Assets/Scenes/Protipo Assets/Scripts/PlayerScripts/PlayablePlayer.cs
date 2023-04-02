@@ -7,12 +7,14 @@ public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
     protected int Cooldown;
+    protected bool willAttack;
     protected override void Awake()
     {
         base.Awake();
         SPM = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
 
     }
+    protected override void OnTriggerEnter2D(Collider2D other){}
     public override void Update()
     {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving && Mode == 1)
@@ -60,6 +62,7 @@ public class PlayablePlayer : PlayerBase
     }
     public override void setGame()
     {
+        willAttack=false;
         base.setGame();
         Cooldown = 0;
     }
@@ -73,7 +76,7 @@ public class PlayablePlayer : PlayerBase
         //GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,team,false);
         print("hey");
         ChangeMapShown(1);
-        
+        willAttack=false;
         hasMove = false;
         hasAttack = false;
         if (Cooldown > 0) { Cooldown--; }

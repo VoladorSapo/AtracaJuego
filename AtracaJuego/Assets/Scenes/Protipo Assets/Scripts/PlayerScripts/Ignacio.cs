@@ -7,6 +7,7 @@ using System.Linq;
 public class Ignacio : PlayablePlayer
 {
     public GameObject FirePrefab;
+    private Vector3Int posMouse;
 
     //Vector3Int posGrid = _GC.grid.WorldToCell(transform.position);
        //_GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].setPlayer(this); //Hacer esto para inicializar
@@ -16,10 +17,10 @@ public class Ignacio : PlayablePlayer
     {   
         base.Update();
         if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode ==2){
-            Vector3Int posMouse=GC.GetMousePosition();
             if(!GC.isEmpty(posMouse, false, 2)){
-                Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
-                Instantiate(FirePrefab, posNew, Quaternion.identity);
+                posMouse=GC.GetMousePosition(); print(posMouse);
+                animator.SetInteger("Anim",2);
+
                  hasAttack= true;
                 if (hasMove)
                 {
@@ -33,8 +34,14 @@ public class Ignacio : PlayablePlayer
                 //_SPM.CanAttack[0]=false;
             }
         }
+
     }
 
+    public void InstantiateFirePrefab(){
+        Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
+        Instantiate(FirePrefab, posNew, Quaternion.identity);
+        animator.SetInteger("Anim",0);
+    }
     protected override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)

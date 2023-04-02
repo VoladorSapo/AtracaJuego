@@ -29,13 +29,16 @@ public class Iowa : PlayablePlayer
                 if(Mathf.Abs(x)!=Mathf.Abs(y)){ //A los lados
                     switch(Mathf.Abs(x)){
                         case 0: if(y==1){   PushPrefab.GetComponent<PushEffect>().direction = 3;
+                                            
                                             Instantiate(PushPrefab, posNew, Quaternion.identity);}
                                 else{       PushPrefab.GetComponent<PushEffect>().direction = 4;
                                             Instantiate(PushPrefab, posNew, Quaternion.identity);
                                 } break;
                         case 1: if(x==1){   PushPrefab.GetComponent<PushEffect>().direction = 1;
+                                            sprite.flipX=false;
                                             Instantiate(PushPrefab, posNew, Quaternion.identity);}
                                 else{       PushPrefab.GetComponent<PushEffect>().direction = 2;
+                                            sprite.flipX=true;
                                             Instantiate(PushPrefab, posNew, Quaternion.identity);
                                 }break;
                     }
@@ -58,6 +61,16 @@ public class Iowa : PlayablePlayer
         }
         }
 
+        public void StartRage(int dir){
+            StartCoroutine(RageOn(dir));
+        }
+        protected override void OnTriggerEnter2D(Collider2D other){
+            //if(){}
+            switch(other.name){
+                case "ElecPrefab(Clone)": StartCoroutine(RageOn(other.GetComponent<PushEffect>().direction)); break;
+            }  
+        }
+
         protected override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)
@@ -71,7 +84,40 @@ public class Iowa : PlayablePlayer
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
-    }
+        }
+
+        IEnumerator RageOn(int direction){
+        int dx=0, dy=0;
+        switch(direction){
+            case 1: dx=1; break;
+            case 2: dx=-1; break;
+            case 3: dy=1; break;
+            case 4: dy=-1; break;
+        }
+
+        WaitForSeconds wfs=new WaitForSeconds(0);
+        int speed=60;
+        bool stop=false;
+        Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
+        Vector3Int tileO = GC.grid.WorldToCell(transform.position);
+        GC.tiles[x,y].setPlayer(null);
+        while(!stop){
+            tileO = GC.grid.WorldToCell(transform.position);
+            x=tileO.x-GC.ogx;
+            y=tileO.y-GC.ogy;
+            transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);
+            if(transform.position==newPos && (GC.tiles[x+ dx,y + dy].GetTileState()<5 || GC.tiles[x+ dx,y + dy].GetTileState()==9 || GC.tiles[x+ dx,y + dy].GetTileState()==11)){
+                newPos=transform.position+new Vector3(10f*dx,10f*dy,0f); 
+                //if transform.position coincide con una tile rompible, hacer efecto de romper (SetTileStats)
+                }
+            else if(transform.position==newPos && (GC.tiles[x + dx,y + dy].GetTileState()>=5 || GC.tiles[x+ dx,y + dy].GetTileState()!=9 || GC.tiles[x+ dx,y + dy].GetTileState()!=11)){
+                 stop=true;}
+            
+            yield return wfs;
+        }
+        GC.tiles[x,y].setPlayer(this);
+        }
+
         
     }
 

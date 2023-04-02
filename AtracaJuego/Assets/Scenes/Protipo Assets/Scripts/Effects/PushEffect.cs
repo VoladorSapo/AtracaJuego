@@ -43,7 +43,7 @@ public class PushEffect : MonoBehaviour
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
                                 if(_GC.tiles[x+i,y+k].GetTileState()<8){
-                                if(_GC.tiles[x+i,y+k].GetTileEffect()==1 || _GC.tiles[x+i,y+k].GetTileEffect()==10){
+                                if(_GC.tiles[x+i,y+k].GetTileEffect()==1 || _GC.tiles[x+i,y+k].GetTileEffect()==7){
                                     switch(k){
                                         case 1: dist1++; break;
                                         case 0: dist0++; break;
@@ -78,7 +78,7 @@ public class PushEffect : MonoBehaviour
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
                                 if(_GC.tiles[x-i,y+k].GetTileState()<8){
-                                if(_GC.tiles[x-i,y+k].GetTileEffect()==1 || _GC.tiles[x-i,y+k].GetTileEffect()==10){
+                                if(_GC.tiles[x-i,y+k].GetTileEffect()==1 || _GC.tiles[x-i,y+k].GetTileEffect()==7){
                                     switch(k){
                                         case 1: dist1++; break;
                                         case 0: dist0++; break;
@@ -104,7 +104,7 @@ public class PushEffect : MonoBehaviour
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
                                 if(_GC.tiles[x+k,y+i].GetTileState()<8){
-                                if(_GC.tiles[x+k,y+i].GetTileEffect()==1 || _GC.tiles[x+k,y+i].GetTileEffect()==10){
+                                if(_GC.tiles[x+k,y+i].GetTileEffect()==1 || _GC.tiles[x+k,y+i].GetTileEffect()==7){
                                     switch(k){
                                         case 1: dist1++; break;
                                         case 0: dist0++; break;
@@ -128,7 +128,7 @@ public class PushEffect : MonoBehaviour
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
                                 if(_GC.tiles[x+k,y-i].GetTileState()<8){
-                                if(_GC.tiles[x+k,y-i].GetTileEffect()==1 || _GC.tiles[x+k,y-i].GetTileEffect()==10){
+                                if(_GC.tiles[x+k,y-i].GetTileEffect()==1 || _GC.tiles[x+k,y-i].GetTileEffect()==7){
                                     switch(k){
                                         case 1: dist1++; break;
                                         case 0: dist0++; break;

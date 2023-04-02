@@ -31,6 +31,7 @@ public class tunController : MonoBehaviour
 
     public void startTurns()
     {
+        
         currentManager++;
         if(currentManager < Managers.Length)
         {

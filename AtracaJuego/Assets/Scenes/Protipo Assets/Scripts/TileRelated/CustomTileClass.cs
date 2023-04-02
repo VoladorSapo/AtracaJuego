@@ -119,8 +119,7 @@ public class CustomTileClass
                     if(tileEffect!=16){
                     switch(tileEffect){
                         case 0: tileEffect=1; break;
-                        //case 2: cambio de sprite a nube mojada pero con propiedades nulas?
-                        //case 3: cambio de sprite pero propiedades iguales que un gas normal?
+                        case 2: tileEffect=1; break;
                         case 4: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); break;
                         case 5: tileEffect=3; break;
                         case 6: tileEffect=7; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
@@ -136,7 +135,7 @@ public class CustomTileClass
                         case 3: tileEffect=12; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); _MM.Damage(1,tilePos.x,tilePos.y); break; 
                         case 5: tileEffect=2; if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0);} break;
                         case 6: tileEffect=0; break;
-                        case 7: tileEffect=0; break; 
+                        case 7: tileEffect=0; _MM.Damage(4,tilePos.x,tilePos.y); break; 
                         case 8: tileEffect=1; break;
                         case 9: tileEffect=3; break;
                         case 10: tileEffect=3; break;
@@ -166,9 +165,9 @@ public class CustomTileClass
             case 5:
                     if(tileEffect!=16){
                     switch(tileEffect){
-                        case 1: tileEffect=7; break;
-                        case 2: tileEffect=6; break;
-                        case 3: tileEffect=11; break;
+                        case 1: tileEffect=7; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
+                        case 2: tileEffect=6; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction);  _MM.Damage(4,tilePos.x,tilePos.y); break;
+                        case 3: tileEffect=11; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction); break;
                         //case 6: resetea el fade?
                         //case 7: resetea el fade?
                     }}break;
@@ -182,6 +181,18 @@ public class CustomTileClass
                         case 12: tileEffect=0; break;
                         case 13: tileEffect=0; break;
                     }}break;
+            case 7:
+                    if(tileEffect!=16){
+                        switch(tileEffect){
+                        case 0: tileEffect=7; break;
+                        case 1: tileEffect=7; break;
+                        case 2: tileEffect=7; break;
+                        case 4: tileEffect=4; _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction); break;
+                        case 5: tileEffect=11; break;
+                        case 11: tileEffect=7; break;
+                        case 12: tileEffect=0;  _MM.Damage(4,tilePos.x,tilePos.y); break; //Damage
+                        case 13: tileEffect=0;  _MM.Damage(2,tilePos.x,tilePos.y); break; //Damage
+                    }} break;
                     }
         }
 
