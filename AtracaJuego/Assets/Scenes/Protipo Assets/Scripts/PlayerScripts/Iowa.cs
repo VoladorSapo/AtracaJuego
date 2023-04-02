@@ -16,7 +16,8 @@ public class Iowa : PlayablePlayer
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
         x=tileO.x-GC.ogx;
         y=tileO.y-GC.ogy;
-        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && AttackMode){
+        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2)
+        {
             Vector3Int posMouse=GC.GetMousePosition();
             if(!GC.isEmpty(posMouse, false, 2)){
                 Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
@@ -39,6 +40,15 @@ public class Iowa : PlayablePlayer
                                 }break;
                     }
                 }
+                hasAttack = true;
+                if (hasMove)
+                {
+                   // SPM.endTurn(teamNumb, false);
+                }
+                else
+                {
+                    ChangeMapShown();
+                }
                 //else{} Las diagonales
 
                 //Instantiate(PushPrefab, posNew, Quaternion.identity);
@@ -49,8 +59,12 @@ public class Iowa : PlayablePlayer
         }
 
         protected override void ChangeMapShown(){
-            if(AttackMode){AttackMode=false; GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
-            else{AttackMode=true; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}
+            if(Mode == 2){Mode=1; 
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); 
+            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
+            else if(Mode == 1){Mode=2; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}
+        else  {GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+        }
         }
         
     }

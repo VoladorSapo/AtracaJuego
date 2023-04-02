@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayerBase : MonoBehaviour
 {
     [SerializeField] private Grid grid;
+    [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
     public GridController GC;
     public gameController _gamecontroller;
     [SerializeField] private tunController _turnController;
@@ -15,7 +16,9 @@ public class PlayerBase : MonoBehaviour
     private int[] prevY= new int[5];
     public bool team;
     protected bool moving;
-    private bool hasTurn;
+    protected bool hasTurn;
+    protected bool hasMove;
+    protected bool hasAttack;
     public int Cooldowns=0;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -74,7 +77,16 @@ public class PlayerBase : MonoBehaviour
                     //print(tilepos);
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
-                    SPM.endTurn(teamNumb,false);
+                    hasMove = true;
+                    if (hasAttack)
+                    {
+                        print("endturn");
+                        SPM.endTurn(teamNumb, false);
+                    }
+                    else
+                    {
+                        ChangeMapShown();
+                    }
                 }
                 else
                 {
@@ -95,7 +107,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void startTurn() 
     { }
-
+    protected virtual void ChangeMapShown() { }
     
 
 
@@ -108,7 +120,7 @@ public class PlayerBase : MonoBehaviour
         Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         if (newPos != null &&  newPos.Count > 0)
         {
-            Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+            Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             tile.setPlayer(null);
             print(name);
@@ -198,7 +210,7 @@ public class PlayerBase : MonoBehaviour
     }
     public void setTurn(bool newTurn)
     {
-        hasTurn = newTurn;
+       hasAttack= hasMove= hasTurn = newTurn;
     }
 
 

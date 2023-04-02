@@ -46,8 +46,10 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void ChangePlayer(int player)
     {
+        print("dubi"+player);
         if (!players[player].getTurn())
         {
+            print("cubi" + player);
             currentPlayer = player;
             players[player].startTurn();
         }

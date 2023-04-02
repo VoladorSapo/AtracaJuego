@@ -6,11 +6,10 @@ using UnityEngine.EventSystems;
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
-    [SerializeField] protected bool AttackMode;
     protected int Cooldown;
     public override void Update()
     {
-        if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving && !AttackMode)
+        if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving && Mode == 1)
         {
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
@@ -30,8 +29,9 @@ public class PlayablePlayer : PlayerBase
 
     void OnMouseDown()
     {
-        if (SPM.Activated)
+        if (SPM.Activated/* && SPM.players[SPM.currentPlayer].Mode == 0*/)
         {
+            print("yotoyroyt" +name+teamNumb);
             SPM.ChangePlayer(teamNumb);
             //GC.setReachablePos(transform.position, MaxDistance, true);
         }
@@ -46,7 +46,7 @@ public class PlayablePlayer : PlayerBase
         base.setGame();
         Cooldown = 0;
     }
-    protected virtual void ChangeMapShown()
+    protected override void ChangeMapShown()
     {
 
     }
@@ -54,7 +54,9 @@ public class PlayablePlayer : PlayerBase
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,team,false);
-        AttackMode = false;
+        Mode = 1;
+        hasMove = false;
+        hasAttack = false;
         if (Cooldown > 0) { Cooldown--; }
     }
 

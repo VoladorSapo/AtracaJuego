@@ -201,7 +201,7 @@ public class GridController : MonoBehaviour
         }
         CanAttackMap.RefreshAllTiles();
         freeCursor = false;
-        }else{CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); attackableNodes=null;}
+        }else{ print("David"); CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); attackableNodes=null;}
         return attackableNodes;
     }
 

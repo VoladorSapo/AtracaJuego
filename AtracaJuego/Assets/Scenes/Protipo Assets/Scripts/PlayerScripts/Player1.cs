@@ -6,9 +6,19 @@ using UnityEngine.UIElements;
 
 public class Player1 : PlayablePlayer
 {   
-    void Start(){
-        //Vector3Int posGrid = GC.grid.WorldToCell(transform.position);
-        //GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
+    protected override void ChangeMapShown()
+    {
+        if (Mode == 2)
+        {
+            Mode = 1;
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
+            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
+        }
+        else if (Mode == 1) { Mode = 2; GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else
+        {
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+        }
     }
-
 }
+

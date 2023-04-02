@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyCharacter : PlayerBase
 {
+    [SerializeField] protected PlayerBase Objetivo; //El personaje al que quiere pegar
+        [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
     // Start is called before the first frame update
 
     // Update is called once per frame
