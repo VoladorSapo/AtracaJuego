@@ -6,6 +6,7 @@ public class Iowa : PlayablePlayer
 {
     
     public GameObject PushPrefab;
+    public Vector3Int posMouse;
     private int x,y;
 
     // Update is called once per frame
@@ -18,45 +19,10 @@ public class Iowa : PlayablePlayer
         y=tileO.y-GC.ogy;
         if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2)
         {
-            Vector3Int posMouse=GC.GetMousePosition();
+            posMouse=GC.GetMousePosition();
             if(!GC.isEmpty(posMouse, false, 2)){
-                Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
+                animator.SetInteger("Anim", 2);
 
-                Vector3 directionVec=posMouse-GC.grid.WorldToCell(transform.position);
-                int x=(int) directionVec.x;
-                int y=(int) directionVec.y;
-                Vector2 dir=new Vector2(x,y);
-                if(Mathf.Abs(x)!=Mathf.Abs(y)){ //A los lados
-                    switch(Mathf.Abs(x)){
-                        case 0: if(y==1){   PushPrefab.GetComponent<PushEffect>().direction = 3;
-                                            
-                                            Instantiate(PushPrefab, posNew, Quaternion.identity);}
-                                else{       PushPrefab.GetComponent<PushEffect>().direction = 4;
-                                            Instantiate(PushPrefab, posNew, Quaternion.identity);
-                                } break;
-                        case 1: if(x==1){   PushPrefab.GetComponent<PushEffect>().direction = 1;
-                                            sprite.flipX=false;
-                                            Instantiate(PushPrefab, posNew, Quaternion.identity);}
-                                else{       PushPrefab.GetComponent<PushEffect>().direction = 2;
-                                            sprite.flipX=true;
-                                            Instantiate(PushPrefab, posNew, Quaternion.identity);
-                                }break;
-                    }
-                }
-                hasAttack = true;
-                if (hasMove)
-                {
-                   // SPM.endTurn(teamNumb, false);
-                }
-                else
-                {
-                    ChangeMapShown(1);
-                }
-                //else{} Las diagonales
-
-                //Instantiate(PushPrefab, posNew, Quaternion.identity);
-                //PushCooldown++;
-                //_SPM.CanAttack[0]=false;
             }
         }
         }
@@ -70,8 +36,64 @@ public class Iowa : PlayablePlayer
                 case "ElecPrefab(Clone)": StartCoroutine(RageOn(other.GetComponent<PushEffect>().direction)); break;
             }  
         }
+    public override void InstantiatePrefab()
+    {
+        Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
 
-        protected override void ChangeMapShown(int setMode){
+        Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
+        int x = (int)directionVec.x;
+        int y = (int)directionVec.y;
+        Vector2 dir = new Vector2(x, y);
+        animator.SetInteger("Anim", 0);
+        if (Mathf.Abs(x) != Mathf.Abs(y))
+        { //A los lados
+            switch (Mathf.Abs(x))
+            {
+                case 0:
+                    if (y == 1)
+                    {
+                        PushPrefab.GetComponent<PushEffect>().direction = 3;
+
+                        Instantiate(PushPrefab, posNew, Quaternion.identity);
+                    }
+                    else
+                    {
+                        PushPrefab.GetComponent<PushEffect>().direction = 4;
+                        Instantiate(PushPrefab, posNew, Quaternion.identity);
+                    }
+                    break;
+                case 1:
+                    if (x == 1)
+                    {
+                        PushPrefab.GetComponent<PushEffect>().direction = 1;
+                        sprite.flipX = false;
+                        Instantiate(PushPrefab, posNew, Quaternion.identity);
+                    }
+                    else
+                    {
+                        PushPrefab.GetComponent<PushEffect>().direction = 2;
+                        sprite.flipX = true;
+                        Instantiate(PushPrefab, posNew, Quaternion.identity);
+                    }
+                    break;
+            }
+        }
+        hasAttack = true;
+        if (hasMove)
+        {
+           SPM.endTurn(teamNumb, false);
+        }
+        else
+        {
+            ChangeMapShown(1);
+        }
+        //else{} Las diagonales
+
+        //Instantiate(PushPrefab, posNew, Quaternion.identity);
+        //PushCooldown++;
+        //_SPM.CanAttack[0]=false;
+    }
+    protected override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)
         {

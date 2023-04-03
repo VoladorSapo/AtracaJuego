@@ -17,11 +17,12 @@ public class Ignacio : PlayablePlayer
     {   
         base.Update();
         if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode ==2){
-            if(!GC.isEmpty(posMouse, false, 2)){
-                posMouse=GC.GetMousePosition(); print(posMouse);
+            posMouse = GC.GetMousePosition();
+            if (!GC.isEmpty(posMouse, false, 2)){
+                 print(posMouse);
                 animator.SetInteger("Anim",2);
 
-                 hasAttack= true;
+                /* hasAttack= true;
                 if (hasMove)
                 {
                    // SPM.endTurn(teamNumb, false);
@@ -31,16 +32,25 @@ public class Ignacio : PlayablePlayer
                     ChangeMapShown(1);
                 }
                 //FireCooldown++;
-                //_SPM.CanAttack[0]=false;
+                //_SPM.CanAttack[0]=false;*/
             }
         }
 
     }
 
-    public void InstantiateFirePrefab(){
+    public override void InstantiatePrefab(){
         Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
         Instantiate(FirePrefab, posNew, Quaternion.identity);
         animator.SetInteger("Anim",0);
+        hasAttack = true;
+        if (hasMove)
+        {
+            SPM.endTurn(teamNumb, false);
+        }
+        else
+        {
+            ChangeMapShown(1);
+        }
     }
     protected override void ChangeMapShown(int setMode){
         Mode = setMode;

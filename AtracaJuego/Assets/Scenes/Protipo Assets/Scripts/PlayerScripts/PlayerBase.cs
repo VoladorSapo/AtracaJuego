@@ -174,14 +174,7 @@ public class PlayerBase : MonoBehaviour
         SPM.playerDie(this);
     }
 
-    public void OnMouseOver()
-    {
-
-        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
-        {
-            loseHealth(1);
-        }
-    }
+ 
 
     public virtual void loseHealth(int health)
     {
@@ -201,7 +194,10 @@ public class PlayerBase : MonoBehaviour
     {
         return currentHealth;
     }
+    public virtual void InstantiatePrefab()
+    {
 
+    }
     public virtual void startGame()
     {
         alive = true;
