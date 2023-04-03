@@ -60,7 +60,7 @@ public class PushEffect : MonoBehaviour
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,1));
+                                _GC.tiles[x,y].GetPlayer().Push(1,0,5);
                             }
 
                             
@@ -94,7 +94,7 @@ public class PushEffect : MonoBehaviour
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,2));
+                                _GC.tiles[x,y].GetPlayer().Push(-1,0,5);
                             }
                             distance=auxDist;
                             break;
@@ -120,7 +120,7 @@ public class PushEffect : MonoBehaviour
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,3));
+                                _GC.tiles[x,y].GetPlayer().Push(0,1,5);
                             }
                             distance=auxDist;
                             break;
@@ -144,7 +144,7 @@ public class PushEffect : MonoBehaviour
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                        StartCoroutine(PushPlayerWait(x,y,0.25f,distancePush,4));
+                                _GC.tiles[x,y].GetPlayer().Push(0,-1,5);
                             }
                             break;
 

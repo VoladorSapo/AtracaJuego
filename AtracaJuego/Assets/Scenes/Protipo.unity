@@ -396,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50655422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: -35, z: 0}
+  m_LocalPosition: {x: -44.8, y: -14.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1206,7 +1206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549352399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -35.4, z: 0}
+  m_LocalPosition: {x: -5, y: -25.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1398,6 +1398,7 @@ GameObject:
   - component: {fileID: 642901474}
   - component: {fileID: 642901475}
   - component: {fileID: 642901476}
+  - component: {fileID: 642901477}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1555,6 +1556,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &642901477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642901470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33b1b2fb17a334f9d51175996c2fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 0
+  team: 0
+  hasTurn: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 0
+  alive: 0
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &659085978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,7 +1662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659085978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.5, y: -44.5, z: -10}
+  m_LocalPosition: {x: 17.5, y: -3.5, z: -10}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1647,7 +1676,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659085978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35d2dadc364893040992979bfcbd6cdf, type: 3}
   m_Name: 
@@ -2054,7 +2083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877809182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 5, z: 0}
+  m_LocalPosition: {x: 5, y: -25.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4769,8 +4798,8 @@ Tilemap:
   - first: {x: 3, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7158,16 +7187,16 @@ Tilemap:
       m_AllTileFlags: 2147483649
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 287
+  - m_RefCount: 286
     m_Data: {fileID: 11400000, guid: 6f71d72bebabc4e488d5c5189d5e1cf1, type: 2}
-  - m_RefCount: 43
+  - m_RefCount: 44
     m_Data: {fileID: 11400000, guid: e5b077d94997140478b224f57e43e725, type: 2}
   - m_RefCount: 61
     m_Data: {fileID: 11400000, guid: 183975fac2751f647b27d1aab47ce534, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 287
+  - m_RefCount: 286
     m_Data: {fileID: 1847519609, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
-  - m_RefCount: 43
+  - m_RefCount: 44
     m_Data: {fileID: -1858351124, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
   - m_RefCount: 61
     m_Data: {fileID: -1129575271, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
@@ -7606,7 +7635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839479771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.7, y: -44.5, z: 0}
+  m_LocalPosition: {x: -25.03, y: -25.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

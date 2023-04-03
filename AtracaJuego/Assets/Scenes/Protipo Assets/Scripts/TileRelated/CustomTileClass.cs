@@ -227,6 +227,10 @@ public class CustomTileClass
         return false;
         }
         
+        public bool TileIsSafe(){
+            if(tileEffect==4 || tileEffect==6 || tileEffect==8 || tileEffect==10 || tileEffect==12|| tileEffect==13 || tileEffect==15){return false;}
+            else{return true;}
+        }
     }
 
 

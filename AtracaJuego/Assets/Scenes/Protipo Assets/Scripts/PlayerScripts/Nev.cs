@@ -14,7 +14,7 @@ public class Nev : PlayablePlayer
         {
             posMouse=GC.GetMousePosition();
             Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
-            if(!GC.isEmpty(posMouse, false, 2)){
+            if(!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x-GC.ogx,posMouse.y-GC.ogy].player==null){
                 //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
                 animator.SetInteger("Anim", 2);
 

@@ -23,7 +23,7 @@ public class PlayerBase : MonoBehaviour
     public Animator animator;
     public SpriteRenderer sprite;
     public int teamNumb;//El numero del jugador dentro del equipo
-    [SerializeField] protected bool alive;
+    [SerializeField] public bool alive;
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
     List<Node> nodes;
@@ -164,7 +164,7 @@ public class PlayerBase : MonoBehaviour
         sprite.sortingOrder = -(tilepos.y);
         tile.setPlayer(this);
     }
-    public void Die()
+    public virtual void Die()
     {
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
@@ -216,6 +216,44 @@ public class PlayerBase : MonoBehaviour
     {
        hasAttack= hasMove= hasTurn = newTurn;
     }
+
+    public void Push(int dx, int dy, int distance){
+        StartCoroutine(GetPush(dx,dy, distance));
+    }
+    IEnumerator GetPush(int dx, int dy, int distance){
+        Vector3Int tileO = GC.grid.WorldToCell(transform.position);
+        int x=tileO.x-GC.ogx;
+        int y=tileO.y-GC.ogy;
+        
+        WaitForSeconds wfs=new WaitForSeconds(0);
+        int speed=60;
+        bool stop=false;
+        Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
+        if(GC.tiles[x + dx, y + dy].GetTileState()<5){
+        while(!stop && distance>0){
+            GC.tiles[x,y].setPlayer(null);
+            //&& _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5
+            //newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
+            if(GC.tiles[x + dx,y + dy].GetPlayer()==null){transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);}else{
+            GC.tiles[x,y].setPlayer(this); GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;  
+            }
+
+            if(transform.position==newPos || GC.tiles[x + dx,y + dy].GetPlayer()!=null){
+                x=GC.grid.WorldToCell(transform.position).x-GC.ogx;
+                y=GC.grid.WorldToCell(transform.position).y-GC.ogy;
+                GC.tiles[x,y].setPlayer(this);
+                newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
+
+                if(GC.tiles[x + dx,y + dy].GetTileState()>=5){break;}
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;}
+                distance--;
+            }
+
+            yield return wfs;
+        }
+        }
+        }
+
 
 
     /*Intercambia los valores playerOnTop de las tiles*/

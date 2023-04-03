@@ -123,6 +123,7 @@ public class Iowa : PlayablePlayer
         Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
         GC.tiles[x,y].setPlayer(null);
+        
         while(!stop){
             tileO = GC.grid.WorldToCell(transform.position);
             x=tileO.x-GC.ogx;
