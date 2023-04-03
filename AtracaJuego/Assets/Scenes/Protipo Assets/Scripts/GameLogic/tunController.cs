@@ -6,7 +6,13 @@ public class tunController : MonoBehaviour
 {
     public ScriptPlayerManager[] Managers;
     public int currentManager;
+
+    public GridController _GC;
     GridController _grid;
+
+    void Awake(){
+        _GC=GameObject.Find("Grid").GetComponent<GridController>();
+    }
     public void startGame()
     {
         startRound();
@@ -16,6 +22,10 @@ public class tunController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             startGame();
+        }
+
+        if(Input.GetKeyDown("p")){
+            nextTurn();
         }
     }
     // Start is called before the first frame update
@@ -48,8 +58,13 @@ public class tunController : MonoBehaviour
         }
     }
 
-    public void nextTurn(PlayerBase personaje)
+    public void nextTurn()
     {
-     
+      for(int i=0; i<_GC.tiles.GetLength(0); i++){
+            for(int j=0; j<_GC.tiles.GetLength(1); j++){
+                _GC.tiles[i,j].LowerFade();
+            }
+        }
+        startTurns();
     }
 }

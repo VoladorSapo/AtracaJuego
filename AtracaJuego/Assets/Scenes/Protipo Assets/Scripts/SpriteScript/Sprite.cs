@@ -13,4 +13,8 @@ public class Sprite : MonoBehaviour
     void StartPrefab(){
         player.InstantiatePrefab();
     }
+
+    void BeIdle(){
+        player.BeIdle();
+    }
 }

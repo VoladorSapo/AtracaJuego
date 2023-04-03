@@ -21,6 +21,7 @@ public class Iowa : PlayablePlayer
         {
             posMouse=GC.GetMousePosition();
             if(!GC.isEmpty(posMouse, false, 2)){
+                Cooldown=1;
                 animator.SetInteger("Anim", 2);
 
             }
@@ -44,7 +45,6 @@ public class Iowa : PlayablePlayer
         int x = (int)directionVec.x;
         int y = (int)directionVec.y;
         Vector2 dir = new Vector2(x, y);
-        animator.SetInteger("Anim", 0);
         if (Mathf.Abs(x) != Mathf.Abs(y))
         { //A los lados
             switch (Mathf.Abs(x))

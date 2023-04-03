@@ -432,6 +432,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!50 &50655428
 Rigidbody2D:
@@ -1242,6 +1243,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!50 &549352404
 Rigidbody2D:
@@ -1437,6 +1439,7 @@ MonoBehaviour:
   - {fileID: 642901473}
   - {fileID: 1088530369}
   currentManager: 0
+  _GC: {fileID: 0}
 --- !u!114 &642901473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,6 +1587,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
 --- !u!1 &659085978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1737,7 @@ Animator:
   m_GameObject: {fileID: 689507156}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f18d0972394a18478d07a5ed2633961, type: 2}
+  m_Controller: {fileID: 9100000, guid: be601605b32de7143b21f4454e46aa65, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1785,7 +1789,7 @@ SpriteRenderer:
   m_SortingLayerID: -1256105479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2131501888, guid: 7933667d3591d084984bb687217872b9, type: 3}
+  m_Sprite: {fileID: 2062918731, guid: b0c2fc47467e1ce49a59174f79d33b54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1808,7 +1812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1b08742eb2a274caa854f970b85654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 50655427}
 --- !u!1 &711030134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +1992,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
 --- !u!1 &843505700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2150,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &877809188
 MonoBehaviour:
@@ -2174,6 +2180,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!114 &877809189
@@ -2204,6 +2211,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  Cooldown: 0
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
 --- !u!114 &877809190
 MonoBehaviour:
@@ -2233,6 +2241,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
 --- !u!50 &877809191
 Rigidbody2D:
@@ -2988,6 +2997,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   ElecPrefab: {fileID: 2704912516305452731, guid: f5f9cf3f7e564c04d9d9c24ade97ed30, type: 3}
 --- !u!50 &1019147423
 Rigidbody2D:
@@ -7697,6 +7707,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!50 &1839479777
@@ -7979,6 +7990,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  Cooldown: 0
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &2050588221
 MonoBehaviour:
@@ -8008,6 +8020,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  Cooldown: 0
 --- !u!212 &2050588222
 SpriteRenderer:
   m_ObjectHideFlags: 0

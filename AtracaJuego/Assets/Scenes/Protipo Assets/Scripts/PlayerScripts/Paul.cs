@@ -21,6 +21,7 @@ public class Paul : PlayablePlayer
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2))
             {
+                Cooldown=1;
                 animator.SetInteger("Anim", 2);
 
             }
@@ -29,7 +30,6 @@ public class Paul : PlayablePlayer
     public override void InstantiatePrefab()
     {
         Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
-        animator.SetInteger("Anim", 0);
 
         Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
         int x = (int)directionVec.x;

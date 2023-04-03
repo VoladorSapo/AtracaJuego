@@ -15,6 +15,7 @@ public class Marl : PlayablePlayer
         {
             posMouse=GC.GetMousePosition();
             if(!GC.isEmpty(posMouse, false, 2)){
+                Cooldown=3;
                 animator.SetInteger("Anim", 2);
             }
         }
@@ -25,7 +26,6 @@ public class Marl : PlayablePlayer
         Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
         Instantiate(GasPrefab, posNew, Quaternion.identity);
         hasAttack = true;
-        animator.SetInteger("Anim", 0);
 
         if (hasMove)
         {

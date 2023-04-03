@@ -198,6 +198,10 @@ public class PlayerBase : MonoBehaviour
     {
 
     }
+
+    public virtual void BeIdle(){
+        animator.SetInteger("Anim",0);
+    }
     public virtual void startGame()
     {
         alive = true;

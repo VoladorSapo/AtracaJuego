@@ -16,6 +16,7 @@ public class Nev : PlayablePlayer
             Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
             if(!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x-GC.ogx,posMouse.y-GC.ogy].player==null){
                 //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
+                Cooldown=3;
                 animator.SetInteger("Anim", 2);
 
             }
@@ -33,7 +34,6 @@ public class Nev : PlayablePlayer
                 GC.tiles[posInGrid.x - GC.ogx + i, posInGrid.y - GC.ogy + j].addEffect(4, true, 0);
             }
         }
-        animator.SetInteger("Anim", 0);
         Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
         Instantiate(IcePrefab, posNew, Quaternion.identity);
         hasAttack = true;

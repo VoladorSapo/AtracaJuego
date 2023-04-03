@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
-    protected int Cooldown;
+    [SerializeField] protected int Cooldown;
     protected bool willAttack;
     protected override void Awake()
     {
@@ -64,7 +64,7 @@ public class PlayablePlayer : PlayerBase
     {
         willAttack=false;
         base.setGame();
-        Cooldown = 0;
+        if (Cooldown > 0) { Cooldown--; }
     }
     protected override void ChangeMapShown(int setPos)
     {
@@ -79,7 +79,6 @@ public class PlayablePlayer : PlayerBase
         willAttack=false;
         hasMove = false;
         hasAttack = false;
-        if (Cooldown > 0) { Cooldown--; }
     }
 
     IEnumerator skipturn()
