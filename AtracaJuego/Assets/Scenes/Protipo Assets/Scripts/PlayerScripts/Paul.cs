@@ -69,7 +69,7 @@ public class Paul : PlayablePlayer
         hasAttack = true;
         if (hasMove)
         {
-            // SPM.endTurn(teamNumb, false);
+             SPM.endTurn(teamNumb, false);
         }
         else
         {

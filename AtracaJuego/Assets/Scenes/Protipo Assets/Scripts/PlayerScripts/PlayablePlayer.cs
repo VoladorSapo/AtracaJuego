@@ -66,6 +66,12 @@ public class PlayablePlayer : PlayerBase
         base.setGame();
         if (Cooldown > 0) { Cooldown--; }
     }
+    public override void setTurn(bool newTurn)
+    {
+        base.setTurn(newTurn);
+        willAttack = false;
+        if (Cooldown > 0) { Cooldown--; }
+    }
     protected override void ChangeMapShown(int setPos)
     {
 

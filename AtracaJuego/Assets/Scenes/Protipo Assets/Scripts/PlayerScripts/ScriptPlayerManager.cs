@@ -38,7 +38,7 @@ public class ScriptPlayerManager : MonoBehaviour
             {
                 players[i].setTurn(false);
                 players[i].teamNumb = i;
-                players[i].startTurn();
+                //players[i].startTurn();
             }
             currentPlayer = 0;
             players[0].startTurn();

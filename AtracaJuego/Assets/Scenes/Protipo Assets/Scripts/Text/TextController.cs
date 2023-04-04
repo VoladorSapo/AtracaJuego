@@ -8,6 +8,7 @@ public class TextController : MonoBehaviour
     public TMP_Text TextDisplay;
     TMP_TextInfo textinfo;
     DialogueController _dialogcontroller;
+    GameDialogController _gamedialogcontroller;
     public bool escribiendo;
     public bool terminado;
     public string texto;
@@ -20,6 +21,8 @@ public class TextController : MonoBehaviour
         escribiendo = false;
         terminado = false;
         _dialogcontroller = GetComponent<DialogueController>();
+        _gamedialogcontroller = GetComponent<GameDialogController>();
+
         texto = "";
         charpersec = 20f;
 
@@ -54,20 +57,25 @@ public class TextController : MonoBehaviour
             currentChar++;
         }
         terminado = true;
+        if (_gamedialogcontroller != null)
+        {
+            _gamedialogcontroller.StartCoroutine("Text");
+        }
     }
     public void SkipTalk()
     {
         StopCoroutine("Escribir");
         print(terminado);
         terminado = true;
+        if(_gamedialogcontroller != null)
+        {
+            _gamedialogcontroller.StartCoroutine("Text");
+        }
         TextDisplay.maxVisibleCharacters = TextDisplay.textInfo.characterCount;
     }
     // Update is called once per frame
     void Update()
     { 
-        //if (Input.GetMouseButtonDown(0) && escribiendo && !terminado) {
-        //    print("chip");
-        //SkipTalk();
-        //}
+
     }
 }

@@ -17,8 +17,8 @@ public class PlayerBase : MonoBehaviour
     public bool team;
     protected bool moving;
    [SerializeField] protected bool hasTurn;
-    protected bool hasMove;
-    protected bool hasAttack;
+    [SerializeField] protected bool hasMove;
+    [SerializeField] protected bool hasAttack;
     public int Cooldowns=0;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -213,7 +213,7 @@ public class PlayerBase : MonoBehaviour
     {
         return team;
     }
-    public void setTurn(bool newTurn)
+    public virtual void setTurn(bool newTurn)
     {
        hasAttack= hasMove= hasTurn = newTurn;
     }
