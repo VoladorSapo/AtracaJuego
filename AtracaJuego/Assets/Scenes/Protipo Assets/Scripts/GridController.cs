@@ -53,9 +53,15 @@ public class GridController : MonoBehaviour
         canMoveHere = true;
         TileToPlace = hoverTile;
         nodos = new Node[pathMap.size.x, pathMap.size.y];
+        
+
+        tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
+
+    }
+    public void setGame()
+    {
         ogx = pathMap.origin.x;
         ogy = pathMap.origin.y;
-
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
 
         for (int i = 0; i < pathMap.size.x; i++)
@@ -67,23 +73,19 @@ public class GridController : MonoBehaviour
 
                 Vector3Int posTiles = new Vector3Int(i + ogx, j + ogy, 0);
                 Tile actualTile = ground.GetTile<Tile>(posTiles);
-                
+                print(new Vector3Int(i + ogx, j + ogy, 0));
                 Vector3Int posTileInGrid = new Vector3Int(i, j, 0);
- 
+
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
-                
+
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
                 nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false, 1)); //Lo dejo así de forma Temporal 
             }
 
         }
-
-
-
     }
-
     // Update is called once per frame
     void Update()
     {

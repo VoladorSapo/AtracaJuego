@@ -15,12 +15,17 @@ public class tunController : MonoBehaviour
     }
     public void startGame()
     {
+        for (int i = 0; i < Managers.Length; i++)
+        {
+            Managers[i].setGame();
+        }
         startRound();
     }
     private void Update()
     {
         if (Input.GetKeyDown("space"))
         {
+            _GC.setGame();
             startGame();
         }
 
@@ -32,10 +37,7 @@ public class tunController : MonoBehaviour
     public void startRound()
     {
         currentManager = -1;
-        for (int i = 0; i < Managers.Length; i++)
-        {
-            Managers[i].setGame();
-        }
+       
         startTurns();
     }
 

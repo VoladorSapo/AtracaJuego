@@ -41,10 +41,10 @@ public class PlayerBase : MonoBehaviour
     void Start()
     {
         
-        startGame();
+        //startGame();
 
-        Vector3Int posGrid = grid.WorldToCell(transform.position);
-        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
+        //Vector3Int posGrid = grid.WorldToCell(transform.position);
+        //GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
     }
 
     // Update is called once per frame
@@ -163,6 +163,8 @@ public class PlayerBase : MonoBehaviour
         CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
         sprite.sortingOrder = -(tilepos.y);
         tile.setPlayer(this);
+        alive = true;
+        currentHealth = maxHealth;
     }
     public virtual void Die()
     {
@@ -201,11 +203,6 @@ public class PlayerBase : MonoBehaviour
 
     public virtual void BeIdle(){
         animator.SetInteger("Anim",0);
-    }
-    public virtual void startGame()
-    {
-        alive = true;
-        currentHealth = maxHealth;
     }
 
     public bool getTurn()

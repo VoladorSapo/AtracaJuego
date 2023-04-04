@@ -20,7 +20,6 @@ public class ScriptPlayerManager : MonoBehaviour
     {
         for(int i = 0; i < players.Count; i++)
             {
-            print(name);
             players[i].setGame();
             players[i].teamNumb = i;
 
