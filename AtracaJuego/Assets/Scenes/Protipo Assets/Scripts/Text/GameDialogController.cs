@@ -14,6 +14,7 @@ public class GameDialogController : MonoBehaviour
         writingtext = false;
         _text = GetComponent<TextController>();
         List<Dialog> loaddialos = new List<Dialog>();
+        dialogs = new List<Dialog>();
         loaddialos.Add(new Dialog("Que culo nena", 1, 20));
         loaddialos.Add(new Dialog("Te voy a romper el orto pelotudo", 3, 20));
         loaddialos.Add(new Dialog("Pongan Melendi", 4, 20));
@@ -22,7 +23,6 @@ public class GameDialogController : MonoBehaviour
     }
     public void loadDialogs(List<Dialog> newdialog)
     {
-        dialogs = new List<Dialog>();
         dialogs.AddRange(newdialog);
     }
 
