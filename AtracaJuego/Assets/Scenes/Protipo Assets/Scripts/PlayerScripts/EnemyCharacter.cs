@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyCharacter : PlayerBase
 {
+    [SerializeField] protected MapManager _MM;
     [SerializeField] protected PlayerBase Objetivo; //El personaje al que quiere pegar
         [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
+    protected Vector3Int objective; //La casilla en la que quieres llegar
     protected override void Awake()
     {
         base.Awake();
         SPM = GameObject.Find("EnemyController").GetComponent<ScriptPlayerManager>();
+        _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
+
 
     }
     public override void startTurn()

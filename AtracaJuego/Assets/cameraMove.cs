@@ -6,12 +6,15 @@ public class cameraMove : MonoBehaviour
 {
     public float borde;
     public float speed;
+    Grid _grid;
     public float[] limitesx;
     public float[] limitesy;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _grid = GameObject.Find("Grid").GetComponent<Grid>();
+        //limitesx = new float []{_grid. };
+        //limitesy = new float []{ 2, 2 };
     }
 
     // Update is called once per frame

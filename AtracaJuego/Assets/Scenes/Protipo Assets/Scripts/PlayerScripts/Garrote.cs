@@ -4,8 +4,8 @@ using UnityEngine;
 using System;
 public class Garrote : EnemyCharacter
 {
-
     // Start is called before the first frame update
+    Vector3Int hit; //The tile of the player you want to hit
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
@@ -48,10 +48,16 @@ public class Garrote : EnemyCharacter
         }
         print(path.Count);
         print(path[0].pos);
+        hit = path[path.Count - 1].pos;
+        objective = path[path.Count - 1].pos;
         startMove(path);
     }
     protected override void ChangeMapShown(int setMode)
     {
+        if(GC.grid.WorldToCell(transform.position) == objective)
+        {
+            print("llegado");
+        }
         SPM.endTurn(teamNumb, false);
     }
 }
