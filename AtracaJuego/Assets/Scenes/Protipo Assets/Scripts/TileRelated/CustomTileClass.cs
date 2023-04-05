@@ -14,7 +14,7 @@ public class CustomTileClass
     public GridController _GC;
     public PlaceTiles _PT;
     public int tileFadeEffect;
-
+    public EventTile _eventile;
     //Lista de TileMaps afectados
 
 
@@ -109,14 +109,18 @@ public class CustomTileClass
     //    Debug.Log("ass");
     //    playerOnTop=player;
     //}
-
+    public void setEvent(EventTile _event)
+    {
+        _eventile = _event;
+        //SetTileState(13);
+    }
     public void setPlayer(PlayerBase newplayer)
     {
         player = newplayer;
-        if(tileState == 13)
+        if(_eventile != null && newplayer != null)
         {
             Debug.Log("uo");
-            player.pressWinTile();
+            _eventile.PressEvent();
         }
     }
 

@@ -17,16 +17,17 @@ public class GameDialogController : MonoBehaviour
         _text = GetComponent<TextController>();
         List<string> loaddialos = new List<string>();
         evento = GetComponentInChildren<DialogEvent>();
-        dialogs = new List<string>();
+       dialogs = new List<string>();/*
         loaddialos.Add("<link="+"\""+ "SetAnim-1" + "\""+ "> Que culo nena </link>");
         loaddialos.Add("<link=" + "\"" + "SetAnim-3" + "\"" + ">Te voy a romper el orto pelotudo</link>");
         loaddialos.Add("<link=" + "\"" + "SetAnim-2" + "\"" + ">No pilien</link>");
         loaddialos.Add("<link=" + "\"" + "SetAnim-4" + "\"" + ">GAAAAAAAAAAAAAARROTE</link>");
-        loadDialogs(loaddialos);
+        loadDialogs(loaddialos);*/
     }
     public void loadDialogs(List<string> newdialog)
     {
         dialogs.AddRange(newdialog);
+        writeText();
     }
     public void setAnim(int animint)
     {
@@ -47,7 +48,7 @@ public class GameDialogController : MonoBehaviour
             _localizedstring.TableReference = "Game_Dialog_Ignacio";
             _localizedstring.TableEntryReference = "Game_Ignacio_Walk";
             _localizedstring.GetLocalizedString();
-            _text.StartText(_localizedstring.GetLocalizedString());
+            _text.StartText(dialogs[0]);
             dialogs.RemoveAt(0);
             evento.CheckForLinkEvent();
         }

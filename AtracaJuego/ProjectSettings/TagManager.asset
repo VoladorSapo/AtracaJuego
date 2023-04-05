@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - IceCube
   - MapManager
+  - EventTileParent
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 3038861817
+    locked: 0
+  - name: Top
+    uniqueID: 3462690527
     locked: 0
