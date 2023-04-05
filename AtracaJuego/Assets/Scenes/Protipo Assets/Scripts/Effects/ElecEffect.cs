@@ -20,7 +20,7 @@ public class ElecEffect : MonoBehaviour
         int x=tileO.x-_GC.ogx;
         int y=tileO.y-_GC.ogy;
 
-        _GC.tiles[x,y].addEffect(5,true,direction);
+        _GC.tiles[x,y].addEffect(5,true,direction,-1);
         if(_GC.tiles[x,y].player!=null){
             if(_GC.tiles[x,y].player.name=="Player2" && _GC.tiles[x,y].player.GetAlive()){GameObject.Find("Player2").GetComponent<Iowa>().StartRage(direction);}
             if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive() && _GC.tiles[x,y].TileIsSafe()){_PP.Revive(_GC.tiles[x,y].GetPlayer());}

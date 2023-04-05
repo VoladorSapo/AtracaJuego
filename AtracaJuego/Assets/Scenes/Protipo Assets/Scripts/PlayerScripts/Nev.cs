@@ -5,6 +5,7 @@ using UnityEngine;
 public class Nev : PlayablePlayer
 {
     public GameObject IcePrefab;
+    public PlayerBase IceCube;
     Vector3Int posMouse;
     // Update is called once per frame
     public override void Update()
@@ -31,7 +32,7 @@ public class Nev : PlayablePlayer
         {
             for (int j = 1; j >= -1; j--)
             {
-                GC.tiles[posInGrid.x - GC.ogx + i, posInGrid.y - GC.ogy + j].addEffect(4, true, 0);
+                GC.tiles[posInGrid.x - GC.ogx + i, posInGrid.y - GC.ogy + j].addEffect(4, true, 0, -1);
             }
         }
         Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);

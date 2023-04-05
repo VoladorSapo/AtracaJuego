@@ -9,13 +9,17 @@ public override void Update(){
         base.Update();
 }
 
+protected override void Awake()
+    {
+        base.Awake();
+    }
 public override void Die(){
 
 }
 
 public void Melt(){
         StartCoroutine(Melting(0.25f));
-        StartCoroutine(DestroyObject(2.0f));
+        StartCoroutine(MeltedObject(2.0f));
 }
 
 IEnumerator Melting(float sec){
@@ -29,7 +33,7 @@ IEnumerator Melting(float sec){
 
         
         for(int i=1; i<=(25); i++){
-            GC.tiles[x,y].addEffect(6,false,0);
+            GC.tiles[x,y].addEffect(6,false,0,-1);
             
 
             switch(rot){
@@ -53,12 +57,13 @@ IEnumerator Melting(float sec){
         
 }
 
-IEnumerator DestroyObject(float sec){
+IEnumerator MeltedObject(float sec){
         WaitForSeconds wfs=new WaitForSeconds(sec);
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         yield return wfs;
-        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(6,false,0);
         Destroy(this.gameObject);
+        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
+        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(6,false,0,-1);
         
     }
 

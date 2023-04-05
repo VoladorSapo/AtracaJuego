@@ -30,38 +30,38 @@ public class MapManager : MonoBehaviour
     }
 
     //Extiende el fuego si se le llama
-    public void SpreadEffectNoLimit(int x, int y, int effect, int direction){
+    public void SpreadEffectNoLimit(int x, int y, int effect, int direction, int lock_){
         int up1= y+1;
         int down1= y-1;
         int left1= x-1;
         int right1= x+1;
 
-        _GC.tiles[x,up1].addEffect(effect,false,direction);
-        _GC.tiles[x,down1].addEffect(effect,false,direction);
-        _GC.tiles[x,y].addEffect(effect,false,direction);
-        _GC.tiles[left1,y].addEffect(effect,false,direction);
-        _GC.tiles[right1,y].addEffect(effect,false,direction);
+        _GC.tiles[x,up1].addEffect(effect,false,direction,lock_);
+        _GC.tiles[x,down1].addEffect(effect,false,direction,lock_);
+        _GC.tiles[x,y].addEffect(effect,false,direction,lock_);
+        _GC.tiles[left1,y].addEffect(effect,false,direction,lock_);
+        _GC.tiles[right1,y].addEffect(effect,false,direction,lock_);
     }
 
-    public void SpreadEffectLimit(int x,int y,int effect, int Range,int MaxRange, int direction){
+    public void SpreadEffectLimit(int x,int y,int effect, int Range,int MaxRange, int direction, int lock_){
         int up1= y+1;
         int down1= y-1;
         int left1= x-1;
         int right1= x+1;
         
-        _GC.tiles[x,y].addEffect(effect,false,direction);
+        _GC.tiles[x,y].addEffect(effect,false,direction,lock_);
         print("@"+Range);
         if(Range<=MaxRange){
         Range++;
 
-        if(direction!=4 && _GC.tiles[x,up1].canAddEffect(effect) ){SpreadEffectLimit(x,up1,effect,Range,MaxRange,direction);}
+        if(direction!=4 && _GC.tiles[x,up1].canAddEffect(effect) ){SpreadEffectLimit(x,up1,effect,Range,MaxRange,direction,lock_);}
 
-        if(direction!=3 && _GC.tiles[x,down1].canAddEffect(effect) ){SpreadEffectLimit(x,down1,effect,Range,MaxRange,direction);}
+        if(direction!=3 && _GC.tiles[x,down1].canAddEffect(effect) ){SpreadEffectLimit(x,down1,effect,Range,MaxRange,direction,lock_);}
         
-        if(direction!=1 && _GC.tiles[left1,y].canAddEffect(effect) ){SpreadEffectLimit(left1,y,effect,Range,MaxRange,direction);}
+        if(direction!=1 && _GC.tiles[left1,y].canAddEffect(effect) ){SpreadEffectLimit(left1,y,effect,Range,MaxRange,direction,lock_);}
         
         print("@"+_GC.tiles[right1,y].canAddEffect(effect));
-        if(direction!=2 && _GC.tiles[right1,y].canAddEffect(effect) ){SpreadEffectLimit(right1,y,effect,Range,MaxRange,direction);}
+        if(direction!=2 && _GC.tiles[right1,y].canAddEffect(effect) ){SpreadEffectLimit(right1,y,effect,Range,MaxRange,direction,lock_);}
         }
 
     }

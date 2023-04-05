@@ -27,6 +27,8 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
     List<Node> nodes;
+
+    bool isRunning=false;
     //Método Principal
     /*Método Secundario*/
     // Start is called before the first frame update
@@ -38,7 +40,7 @@ public class PlayerBase : MonoBehaviour
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
         _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
     }
-    void Start()
+    protected virtual void Start()
     {
         
         //startGame();
@@ -219,9 +221,11 @@ public class PlayerBase : MonoBehaviour
     }
 
     public void Push(int dx, int dy, int distance){
-        StartCoroutine(GetPush(dx,dy, distance));
+        
+        if(!isRunning){StartCoroutine(GetPush(dx,dy, distance));}
     }
-    IEnumerator GetPush(int dx, int dy, int distance){
+    public IEnumerator GetPush(int dx, int dy, int distance){
+        isRunning=true;
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
         int x=tileO.x-GC.ogx;
         int y=tileO.y-GC.ogy;
@@ -230,6 +234,7 @@ public class PlayerBase : MonoBehaviour
         int speed=60;
         bool stop=false;
         Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
+        Debug.LogWarning(transform.position); Debug.LogWarning(newPos);
         if(GC.tiles[x + dx, y + dy].GetTileState()<5){
         while(!stop && distance>0){
             GC.tiles[x,y].setPlayer(null);
@@ -245,15 +250,20 @@ public class PlayerBase : MonoBehaviour
                 GC.tiles[x,y].setPlayer(this);
                 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
 
-                if(GC.tiles[x + dx,y + dy].GetTileState()>=5){break;}
+                if(GC.tiles[x + dx,y + dy].GetTileState()>=5){ break;}
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;}
                 distance--;
             }
-
-            yield return wfs;
+        
+        
+        
+        yield return null;
         }
+        Debug.LogWarning(transform.position==newPos);
+        Debug.LogWarning("Hecho");
+        yield return null;
         }
-        }
+    }
 
 
 

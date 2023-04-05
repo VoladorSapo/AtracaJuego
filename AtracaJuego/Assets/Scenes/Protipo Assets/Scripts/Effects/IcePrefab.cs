@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class IcePrefab : ObjectStuff
 {    
-
-    // Update is called once per frame
+    protected override void Awake()
+    {
+        base.Awake();
+        Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
+        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
+    }
+    /*protected override void Start(){
+        Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
+        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
+    }*/
     public override void Update()
     {
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
@@ -14,7 +22,7 @@ public class IcePrefab : ObjectStuff
     }
 
     public void FreezeTile(Vector3Int posGrid){
-        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0);
+        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0,-1);
     }
 
     

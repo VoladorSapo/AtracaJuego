@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5347602195125805746}
   m_Layer: 0
   m_Name: IcePrefab 1
-  m_TagString: Untagged
+  m_TagString: IceCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c78e9a631836f47b0c29bbd20a85ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GC: {fileID: 0}
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 0
+  team: 0
+  hasTurn: 0
+  hasMove: 0
+  hasAttack: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 0
+  alive: 0
+  maxHealth: 0
+  currentHealth: 0
 --- !u!61 &3729846032480670970
 BoxCollider2D:
   m_ObjectHideFlags: 0

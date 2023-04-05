@@ -75,7 +75,6 @@ public class GridController : MonoBehaviour
                 Tile actualTile = ground.GetTile<Tile>(posTiles);
                 print(new Vector3Int(i + ogx, j + ogy, 0));
                 Vector3Int posTileInGrid = new Vector3Int(i, j, 0);
-
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
