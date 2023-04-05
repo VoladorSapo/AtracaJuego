@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Localization;
 
 public class TextController : MonoBehaviour
 {
@@ -31,11 +32,11 @@ public class TextController : MonoBehaviour
     {
         //TextDisplay.ForceMeshUpdate();
         currentChar = 0;
-        texto = txt;
         TextDisplay.enabled = true;
         TextDisplay.text = txt;
         TextDisplay.maxVisibleCharacters = 0;
         textinfo = TextDisplay.textInfo;
+        print(TextDisplay.textInfo.lineCount + "Aiaiaiaiia");
         print(TextDisplay.text);
         TextDisplay.ForceMeshUpdate();
         print(textinfo.characterCount);

@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: UI Shared Data
+  m_Name: Game_Dialog_Ignacio Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: UI
-  m_TableCollectionNameGuidString: 18eddd913abf5984c83f7e812410553c
+  m_TableCollectionName: Game_Dialog_Ignacio
+  m_TableCollectionNameGuidString: b4a47451c00b980448a476e11af5c16f
   m_Entries:
-  - m_Id: 27833409536
-    m_Key: New Entry
+  - m_Id: 7507812352
+    m_Key: Game_Ignacio_Walk
     m_Metadata:
       m_Items: []
-  - m_Id: 209381228552192
+  - m_Id: 45889888256
     m_Key: New Entry 1
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 295055146542694424
+    rid: 295055159594057728
   references:
     version: 2
     RefIds:
-    - rid: 295055146542694424
+    - rid: 295055159594057728
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1680608861117
+        m_CustomEpoch: 1680658608280

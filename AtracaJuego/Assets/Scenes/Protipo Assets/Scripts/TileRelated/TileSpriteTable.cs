@@ -42,6 +42,14 @@ public class TileSpriteTable : MonoBehaviour
             case "ampliacionTileSheetRecepcion_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_46": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_47": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_86": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_87": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_88": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_89": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_90": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "ampliacionTileSheetRecepcion_91": id[0] = 1; id[1] = 8; id[2] = 16; break;
+
 
                 //case "sheet_191": id[0] = 1; id[1] = 8; id[2] = 16; break;
                 //case "sheet_191": id[0] = 1; id[1] = 8; id[2] = 16; break;

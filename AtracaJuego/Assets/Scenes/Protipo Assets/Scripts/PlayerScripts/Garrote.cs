@@ -29,6 +29,8 @@ public class Garrote : EnemyCharacter
                 path = newpath;
             }
         }
+        hit = path[path.Count - 1].pos;
+        objective = path[path.Count - 2].pos;
         print(path.Count);
         print(elname);
         if(path != null)
@@ -48,16 +50,18 @@ public class Garrote : EnemyCharacter
         }
         print(path.Count);
         print(path[0].pos);
-        hit = path[path.Count - 1].pos;
-        objective = path[path.Count - 1].pos;
         startMove(path);
     }
     protected override void ChangeMapShown(int setMode)
     {
         if(GC.grid.WorldToCell(transform.position) == objective)
         {
-            print("llegado");
+            animator.SetInteger("Anim", 2);
         }
         SPM.endTurn(teamNumb, false);
+    }
+    public override void InstantiatePrefab()
+    {
+        _MM.Damage(1, hit.x - GC.ogx, hit.y - GC.ogy);
     }
 }
