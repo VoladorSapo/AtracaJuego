@@ -122,6 +122,10 @@ public class CustomTileClass
             Debug.Log("uo");
             _eventile.PressEvent();
         }
+
+        if(tileState==1 || tileState==2){
+            if(newplayer==null){tileState=1; Debug.LogWarning("no placa");}else{tileState=2; Debug.LogWarning("placa");}
+        }
     }
 
     public void addEffect(int effect, bool bypass, int direction, int lock_){
