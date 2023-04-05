@@ -41,7 +41,7 @@ public class PlayablePlayer : PlayerBase
             int newMode = (Mode + 1) % 3;
             print(Mode);
             print(newMode);
-            ChangeMapShown(newMode);
+                ChangeMapShown(newMode);
         }
         base.Update();
     }
