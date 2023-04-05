@@ -9,6 +9,10 @@ public class IcePrefab : ObjectStuff
         base.Awake();
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
+        effect=4;
+        bypass=false;
+        direction=0;
+        FreezeTile(posGrid);
     }
     /*protected override void Start(){
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
@@ -17,7 +21,7 @@ public class IcePrefab : ObjectStuff
     public override void Update()
     {
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
-        FreezeTile(posGrid);
+        
         base.Update();
     }
 

@@ -72,6 +72,7 @@ public class PlayablePlayer : PlayerBase
         willAttack = false;
         if (Cooldown > 0) { Cooldown--; }
     }
+    
     protected override void ChangeMapShown(int setPos)
     {
 

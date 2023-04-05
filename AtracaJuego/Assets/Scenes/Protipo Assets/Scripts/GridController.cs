@@ -38,6 +38,8 @@ public class GridController : MonoBehaviour
     public CustomTileClass[,] tiles;
     public TileSpriteTable tileTable;
     [SerializeField] private Vector3Int mousePos;
+
+    public ObjectStuff[] _OS;
     void Awake()
     {
         grid = gameObject.GetComponent<Grid>();
@@ -57,6 +59,7 @@ public class GridController : MonoBehaviour
         
 
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
+        _OS=FindObjectsOfType<ObjectStuff>();
 
     }
     public void setGame()
@@ -79,12 +82,16 @@ public class GridController : MonoBehaviour
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 print(posTiles);
+                
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
 
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
                 nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), isEmpty(grid.CellToWorld(new Vector3Int(i + ogx, j + ogy)), false, 1)); //Lo dejo así de forma Temporal 
             }
 
+        }
+        foreach (ObjectStuff os in _OS){
+            os.StartObject();
         }
         /*Component[] eventtiles = _eventtileparent.GetComponentsInChildren<EventTile>();
         foreach (EventTile _event in eventtiles)

@@ -8,10 +8,12 @@ public class tunController : MonoBehaviour
     public int currentManager;
 
     public GridController _GC;
+    
     GridController _grid;
 
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
+        
     }
     public void startGame()
     {

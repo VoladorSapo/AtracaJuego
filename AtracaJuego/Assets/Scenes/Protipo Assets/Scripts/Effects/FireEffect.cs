@@ -25,8 +25,11 @@ public class FireEffect : MonoBehaviour
         _GC.tiles[x,y].addEffect(2,true,0,-1); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
         if(_GC.tiles[x,y].player!=null){
             PlayerBase p=_GC.tiles[x,y].player;
-            ObjectStuff o=p as ObjectStuff;
-            if(p.tag=="IceCube"){o.Melt();}
+            
+            switch(p.tag){
+                case "IceCube": ObjectStuff o=p as ObjectStuff; o.Melt(); break;
+                case "WoodBox": CajasQuemables c=p as CajasQuemables; c.Burn(); break;
+            }
         }
 
         StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion

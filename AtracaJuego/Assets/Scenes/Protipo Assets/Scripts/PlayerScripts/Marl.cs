@@ -6,7 +6,12 @@ public class Marl : PlayablePlayer
 {
     public GameObject GasPrefab;
     Vector3Int posMouse;
-    // Update is called once per frame
+    
+    protected override void Awake()
+    {
+        base.Awake();
+        effect=-1;
+    }
     public override void Update()
     {
 

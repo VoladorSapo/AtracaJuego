@@ -8,7 +8,11 @@ public class Paul : PlayablePlayer
     Vector3Int posMouse;
     private int x, y;
 
-    // Update is called once per frame
+    protected override void Awake()
+    {
+        base.Awake();
+        effect=-1;
+    }
     public override void Update()
     {
 

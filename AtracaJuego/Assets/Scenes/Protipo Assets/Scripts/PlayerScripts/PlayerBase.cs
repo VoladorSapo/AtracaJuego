@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerBase : MonoBehaviour
 {
+    protected int effect;
+    protected bool bypass;
+    protected int direction;
     [SerializeField] private Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
     public GridController GC;
@@ -27,6 +30,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
     List<Node> nodes;
+    private PlaceTiles PT;
 
     bool isRunning=false;
     //Método Principal
@@ -35,6 +39,7 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Awake(){
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         GC = grid.GetComponent<GridController>();
+        PT=FindObjectOfType<PlaceTiles>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
@@ -235,7 +240,9 @@ public class PlayerBase : MonoBehaviour
         bool stop=false;
         Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
         Debug.LogWarning(transform.position); Debug.LogWarning(newPos);
-        if(GC.tiles[x + dx, y + dy].GetTileState()<5){
+        
+        if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+        if(GC.tiles[x + dx, y + dy].GetTileState()<5 || GC.tiles[x + dx, y + dy].GetTileState()==9){
         while(!stop && distance>0){
             GC.tiles[x,y].setPlayer(null);
             //&& _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5
@@ -247,10 +254,11 @@ public class PlayerBase : MonoBehaviour
             if(transform.position==newPos || GC.tiles[x + dx,y + dy].GetPlayer()!=null){
                 x=GC.grid.WorldToCell(transform.position).x-GC.ogx;
                 y=GC.grid.WorldToCell(transform.position).y-GC.ogy;
-                GC.tiles[x,y].setPlayer(this);
+                GC.tiles[x,y].setPlayer(this); GC.tiles[x,y].addEffect(effect,bypass,direction,-1);
                 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
 
-                if(GC.tiles[x + dx,y + dy].GetTileState()>=5){ break;}
+                if(GC.tiles[x + dx,y + dy].GetTileState()>=5 && GC.tiles[x + dx,y + dy].GetTileState()!=9){ break;}
+                if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;}
                 distance--;
             }

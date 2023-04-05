@@ -7,7 +7,12 @@ public class Nev : PlayablePlayer
     public GameObject IcePrefab;
     public PlayerBase IceCube;
     Vector3Int posMouse;
-    // Update is called once per frame
+    
+    protected override void Awake()
+    {
+        base.Awake();
+        effect=-1;
+    }
     public override void Update()
     {
         base.Update();

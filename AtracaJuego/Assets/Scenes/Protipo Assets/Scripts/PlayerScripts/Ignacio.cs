@@ -9,10 +9,11 @@ public class Ignacio : PlayablePlayer
     public GameObject FirePrefab;
     private Vector3Int posMouse;
 
-    //Vector3Int posGrid = _GC.grid.WorldToCell(transform.position);
-       //_GC.tiles[posGrid.x-_GC.ogx, posGrid.y-_GC.ogy].setPlayer(this); //Hacer esto para inicializar
-
-    // Update is called once per frame
+    protected override void Awake()
+    {
+        base.Awake();
+        effect=-1;
+    }
     public override void Update()
     {   
         base.Update();

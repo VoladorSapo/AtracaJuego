@@ -61,9 +61,7 @@ public class PushEffect : MonoBehaviour
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 _GC.tiles[x,y].player.Push(1,0,5);
-                            }
-
-                            if(_GC.tiles[x,y].player==null){_GC.tiles[x,y].addEffect(3,true,1,-1);}
+                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
                             
                             /*if hay objeto...*/
                             distance=auxDist;
@@ -94,9 +92,7 @@ public class PushEffect : MonoBehaviour
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 _GC.tiles[x,y].GetPlayer().Push(-1,0,5);
-                            }
-
-                            if(_GC.tiles[x,y].player==null){_GC.tiles[x,y].addEffect(3,true,2,-1);}
+                            }else{_GC.tiles[x,y].addEffect(3,true,2,-1);}
 
                             distance=auxDist;
                             break;
@@ -123,9 +119,7 @@ public class PushEffect : MonoBehaviour
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 _GC.tiles[x,y].GetPlayer().Push(0,1,5);
-                            }
-
-                            if(_GC.tiles[x,y].player==null){_GC.tiles[x,y].addEffect(3,true,3,-1);}
+                            }else{_GC.tiles[x,y].addEffect(3,true,3,-1);}
 
                             distance=auxDist;
                             break;
@@ -150,9 +144,7 @@ public class PushEffect : MonoBehaviour
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
                                 _GC.tiles[x,y].GetPlayer().Push(0,-1,5);
-                            }
-
-                            if(_GC.tiles[x,y].player==null){_GC.tiles[x,y].addEffect(3,true,4,-1);}
+                            }else{_GC.tiles[x,y].addEffect(3,true,4,-1);}
                             break;
 
 
@@ -478,8 +470,4 @@ public class PushEffect : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private CustomTileClass Clone(int sprite, int state, int effect, Vector3Int pos, int fade){
-        CustomTileClass n = new CustomTileClass(sprite, state, effect, pos, fade);
-        return n;
-    }
 }
