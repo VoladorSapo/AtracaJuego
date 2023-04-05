@@ -5,11 +5,6 @@ using UnityEngine;
 public class EventTile : MonoBehaviour
 {
     [SerializeField] protected GridController GC;
-    enum type{
-        Win,
-        CombatDialogue,
-        Scene
-        }
     // Start is called before the first frame update
     void Start()
     {

@@ -55,7 +55,7 @@ public class PlayerBase : MonoBehaviour
         if (moving)
         {
            
-            transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), 0.8f);
+            transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), Time.deltaTime * 50);
             //transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
             if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
@@ -173,7 +173,7 @@ public class PlayerBase : MonoBehaviour
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
-        //tile.setPlayer(null);
+        tile.setPlayer(null);
         sprite.enabled = false;
         SPM.playerDie(this);
     }

@@ -47,7 +47,7 @@ public class GridController : MonoBehaviour
         _eventtileparent = GameObject.Find("EventTileParent").GetComponent<GameObject>().gameObject;
         //De este script
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 120;
         distanceRun = 0;
         _path = GetComponent<pathFinder>();
         
@@ -78,6 +78,7 @@ public class GridController : MonoBehaviour
                 Vector3Int posTileInGrid = new Vector3Int(i, j, 0);
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
+                print(posTiles);
                 tiles[i, j] = new CustomTileClass(stats[0], stats[1], stats[2], posTileInGrid, 0);
 
                 //print("Tile guardada con v3 de: "+tiles[i,j].GetTilePos());
@@ -248,6 +249,10 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
     }
     public bool isWalkable(Vector3 position, bool wantMove, bool team) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
     {
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
+        {
+            print((tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team) + tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().name);
+        }
         if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||*/ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team))
         {
             return false;
