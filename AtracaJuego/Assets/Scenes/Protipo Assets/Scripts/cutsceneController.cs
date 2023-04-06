@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
-public class CutsceneEventTile : EventTile
+
+public class cutsceneController : MonoBehaviour
 {
     [SerializeField] PlayerBase player;
     [SerializeField] string table;
     [SerializeField] string code;
+    [SerializeField] int length;
+    [SerializeField] bool endCutscene; //False if is the cutscene at the start of the level. True if it is the cutscene at the end
     [SerializeField] DialogueController dc;
     [SerializeField] LocalizedString _localizedstring;
     // Start is called before the first frame update
@@ -15,7 +17,7 @@ public class CutsceneEventTile : EventTile
     {
         
     }
-    public override void PressEvent()
+    public void loadScene(string table,string code)
     {
         List<string> list = new List<string>();
         bool finish = false;
@@ -36,17 +38,17 @@ public class CutsceneEventTile : EventTile
             }
             i++;
         }
-        dc.loadDialogs(list,this,null);
+        dc.loadDialogs(list, null, this);
     }
     public void returnTurn()
     {
-        if (player.getAttack())
+        if (endCutscene)
         {
-            player.ChangeMapShown(0);
+
         }
         else
         {
-            player.ChangeMapShown(2);
+
         }
     }
     // Update is called once per frame

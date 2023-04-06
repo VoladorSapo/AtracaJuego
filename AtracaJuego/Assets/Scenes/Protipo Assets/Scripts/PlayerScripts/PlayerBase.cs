@@ -179,7 +179,7 @@ public class PlayerBase : MonoBehaviour
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
-        tile.setPlayer(null);
+        //tile.setPlayer(null);
         sprite.enabled = false;
         SPM.playerDie(this);
     }
@@ -191,6 +191,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void loseHealth(int health)
     {
+        animator.SetInteger("Anim", 4);
         currentHealth -= health;
         if(currentHealth <= 0)
         {

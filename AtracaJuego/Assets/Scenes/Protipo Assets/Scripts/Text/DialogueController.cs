@@ -24,7 +24,7 @@ public class DialogueController : MonoBehaviour
             _tile.returnTurn();
         }
     }
-    public void loadDialogs(List<string> newdialog,CutsceneEventTile tile)
+    public void loadDialogs(List<string> newdialog,CutsceneEventTile tile,cutsceneController controller)
     {
         _tile = tile;
         dialogs = new List<string>();

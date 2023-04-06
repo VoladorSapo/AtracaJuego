@@ -8,7 +8,6 @@ public class CombatDialogTile : EventTile
 {
     [SerializeField] string table;
     [SerializeField] string code;
-    [SerializeField] int length;
     [SerializeField] int random;
     [SerializeField] LocalizedString _localizedstring;
     [SerializeField] GameDialogController gdc;
@@ -17,7 +16,9 @@ public class CombatDialogTile : EventTile
     {
         int rnd = Random.Range(0, random);
         List<string> list = new List<string>();
-        for (int i = 0; i < length+1; i++)
+        bool finish = false;
+        int i = 0;
+        while (!false)
         {
             _localizedstring.TableReference = table;
             string reference = code + "_" + rnd + "_" + i;
@@ -26,7 +27,17 @@ public class CombatDialogTile : EventTile
             {
                 list.Add(_localizedstring.GetLocalizedString());
             }
+            else
+            {
+                finish = true;
+                break;
+            }
+            i++;
         }
         gdc.loadDialogs(list);
+
     }
+
+
+
 }

@@ -7,6 +7,9 @@ public class gameController : MonoBehaviour
     [SerializeField] tunController _turn;
     [SerializeField] TextController _text;
     [SerializeField] private int winCondition;
+    [SerializeField] cutsceneController _cutsceneController;
+    [SerializeField] string table;
+    [SerializeField] string code;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,8 @@ public class gameController : MonoBehaviour
     }
     public void winRound()
     {
+        string fullcode = "end_" + code;
+        _cutsceneController.loadScene(table, fullcode);
         print("Ganaste Light");
     }
     public void loseRound()
