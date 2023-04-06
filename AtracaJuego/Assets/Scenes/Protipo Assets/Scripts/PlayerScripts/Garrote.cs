@@ -9,20 +9,11 @@ public class Garrote : EnemyCharacter
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
-        print("hei");
         List<Node> path = new List<Node>();
         string elname = "Null";
         for (int i = 0; i < protas.players.Count; i++)
         {
             List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true);
-            if (newpath == null)
-            {
-                print("tremendonullteaventaste");
-            }
-            else
-            {
-                print(newpath.Count);
-            }
             if(newpath != null && (newpath.Count < path.Count || path.Count == 0))
             {
                 elname = protas.players[i].name;
@@ -31,8 +22,7 @@ public class Garrote : EnemyCharacter
         }
         hit = path[path.Count - 1].pos;
         objective = path[path.Count - 2].pos;
-        print(path.Count);
-        print(elname);
+
         if(path != null)
         {
             List<Node> turnpath = new List<Node>();

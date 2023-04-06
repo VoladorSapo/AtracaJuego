@@ -23,7 +23,7 @@ public class CombatDialogTile : EventTile
             _localizedstring.TableReference = table;
             string reference = code + "_" + rnd + "_" + i;
             _localizedstring.TableEntryReference = reference;
-            if (_localizedstring.GetLocalizedString() != "null")
+            if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
             {
                 list.Add(_localizedstring.GetLocalizedString());
             }

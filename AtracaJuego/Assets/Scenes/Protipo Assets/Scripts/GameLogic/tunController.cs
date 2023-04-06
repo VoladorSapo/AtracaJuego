@@ -25,11 +25,11 @@ public class tunController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            _GC.setGame();
-            startGame();
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    _GC.setGame();
+        //    startGame();
+        //}
 
         if(Input.GetKeyDown("p")){
             nextTurn();

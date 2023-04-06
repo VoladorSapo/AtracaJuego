@@ -7,12 +7,15 @@ public class DialogEvent : MonoBehaviour
 {
   [SerializeField]  private TMP_Text _textbox;
     [SerializeField] GameDialogController _GDC;
+    [SerializeField] DialogueController _DC;
 
 
     private void Awake()
     {
         _textbox = GetComponentInChildren<TMP_Text>();
         _GDC = GetComponentInChildren<GameDialogController>();
+        _DC = GetComponentInChildren<DialogueController>();
+
     }
 
     public  void CheckForLinkEvent()
@@ -36,7 +39,13 @@ public class DialogEvent : MonoBehaviour
         switch (eventoarray[0])
         {
             case "SetAnim":
-                _GDC.setAnim(int.Parse(eventoarray[1]));
+                if (_GDC)
+                {
+                    _GDC.setAnim(int.Parse(eventoarray[1]));
+                }
+                else{
+                    _DC.setAnim(int.Parse(eventoarray[1]));
+                }
                 break;
         }
     }
