@@ -49,7 +49,7 @@ public class GridController : MonoBehaviour
         _eventtileparent = GameObject.Find("EventTileParent").GetComponent<GameObject>().gameObject;
         //De este script
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = 60;
         distanceRun = 0;
         _path = GetComponent<pathFinder>();
         

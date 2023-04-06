@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class Player1 : PlayablePlayer
 {   
-    protected override void ChangeMapShown(int setMode)
+    public override void ChangeMapShown(int setMode)
     {
         Mode = setMode;
         if (Mode == 1)

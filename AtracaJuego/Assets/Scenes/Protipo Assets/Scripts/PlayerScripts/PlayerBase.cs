@@ -86,7 +86,8 @@ public class PlayerBase : MonoBehaviour
                     if (hasAttack)
                     {
                         print("endturn");
-                        SPM.endTurn(teamNumb, false);
+                        // SPM.endTurn(teamNumb, false);
+                        ChangeMapShown(0);
                     }
                     else
                     {
@@ -115,7 +116,7 @@ public class PlayerBase : MonoBehaviour
 
     public virtual void startTurn() 
     { }
-    protected virtual void ChangeMapShown(int setMode) { }
+    public virtual void ChangeMapShown(int setMode) { }
     
 
 
@@ -184,7 +185,10 @@ public class PlayerBase : MonoBehaviour
     }
 
  
-
+    public ScriptPlayerManager getSPM()
+    {
+        return SPM;
+    }
     public virtual void loseHealth(int health)
     {
         currentHealth -= health;
@@ -219,6 +223,14 @@ public class PlayerBase : MonoBehaviour
     public bool getTeam()
     {
         return team;
+    }
+    public bool getAttack()
+    {
+        return hasAttack;
+    }
+    public bool getMove()
+    {
+        return hasMove;
     }
     public virtual void setTurn(bool newTurn)
     {

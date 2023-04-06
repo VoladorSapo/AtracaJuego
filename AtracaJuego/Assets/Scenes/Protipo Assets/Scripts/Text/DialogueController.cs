@@ -31,11 +31,11 @@ public class DialogueController : MonoBehaviour
     {
         _text = GetComponent<TextController>();
         List<string> loaddialos = new List<string>();
-        loaddialos.Add("Que culo nena");
+       /* loaddialos.Add("Que culo nena");
         loaddialos.Add("Te voy a romper el orto pelotudo");
         loaddialos.Add("No pilien");
         loaddialos.Add("GAAAAAAAAAAAAAARROTE");
-        loadDialogs(loaddialos);
+        loadDialogs(loaddialos);*/
     }
     private void Update()
     {

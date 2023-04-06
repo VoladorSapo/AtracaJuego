@@ -45,7 +45,10 @@ public class Nev : PlayablePlayer
         hasAttack = true;
         if (hasMove)
         {
-             SPM.endTurn(teamNumb, false);
+            // SPM.endTurn(teamNumb, false);
+            ChangeMapShown(0);
+            hasTurn = true;
+
         }
         else
         {
@@ -53,7 +56,7 @@ public class Nev : PlayablePlayer
         }
     }
 
-    protected override void ChangeMapShown(int setMode){
+    public override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)
         {
@@ -66,5 +69,7 @@ public class Nev : PlayablePlayer
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 3, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
+        _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
+
     }
 }

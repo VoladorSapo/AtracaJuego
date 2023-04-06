@@ -45,14 +45,16 @@ public class Ignacio : PlayablePlayer
         hasAttack = true;
         if (hasMove)
         {
-            SPM.endTurn(teamNumb, false);
+            // SPM.endTurn(teamNumb, false);
+            hasTurn = true;
+            ChangeMapShown(0);
         }
         else
         {
             ChangeMapShown(1);
         }
     }
-    protected override void ChangeMapShown(int setMode){
+    public override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)
         {
@@ -65,6 +67,8 @@ public class Ignacio : PlayablePlayer
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
+        _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
+
     }
     /* if(AttackMode){AttackMode=false; GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
             else{AttackMode=true; GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}*/

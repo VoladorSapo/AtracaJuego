@@ -117,7 +117,7 @@ public class CustomTileClass
     public void setPlayer(PlayerBase newplayer)
     {
         player = newplayer;
-        if(_eventile != null && newplayer != null)
+        if(_eventile != null && newplayer != null && !newplayer.team)
         {
             Debug.Log("uo");
             _eventile.PressEvent();

@@ -11,7 +11,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
-
+    public bool isEnemy;
     public int[] MaxDistancePlayers={5,6,4,3,8}; //Ignacio,Iowa,Marl,Nev,Paul
     void Update(){
 
@@ -22,6 +22,7 @@ public class ScriptPlayerManager : MonoBehaviour
             {
             players[i].setGame();
             players[i].teamNumb = i;
+            players[i].team = isEnemy;
 
         }
     }
@@ -41,7 +42,14 @@ public class ScriptPlayerManager : MonoBehaviour
                 //players[i].startTurn();
             }
             currentPlayer = 0;
-            players[0].startTurn();
+            if (isEnemy)
+            {
+                players[0].startTurn();
+            }
+            else
+            {
+                players[0].ChangeMapShown(0);
+            }
         }
     }
     public void ChangePlayer(int player)
@@ -64,9 +72,9 @@ public class ScriptPlayerManager : MonoBehaviour
             {
                 players[i].teamNumb = i;
             }
-            if (Activated)
+            if (Activated && players.Count > 0)
             {
-                endTurn(0, true);
+                players[0].ChangeMapShown(0);
             }
         }
         if(players.Count == 0)
@@ -74,28 +82,34 @@ public class ScriptPlayerManager : MonoBehaviour
             _gameController.teamDie(this);
         }
     }
-    public void endTurn(int player,bool die)
+    public void nextTurn(int player,bool die)
     {
-        if (!die)
-        {
-            players[player].setTurn(true);
-        }
-        currentPlayer = -1;
-        print(players.Count);
-        for (int i = 0; i < players.Count; i++)
-        {
-            print("ai");
-            if(!players[i].getTurn()){
-                print("Noa");
-                currentPlayer = i;
-                players[i].startTurn();
-                break;
-            }
-        }
-        if(currentPlayer == -1)
+         if (!die)
+         {
+             players[player].setTurn(true);
+         }
+         currentPlayer = -1;
+         print(players.Count);
+         for (int i = 0; i < players.Count; i++)
+         {
+             print("ai");
+             if(!players[i].getTurn()){
+                 print("Noa");
+                 currentPlayer = i;
+                 players[i].startTurn();
+                 break;
+             }
+         }
+
+        if (currentPlayer == -1)
         {
             print("nextteam");
-            _turn.startTurns();
+            endTurn();
         }
+    }
+    public void endTurn()
+    {
+        _turn.startTurns();
+
     }
 }

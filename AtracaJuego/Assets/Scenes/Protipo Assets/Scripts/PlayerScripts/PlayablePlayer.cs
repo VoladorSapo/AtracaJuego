@@ -7,11 +7,13 @@ public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
     [SerializeField] protected int Cooldown;
+    [SerializeField] protected turnButtonsController _turnbuttons;
     protected bool willAttack;
     protected override void Awake()
     {
         base.Awake();
         SPM = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
+        _turnbuttons = GameObject.Find("TurnButtons").GetComponent<turnButtonsController>();
 
     }
     protected override void OnTriggerEnter2D(Collider2D other){}
@@ -70,10 +72,12 @@ public class PlayablePlayer : PlayerBase
     {
         base.setTurn(newTurn);
         willAttack = false;
+        hasMove = false;
+        hasAttack = false;
         if (Cooldown > 0) { Cooldown--; }
     }
     
-    protected override void ChangeMapShown(int setPos)
+    public override void ChangeMapShown(int setPos)
     {
 
     }
@@ -82,16 +86,25 @@ public class PlayablePlayer : PlayerBase
     {
         //GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,team,false);
         print("hey");
-        ChangeMapShown(1);
-        willAttack=false;
-        hasMove = false;
-        hasAttack = false;
+        if (hasMove && hasAttack)
+        {
+            ChangeMapShown(0);
+        }
+        else if (!hasMove)
+        {
+            ChangeMapShown(1);
+        }
+        else
+        {
+            ChangeMapShown(2);
+        }
+      
     }
 
     IEnumerator skipturn()
     {
         yield return new WaitForEndOfFrame();
-        SPM.endTurn(teamNumb, false);
+        SPM.nextTurn(teamNumb, false);
 
     }
 

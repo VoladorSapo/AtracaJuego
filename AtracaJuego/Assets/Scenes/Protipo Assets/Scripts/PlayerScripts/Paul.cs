@@ -73,7 +73,10 @@ public class Paul : PlayablePlayer
         hasAttack = true;
         if (hasMove)
         {
-             SPM.endTurn(teamNumb, false);
+            // SPM.endTurn(teamNumb, false);
+            ChangeMapShown(0);
+            hasTurn = true;
+
         }
         else
         {
@@ -85,7 +88,7 @@ public class Paul : PlayablePlayer
         //PushCooldown++;
         //_SPM.CanAttack[0]=false;
     }
-    protected override void ChangeMapShown(int setMode)
+    public override void ChangeMapShown(int setMode)
     {
         Mode = setMode;
         if (Mode == 1)
@@ -99,6 +102,8 @@ public class Paul : PlayablePlayer
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 4, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
+        _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
+
     }
 
 }

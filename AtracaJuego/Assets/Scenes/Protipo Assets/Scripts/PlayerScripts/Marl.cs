@@ -34,7 +34,10 @@ public class Marl : PlayablePlayer
 
         if (hasMove)
         {
-            SPM.endTurn(teamNumb, false);
+            // SPM.endTurn(teamNumb, false);
+            ChangeMapShown(0);
+            hasTurn = true;
+
         }
         else
         {
@@ -42,7 +45,7 @@ public class Marl : PlayablePlayer
         }
     }
 
-    protected override void ChangeMapShown(int setMode){
+    public override void ChangeMapShown(int setMode){
         Mode = setMode;
         if (Mode == 1)
         {
@@ -55,6 +58,8 @@ public class Marl : PlayablePlayer
         {
             GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
+        _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
+
     }
 }
 

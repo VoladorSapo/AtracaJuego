@@ -52,13 +52,13 @@ public class Garrote : EnemyCharacter
         print(path[0].pos);
         startMove(path);
     }
-    protected override void ChangeMapShown(int setMode)
+    public override void ChangeMapShown(int setMode)
     {
         if(GC.grid.WorldToCell(transform.position) == objective)
         {
             animator.SetInteger("Anim", 2);
         }
-        SPM.endTurn(teamNumb, false);
+        SPM.nextTurn(teamNumb, false);
     }
     public override void InstantiatePrefab()
     {
