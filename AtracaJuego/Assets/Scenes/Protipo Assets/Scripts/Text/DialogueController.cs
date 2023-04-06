@@ -6,6 +6,7 @@ public class DialogueController : MonoBehaviour
 {
     TextController _text;
     [SerializeField] Animator anim;
+    [SerializeField] CutsceneEventTile _tile;
     List<string> dialogs;
 
     public void nextDialog()
@@ -20,10 +21,12 @@ public class DialogueController : MonoBehaviour
         else
         {
             _text.terminado = true;
+            _tile.returnTurn();
         }
     }
-    public void loadDialogs(List<string> newdialog)
+    public void loadDialogs(List<string> newdialog,CutsceneEventTile tile)
     {
+        _tile = tile;
         dialogs = new List<string>();
         dialogs.AddRange(newdialog);
     }

@@ -29,7 +29,7 @@ public class CutsceneEventTile : EventTile
                 list.Add(_localizedstring.GetLocalizedString());
             }
         }
-        dc.loadDialogs(list);
+        dc.loadDialogs(list,this);
     }
     public void returnTurn()
     {
