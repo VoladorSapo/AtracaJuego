@@ -1843,6 +1843,7 @@ MonoBehaviour:
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
+  isEnemy: 0
   MaxDistancePlayers: 0500000006000000040000000300000008000000
 --- !u!114 &642901474
 MonoBehaviour:
@@ -3770,6 +3771,7 @@ MonoBehaviour:
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
+  isEnemy: 1
   MaxDistancePlayers: 0500000006000000040000000300000008000000
 --- !u!4 &1088530370
 Transform:
