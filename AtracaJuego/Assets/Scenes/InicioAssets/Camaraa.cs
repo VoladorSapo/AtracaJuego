@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Camaraa : MonoBehaviour
 {
+    public float speed;
    
     void Start()
     {
@@ -13,6 +14,6 @@ public class Camaraa : MonoBehaviour
  
     void Update()
     {
-        transform.position += new Vector3(Time.deltaTime*3,0,0);
+        transform.position += new Vector3(Time.deltaTime*speed,0,0);
     }
 }
