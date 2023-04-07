@@ -20,9 +20,10 @@ public class cutsceneController : MonoBehaviour
     }
     public void loadScene(string table,string code,bool endScene)
     {
-        List<string> list = new List<string>();
+        List<string> list = GetLocalizedString.getLocalizedString(table, code);
         endCutscene = endScene;
-        bool finish = false;
+      //  GetLocalizedString.getLocalizedString(table, code);
+      /*  bool finish = false;
         int i = 0;
         while (!false && i<20)
         {
@@ -40,7 +41,7 @@ public class cutsceneController : MonoBehaviour
                 finish = true;
                 break;
             }
-        }
+        }*/
         dc.loadDialogs(list, null, this);
     }
     public void returnTurn()

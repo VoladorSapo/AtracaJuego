@@ -15,25 +15,27 @@ public class CombatDialogTile : EventTile
     public override void PressEvent()
     {
         int rnd = Random.Range(0, random);
-        List<string> list = new List<string>();
-        bool finish = false;
-        int i = 0;
-        while (!false)
-        {
-            _localizedstring.TableReference = table;
-            string reference = code + "_" + rnd + "_" + i;
-            _localizedstring.TableEntryReference = reference;
-            if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
-            {
-                list.Add(_localizedstring.GetLocalizedString());
-            }
-            else
-            {
-                finish = true;
-                break;
-            }
-            i++;
-        }
+        string newcode = code + "_" + rnd;
+
+        List<string> list = GetLocalizedString.getLocalizedString(table, newcode);
+        //bool finish = false;
+        //int i = 0;
+        //while (!false)
+        //{
+        //    _localizedstring.TableReference = table;
+        //    string reference = code + "_" + rnd + "_" + i;
+        //    _localizedstring.TableEntryReference = reference;
+        //    if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
+        //    {
+        //        list.Add(_localizedstring.GetLocalizedString());
+        //    }
+        //    else
+        //    {
+        //        finish = true;
+        //        break;
+        //    }
+        //    i++;
+        //}
         gdc.loadDialogs(list);
 
     }
