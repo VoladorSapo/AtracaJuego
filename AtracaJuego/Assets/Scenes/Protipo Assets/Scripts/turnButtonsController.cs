@@ -8,11 +8,13 @@ public class turnButtonsController : MonoBehaviour
     [SerializeField] Button moveButton;
     [SerializeField] Button outButton;
     [SerializeField] Button attackButton;
+    [SerializeField] GameObject skipConfirm;
     [SerializeField] PlayerBase currentplayer;
     // Start is called before the first frame update
     void Start()
     {
         hideButtons();
+        Skip(false);
     }
 
     // Update is called once per frame
@@ -63,5 +65,10 @@ public class turnButtonsController : MonoBehaviour
     {
         currentplayer.getSPM().endTurn();
         hideButtons();
+        Skip(false);
+    }
+    public void Skip(bool show)
+    {
+        skipConfirm.SetActive(show);
     }
 }

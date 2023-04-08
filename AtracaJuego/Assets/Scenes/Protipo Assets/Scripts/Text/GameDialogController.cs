@@ -45,9 +45,6 @@ public class GameDialogController : MonoBehaviour
     {
         if (dialogs.Count > 0)
         {
-            _localizedstring.TableReference = "Game_Dialog_Ignacio";
-            _localizedstring.TableEntryReference = "Game_Ignacio_Walk";
-            _localizedstring.GetLocalizedString();
             _text.StartText(dialogs[0]);
             dialogs.RemoveAt(0);
             evento.CheckForLinkEvent();

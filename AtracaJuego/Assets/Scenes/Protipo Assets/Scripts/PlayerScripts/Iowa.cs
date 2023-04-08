@@ -83,6 +83,7 @@ public class Iowa : PlayablePlayer
             }
         }
         hasAttack = true;
+        
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);
@@ -110,6 +111,7 @@ public class Iowa : PlayablePlayer
         else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
         else
         {
+            print("waka");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
         }
         _turnbuttons.showButtons(this,setMode,!hasMove,!hasAttack);

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Scene_1.1_es
+  m_Name: Level1_Scenes_es
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: es
@@ -18,29 +18,24 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 2999590068224
-    m_Localized: <link="SetAnim-1">Bienvenido al tutorial del robojuego.</link>
+  - m_Id: 645356576579584
+    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
-  - m_Id: 3003780177920
-    m_Localized: <link="SetAnim-2">Yo hago poffffffff.</link>
+  - m_Id: 645309248053248
+    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
-  - m_Id: 3006489698304
-    m_Localized: <link="SetAnim-1">Y yo boom.</link>
+  - m_Id: 645279569158144
+    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
-  - m_Id: 19745017438208
-    m_Localized: <link="SetAnim-4">Gracias por jugar.</link>
+  - m_Id: 645225471025152
+    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
-  - m_Id: 20405054087168
-    m_Localized: <link="SetAnim-2">Combina nuestras habilidades para matar.</link>
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20609446715392
-    m_Localized: <link="SetAnim-3">Ahora vamos a mandarte a una escena rota y sin
-      configurar.</link>
+  - m_Id: 645362251472896
+    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
   references:

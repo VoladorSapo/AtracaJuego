@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class DialogueController : MonoBehaviour
 {
     TextController _text;
@@ -10,7 +10,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] GameObject _dialogbox;
     [SerializeField] CutsceneEventTile _tile;
     [SerializeField] cutsceneController _cutscene;
-
+    [SerializeField] TMP_Text name_text;
     List<string> dialogs;
 
     public void nextDialog()
@@ -41,6 +41,33 @@ public class DialogueController : MonoBehaviour
     public void setAnim(int animint)
     {
         anim.SetInteger("Character", animint);
+        switch (animint)
+        {
+            case 0:
+                name_text.text = "";
+                break;
+            case 1:
+                name_text.text = "Ignacio";
+                break;
+            case 2:
+                name_text.text = "Marl";
+                break;
+            case 3:
+                name_text.text = "Iowa";
+
+                break;
+            case 4:
+                name_text.text = "Pol";
+
+                break;
+            case 5:
+                name_text.text = "Nev";
+
+                break;
+            case 6:
+                name_text.text = "Guardia";
+                break;
+        }
     }
     public void loadDialogs(List<string> newdialog,CutsceneEventTile tile,cutsceneController controller)
     {

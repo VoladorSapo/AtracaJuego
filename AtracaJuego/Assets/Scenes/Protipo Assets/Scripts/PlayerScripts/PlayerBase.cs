@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerBase : MonoBehaviour
 {
-    protected int effect;
+    public int effect;
     protected bool bypass;
     protected int direction;
     [SerializeField] private Grid grid;
