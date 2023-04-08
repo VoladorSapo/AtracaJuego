@@ -10,9 +10,9 @@ public class PlaceTiles : MonoBehaviour
     public Tilemap Ground;
     
     //Podria ser array pero para que tan solo tenga unos 10 elementos mejor que tenga cada uno un nombre especifico
-    public Tile iceT;
-    public Tile wetT;
-    public Tile gasT;
+    public RuleTile iceT;
+    public RuleTile wetT;
+    public RuleTile gasT;
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         Charco=GameObject.Find("Charcos").GetComponent<Tilemap>();

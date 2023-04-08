@@ -5,30 +5,59 @@ using UnityEngine;
 public class Marl : PlayablePlayer
 {
     public GameObject GasPrefab;
+    public GameObject DisplayGas;
     Vector3Int posMouse;
+    Vector3Int prevMouse;
+
+    Vector3Int placeHere;
+    private bool InstHecho=false;
     
     protected override void Awake()
     {
         base.Awake();
         effect=-1;
+        prevMouse=posMouse;
     }
     public override void Update()
     {
-
         base.Update();
+
+        posMouse=GC.GetMousePosition();
+
+        if(!GC.isEmpty(posMouse, false, 2) && Mode == 2){
+                if(!InstHecho){
+                Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
+                
+                Instantiate(DisplayGas, posNew, Quaternion.identity);
+                InstHecho=true;
+                }
+                if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb){
+                    placeHere=posMouse;
+                    Cooldown=3;
+                    animator.SetInteger("Anim", 2);
+                }
+        }
+        if(prevMouse!=posMouse || Cooldown!=0 || Mode!=2){
+            Destroy(GameObject.FindGameObjectWithTag("DisplayGasTag"));
+            InstHecho=false;
+        }
+
+        /*
         if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2)
         {
-            posMouse=GC.GetMousePosition();
+            
             if(!GC.isEmpty(posMouse, false, 2)){
                 Cooldown=3;
                 animator.SetInteger("Anim", 2);
             }
-        }
+        }*/
+
+        prevMouse=posMouse;
     }
     public override void InstantiatePrefab()
     {
         //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
-        Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
+        Vector3Int posNew = placeHere * 10 + new Vector3Int(5, 5, 0);
         Instantiate(GasPrefab, posNew, Quaternion.identity);
         hasAttack = true;
 

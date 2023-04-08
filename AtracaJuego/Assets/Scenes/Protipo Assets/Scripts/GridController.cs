@@ -124,7 +124,7 @@ public class GridController : MonoBehaviour
         if (!mousePos.Equals(previousMousePos))
         {
 
-            Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            /*Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             objectHit = Physics2D.Raycast(mousePos2, Vector2.zero);
             TileToPlace = hoverTile;
             canMoveHere = true;
@@ -135,7 +135,7 @@ public class GridController : MonoBehaviour
                     case "Top1": TileToPlace = hoverTileNope; canMoveHere = false; break;
                     case "Player": TileToPlace = hoverTilePlayer; break;
                 }
-            }
+            }*/
             interactiveMap.SetTile(previousMousePos, null); //Quita la anterior tile de indicación
             interactiveMap.SetTile(mousePos, TileToPlace);
             previousMousePos = mousePos;
@@ -239,8 +239,9 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
 
         case 2:
         posInted= new Vector3Int(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), 0);
-        if (AttackPos.Contains(posInted))
+        if (CanAttackMap.HasTile(posInted))
         {
+            
             empty=false;
         }else{empty=true;} break;
         }

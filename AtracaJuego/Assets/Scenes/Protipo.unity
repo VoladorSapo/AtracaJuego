@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50655422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 4.9, z: 0}
+  m_LocalPosition: {x: 25, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -425,6 +425,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -441,6 +442,7 @@ MonoBehaviour:
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
+  DisplayGas: {fileID: 5070135446965842197, guid: 13be77a770a63874b980ca6fc526bb29, type: 3}
 --- !u!50 &50655428
 Rigidbody2D:
   serializedVersion: 4
@@ -650,7 +652,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 750, y: 350}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176352186
 MonoBehaviour:
@@ -728,8 +730,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 20fc0eb2d708a8746a2925d48c89d692, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -888,7 +890,7 @@ MonoBehaviour:
   ground: {fileID: 1484169943}
   canMove: {fileID: 384387088}
   CanAttackMap: {fileID: 200822311}
-  hoverTile: {fileID: 11400000, guid: aed8c3e5cbbf4984896b3c68b4f7e9b1, type: 2}
+  hoverTile: {fileID: 11400000, guid: 209de7714a2d9324bbcad0402c6e8bda, type: 2}
   hoverTileNope: {fileID: 11400000, guid: 6393baf3ad915a24989d617a5e35a810, type: 2}
   hoverTilePlayer: {fileID: 11400000, guid: a332d85a6ce95bb45814fbd515bc7b51, type: 2}
   canMoveTile: {fileID: 11400000, guid: ab9c22f31e5712a4993e1dcae711a82f, type: 2}
@@ -1374,8 +1376,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5128f4d78d6ba044e88c2f6575e83361, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1410,7 +1412,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 450, y: 350}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &485715674
 GameObject:
@@ -1610,6 +1612,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -2263,6 +2266,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -2448,9 +2452,9 @@ MonoBehaviour:
   Charco: {fileID: 0}
   Gas: {fileID: 0}
   Ground: {fileID: 0}
-  iceT: {fileID: 11400000, guid: 83bed548fc268f844bf6ca772f56e37d, type: 2}
-  wetT: {fileID: 11400000, guid: 6a3d6a4124007a1439a77b1acd67328b, type: 2}
-  gasT: {fileID: 11400000, guid: b3ef72e05c82a49469dc8910268a8015, type: 2}
+  iceT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
+  wetT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
+  gasT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
 --- !u!4 &769169109
 Transform:
   m_ObjectHideFlags: 0
@@ -2516,6 +2520,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 0
@@ -2546,6 +2551,7 @@ MonoBehaviour:
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
+  MM: {fileID: 0}
   SPM: {fileID: 642901473}
   MaxDistance: 5
   team: 0
@@ -2738,6 +2744,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -2771,6 +2778,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -2805,6 +2813,7 @@ MonoBehaviour:
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
+  MM: {fileID: 0}
   SPM: {fileID: 642901473}
   MaxDistance: 5
   team: 0
@@ -2821,6 +2830,7 @@ MonoBehaviour:
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
+  DisplayGas: {fileID: 0}
 --- !u!114 &877809190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,6 +2848,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -2876,6 +2887,123 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &976982400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976982402}
+  - component: {fileID: 976982401}
+  - component: {fileID: 976982403}
+  m_Layer: 0
+  m_Name: CajaReforzada
+  m_TagString: StoneBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &976982401
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976982400}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &976982402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976982400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35, y: -5, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976982403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976982400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec58d9887e86464cbe1b584a310a967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  MM: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 0
+  team: 0
+  hasTurn: 0
+  hasMove: 0
+  hasAttack: 0
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 0
+  alive: 0
+  maxHealth: 0
+  currentHealth: 0
+  LifeTime: 0
 --- !u!1 &1003061663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,6 +3726,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -3730,8 +3859,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 538db2c5265e69f429fb5b940f7d5b19, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3766,7 +3895,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 600, y: 350}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1088530368
 GameObject:
@@ -4215,6 +4344,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047984}
     m_Modifications:
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.w
+      value: 70.37456
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.x
+      value: 146.81119
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.y
+      value: 16.17987
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.z
+      value: 121.7547
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386627095995834, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 596.7225
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386627095995834, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -239.44577
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386627095995835, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef37596f76cb7f148a58d74b1ebb6984, type: 3}
+    - target: {fileID: 5232386627095995835, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386627095995835, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386627095995835, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5232386627632228584, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
       propertyPath: m_Name
       value: DialogueController
@@ -8356,6 +8525,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6393baf3ad915a24989d617a5e35a810, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: d5febda5725cfe94786d5069259631c5, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 283
     m_Data: {fileID: 1847519609, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
@@ -8367,6 +8538,28 @@ Tilemap:
     m_Data: {fileID: 429978272, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -2116766223, guid: b44fbad3946e7a14ab9a6d4d7fc8e9d0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 391
     m_Data:
@@ -8813,6 +9006,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -8924,8 +9118,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b7b965da4d0c4904083a315dc3a917d1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8960,7 +9154,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 300, y: 350}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1819482700
 GameObject:
@@ -9160,6 +9354,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -9461,7 +9656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946447231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45, y: -25, z: 0}
+  m_LocalPosition: {x: -54.8, y: -5.1, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9485,6 +9680,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -9562,6 +9758,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -9595,6 +9792,7 @@ MonoBehaviour:
   GC: {fileID: 195986141}
   _gamecontroller: {fileID: 642901474}
   _turnController: {fileID: 642901472}
+  MM: {fileID: 0}
   SPM: {fileID: 642901473}
   MaxDistance: 10
   team: 0
@@ -9813,6 +10011,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1

@@ -60,17 +60,20 @@ public class PushEffect : MonoBehaviour
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                _GC.tiles[x,y].player.Push(1,0,5);
+                                switch(_GC.tiles[x,y].GetPlayer().tag){
+                                    case "Player": auxDist=5; break;
+                                    case "Enemy": auxDist=5; break;
+                                    case "StoneBox": auxDist=3; break;
+                                    case "IceCube": auxDist=1000; break;
+                                    case "WoodBox": auxDist=5; break;
+                                }
+                                _GC.tiles[x,y].player.Push(1,0,auxDist);
                             }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
-                            
-                            /*if hay objeto...*/
-                            distance=auxDist;
+                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
                             break;
 
                 case 2:     
 
-                            /*if hay personaje... más simple de hacer*/
-                            /*if hay objeto...*/
                             
                             for(int k=1; k>=-1; k--){
                             for(int i=0; i<distance; i++){
@@ -91,10 +94,17 @@ public class PushEffect : MonoBehaviour
                             }
 
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                _GC.tiles[x,y].GetPlayer().Push(-1,0,5);
-                            }else{_GC.tiles[x,y].addEffect(3,true,2,-1);}
+                                switch(_GC.tiles[x,y].GetPlayer().tag){
+                                    case "Player": auxDist=5; break;
+                                    case "Enemy": auxDist=5; break;
+                                    case "StoneBox": auxDist=3; break;
+                                    case "IceCube": auxDist=1000; break;
+                                    case "WoodBox": auxDist=5; break;
+                                }
+                                _GC.tiles[x,y].player.Push(-1,0,auxDist);
+                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
+                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
 
-                            distance=auxDist;
                             break;
 
                 case 3:     
@@ -118,8 +128,16 @@ public class PushEffect : MonoBehaviour
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                _GC.tiles[x,y].GetPlayer().Push(0,1,5);
-                            }else{_GC.tiles[x,y].addEffect(3,true,3,-1);}
+                                switch(_GC.tiles[x,y].GetPlayer().tag){
+                                    case "Player": auxDist=5; break;
+                                    case "Enemy": auxDist=5; break;
+                                    case "StoneBox": auxDist=3; break;
+                                    case "IceCube": auxDist=1000; break;
+                                    case "WoodBox": auxDist=5; break;
+                                }
+                                _GC.tiles[x,y].player.Push(0,1,auxDist);
+                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
+                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
 
                             distance=auxDist;
                             break;
@@ -143,8 +161,16 @@ public class PushEffect : MonoBehaviour
                             }
                             
                             if(_GC.tiles[x,y].GetPlayer()!=null){
-                                _GC.tiles[x,y].GetPlayer().Push(0,-1,5);
-                            }else{_GC.tiles[x,y].addEffect(3,true,4,-1);}
+                                switch(_GC.tiles[x,y].GetPlayer().tag){
+                                    case "Player": auxDist=5; break;
+                                    case "Enemy": auxDist=5; break;
+                                    case "StoneBox": auxDist=3; break;
+                                    case "IceCube": auxDist=1000; break;
+                                    case "WoodBox": auxDist=5; break;
+                                }
+                                _GC.tiles[x,y].player.Push(0,-1,auxDist);
+                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
+                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
                             break;
 
 

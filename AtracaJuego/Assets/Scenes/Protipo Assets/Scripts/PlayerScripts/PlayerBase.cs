@@ -13,6 +13,7 @@ public class PlayerBase : MonoBehaviour
     public GridController GC;
     public gameController _gamecontroller;
     [SerializeField] private tunController _turnController;
+    [SerializeField] private MapManager MM;
     [SerializeField] protected ScriptPlayerManager SPM;
     [SerializeField] protected int MaxDistance;
     private int[] prevX= new int[5];
@@ -39,6 +40,7 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Awake(){
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         GC = grid.GetComponent<GridController>();
+        MM = GameObject.Find("MapManager").GetComponent<MapManager>();
         PT=FindObjectOfType<PlaceTiles>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -182,6 +184,7 @@ public class PlayerBase : MonoBehaviour
         //tile.setPlayer(null);
         sprite.enabled = false;
         SPM.playerDie(this);
+        if(this.tag!="Player"){tile.setPlayer(null);}
     }
 
  
@@ -191,7 +194,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void loseHealth(int health)
     {
-        animator.SetInteger("Anim", 4);
+        if(animator!=null){animator.SetInteger("Anim", 4);}
         currentHealth -= health;
         if(currentHealth <= 0)
         {
@@ -261,7 +264,10 @@ public class PlayerBase : MonoBehaviour
             //&& _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5
             //newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
             if(GC.tiles[x + dx,y + dy].GetPlayer()==null){transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);}else{
-            GC.tiles[x,y].setPlayer(this); GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;  
+            GC.tiles[x,y].setPlayer(this);
+            if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;}
+            if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
+            GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;  
             }
 
             if(transform.position==newPos || GC.tiles[x + dx,y + dy].GetPlayer()!=null){
@@ -272,7 +278,10 @@ public class PlayerBase : MonoBehaviour
 
                 if(GC.tiles[x + dx,y + dy].GetTileState()>=5 && GC.tiles[x + dx,y + dy].GetTileState()!=9){ break;}
                 if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
-                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;}
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
+                    if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;} 
+                    if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
+                    GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;} //Solo el bloque de hielo puede dañar
                 distance--;
             }
         
@@ -280,8 +289,8 @@ public class PlayerBase : MonoBehaviour
         
         yield return null;
         }
-        Debug.LogWarning(transform.position==newPos);
-        Debug.LogWarning("Hecho");
+        
+        
         yield return null;
         }
     }

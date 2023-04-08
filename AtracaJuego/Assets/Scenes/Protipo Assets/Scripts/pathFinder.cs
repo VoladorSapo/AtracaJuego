@@ -168,10 +168,10 @@ public class pathFinder : MonoBehaviour
 
         case 4: //Electricidad
         Vector3Int posE=nodo.pos-new Vector3Int(2,2,0);
-        if(GC.tiles[posE.x - ogx +2, posE.y - ogy].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy]);}
-        if(GC.tiles[posE.x - ogx, posE.y - ogy +2].GetTileState()<5){nearList.Add(nodos[posE.x - ogx, posE.y - ogy +2]);}
-        if(GC.tiles[posE.x - ogx +2, posE.y - ogy +4].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy +4]);}
-        if(GC.tiles[posE.x - ogx +4, posE.y - ogy +2].GetTileState()<5){nearList.Add(nodos[posE.x - ogx +4, posE.y - ogy +2]);}
+        if(GC.tiles[posE.x - ogx +2, posE.y - ogy].GetTileEffect()!=16 && GC.tiles[posE.x - ogx +2, posE.y - ogy+1].GetTileEffect()!=16){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy]);}
+        if(GC.tiles[posE.x - ogx, posE.y - ogy +2].GetTileEffect()!=16 && GC.tiles[posE.x - ogx+1, posE.y - ogy +2].GetTileEffect()!=16){nearList.Add(nodos[posE.x - ogx, posE.y - ogy +2]);}
+        if(GC.tiles[posE.x - ogx +2, posE.y - ogy +4].GetTileEffect()!=16 && GC.tiles[posE.x - ogx +2, posE.y - ogy +3].GetTileEffect()!=16){nearList.Add(nodos[posE.x - ogx +2, posE.y - ogy +4]);}
+        if(GC.tiles[posE.x - ogx +4, posE.y - ogy +2].GetTileEffect()!=16 && GC.tiles[posE.x - ogx +3, posE.y - ogy +2].GetTileEffect()!=16){nearList.Add(nodos[posE.x - ogx +4, posE.y - ogy +2]);}
 
         break;
         }

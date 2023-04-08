@@ -39,11 +39,15 @@ public class PlayablePlayer : PlayerBase
             }
         }
         if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb&& SPM.Activated && !moving)
-        { //&& _SPM.currentPlayer==x
+        { 
             int newMode = (Mode + 1) % 3;
-            print(Mode);
-            print(newMode);
-                ChangeMapShown(newMode);
+            if(!hasAttack || !hasMove){
+            if(hasAttack && newMode==2){newMode=0;}
+            if(hasMove && newMode==1){newMode=2;}
+            }else{newMode=0;}
+            
+            
+            ChangeMapShown(newMode);
         }
         base.Update();
     }

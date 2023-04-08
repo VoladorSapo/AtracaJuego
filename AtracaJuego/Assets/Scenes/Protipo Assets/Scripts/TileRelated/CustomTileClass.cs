@@ -243,7 +243,7 @@ public class CustomTileClass
             if(changed){return Mathf.Min(e1,e2,e3,e4);}else{return 3;}
         }
                                  //Set                                  //Do                                                                            //Damage
-        private void AddEffectAct(int id, Vector3Int og, bool bypass, int lock_, int newEf, int newF, Tile newTG, Tile newTC, int effect, int MaxRange, int direction, int codeDamage){
+        private void AddEffectAct(int id, Vector3Int og, bool bypass, int lock_, int newEf, int newF, RuleTile newTG, RuleTile newTC, int effect, int MaxRange, int direction, int codeDamage){
             if(tileEffect==lock_){
             switch(id){
                 case 1: tileEffect=newEf; tileFadeEffect=newF; _PT.Gas.SetTile(tilePos+og,newTG); _PT.Charco.SetTile(tilePos+og,newTC); break;
