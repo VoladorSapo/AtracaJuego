@@ -7,491 +7,630 @@ public class PushEffect : MonoBehaviour
     [SerializeField] private Vector3 posBL;
     [SerializeField] private float w;
     [SerializeField] private float h;
+    public Iowa _iowa;
     public GridController _GC;
     public MapManager _MM;
 
     public GameObject IcePrefab;
-    [SerializeField] private int distance=5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
-    [SerializeField] private int distanceMoved=5; //Mueve n tiles
-    [SerializeField] private int distancePush=10;
+    [SerializeField] private int distance = 5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
+    [SerializeField] private int distanceMoved = 5; //Mueve n tiles
+    [SerializeField] private int distancePush = 10;
     private int auxDist;
     public int direction; //1:Derecha 2:Izquierda 3:Arriba 4:Abajo
 
     // Start is called before the first frame update
     void Awake()
     {
-        _GC=GameObject.Find("Grid").GetComponent<GridController>();
-        _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
-        w=transform.localScale.x;
-        h=transform.localScale.y;
-        auxDist=distance;
+        _GC = GameObject.Find("Grid").GetComponent<GridController>();
+        _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
+        w = transform.localScale.x;
+        h = transform.localScale.y;
+        auxDist = distance;
     }
 
     // Update is called once per frame
     void Start()
     {
-        
-            Vector3Int tileO = _GC.grid.WorldToCell(transform.position);
-            bool hayGas=false;
-            int x=tileO.x-_GC.ogx;
-            int y=tileO.y-_GC.ogy;
 
-            int dist1=0, dist0=0, dist_=0;
-            switch(direction){
-                case 1:     
-                            
-                            for(int k=1; k>=-1; k--){
-                            for(int i=0; i<distance; i++){
-                                if(_GC.tiles[x+i,y+k].GetTileState()<8){
-                                if(_GC.tiles[x+i,y+k].GetTileEffect()==1 || _GC.tiles[x+i,y+k].GetTileEffect()==7){
-                                    switch(k){
-                                        case 1: dist1++; break;
-                                        case 0: dist0++; break;
-                                        case -1: dist_++; break;
-                                    } 
-                                hayGas=true;}
-                                }else{break;}
-                            }}
+        Vector3Int tileO = _GC.grid.WorldToCell(transform.position);
+        bool hayGas = false;
+        int x = tileO.x - _GC.ogx;
+        int y = tileO.y - _GC.ogy;
 
-                            print(dist1+";"+dist0+";"+dist_);
+        int dist1 = 0, dist0 = 0, dist_ = 0;
+        switch (direction)
+        {
+            case 1:
 
-                            if(hayGas){
-                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,1));
-                            }
-
-                            if(_GC.tiles[x,y].GetPlayer()!=null){
-                                switch(_GC.tiles[x,y].GetPlayer().tag){
-                                    case "Player": auxDist=5; break;
-                                    case "Enemy": auxDist=5; break;
-                                    case "StoneBox": auxDist=3; break;
-                                    case "IceCube": auxDist=1000; break;
-                                    case "WoodBox": auxDist=5; break;
+                for (int k = 1; k >= -1; k--)
+                {
+                    for (int i = 0; i < distance; i++)
+                    {
+                        if (_GC.tiles[x + i, y + k].GetTileState() < 8)
+                        {
+                            if (_GC.tiles[x + i, y + k].GetTileEffect() == 1 || _GC.tiles[x + i, y + k].GetTileEffect() == 7)
+                            {
+                                switch (k)
+                                {
+                                    case 1: dist1++; break;
+                                    case 0: dist0++; break;
+                                    case -1: dist_++; break;
                                 }
-                                _GC.tiles[x,y].player.Push(1,0,auxDist);
-                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
-                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
-                            break;
-
-                case 2:     
-
-                            
-                            for(int k=1; k>=-1; k--){
-                            for(int i=0; i<distance; i++){
-                                if(_GC.tiles[x-i,y+k].GetTileState()<8){
-                                if(_GC.tiles[x-i,y+k].GetTileEffect()==1 || _GC.tiles[x-i,y+k].GetTileEffect()==7){
-                                    switch(k){
-                                        case 1: dist1++; break;
-                                        case 0: dist0++; break;
-                                        case -1: dist_++; break;
-                                    } 
-                                hayGas=true;}
-                                }else{break;}
-                            }}
-
-                            print(dist1+";"+dist0+";"+dist_);
-                            if(hayGas){
-                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,2));
+                                hayGas = true;
                             }
+                        }
+                        else { break; }
+                    }
+                }
 
-                            if(_GC.tiles[x,y].GetPlayer()!=null){
-                                switch(_GC.tiles[x,y].GetPlayer().tag){
-                                    case "Player": auxDist=5; break;
-                                    case "Enemy": auxDist=5; break;
-                                    case "StoneBox": auxDist=3; break;
-                                    case "IceCube": auxDist=1000; break;
-                                    case "WoodBox": auxDist=5; break;
+                print(dist1 + ";" + dist0 + ";" + dist_);
+
+                if (hayGas)
+                {
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 1));
+                }
+
+                if (_GC.tiles[x, y].GetPlayer() != null)
+                {
+                    switch (_GC.tiles[x, y].GetPlayer().tag)
+                    {
+                        case "Player": auxDist = 5; break;
+                        case "Enemy": auxDist = 5; break;
+                        case "StoneBox": auxDist = 3; break;
+                        case "IceCube": auxDist = 1000; break;
+                        case "WoodBox": auxDist = 5; break;
+                    }
+                    _GC.tiles[x, y].player.Push(1, 0, auxDist);
+                }
+                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                if (!_iowa.getMove())
+                {
+                    _iowa.ChangeMapShown(1);
+                }
+                break;
+
+            case 2:
+
+
+                for (int k = 1; k >= -1; k--)
+                {
+                    for (int i = 0; i < distance; i++)
+                    {
+                        if (_GC.tiles[x - i, y + k].GetTileState() < 8)
+                        {
+                            if (_GC.tiles[x - i, y + k].GetTileEffect() == 1 || _GC.tiles[x - i, y + k].GetTileEffect() == 7)
+                            {
+                                switch (k)
+                                {
+                                    case 1: dist1++; break;
+                                    case 0: dist0++; break;
+                                    case -1: dist_++; break;
                                 }
-                                _GC.tiles[x,y].player.Push(-1,0,auxDist);
-                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
-                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
-
-                            break;
-
-                case 3:     
-
-                            for(int k=1; k>=-1; k--){
-                            for(int i=0; i<distance; i++){
-                                if(_GC.tiles[x+k,y+i].GetTileState()<8){
-                                if(_GC.tiles[x+k,y+i].GetTileEffect()==1 || _GC.tiles[x+k,y+i].GetTileEffect()==7){
-                                    switch(k){
-                                        case 1: dist1++; break;
-                                        case 0: dist0++; break;
-                                        case -1: dist_++; break;
-                                    } 
-                                hayGas=true;}
-                                }else{break;}
-                            }}
-
-                            print(dist1+";"+dist0+";"+dist_);
-                            if(hayGas){
-                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,3));
+                                hayGas = true;
                             }
-                            
-                            if(_GC.tiles[x,y].GetPlayer()!=null){
-                                switch(_GC.tiles[x,y].GetPlayer().tag){
-                                    case "Player": auxDist=5; break;
-                                    case "Enemy": auxDist=5; break;
-                                    case "StoneBox": auxDist=3; break;
-                                    case "IceCube": auxDist=1000; break;
-                                    case "WoodBox": auxDist=5; break;
+                        }
+                        else { break; }
+                    }
+                }
+
+                print(dist1 + ";" + dist0 + ";" + dist_);
+                if (hayGas)
+                {
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 2));
+                }
+
+                if (_GC.tiles[x, y].GetPlayer() != null)
+                {
+                    switch (_GC.tiles[x, y].GetPlayer().tag)
+                    {
+                        case "Player": auxDist = 5; break;
+                        case "Enemy": auxDist = 5; break;
+                        case "StoneBox": auxDist = 3; break;
+                        case "IceCube": auxDist = 1000; break;
+                        case "WoodBox": auxDist = 5; break;
+                    }
+                    _GC.tiles[x, y].player.Push(-1, 0, auxDist);
+                }
+                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                if (!_iowa.getMove())
+                {
+                    _iowa.ChangeMapShown(1);
+                }
+
+                break;
+
+            case 3:
+
+                for (int k = 1; k >= -1; k--)
+                {
+                    for (int i = 0; i < distance; i++)
+                    {
+                        if (_GC.tiles[x + k, y + i].GetTileState() < 8)
+                        {
+                            if (_GC.tiles[x + k, y + i].GetTileEffect() == 1 || _GC.tiles[x + k, y + i].GetTileEffect() == 7)
+                            {
+                                switch (k)
+                                {
+                                    case 1: dist1++; break;
+                                    case 0: dist0++; break;
+                                    case -1: dist_++; break;
                                 }
-                                _GC.tiles[x,y].player.Push(0,1,auxDist);
-                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
-                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
-
-                            distance=auxDist;
-                            break;
-                case 4:
-                            for(int k=1; k>=-1; k--){
-                            for(int i=0; i<distance; i++){
-                                if(_GC.tiles[x+k,y-i].GetTileState()<8){
-                                if(_GC.tiles[x+k,y-i].GetTileEffect()==1 || _GC.tiles[x+k,y-i].GetTileEffect()==7){
-                                    switch(k){
-                                        case 1: dist1++; break;
-                                        case 0: dist0++; break;
-                                        case -1: dist_++; break;
-                                    } 
-                                hayGas=true;}
-                                }else{break;}
-                            }}
-
-                            print(dist1+";"+dist0+";"+dist_);
-                            if(hayGas){
-                                StartCoroutine(PushGas(0.25f,dist1,dist0,dist_,x,y,4));
+                                hayGas = true;
                             }
-                            
-                            if(_GC.tiles[x,y].GetPlayer()!=null){
-                                switch(_GC.tiles[x,y].GetPlayer().tag){
-                                    case "Player": auxDist=5; break;
-                                    case "Enemy": auxDist=5; break;
-                                    case "StoneBox": auxDist=3; break;
-                                    case "IceCube": auxDist=1000; break;
-                                    case "WoodBox": auxDist=5; break;
+                        }
+                        else { break; }
+                    }
+                }
+
+                print(dist1 + ";" + dist0 + ";" + dist_);
+                if (hayGas)
+                {
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 3));
+                }
+
+                if (_GC.tiles[x, y].GetPlayer() != null)
+                {
+                    switch (_GC.tiles[x, y].GetPlayer().tag)
+                    {
+                        case "Player": auxDist = 5; break;
+                        case "Enemy": auxDist = 5; break;
+                        case "StoneBox": auxDist = 3; break;
+                        case "IceCube": auxDist = 1000; break;
+                        case "WoodBox": auxDist = 5; break;
+                    }
+                    _GC.tiles[x, y].player.Push(0, 1, auxDist);
+                }
+                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                if (!_iowa.getMove())
+                {
+                    _iowa.ChangeMapShown(1);
+                }
+
+                distance = auxDist;
+                break;
+            case 4:
+                for (int k = 1; k >= -1; k--)
+                {
+                    for (int i = 0; i < distance; i++)
+                    {
+                        if (_GC.tiles[x + k, y - i].GetTileState() < 8)
+                        {
+                            if (_GC.tiles[x + k, y - i].GetTileEffect() == 1 || _GC.tiles[x + k, y - i].GetTileEffect() == 7)
+                            {
+                                switch (k)
+                                {
+                                    case 1: dist1++; break;
+                                    case 0: dist0++; break;
+                                    case -1: dist_++; break;
                                 }
-                                _GC.tiles[x,y].player.Push(0,-1,auxDist);
-                            }else{_GC.tiles[x,y].addEffect(3,true,1,-1);}
-                            _GC.setReachablePos(transform.position, 6, true, true, false, false);
-                            break;
+                                hayGas = true;
+                            }
+                        }
+                        else { break; }
+                    }
+                }
+
+                print(dist1 + ";" + dist0 + ";" + dist_);
+                if (hayGas)
+                {
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 4));
+                }
+
+                if (_GC.tiles[x, y].GetPlayer() != null)
+                {
+                    switch (_GC.tiles[x, y].GetPlayer().tag)
+                    {
+                        case "Player": auxDist = 5; break;
+                        case "Enemy": auxDist = 5; break;
+                        case "StoneBox": auxDist = 3; break;
+                        case "IceCube": auxDist = 1000; break;
+                        case "WoodBox": auxDist = 5; break;
+                    }
+                    _GC.tiles[x, y].player.Push(0, -1, auxDist);
+                }
+                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                if (!_iowa.getMove())
+                {
+                    _iowa.ChangeMapShown(1);
+                }
+                break;
 
 
-            }
+        }
 
-            StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
+        StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
 
-    IEnumerator PushPlayerWait(int x,int y,float sec, int distancePush, int dir){
-        WaitForSeconds wfs=new WaitForSeconds(sec);
-        
-        Transform oldPosPlayer=_GC.tiles[x,y].GetPlayer().GetComponent<Transform>();
+    IEnumerator PushPlayerWait(int x, int y, float sec, int distancePush, int dir)
+    {
+        WaitForSeconds wfs = new WaitForSeconds(sec);
 
-        switch(dir){
-        case 1:
-        for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x+i+1,y].GetTileState()<5){
-                oldPosPlayer.position += (new Vector3(10,0,0));
-            }else{
-                break;
-            }
-        yield return wfs;
-        } break;
+        Transform oldPosPlayer = _GC.tiles[x, y].GetPlayer().GetComponent<Transform>();
 
-        case 2:
-        for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x-i-1,y].GetTileState()<5){
-                oldPosPlayer.position -= (new Vector3(10,0,0));
-            }else{
+        switch (dir)
+        {
+            case 1:
+                for (int i = 0; i < distancePush; i++)
+                {
+                    if (_GC.tiles[x + i + 1, y].GetTileState() < 5)
+                    {
+                        oldPosPlayer.position += (new Vector3(10, 0, 0));
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    yield return wfs;
+                }
                 break;
-            }
-        yield return wfs;
-        
-        } break;
 
-        case 3:
-        for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x,y+i+1].GetTileState()<5){
-                oldPosPlayer.position += (new Vector3(0,10,0));
-            }else{
+            case 2:
+                for (int i = 0; i < distancePush; i++)
+                {
+                    if (_GC.tiles[x - i - 1, y].GetTileState() < 5)
+                    {
+                        oldPosPlayer.position -= (new Vector3(10, 0, 0));
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    yield return wfs;
+
+                }
                 break;
-            }
-        yield return wfs;
-        } break;
-        case 4:
-        for(int i=0; i<distancePush; i++){
-            if(_GC.tiles[x,y-i-1].GetTileState()<5){
-                oldPosPlayer.position -= (new Vector3(0,10,0));
-            }else{
+
+            case 3:
+                for (int i = 0; i < distancePush; i++)
+                {
+                    if (_GC.tiles[x, y + i + 1].GetTileState() < 5)
+                    {
+                        oldPosPlayer.position += (new Vector3(0, 10, 0));
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    yield return wfs;
+                }
                 break;
-            }
-        yield return wfs;
-        } break;
+            case 4:
+                for (int i = 0; i < distancePush; i++)
+                {
+                    if (_GC.tiles[x, y - i - 1].GetTileState() < 5)
+                    {
+                        oldPosPlayer.position -= (new Vector3(0, 10, 0));
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    yield return wfs;
+                }
+                break;
         }
     }
 
-    IEnumerator PushGas(float sec,int dist1,int dist0,int dist_,int x,int y, int dir){
-        WaitForSeconds wfs=new WaitForSeconds(sec);
-        switch(dir){
-        case 1:
-                            for(int j=0; j<distanceMoved; j++){
-                            
-                            
-                            if(j<=dist1 && _GC.tiles[x+(dist1-1)+j+1,y+1].GetTileState()<8){
-                                switch(_GC.tiles[x+(dist1-1)+j,y+1].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x+(dist1-1)+j+1,y+1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist1 && _GC.tiles[x+1+j,y+1].GetTileState()<8){
-                                switch(_GC.tiles[x+1+j,y+1].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x+1+j,y+1].addEffect(1,false,0,-1);
-                                _GC.tiles[x+j,y+1].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x+1+j,y+1].addEffect(7,false,0,-1);
-                                _GC.tiles[x+j,y+1].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
-                            
-                            if(j<=dist0 && _GC.tiles[x+(dist0-1)+j+1,y].GetTileState()<8){
-                                switch(_GC.tiles[x+(dist0-1)+j,y].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x+(dist0-1)+j+1,y].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist0 && _GC.tiles[x+1+j,y].GetTileState()<8){
-                                switch(_GC.tiles[x+1+j,y].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x+1+j,y].addEffect(1,false,0,-1);
-                                _GC.tiles[x+j,y].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x+1+j,y].addEffect(7,false,0,-1);
-                                _GC.tiles[x+j,y].addEffect(0,false,0,-1); break;
-                                }
-                            }
+    IEnumerator PushGas(float sec, int dist1, int dist0, int dist_, int x, int y, int dir)
+    {
+        WaitForSeconds wfs = new WaitForSeconds(sec);
+        switch (dir)
+        {
+            case 1:
+                for (int j = 0; j < distanceMoved; j++)
+                {
 
-                            if(j<=dist_ && _GC.tiles[x+(dist_-1)+j+1,y-1].GetTileState()<8){
-                                switch(_GC.tiles[x+(dist_-1)+j,y-1].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x+(dist_-1)+j+1,y-1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist_ && _GC.tiles[x+1+j,y-1].GetTileState()<8){
-                                switch(_GC.tiles[x+1+j,y-1].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x+1+j,y-1].addEffect(1,false,0,-1);
-                                _GC.tiles[x+j,y-1].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x+1+j,y-1].addEffect(7,false,0,-1);
-                                _GC.tiles[x+j,y-1].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
 
-                            yield return wfs;   
-                            }
-                            break;
-        case 2:
-                            for(int j=0; j<distanceMoved; j++){
-                            if(j<=dist1 && _GC.tiles[x-(dist1-1)-1-j,y+1].GetTileState()<8){
-                                switch(_GC.tiles[x-(dist1-1)-j,y+1].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x-(dist1-1)-1-j,y+1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist1 && _GC.tiles[x-1-j,y+1].GetTileState()<8){
-                                switch(_GC.tiles[x-1-j,y+1].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x-1-j,y+1].addEffect(1,false,0,-1);
-                                _GC.tiles[x-j,y+1].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x-1-j,y+1].addEffect(7,false,0,-1);
-                                _GC.tiles[x-j,y+1].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
-                            
-                            if(j<=dist0 && _GC.tiles[x-(dist0-1)-j-1,y].GetTileState()<8){
-                                switch(_GC.tiles[x-(dist0-1)-j,y].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x-(dist0-1)-j-1,y].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist0 && _GC.tiles[x-1-j,y].GetTileState()<8){
-                                switch(_GC.tiles[x-1-j,y].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x-1-j,y].addEffect(1,false,0,-1);
-                                _GC.tiles[x-j,y].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x-1-j,y].addEffect(7,false,0,-1);
-                                _GC.tiles[x-j,y].addEffect(0,false,0,-1); break;
-                                }
-                            }
+                    if (j <= dist1 && _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + (dist1 - 1) + j, y + 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist1 && _GC.tiles[x + 1 + j, y + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1 + j, y + 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1 + j, y + 1].addEffect(1, false, 0, -1);
+                                _GC.tiles[x + j, y + 1].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1 + j, y + 1].addEffect(7, false, 0, -1);
+                                _GC.tiles[x + j, y + 1].addEffect(0, false, 0, -1); break;
+                        }
+                    }
 
-                            if(j<=dist_ && _GC.tiles[x-(dist_-1)-j-1,y-1].GetTileState()<8){
-                                switch(_GC.tiles[x-(dist_-1)-j,y-1].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x-(dist_-1)-j-1,y-1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist_ && _GC.tiles[x-1-j,y-1].GetTileState()<8){
-                                switch(_GC.tiles[x-1-j,y-1].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x-1-j,y-1].addEffect(1,false,0,-1);
-                                _GC.tiles[x-j,y-1].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x-1-j,y-1].addEffect(7,false,0,-1);
-                                _GC.tiles[x-j,y-1].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
-                            yield return wfs; 
-                            }
-        
-                            break;
-        case 3:             
-                            for(int j=0; j<distanceMoved; j++){
-                            
-                            if(j<=dist1 && _GC.tiles[x+1,y+(dist1-1)+j+1].GetTileState()<8){
-                                switch(_GC.tiles[x+1,y+(dist1-1)+j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x+1,y+(dist1-1)+j+1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist1 && _GC.tiles[x+1,y+1+j].GetTileState()<8){
-                                switch(_GC.tiles[x+1,y+1+j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x+1,y+1+j].addEffect(1,false,0,-1);
-                                _GC.tiles[x+1,y+j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x+1,y+1+j].addEffect(7,false,0,-1);
-                                _GC.tiles[x+1,y+j].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
-                            
-                            if(j<=dist0 && _GC.tiles[x,y+(dist0-1)+j+1].GetTileState()<8){
-                                switch(_GC.tiles[x,y+(dist0-1)+j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x,y+(dist0-1)+j+1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist0 && _GC.tiles[x,y+1+j].GetTileState()<8){
-                                switch(_GC.tiles[x,y+1+j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x,y+1+j].addEffect(1,false,0,-1);
-                                _GC.tiles[x,y+j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x,y+1+j].addEffect(7,false,0,-1);
-                                _GC.tiles[x,y+j].addEffect(0,false,0,-1); break;
-                                }
-                            }
 
-                            if(j<=dist_ && _GC.tiles[x-1,y+(dist_-1)+j+1].GetTileState()<8){
-                                switch(_GC.tiles[x-1,y+(dist_-1)+j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x-1,y+(dist_-1)+j+1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist_ && _GC.tiles[x-1,y+1+j].GetTileState()<8){
-                                switch(_GC.tiles[x-1,y+1+j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x-1,y+1+j].addEffect(1,false,0,-1);
-                                _GC.tiles[x-1,y+j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x-1,y+1+j].addEffect(7,false,0,-1);
-                                _GC.tiles[x-1,y+j].addEffect(0,false,0,-1); break;
-                                }
-                            }
+                    if (j <= dist0 && _GC.tiles[x + (dist0 - 1) + j + 1, y].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + (dist0 - 1) + j, y].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + (dist0 - 1) + j + 1, y].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + (dist0 - 1) + j + 1, y].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist0 && _GC.tiles[x + 1 + j, y].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1 + j, y].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1 + j, y].addEffect(1, false, 0, -1);
+                                _GC.tiles[x + j, y].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1 + j, y].addEffect(7, false, 0, -1);
+                                _GC.tiles[x + j, y].addEffect(0, false, 0, -1); break;
+                        }
+                    }
 
-                            yield return wfs;
-                            }
-                            break;
-        case 4:             
-                            for(int j=0; j<distanceMoved; j++){
-                            
-                            if(j<=dist1 && _GC.tiles[x+1,y-(dist1-1)-1-j].GetTileState()<8){
-                                switch(_GC.tiles[x+1,y-(dist1-1)-j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x+1,y-(dist1-1)-1-j].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist1 && _GC.tiles[x+1,y-1-j].GetTileState()<8){
-                                switch(_GC.tiles[x+1,y-1-j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x+1,y-1-j].addEffect(1,false,0,-1);
-                                _GC.tiles[x+1,y-j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x+1,y-1-j].addEffect(7,false,0,-1);
-                                _GC.tiles[x+1,y-j].addEffect(0,false,0,-1); break;
-                                }
-                            }
-                            
-                            
-                            if(j<=dist0 && _GC.tiles[x,y-(dist0-1)-j-1].GetTileState()<8){
-                                switch(_GC.tiles[x,y-(dist0-1)-j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x,y-(dist0-1)-j-1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist0 && _GC.tiles[x,y-1-j].GetTileState()<8){
-                                switch(_GC.tiles[x,y-1-j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x,y-1-j].addEffect(1,false,0,-1);
-                                _GC.tiles[x,y-j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x,y-1-j].addEffect(7,false,0,-1);
-                                _GC.tiles[x,y-j].addEffect(0,false,0,-1); break;
-                                }
-                            }
+                    if (j <= dist_ && _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + (dist_ - 1) + j, y - 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist_ && _GC.tiles[x + 1 + j, y - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1 + j, y - 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1 + j, y - 1].addEffect(1, false, 0, -1);
+                                _GC.tiles[x + j, y - 1].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1 + j, y - 1].addEffect(7, false, 0, -1);
+                                _GC.tiles[x + j, y - 1].addEffect(0, false, 0, -1); break;
+                        }
+                    }
 
-                            if(j<=dist_ && _GC.tiles[x-1,y-(dist_-1)-j-1].GetTileState()<8){
-                                switch(_GC.tiles[x-1,y-(dist_-1)-j].GetTileEffect()){
-                                    case 1:
-                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(1,false,0,-1); break;
-                                    case 7:
-                                    _GC.tiles[x-1,y-(dist_-1)-j-1].addEffect(7,false,0,-1); break;
-                                }
-                            }
-                            if(j<=dist_ && _GC.tiles[x-1,y-1-j].GetTileState()<8){
-                                switch(_GC.tiles[x-1,y-1-j].GetTileEffect()){
-                                case 1:
-                                _GC.tiles[x-1,y-1-j].addEffect(1,false,0,-1);
-                                _GC.tiles[x-1,y-j].addEffect(0,false,0,-1); break;
-                                case 7:
-                                _GC.tiles[x-1,y-1-j].addEffect(7,false,0,-1);
-                                _GC.tiles[x-1,y-j].addEffect(0,false,0,-1); break;
-                                }
-                            }
 
-                                yield return wfs;
-                            }
-                            break;
+                    yield return wfs;
+                }
+                break;
+            case 2:
+                for (int j = 0; j < distanceMoved; j++)
+                {
+                    if (j <= dist1 && _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - (dist1 - 1) - j, y + 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist1 && _GC.tiles[x - 1 - j, y + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1 - j, y + 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1 - j, y + 1].addEffect(1, false, 0, -1);
+                                _GC.tiles[x - j, y + 1].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1 - j, y + 1].addEffect(7, false, 0, -1);
+                                _GC.tiles[x - j, y + 1].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+
+                    if (j <= dist0 && _GC.tiles[x - (dist0 - 1) - j - 1, y].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - (dist0 - 1) - j, y].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - (dist0 - 1) - j - 1, y].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - (dist0 - 1) - j - 1, y].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist0 && _GC.tiles[x - 1 - j, y].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1 - j, y].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1 - j, y].addEffect(1, false, 0, -1);
+                                _GC.tiles[x - j, y].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1 - j, y].addEffect(7, false, 0, -1);
+                                _GC.tiles[x - j, y].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    if (j <= dist_ && _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - (dist_ - 1) - j, y - 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist_ && _GC.tiles[x - 1 - j, y - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1 - j, y - 1].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1 - j, y - 1].addEffect(1, false, 0, -1);
+                                _GC.tiles[x - j, y - 1].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1 - j, y - 1].addEffect(7, false, 0, -1);
+                                _GC.tiles[x - j, y - 1].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    yield return wfs;
+                }
+
+                break;
+            case 3:
+                for (int j = 0; j < distanceMoved; j++)
+                {
+
+                    if (j <= dist1 && _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1, y + (dist1 - 1) + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist1 && _GC.tiles[x + 1, y + 1 + j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1, y + 1 + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1, y + 1 + j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x + 1, y + j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1, y + 1 + j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x + 1, y + j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+
+                    if (j <= dist0 && _GC.tiles[x, y + (dist0 - 1) + j + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x, y + (dist0 - 1) + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x, y + (dist0 - 1) + j + 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x, y + (dist0 - 1) + j + 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist0 && _GC.tiles[x, y + 1 + j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x, y + 1 + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x, y + 1 + j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x, y + j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x, y + 1 + j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x, y + j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    if (j <= dist_ && _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1, y + (dist_ - 1) + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist_ && _GC.tiles[x - 1, y + 1 + j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1, y + 1 + j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1, y + 1 + j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x - 1, y + j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1, y + 1 + j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x - 1, y + j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    yield return wfs;
+                }
+                break;
+            case 4:
+                for (int j = 0; j < distanceMoved; j++)
+                {
+
+                    if (j <= dist1 && _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1, y - (dist1 - 1) - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist1 && _GC.tiles[x + 1, y - 1 - j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x + 1, y - 1 - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x + 1, y - 1 - j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x + 1, y - j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x + 1, y - 1 - j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x + 1, y - j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+
+                    if (j <= dist0 && _GC.tiles[x, y - (dist0 - 1) - j - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x, y - (dist0 - 1) - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x, y - (dist0 - 1) - j - 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x, y - (dist0 - 1) - j - 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist0 && _GC.tiles[x, y - 1 - j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x, y - 1 - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x, y - 1 - j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x, y - j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x, y - 1 - j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x, y - j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    if (j <= dist_ && _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1, y - (dist_ - 1) - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].addEffect(1, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].addEffect(7, false, 0, -1); break;
+                        }
+                    }
+                    if (j <= dist_ && _GC.tiles[x - 1, y - 1 - j].GetTileState() < 8)
+                    {
+                        switch (_GC.tiles[x - 1, y - 1 - j].GetTileEffect())
+                        {
+                            case 1:
+                                _GC.tiles[x - 1, y - 1 - j].addEffect(1, false, 0, -1);
+                                _GC.tiles[x - 1, y - j].addEffect(0, false, 0, -1); break;
+                            case 7:
+                                _GC.tiles[x - 1, y - 1 - j].addEffect(7, false, 0, -1);
+                                _GC.tiles[x - 1, y - j].addEffect(0, false, 0, -1); break;
+                        }
+                    }
+
+                    yield return wfs;
+                }
+                break;
         }
     }
-    IEnumerator DestroyEffect(float sec){
-        WaitForSeconds wfs=new WaitForSeconds(sec);
+    IEnumerator DestroyEffect(float sec)
+    {
+        WaitForSeconds wfs = new WaitForSeconds(sec);
         yield return wfs;
         Destroy(this.gameObject);
     }
