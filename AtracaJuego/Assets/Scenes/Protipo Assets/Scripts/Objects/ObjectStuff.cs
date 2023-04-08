@@ -7,6 +7,7 @@ public class ObjectStuff : PlayerBase
 {   
 
 [SerializeField] protected int LifeTime;
+
 public override void Update(){
         base.Update();
 }
@@ -38,10 +39,16 @@ IEnumerator Melting(float sec){
         int rotSteps=1;
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         int x=posGrid.x-GC.ogx; int y=posGrid.y-GC.ogy;
-
-        
+        int prevx=x;
+        int prevy=y;
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(6,false,0,-1);
         for(int i=1; i<=(25); i++){
-            GC.tiles[x,y].addEffect(6,false,0,-1);
+            if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){
+                GC.tiles[prevx,prevy].addEffect(6,false,0,-1); GC.tiles[x,y].addEffect(6,false,0,-1);
+            }
+            prevx=x; prevy=y;
+            
             
 
             switch(rot){
@@ -70,8 +77,7 @@ IEnumerator MeltedObject(float sec){
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         yield return wfs;
         Destroy(this.gameObject);
-        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
-        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(6,false,0,-1);
+        
         
     }
 

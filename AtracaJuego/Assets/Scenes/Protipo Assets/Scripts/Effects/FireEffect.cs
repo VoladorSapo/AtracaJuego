@@ -6,7 +6,6 @@ public class FireEffect : MonoBehaviour
 {
     public GridController _GC;
     public MapManager _MM;
-
     public ObjectStuff _OS;
     // Start is called before the first frame update
 
@@ -23,7 +22,7 @@ public class FireEffect : MonoBehaviour
         int x = posInted.x - _GC.ogx;
         int y = posInted.y - _GC.ogy;
         print(x + "," + y);
-        _GC.tiles[x, y].addEffect(2, true, 0, -1); //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
+        
         if (_GC.tiles[x, y].player != null)
         {
             PlayerBase p = _GC.tiles[x, y].player;
@@ -33,11 +32,12 @@ public class FireEffect : MonoBehaviour
                 case "IceCube": ObjectStuff o = p as ObjectStuff; o.Melt(); break;
                 case "WoodBox": CajasQuemables c = p as CajasQuemables; c.Burn(); break;
             }
-        }
+        }else{_GC.tiles[x, y].addEffect(2, true, 0, -1);} //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
 
+        
         StartCoroutine(DestroyEffect(2)); //Destruye el prefab en 2 (de momento) segs tras la animacion
     }
-
+    
     IEnumerator DestroyEffect(float sec)
     {
         WaitForSeconds wfs = new WaitForSeconds(sec);
@@ -48,7 +48,6 @@ public class FireEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 
     }
 }
