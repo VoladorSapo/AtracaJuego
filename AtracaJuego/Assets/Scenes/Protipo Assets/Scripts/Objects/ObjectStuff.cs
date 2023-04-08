@@ -19,6 +19,7 @@ public void StartObject(){
 protected override void Awake()
     {
         base.Awake();
+        isObject=true;
     }
 public override void Die(){
 

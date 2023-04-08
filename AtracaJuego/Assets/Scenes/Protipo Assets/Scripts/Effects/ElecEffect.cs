@@ -12,7 +12,7 @@ public class ElecEffect : MonoBehaviour
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
-        _PP=GameObject.Find("Controller").GetComponent<PlayablePlayer>();
+        _PP=GameObject.Find("PlayerController").GetComponent<PlayablePlayer>();
     }
     void Start()
     {
@@ -20,12 +20,12 @@ public class ElecEffect : MonoBehaviour
         int x=tileO.x-_GC.ogx;
         int y=tileO.y-_GC.ogy;
 
-        _GC.tiles[x,y].addEffect(5,true,direction,-1);
+        
         if(_GC.tiles[x,y].player!=null){
             if(_GC.tiles[x,y].player.name=="Player2" && _GC.tiles[x,y].player.GetAlive()){GameObject.Find("Player2").GetComponent<Iowa>().StartRage(direction);}
-            if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive() && _GC.tiles[x,y].TileIsSafe()){_PP.Revive(_GC.tiles[x,y].GetPlayer());}
+            if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive() && _GC.tiles[x,y].TileIsSafe()){_PP.Revive(_GC.tiles[x,y].player);}
             //if(!_GC.tiles[x,y].player.GetAlive()){print("Revive");}
-        }
+        }else{_GC.tiles[x,y].addEffect(5,true,direction,-1);}
 
         StartCoroutine(DestroyEffect(2.0f));
     }

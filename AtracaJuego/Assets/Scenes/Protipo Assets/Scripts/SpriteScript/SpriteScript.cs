@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sprite : MonoBehaviour
+public class SpriteScript : MonoBehaviour
 {
     public PlayerBase player;
     
@@ -16,5 +16,9 @@ public class Sprite : MonoBehaviour
 
     void BeIdle(){
         player.BeIdle();
+    }
+
+    void SetDead(){
+        player.SetSpriteDead();
     }
 }

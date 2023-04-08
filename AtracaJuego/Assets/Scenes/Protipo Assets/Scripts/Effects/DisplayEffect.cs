@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GasDisplay : MonoBehaviour
+public class DisplayEffect : MonoBehaviour
 {
     public Color startColor;
     public Color endColor;

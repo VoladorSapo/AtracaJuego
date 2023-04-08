@@ -6,8 +6,10 @@ public class Nev : PlayablePlayer
 {
     public GameObject IcePrefab;
     public PlayerBase IceCube;
+    public GameObject DisplayIce;
     Vector3Int posMouse;
-    
+    Vector3Int posNev;
+    private bool InstHecho=false;    
     protected override void Awake()
     {
         base.Awake();
@@ -16,8 +18,19 @@ public class Nev : PlayablePlayer
     public override void Update()
     {
         base.Update();
-        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2)
-        {
+
+        
+        posNev=GC.grid.WorldToCell(transform.position);
+        if(Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2){
+            if(!InstHecho){
+                Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
+                Vector3Int posNevCenter=posNev * 10 + new Vector3Int(5, 5, 0);
+                Instantiate(DisplayIce, posNevCenter, Quaternion.identity);
+                InstHecho=true;
+            }
+            if(Input.GetMouseButtonDown(0))
+            {   
+            
             posMouse=GC.GetMousePosition();
             Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
             if(!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x-GC.ogx,posMouse.y-GC.ogy].player==null){
@@ -26,6 +39,13 @@ public class Nev : PlayablePlayer
                 animator.SetInteger("Anim", 2);
 
             }
+            }
+        }
+        
+
+        if(Cooldown!=0 || Mode!=2 || SPM.currentPlayer!=teamNumb || !alive){
+            Destroy(GameObject.FindGameObjectWithTag("DisplayIceTag"));
+            InstHecho=false;
         }
     }
     public override void InstantiatePrefab()

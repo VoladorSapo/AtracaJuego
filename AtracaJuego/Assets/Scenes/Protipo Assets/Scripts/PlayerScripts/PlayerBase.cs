@@ -7,6 +7,7 @@ public class PlayerBase : MonoBehaviour
 {
     public int effect;
     protected bool bypass;
+    public bool isObject;
     protected int direction;
     [SerializeField] private Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
@@ -46,6 +47,7 @@ public class PlayerBase : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
         _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
+        isObject=false;
     }
     protected virtual void Start()
     {
@@ -182,9 +184,10 @@ public class PlayerBase : MonoBehaviour
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         //tile.setPlayer(null);
-        sprite.enabled = false;
         SPM.playerDie(this);
-        if(this.tag!="Player"){tile.setPlayer(null);}
+        if(this.tag!="Player"){sprite.enabled = false; tile.setPlayer(null);}
+        if(this.tag=="Player"){animator.SetInteger("Anim",3);}
+        
     }
 
  
@@ -232,6 +235,10 @@ public class PlayerBase : MonoBehaviour
     {
         return hasAttack;
     }
+
+    public void SetSpriteDead(){
+        animator.enabled=false;
+    }
     public bool getMove()
     {
         return hasMove;
@@ -267,7 +274,7 @@ public class PlayerBase : MonoBehaviour
             GC.tiles[x,y].setPlayer(this);
             if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;}
             if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
-            GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;  
+            if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance);} break;  
             }
 
             if(transform.position==newPos || GC.tiles[x + dx,y + dy].GetPlayer()!=null){
@@ -281,7 +288,8 @@ public class PlayerBase : MonoBehaviour
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
                     if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;} 
                     if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
-                    GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;} //Solo el bloque de hielo puede dañar
+                    if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance); break;}
+                    }
                 distance--;
             }
         

@@ -33,11 +33,12 @@ public class Marl : PlayablePlayer
                 }
                 if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb){
                     placeHere=posMouse;
+                    
                     Cooldown=3;
                     animator.SetInteger("Anim", 2);
                 }
         }
-        if(prevMouse!=posMouse || Cooldown!=0 || Mode!=2){
+        if(prevMouse!=posMouse || Cooldown!=0 || Mode!=2 || !alive || SPM.currentPlayer!=teamNumb){
             Destroy(GameObject.FindGameObjectWithTag("DisplayGasTag"));
             InstHecho=false;
         }
