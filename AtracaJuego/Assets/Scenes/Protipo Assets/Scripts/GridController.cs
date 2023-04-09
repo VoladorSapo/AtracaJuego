@@ -14,6 +14,8 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tilemap pathMap = null;
     [SerializeField] private Tilemap Top1 = null;
     [SerializeField] private Tilemap ground = null;
+    [SerializeField] private Tilemap gases = null;
+    [SerializeField] private Tilemap charcos = null;
     public Tilemap canMove = null;
     public Tilemap CanAttackMap = null;
     [SerializeField] private Tile hoverTile = null;
@@ -21,7 +23,7 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
     [SerializeField] private Tile canMoveTile = null;
     [SerializeField] private Tile attackTile=null;
-    [SerializeField] GameObject _eventtileparent;
+    [SerializeField] EventTileList _eventtileparent;
     public pathFinder _path = null;
     public int ogx, ogy;
     public int distanceRun;
@@ -46,7 +48,7 @@ public class GridController : MonoBehaviour
         freeCursor = true;
         //Metodos de otros scripts
         tileTable = GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
-        _eventtileparent = GameObject.Find("EventTileParent").GetComponent<GameObject>().gameObject;
+        _eventtileparent = GameObject.Find("EventTileParent").GetComponent<EventTileList>();
         //De este script
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
@@ -92,11 +94,16 @@ public class GridController : MonoBehaviour
         foreach (ObjectStuff os in _OS){
             os.StartObject();
         }
-        /*Component[] eventtiles = _eventtileparent.GetComponentsInChildren<EventTile>();
+        _eventtileparent.setgame();
+        Component[] eventtiles = _eventtileparent.GetComponentsInChildren<EventTile>();
         foreach (EventTile _event in eventtiles)
         {
             _event.SetGame();
-        }*/
+        }
+        charcos.ClearAllTiles();
+        gases.ClearAllTiles();
+        charcos.RefreshAllTiles();
+        gases.RefreshAllTiles();
     }
     // Update is called once per frame
     void Update()

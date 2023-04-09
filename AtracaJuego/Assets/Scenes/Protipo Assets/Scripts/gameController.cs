@@ -12,12 +12,15 @@ public class gameController : MonoBehaviour
     [SerializeField] tunController _TC;
     [SerializeField] string table;
     [SerializeField] string code;
+    [SerializeField] GameObject retryConfirm;
     // Start is called before the first frame update
     void Start()
     {
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _TC = GameObject.Find("Controller").GetComponent<tunController>();
-        _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>(); 
+        _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>();
+        retryConfirm.SetActive(false);
+
 
     }
 
@@ -46,10 +49,17 @@ public class gameController : MonoBehaviour
         }
         else
         {
+            startGame();
             print("jojojo");
-            _GC.setGame();
-            _TC.startGame();
+            
         }
+    }
+    public void startGame()
+    {
+        retryConfirm.SetActive(false);
+
+        _GC.setGame();
+        _TC.startGame();
     }
     public void winTilePressed()
     {
@@ -80,6 +90,7 @@ public class gameController : MonoBehaviour
     }
     public void loseRound()
     {
+        retryConfirm.SetActive(true);
         print("Cagaste Light");
     }
     public int getCondition()

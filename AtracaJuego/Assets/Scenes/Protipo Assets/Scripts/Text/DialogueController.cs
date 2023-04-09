@@ -69,6 +69,10 @@ public class DialogueController : MonoBehaviour
                 break;
         }
     }
+    public void setEmote(int emoteint)
+    {
+
+    }
     public void loadDialogs(List<string> newdialog,CutsceneEventTile tile,cutsceneController controller)
     {
         _dialogbox.SetActive(true);

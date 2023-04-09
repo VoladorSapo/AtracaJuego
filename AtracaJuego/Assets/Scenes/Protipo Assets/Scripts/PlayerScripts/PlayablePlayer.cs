@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
-    [SerializeField] protected int Cooldown;
+    [SerializeField] public int Cooldown;
     [SerializeField] protected turnButtonsController _turnbuttons;
     protected bool willAttack;
     protected override void Awake()
@@ -54,7 +54,7 @@ public class PlayablePlayer : PlayerBase
 
     void OnMouseDown()
     {
-        if (SPM.Activated && SPM.players[SPM.currentPlayer].Mode == 0)
+        if (alive && SPM.Activated && SPM.players[SPM.currentPlayer].Mode == 0)
         {
             print("yotoyroyt" +name+teamNumb);
             SPM.ChangePlayer(teamNumb);
@@ -77,8 +77,8 @@ public class PlayablePlayer : PlayerBase
         base.setTurn(newTurn);
         willAttack = false;
         hasMove = false;
-        hasAttack = false;
-        if (Cooldown > 0) { Cooldown--; }
+        hasAttack = Cooldown > 1 ? true : false;
+        if (Cooldown > 0) { Cooldown--;  }
     }
     
     public override void ChangeMapShown(int setPos)

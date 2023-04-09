@@ -144,7 +144,7 @@ public class pathFinder : MonoBehaviour
             for(int j=0; j<7; j++){
                 if(GC.tiles[posG.x - ogx +i, posG.y - ogy +j].GetTileState()<8){
                 if((i==3 || j==3) && i!=j){
-                print(i+","+j);
+               // print(i+","+j);
                 nearList.Add(nodos[posG.x - ogx + i, posG.y - ogy + j]);
                 }
                 }

@@ -9,6 +9,7 @@ public class PlayerBase : MonoBehaviour
     protected bool bypass;
     public bool isObject;
     protected int direction;
+    Vector3 startPos;
     [SerializeField] private Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
     public GridController GC;
@@ -31,6 +32,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] public bool alive;
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
+    CustomTileClass _callTile;//La tile que se llama si has pasado por una tile importante
     List<Node> nodes;
     private PlaceTiles PT;
 
@@ -48,6 +50,7 @@ public class PlayerBase : MonoBehaviour
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
         _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
         isObject=false;
+        startPos = transform.position;
     }
     protected virtual void Start()
     {
@@ -168,10 +171,12 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void setGame()
     {
-        
+        transform.position = startPos;
         Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
         print(transform.position);
         print(tilepos + name);
+        animator.enabled = true;
+        animator.SetInteger("Anim", 0);
         CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
         sprite.sortingOrder = -(tilepos.y);
         tile.setPlayer(this);

@@ -15,7 +15,7 @@ public class WinEvent : EventTile
     {
         
     }
-    public override void PressEvent()
+    public override void PressEvent(PlayerBase _player)
     {
         Vector3Int pos = GC.grid.WorldToCell(transform.position);
         GC.tiles[pos.x - GC.ogx, pos.y - GC.ogy].GetPlayer().pressWinTile();

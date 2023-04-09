@@ -42,9 +42,11 @@ public class DialogEvent : MonoBehaviour
                 if (_GDC)
                 {
                     _GDC.setAnim(int.Parse(eventoarray[1]));
+                    
                 }
                 else{
                     _DC.setAnim(int.Parse(eventoarray[1]));
+                    _DC.setEmote(int.Parse(eventoarray[2]));
                 }
                 break;
         }

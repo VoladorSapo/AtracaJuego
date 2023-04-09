@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class turnButtonsController : MonoBehaviour
 {
     [SerializeField] Button skipButton;
@@ -9,7 +10,8 @@ public class turnButtonsController : MonoBehaviour
     [SerializeField] Button outButton;
     [SerializeField] Button attackButton;
     [SerializeField] GameObject skipConfirm;
-    [SerializeField] PlayerBase currentplayer;
+    [SerializeField] PlayablePlayer currentplayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,25 +24,40 @@ public class turnButtonsController : MonoBehaviour
     {
         
     }
-    public void showButtons(PlayerBase newplayer, int type,bool canMove,bool canAttack)
+    public void showButtons(PlayablePlayer newplayer, int type,bool canMove,bool canAttack)
     {
+        print("heybghh");
+
         currentplayer = newplayer;
         switch (type)
         {
             case 0:
                 moveButton.interactable = false;
                 attackButton.interactable = false;
+                attackButton.transform.GetChild(0).gameObject.SetActive(false);
                 outButton.interactable = false;
                 break;
             case 1:
 
                 moveButton.interactable = false;
                 attackButton.interactable = canAttack;
+                attackButton.transform.GetChild(0).gameObject.SetActive(false);
+                if (currentplayer.Cooldown > 0)
+                {
+                    attackButton.transform.GetChild(0).gameObject.SetActive(true);
+                    attackButton.GetComponentInChildren<TMP_Text>().text = currentplayer.Cooldown.ToString();
+                }
                 outButton.interactable = true;
                 break;
             case 2:
+                print("heybaby");
                 moveButton.interactable = canMove;
                 attackButton.interactable = false;
+                if(currentplayer.Cooldown > 0)
+                {
+                    attackButton.transform.GetChild(0).gameObject.SetActive(true);
+                    attackButton.GetComponentInChildren<TMP_Text>().text = currentplayer.Cooldown.ToString();
+                }
                 outButton.interactable = true;
 
                 break;
@@ -52,6 +69,7 @@ public class turnButtonsController : MonoBehaviour
     }
     public void hideButtons()
     {
+        print("hakunamatata");
         attackButton.gameObject.SetActive(false);
         moveButton.gameObject.SetActive(false);
         outButton.gameObject.SetActive(false);
@@ -63,9 +81,9 @@ public class turnButtonsController : MonoBehaviour
     }
     public void nextTurn()
     {
-        currentplayer.getSPM().endTurn();
         hideButtons();
         Skip(false);
+        currentplayer.getSPM().endTurn();
     }
     public void Skip(bool show)
     {

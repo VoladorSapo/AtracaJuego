@@ -22,10 +22,11 @@ public class EventTile : MonoBehaviour
     }
    public virtual void SetGame()
     {
+        GC = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridController>();
         Vector3Int pos = GC.grid.WorldToCell(transform.position);
         GC.tiles[pos.x - GC.ogx, pos.y - GC.ogy].setEvent(this);
     }
-    public virtual void PressEvent()
+    public virtual void PressEvent(PlayerBase _player)
     {
 
     }

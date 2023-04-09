@@ -7,7 +7,8 @@ public class ScriptPlayerManager : MonoBehaviour
     //Contiene el control sobre los scripts de los demás personajes
     public tunController _turn;
     public gameController _gameController;
-    public List<PlayerBase> players;
+   /*[HideInInspector]*/ public List<PlayerBase> players;
+    [SerializeField] PlayerBase[] startPlayer;
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
@@ -18,6 +19,8 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void setGame()
     {
+        players = new List<PlayerBase>();
+        players.AddRange(startPlayer);
         for(int i = 0; i < players.Count; i++)
             {
             players[i].setGame();
@@ -28,9 +31,10 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void StartTurns()
     {
-
+        print("olemibeti");
         if (players.Count <= 0)
         {
+            print("abundalacaca");
             _turn.startRound();
         }
         else

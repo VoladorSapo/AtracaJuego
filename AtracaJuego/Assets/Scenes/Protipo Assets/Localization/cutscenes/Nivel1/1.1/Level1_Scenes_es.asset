@@ -16,28 +16,42 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 3374eb01717655444ab08e4fdb67d825, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 295055246809628679
   m_TableData:
   - m_Id: 645356576579584
-    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
+    m_Localized: <link="SetAnim-1-0">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
   - m_Id: 645309248053248
-    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
+    m_Localized: <link="SetAnim-1-0">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
   - m_Id: 645279569158144
-    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
+    m_Localized: <link="SetAnim-1-0">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
   - m_Id: 645225471025152
-    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
+    m_Localized: <link="SetAnim-1-0">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
   - m_Id: 645362251472896
-    m_Localized: <link="SetAnim-1">Voy caminando por la vida.</link>
+    m_Localized: <link="SetAnim-1-0">Voy caminando por la vida.</link>
     m_Metadata:
       m_Items: []
+  - m_Id: 822905256550400
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 823769216065536
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 295055246809628679
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 295055246809628679
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 002080b736ed0200

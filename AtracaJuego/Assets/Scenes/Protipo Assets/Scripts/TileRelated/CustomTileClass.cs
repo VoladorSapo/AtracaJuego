@@ -37,6 +37,10 @@ public class CustomTileClass
         if(player!=null){
             Debug.Log(" y el jugador "+player.name+" encima");
         }
+        if (_eventile != null)
+        {
+            Debug.Log(" y la tile " + _eventile.name);
+        }
     }
 
     public int GetSpriteId(){
@@ -120,14 +124,17 @@ public class CustomTileClass
         if(_eventile != null && newplayer != null && !newplayer.team)
         {
             Debug.Log("uo");
-            _eventile.PressEvent();
+            sendEvent(player);
         }
 
         if(tileState==1 || tileState==2){
             if(newplayer==null){tileState=1; Debug.LogWarning("no placa");}else{tileState=2; Debug.LogWarning("placa");}
         }
     }
-
+    public void sendEvent(PlayerBase newplayer)
+    {
+            _eventile.PressEvent(player);
+    }
     public void addEffect(int effect, bool bypass, int direction, int lock_){
         //Faltan implementar cambios de sprites y FadeEffects
         Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);

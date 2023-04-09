@@ -11,33 +11,36 @@ public class CutsceneEventTile : EventTile
     [SerializeField] DialogueController dc;
     [SerializeField] LocalizedString _localizedstring;
     // Start is called before the first frame update
-    void Start()
+
+    public override void PressEvent(PlayerBase _player)
     {
-        
-    }
-    public override void PressEvent()
-    {
-        List<string> list = GetLocalizedString.getLocalizedString(table, code);
-        
-        //bool finish = false;
-        //int i = 0;
-        //while (!false)
-        //{
-        //    _localizedstring.TableReference = table;
-        //    string reference = code + "_" + i;
-        //    _localizedstring.TableEntryReference = reference;
-        //    if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
-        //    {
-        //        list.Add(_localizedstring.GetLocalizedString());
-        //    }
-        //    else
-        //    {
-        //        finish = true;
-        //        break;
-        //    }
-        //    i++;
-        //}
-        dc.loadDialogs(list,this,null);
+        player = _player;
+        print("waka waka");
+        if (!GetComponentInParent<EventTileList>().eventlist.Contains(code))
+        {
+            GetComponentInParent<EventTileList>().eventlist.Add(code);
+            List<string> list = GetLocalizedString.getLocalizedString(table, code);
+
+            //bool finish = false;
+            //int i = 0;
+            //while (!false)
+            //{
+            //    _localizedstring.TableReference = table;
+            //    string reference = code + "_" + i;
+            //    _localizedstring.TableEntryReference = reference;
+            //    if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
+            //    {
+            //        list.Add(_localizedstring.GetLocalizedString());
+            //    }
+            //    else
+            //    {
+            //        finish = true;
+            //        break;
+            //    }
+            //    i++;
+            //}
+            dc.loadDialogs(list, this, null);
+        }
     }
     public void returnTurn()
     {
@@ -51,8 +54,4 @@ public class CutsceneEventTile : EventTile
         }
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
