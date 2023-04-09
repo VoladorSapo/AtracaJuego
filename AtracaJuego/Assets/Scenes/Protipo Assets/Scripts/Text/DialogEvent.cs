@@ -21,17 +21,19 @@ public class DialogEvent : MonoBehaviour
     public  void CheckForLinkEvent()
     {
         print("ou");
-        var numeroeventos = _textbox.textInfo.linkCount;
-        print(_textbox.text);
-        print(numeroeventos);
-        if (numeroeventos == 0)
-            return;
+            var numeroeventos = _textbox.textInfo.linkCount;
 
-        for (int i = 0; i < numeroeventos; i++)
-        {
-           TMP_LinkInfo eventoinfo = _textbox.textInfo.linkInfo[i];
-            EventHandler(eventoinfo.GetLinkID());
-        }
+            print(_textbox.text);
+            print(numeroeventos);
+            if (numeroeventos == 0)
+                return;
+
+            for (int i = 0; i < numeroeventos; i++)
+            {
+                TMP_LinkInfo eventoinfo = _textbox.textInfo.linkInfo[i];
+                EventHandler(eventoinfo.GetLinkID());
+            }
+        
     }
     void EventHandler(string evento)
     {
@@ -46,7 +48,10 @@ public class DialogEvent : MonoBehaviour
                 }
                 else{
                     _DC.setAnim(int.Parse(eventoarray[1]));
-                    _DC.setEmote(int.Parse(eventoarray[2]));
+                    if (eventoarray.Length > 2)
+                    {
+                        _DC.setEmote(int.Parse(eventoarray[2]));
+                    }
                 }
                 break;
         }

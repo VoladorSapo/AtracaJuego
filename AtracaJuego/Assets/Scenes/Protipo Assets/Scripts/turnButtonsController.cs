@@ -40,7 +40,7 @@ public class turnButtonsController : MonoBehaviour
             case 1:
 
                 moveButton.interactable = false;
-                attackButton.interactable = canAttack;
+                attackButton.interactable = !newplayer.getAttack();
                 attackButton.transform.GetChild(0).gameObject.SetActive(false);
                 if (currentplayer.Cooldown > 0)
                 {
@@ -51,7 +51,7 @@ public class turnButtonsController : MonoBehaviour
                 break;
             case 2:
                 print("heybaby");
-                moveButton.interactable = canMove;
+                moveButton.interactable = !newplayer.getMove();
                 attackButton.interactable = false;
                 if(currentplayer.Cooldown > 0)
                 {

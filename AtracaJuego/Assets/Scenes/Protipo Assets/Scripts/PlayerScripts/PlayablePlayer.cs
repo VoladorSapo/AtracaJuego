@@ -64,6 +64,7 @@ public class PlayablePlayer : PlayerBase
 
     public override void pressWinTile()
     {
+        print("olebeti");
         _gamecontroller.winTilePressed();
     }
     public override void setGame()
@@ -74,6 +75,7 @@ public class PlayablePlayer : PlayerBase
     }
     public override void setTurn(bool newTurn)
     {
+        print("movidas chungas");
         base.setTurn(newTurn);
         willAttack = false;
         hasMove = false;

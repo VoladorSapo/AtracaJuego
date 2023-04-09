@@ -71,7 +71,7 @@ public class PlayerBase : MonoBehaviour
             //transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
             if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
-                print("Batido PLeNysHakE" + this.name);
+              //  print("Batido PLeNysHakE" + this.name);
                // print(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0));
                 //print(nodes[0].pos);
                 //print(grid.CellToWorld(nodes[0].pos));
@@ -80,6 +80,7 @@ public class PlayerBase : MonoBehaviour
                 nodes.RemoveAt(0);
                 if (nodes.Count <= 0)
                 {
+                  //  print("jonyniii");
                     moving = false;
                     animator.SetInteger("Anim", 0);
                     sprite.sortingOrder = -(grid.WorldToCell(transform.position).y- GC.ogy);
@@ -89,6 +90,10 @@ public class PlayerBase : MonoBehaviour
                     //print(tilepos);
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
+                    if(!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && _callTile != null )
+                    {
+                        _callTile.sendEvent(this);
+                    }
                     hasMove = true;
                     if (hasAttack)
                     {
@@ -103,9 +108,16 @@ public class PlayerBase : MonoBehaviour
                 }
                 else
                 {
-                    print("icamefromalanddownunder");
-                    print(-grid.WorldToCell(transform.position).y);
+                  //  print("icamefromalanddownunder");
+                    //print(-grid.WorldToCell(transform.position).y);
+                    Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+                    CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+                    if(tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile)){
+                        _callTile = tile;
+                    }
+
                     sprite.sortingOrder = -(grid.WorldToCell(transform.position).y - GC.ogy);
+
                     if (nodes[0].pos.x > grid.WorldToCell(transform.position).x)
                     {
                         sprite.flipX = false;
@@ -152,6 +164,7 @@ public class PlayerBase : MonoBehaviour
             print(newPos.Count);
             nodes = newPos;
             moving = true;
+            _callTile = null;
             //turn = false;
         }
     }

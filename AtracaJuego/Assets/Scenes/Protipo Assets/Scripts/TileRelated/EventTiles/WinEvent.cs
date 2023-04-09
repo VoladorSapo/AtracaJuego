@@ -17,7 +17,11 @@ public class WinEvent : EventTile
     }
     public override void PressEvent(PlayerBase _player)
     {
+        print("pisado");
         Vector3Int pos = GC.grid.WorldToCell(transform.position);
-        GC.tiles[pos.x - GC.ogx, pos.y - GC.ogy].GetPlayer().pressWinTile();
+        print((pos.x - GC.ogx) + " " + (pos.y - GC.ogy));
+        print(GC.tiles[pos.x - GC.ogx, pos.y - GC.ogy].GetPlayer());
+        _player.pressWinTile();
+        //GC.tiles[pos.x - GC.ogx, pos.y - GC.ogy].GetPlayer().pressWinTile();
     }
 }

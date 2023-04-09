@@ -6,11 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Protipo.unity
-    guid: c62b8daaa8e580c42a3f3a918d10ca06
+    path: Assets/Scenes/Inicio.unity
+    guid: a06e80a3794472644a15c881e2da3fa7
   - enabled: 1
-    path: Assets/Scenes/Prototipo2.unity
-    guid: 4dda860b1f85ad040b6aeaac90996b16
+    path: Assets/Scenes/Nivel1/Escena1.unity
+    guid: 7cc5e8e83bc0845a1b5d90f05f255bf0
+  - enabled: 1
+    path: "Assets/Scenes/Nivel1/Escena2.0(Ba\xF1oChicos).unity"
+    guid: 4489e645effbb473bbcde3dba929926f
+  - enabled: 1
+    path: "Assets/Scenes/Nivel1/Escena2.1(Ba\xF1os+Pasillo)).unity"
+    guid: d4130cbf89cac42b6b0089a731a9dcb2
+  - enabled: 1
+    path: Assets/Scenes/Nivel1/Escena2.2.unity
+    guid: 6f3b1b60fd9f49541b44b7aadcc9de10
+  - enabled: 1
+    path: Assets/Scenes/Nivel1/Escena3.0(Expo).unity
+    guid: 6102da1296a6d42bbbd7d001a2434660
+  - enabled: 1
+    path: Assets/Scenes/Nivel1/Escena3.1(Cocina).unity
+    guid: e6544fd39f1959d4dbcfe2e2abf59067
+  - enabled: 1
+    path: Assets/Scenes/Nivel1/Escena3.2.unity
+    guid: d35265cbbfef14edb985ecc0a2c24d52
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f7c8acfb403811647ab576724e9a6a66, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 157a4b8c4190fcf40b5cfd24e17b9139, type: 2}

@@ -133,7 +133,8 @@ public class CustomTileClass
     }
     public void sendEvent(PlayerBase newplayer)
     {
-            _eventile.PressEvent(player);
+        
+            _eventile.PressEvent(newplayer);
     }
     public void addEffect(int effect, bool bypass, int direction, int lock_){
         //Faltan implementar cambios de sprites y FadeEffects

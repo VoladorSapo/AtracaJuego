@@ -13,6 +13,7 @@ public class gameController : MonoBehaviour
     [SerializeField] string table;
     [SerializeField] string code;
     [SerializeField] GameObject retryConfirm;
+    [SerializeField] int nextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,15 @@ public class gameController : MonoBehaviour
         _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>();
         retryConfirm.SetActive(false);
 
-
+        StartCoroutine(StartLate());
     }
+    IEnumerator StartLate()
+    {
 
+        yield return new WaitForSeconds(2);
+        string fullcode = "start_" + code;
+        _cutsceneController.loadScene(table, fullcode, false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,7 +52,7 @@ public class gameController : MonoBehaviour
     {
         if (end)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(nextScene);
         }
         else
         {
@@ -85,6 +92,7 @@ public class gameController : MonoBehaviour
     }
     public void winRound()
     {
+        print("ganamos light");
         string fullcode = "end_" + code;
         _cutsceneController.loadScene(table, fullcode,true);
     }
