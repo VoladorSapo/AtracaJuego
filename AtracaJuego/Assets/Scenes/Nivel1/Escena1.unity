@@ -1640,6 +1640,7 @@ GameObject:
   - component: {fileID: 513381609}
   - component: {fileID: 513381608}
   - component: {fileID: 513381607}
+  - component: {fileID: 513381611}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1817,6 +1818,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513381611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513381603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33b1b2fb17a334f9d51175996c2fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
+  grid: {fileID: 0}
+  Mode: 0
+  GC: {fileID: 0}
+  _gamecontroller: {fileID: 0}
+  _turnController: {fileID: 0}
+  MM: {fileID: 0}
+  SPM: {fileID: 0}
+  MaxDistance: 0
+  team: 0
+  hasTurn: 0
+  hasMove: 0
+  hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
+  Cooldowns: 0
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  teamNumb: 0
+  alive: 0
+  maxHealth: 0
+  currentHealth: 0
+  Cooldown: 0
+  _turnbuttons: {fileID: 0}
 --- !u!1 &553211219
 GameObject:
   m_ObjectHideFlags: 0
