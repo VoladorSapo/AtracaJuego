@@ -43,6 +43,8 @@ public class Ignacio : PlayablePlayer
         Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
         Instantiate(FirePrefab, posNew, Quaternion.identity);
         hasAttack = true;
+        changeColor();
+
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);

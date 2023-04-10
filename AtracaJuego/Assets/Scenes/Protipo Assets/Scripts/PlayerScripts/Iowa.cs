@@ -89,7 +89,7 @@ public class Iowa : PlayablePlayer
             }
         }
         hasAttack = true;
-
+        changeColor();
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);

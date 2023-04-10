@@ -25,6 +25,7 @@ public class PlayerBase : MonoBehaviour
    [SerializeField] protected bool hasTurn;
     [SerializeField] protected bool hasMove;
     [SerializeField] protected bool hasAttack;
+    [SerializeField] protected Color _color;
     public int Cooldowns=0;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -95,6 +96,7 @@ public class PlayerBase : MonoBehaviour
                         _callTile.sendEvent(this);
                     }
                     hasMove = true;
+                    changeColor();
                     if (hasAttack)
                     {
                         print("endturn");
@@ -139,7 +141,10 @@ public class PlayerBase : MonoBehaviour
     
 
 
-    
+    public virtual void changeColor()
+    {
+        
+    }
     //Mueve al jugador a la posición indicada
     protected virtual void Move(Vector3 position)
     {

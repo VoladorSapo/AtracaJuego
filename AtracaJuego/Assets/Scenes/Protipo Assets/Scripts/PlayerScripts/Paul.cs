@@ -71,6 +71,8 @@ public class Paul : PlayablePlayer
             }
         }
         hasAttack = true;
+        changeColor();
+
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);

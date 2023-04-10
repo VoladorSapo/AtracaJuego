@@ -87,7 +87,17 @@ public class PlayablePlayer : PlayerBase
     {
 
     }
-
+    public override void changeColor()
+    {
+        if (hasAttack && hasMove)
+        {
+            sprite.color = _color;
+        }
+        else
+        {
+            sprite.color = new Color(255, 255, 255);
+        }
+    }
     public override void startTurn()
     {
         //GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,team,false);

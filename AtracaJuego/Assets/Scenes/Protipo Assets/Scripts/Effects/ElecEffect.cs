@@ -7,7 +7,7 @@ public class ElecEffect : MonoBehaviour
     public int direction;
     public GridController _GC;
     public MapManager _MM;
-    public PlayablePlayer _PP;
+   public PlayablePlayer _PP;
     // Start is called before the first frame update
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
@@ -22,7 +22,7 @@ public class ElecEffect : MonoBehaviour
 
         
         if(_GC.tiles[x,y].player!=null){
-            if(_GC.tiles[x,y].player.name=="Player2" && _GC.tiles[x,y].player.GetAlive()){GameObject.Find("Player2").GetComponent<Iowa>().StartRage(direction);}
+            if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){ _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
             if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive() && _GC.tiles[x,y].TileIsSafe()){_PP.Revive(_GC.tiles[x,y].player);}
             //if(!_GC.tiles[x,y].player.GetAlive()){print("Revive");}
         }else{_GC.tiles[x,y].addEffect(5,true,direction,-1);}

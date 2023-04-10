@@ -20,6 +20,7 @@ public class gameController : MonoBehaviour
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _TC = GameObject.Find("Controller").GetComponent<tunController>();
         _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>();
+        retryConfirm = GameObject.Find("RetryConfirm");
         retryConfirm.SetActive(false);
 
         StartCoroutine(StartLate());

@@ -63,6 +63,8 @@ public class Nev : PlayablePlayer
         Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
         Instantiate(IcePrefab, posNew, Quaternion.identity);
         hasAttack = true;
+        changeColor();
+
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);

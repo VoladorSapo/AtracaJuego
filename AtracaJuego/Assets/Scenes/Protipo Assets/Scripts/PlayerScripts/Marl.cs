@@ -61,7 +61,7 @@ public class Marl : PlayablePlayer
         Vector3Int posNew = placeHere * 10 + new Vector3Int(5, 5, 0);
         Instantiate(GasPrefab, posNew, Quaternion.identity);
         hasAttack = true;
-
+        changeColor();
         if (hasMove)
         {
             // SPM.endTurn(teamNumb, false);

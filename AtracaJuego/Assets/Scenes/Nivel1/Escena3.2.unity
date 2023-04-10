@@ -289,11 +289,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b45af4ae026e994bb46d2dcb69fb0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -404,11 +407,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -504,6 +510,7 @@ MonoBehaviour:
   - {fileID: 1118154382}
   - {fileID: 1118154382}
   - {fileID: 1118154382}
+  startPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -622,6 +629,126 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272993528}
   m_CullTransparentMesh: 1
+--- !u!1 &280822923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280822924}
+  - component: {fileID: 280822926}
+  - component: {fileID: 280822925}
+  m_Layer: 0
+  m_Name: CharcosElec
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280822924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280822923}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2017550971}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &280822925
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280822923}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &280822926
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280822923}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &282499710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,11 +1442,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charco: {fileID: 0}
+  CharcoE: {fileID: 0}
   Gas: {fileID: 0}
+  GasE: {fileID: 0}
   Ground: {fileID: 0}
-  iceT: {fileID: 11400000, guid: 83bed548fc268f844bf6ca772f56e37d, type: 2}
-  wetT: {fileID: 11400000, guid: 6a3d6a4124007a1439a77b1acd67328b, type: 2}
-  gasT: {fileID: 11400000, guid: b3ef72e05c82a49469dc8910268a8015, type: 2}
+  elecT: {fileID: 0}
+  fireT: {fileID: 0}
+  iceT: {fileID: 0}
+  iceSpkT: {fileID: 0}
+  wetT: {fileID: 0}
+  gasT: {fileID: 0}
+  gasolineT: {fileID: 0}
+  gasolineFrzT: {fileID: 0}
+  gasolineFrzSpkT: {fileID: 0}
 --- !u!4 &602401985
 Transform:
   m_ObjectHideFlags: 0
@@ -1405,11 +1540,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cb452b56f1c034982263b355ccc78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -1426,6 +1564,7 @@ MonoBehaviour:
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
+  DisplayGas: {fileID: 0}
 --- !u!50 &639656353
 Rigidbody2D:
   serializedVersion: 4
@@ -1785,11 +1924,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -2187,6 +2329,7 @@ MonoBehaviour:
   moveButton: {fileID: 697081347}
   outButton: {fileID: 1053152767}
   attackButton: {fileID: 784406311}
+  skipConfirm: {fileID: 0}
   currentplayer: {fileID: 0}
 --- !u!1 &1053152766
 GameObject:
@@ -2364,6 +2507,7 @@ MonoBehaviour:
   - {fileID: 639656352}
   - {fileID: 1627815383}
   - {fileID: 1578482927}
+  startPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -2389,6 +2533,8 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: 
   code: 
+  retryConfirm: {fileID: 0}
+  nextScene: 0
 --- !u!114 &1112165334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,11 +2577,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b33b1b2fb17a334f9d51175996c2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -2515,11 +2664,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f74ee564632384f9e5820f24f16fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 0
@@ -2578,11 +2730,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -12242,6 +12397,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77c2cbdbe7783cc41bdf28e93c57a219, type: 2}
   - {fileID: 11400000, guid: fedb4afb74f1c384c882a0c6f3d104e4, type: 2}
   _GC: {fileID: 2017550970}
+  GameObjs: []
 --- !u!114 &1239787355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12939,11 +13095,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -13167,11 +13326,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af7a5d7eb4b0684a9a6e1e5ee9742e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -13281,11 +13443,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b33b1b2fb17a334f9d51175996c2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 2017550972}
   Mode: 0
   GC: {fileID: 2017550970}
   _gamecontroller: {fileID: 1112165333}
   _turnController: {fileID: 1112165334}
+  MM: {fileID: 0}
   SPM: {fileID: 1112165332}
   MaxDistance: 5
   team: 0
@@ -13313,11 +13478,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f74ee564632384f9e5820f24f16fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 0
@@ -13497,11 +13665,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909efacadab5f74abb0dc284564ff02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -13519,6 +13690,7 @@ MonoBehaviour:
   _turnbuttons: {fileID: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 0}
+  DisplayIce: {fileID: 0}
 --- !u!50 &1627815384
 Rigidbody2D:
   serializedVersion: 4
@@ -15926,11 +16098,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -16229,6 +16404,126 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1964519765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964519766}
+  - component: {fileID: 1964519768}
+  - component: {fileID: 1964519767}
+  m_Layer: 0
+  m_Name: GasesElec
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964519766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964519765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2017550971}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &1964519767
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964519765}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1256105479
+  m_SortingLayer: 1
+  m_SortingOrder: 10001
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &1964519768
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964519765}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1995558380
 GameObject:
   m_ObjectHideFlags: 0
@@ -16369,6 +16664,8 @@ MonoBehaviour:
   pathMap: {fileID: 2025676529}
   Top1: {fileID: 1197001350}
   ground: {fileID: 2025676529}
+  gases: {fileID: 0}
+  charcos: {fileID: 0}
   canMove: {fileID: 2090197986}
   CanAttackMap: {fileID: 1859997225}
   hoverTile: {fileID: 11400000, guid: aed8c3e5cbbf4984896b3c68b4f7e9b1, type: 2}
@@ -16406,6 +16703,8 @@ Transform:
   - {fileID: 2025676527}
   - {fileID: 1197001348}
   - {fileID: 1712158453}
+  - {fileID: 1964519766}
+  - {fileID: 280822924}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42722,11 +43021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72a4262925741c48960bcbd574bcca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -42755,11 +43057,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f21540b6d372b34fa0eb46e2b354357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 2017550972}
   Mode: 0
   GC: {fileID: 2017550970}
   _gamecontroller: {fileID: 1112165333}
   _turnController: {fileID: 1112165334}
+  MM: {fileID: 0}
   SPM: {fileID: 1112165332}
   MaxDistance: 10
   team: 0
@@ -42873,11 +43178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721aabbbf5bec4a9c2d9e5b2ed2c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
   team: 1
@@ -42970,11 +43278,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72a4262925741c48960bcbd574bcca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -43024,11 +43335,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909efacadab5f74abb0dc284564ff02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0
@@ -43046,6 +43360,7 @@ MonoBehaviour:
   _turnbuttons: {fileID: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 0}
+  DisplayIce: {fileID: 0}
 --- !u!114 &2072229976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43058,11 +43373,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cb452b56f1c034982263b355ccc78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 2017550972}
   Mode: 0
   GC: {fileID: 2017550970}
   _gamecontroller: {fileID: 1112165333}
   _turnController: {fileID: 1112165334}
+  MM: {fileID: 0}
   SPM: {fileID: 1112165332}
   MaxDistance: 5
   team: 0
@@ -43079,6 +43397,7 @@ MonoBehaviour:
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
+  DisplayGas: {fileID: 0}
 --- !u!114 &2072229977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43091,11 +43410,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b45af4ae026e994bb46d2dcb69fb0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: 0
+  isObject: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
   _gamecontroller: {fileID: 0}
   _turnController: {fileID: 0}
+  MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
   team: 0

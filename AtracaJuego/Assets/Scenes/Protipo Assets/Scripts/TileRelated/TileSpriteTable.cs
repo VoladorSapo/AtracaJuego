@@ -30,9 +30,7 @@ public class TileSpriteTable : MonoBehaviour
             case "sheet_60": id[0]=3; id[1]=1; id[2]=0; break; //Quizas 16 es lo mejor
             case "piso1recepcion_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_17": id[0] = 1; id[1] = 8; id[2] = 16; break;
-
             case "piso1recepcion_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
-
             case "piso1recepcion_46": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_47": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -77,8 +75,7 @@ public class TileSpriteTable : MonoBehaviour
             case "ampliacionTileSheetRecepcion_47": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_49": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
-   
+            case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;   
             case "ampliacionTileSheetRecepcion2jardin_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_12": id[0] = 1; id[1] = 8; id[2] = 16; break;

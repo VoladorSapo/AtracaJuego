@@ -17,6 +17,7 @@ public class cameraMove : MonoBehaviour
     void Start()
     {
         _grid = GameObject.Find("Grid").GetComponent<Grid>();
+        ground = GameObject.Find("Ground").GetComponent<Tilemap>();
         cam = GetComponent<Camera>();
         print(ground.cellBounds);
         limitesx = new float[] { _grid.CellToWorld(ground.cellBounds.min).x + (cam.orthographicSize * Screen.width / Screen.height), _grid.CellToWorld(ground.cellBounds.max).x - (cam.orthographicSize * Screen.width / Screen.height) };

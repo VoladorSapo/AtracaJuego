@@ -13,6 +13,7 @@ public class EnemyCharacter : PlayerBase
         base.Awake();
         SPM = GameObject.Find("EnemyController").GetComponent<ScriptPlayerManager>();
         _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
+        protas = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
 
 
     }
