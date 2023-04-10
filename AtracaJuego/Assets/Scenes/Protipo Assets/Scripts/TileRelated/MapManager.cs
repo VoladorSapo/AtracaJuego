@@ -78,6 +78,11 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public void InstantiatePrefab(GameObject GO, Vector3Int pos){
+        Vector3Int newPos=pos+new Vector3Int(5,5,0);
+        Instantiate(GO,newPos,Quaternion.identity);
+    }
+
 
 
     
