@@ -303,6 +303,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -421,6 +422,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -511,6 +513,7 @@ MonoBehaviour:
   - {fileID: 1118154382}
   - {fileID: 1118154382}
   startPlayer: []
+  startDeadPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -1554,6 +1557,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1938,6 +1942,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2508,6 +2513,7 @@ MonoBehaviour:
   - {fileID: 1627815383}
   - {fileID: 1578482927}
   startPlayer: []
+  startDeadPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -2591,6 +2597,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2678,6 +2685,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2744,6 +2752,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -12397,7 +12406,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77c2cbdbe7783cc41bdf28e93c57a219, type: 2}
   - {fileID: 11400000, guid: fedb4afb74f1c384c882a0c6f3d104e4, type: 2}
   _GC: {fileID: 2017550970}
-  GameObjs: []
+  GameObjs:
+  - {fileID: 9186179475808065521, guid: 1711aecc90d28c644b3e80dd972c8ab2, type: 3}
 --- !u!114 &1239787355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13109,6 +13119,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13340,6 +13351,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13457,6 +13469,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13492,6 +13505,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13679,6 +13693,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -16112,6 +16127,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43035,6 +43051,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43071,6 +43088,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43192,6 +43210,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43292,6 +43311,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43349,6 +43369,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -43387,6 +43408,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 434719387}
@@ -43424,6 +43446,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}

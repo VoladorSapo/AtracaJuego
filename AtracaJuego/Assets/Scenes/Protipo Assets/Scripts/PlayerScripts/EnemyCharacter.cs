@@ -7,6 +7,8 @@ public class EnemyCharacter : PlayerBase
     [SerializeField] protected MapManager _MM;
     [SerializeField] protected PlayerBase Objetivo; //El personaje al que quiere pegar
         [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
+    [SerializeField] protected int detectDistance;
+    [SerializeField] protected bool activated;
     protected Vector3Int objective; //La casilla en la que quieres llegar
     protected override void Awake()
     {
@@ -16,6 +18,11 @@ public class EnemyCharacter : PlayerBase
         protas = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
 
 
+    }
+    public override void setGame()
+    {
+        base.setGame();
+        activated = false;
     }
     public override void startTurn()
     {

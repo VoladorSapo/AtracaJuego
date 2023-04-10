@@ -97,6 +97,8 @@ MonoBehaviour:
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 20
+  activated: 0
 --- !u!1 &4830600861398896637
 GameObject:
   m_ObjectHideFlags: 0

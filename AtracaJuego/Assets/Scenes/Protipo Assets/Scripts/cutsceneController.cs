@@ -16,6 +16,7 @@ public class cutsceneController : MonoBehaviour
     void Start()
     {
         _gc = GameObject.Find("Controller").GetComponent<gameController>();
+        dc = GameObject.Find("DialogueController").GetComponent<DialogueController>();
 
     }
     public void loadScene(string table,string code,bool endScene)

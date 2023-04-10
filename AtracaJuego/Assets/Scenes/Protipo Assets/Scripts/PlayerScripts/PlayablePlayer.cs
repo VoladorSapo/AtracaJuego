@@ -73,6 +73,10 @@ public class PlayablePlayer : PlayerBase
         base.setGame();
         if (Cooldown > 0) { Cooldown--; }
     }
+    public override void setDeath()
+    {
+        base.setDeath();
+    }
     public override void setTurn(bool newTurn)
     {
         print("movidas chungas");
@@ -127,13 +131,15 @@ public class PlayablePlayer : PlayerBase
     public void Revive(PlayerBase player)
     {
         player.alive = true;
-        
         //Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
         //CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         //tile.setPlayer(null);
-        player.animator.SetInteger("Anim",0);
+        hasAttack = hasTurn = hasMove = false;
+        currentHealth = maxHealth;
         player.animator.enabled=true;
-        
+        player.animator.SetInteger("Anim", 0);
+
+        SPM.revive(this);
         
         //player.sprite.enabled = true;
     }

@@ -7,26 +7,34 @@ public class ScriptPlayerManager : MonoBehaviour
     //Contiene el control sobre los scripts de los demás personajes
     public tunController _turn;
     public gameController _gameController;
-   /*[HideInInspector]*/ public List<PlayerBase> players;
+    /*[HideInInspector]*/
+    public List<PlayerBase> players;
     [SerializeField] PlayerBase[] startPlayer;
+    [SerializeField] PlayerBase[] startDeadPlayer;
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
     public bool isEnemy;
-    public int[] MaxDistancePlayers={5,6,4,3,8}; //Ignacio,Iowa,Marl,Nev,Paul
-    void Update(){
+    public int[] MaxDistancePlayers = { 5, 6, 4, 3, 8 }; //Ignacio,Iowa,Marl,Nev,Paul
+    void Update()
+    {
 
     }
     public void setGame()
     {
         players = new List<PlayerBase>();
         players.AddRange(startPlayer);
-        for(int i = 0; i < players.Count; i++)
-            {
+        for (int i = 0; i < players.Count; i++)
+        {
             players[i].setGame();
             players[i].teamNumb = i;
             players[i].team = isEnemy;
 
+        }
+        for (int i = 0; i < startDeadPlayer.Length; i++)
+        {
+            startDeadPlayer[i].setDeath();
+            startDeadPlayer[i].team = isEnemy;
         }
     }
     public void StartTurns()
@@ -58,7 +66,7 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void ChangePlayer(int player)
     {
-        print("dubi"+player);
+        print("dubi" + player);
         if (!players[player].getTurn())
         {
             print("cubi" + player);
@@ -81,29 +89,30 @@ public class ScriptPlayerManager : MonoBehaviour
                 players[0].ChangeMapShown(0);
             }
         }
-        if(players.Count == 0)
+        if (players.Count == 0)
         {
             _gameController.teamDie(this);
         }
     }
-    public void nextTurn(int player,bool die)
+    public void nextTurn(int player, bool die)
     {
-         if (!die)
-         {
-             players[player].setTurn(true);
-         }
-         currentPlayer = -1;
-         print(players.Count);
-         for (int i = 0; i < players.Count; i++)
-         {
-             print("ai");
-             if(!players[i].getTurn()){
-                 print("Noa");
-                 currentPlayer = i;
-                 players[i].startTurn();
-                 break;
-             }
-         }
+        if (!die)
+        {
+            players[player].setTurn(true);
+        }
+        currentPlayer = -1;
+        print(players.Count);
+        for (int i = 0; i < players.Count; i++)
+        {
+            print("ai");
+            if (!players[i].getTurn())
+            {
+                print("Noa");
+                currentPlayer = i;
+                players[i].startTurn();
+                break;
+            }
+        }
 
         if (currentPlayer == -1)
         {
@@ -115,5 +124,13 @@ public class ScriptPlayerManager : MonoBehaviour
     {
         _turn.startTurns();
 
+    }
+    public void revive(PlayerBase player)
+    {
+        players.Add(player);
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].teamNumb = i;
+        }
     }
 }

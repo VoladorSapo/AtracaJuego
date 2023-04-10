@@ -201,6 +201,18 @@ public class PlayerBase : MonoBehaviour
         alive = true;
         currentHealth = maxHealth;
     }
+    public virtual void setDeath()
+    {
+        print("jijijijiaaa");
+        transform.position = startPos;
+        Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
+        animator.enabled = true;
+        animator.SetInteger("Anim", 3);
+        CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+        sprite.sortingOrder = -(tilepos.y);
+        tile.setPlayer(this);
+        alive = false;
+    }
     public virtual void Die()
     {
         alive = false;

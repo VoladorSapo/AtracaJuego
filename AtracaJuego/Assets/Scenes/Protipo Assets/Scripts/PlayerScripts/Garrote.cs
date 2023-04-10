@@ -17,13 +17,17 @@ public class Garrote : EnemyCharacter
             if(newpath != null && (newpath.Count < path.Count || path.Count == 0))
             {
                 elname = protas.players[i].name;
+                if(newpath.Count < detectDistance)
+                {
+                    activated = true;
+                }
                 path = newpath;
             }
         }
         hit = path[path.Count - 1].pos;
         objective = path[path.Count - 2].pos;
 
-        if(path != null)
+        if(path != null && activated)
         {
             List<Node> turnpath = new List<Node>();
             foreach(Node nodo in path)
@@ -37,10 +41,13 @@ public class Garrote : EnemyCharacter
                 }
             }
             path = turnpath;
+            startMove(path);
         }
-        print(path.Count);
-        print(path[0].pos);
-        startMove(path);
+        else
+        {
+            ChangeMapShown(0);
+        }
+
     }
     public override void ChangeMapShown(int setMode)
     {
