@@ -122,8 +122,7 @@ public class GridController : MonoBehaviour
             mousePos = GetMousePosition();
             int difX = mousePos.x - ogx;
             int difY = mousePos.y - ogy;
-            print(isEmpty(grid.CellToWorld(mousePos),false,1));
-            print(tiles[difX, difY].GetPlayer());
+            tiles[difX,difY].addEffect(4,true,0,-1);
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);
         }

@@ -6,17 +6,27 @@ public class PlaceTiles : MonoBehaviour
 {
     private GridController _GC;
     public Tilemap Charco;
+    public Tilemap CharcoE;
     public Tilemap Gas;
+    public Tilemap GasE;
     public Tilemap Ground;
     
     //Podria ser array pero para que tan solo tenga unos 10 elementos mejor que tenga cada uno un nombre especifico
+    public RuleTile elecT;
+    public RuleTile fireT;
     public RuleTile iceT;
+    public RuleTile iceSpkT;
     public RuleTile wetT;
     public RuleTile gasT;
-    void Awake(){
+    public RuleTile gasolineT;
+    public RuleTile gasolineFrzT;
+    public RuleTile gasolineFrzSpkT;
+        void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         Charco=GameObject.Find("Charcos").GetComponent<Tilemap>();
+        CharcoE=GameObject.Find("CharcosElec").GetComponent<Tilemap>();
         Gas=GameObject.Find("Gases").GetComponent<Tilemap>();
+        GasE=GameObject.Find("GasesElec").GetComponent<Tilemap>();
         Ground=GameObject.Find("Ground").GetComponent<Tilemap>();
     }
 

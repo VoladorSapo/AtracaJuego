@@ -10,7 +10,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private List<TileData> tileDatas;
 
     public GridController _GC;
-    
+    public GameObject[] GameObjs;
  
 
     //public bool walkable;
@@ -78,9 +78,10 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    public void InstantiatePrefab(GameObject GO, Vector3Int pos){
-        Vector3Int newPos=pos+new Vector3Int(5,5,0);
-        Instantiate(GO,newPos,Quaternion.identity);
+    public void InstantiatePrefab(int GO, Vector3Int pos){
+        Vector3 newPos=_GC.grid.CellToWorld(pos) + new Vector3 (_GC.ogx*10,_GC.ogy*10,0);
+        newPos+=new Vector3(5,5,0);
+        if(GO>=0){Instantiate(GameObjs[GO],newPos,Quaternion.identity);}
     }
 
 

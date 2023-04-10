@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explode : MonoBehaviour
+public class Freeze : MonoBehaviour
 {
+    
     private PlaceTiles PT;
     private GridController GC;
     void Awake(){
@@ -11,12 +12,12 @@ public class Explode : MonoBehaviour
         GC=GameObject.Find("Grid").GetComponent<GridController>();
     }
 
-    void SetAfire(){
+    void SetFreeze(){
         Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
         if(GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==4 || GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==12 || GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==13)
-        {PT.Charco.SetTile(posInGrid,PT.fireT);}
+        {PT.Charco.SetTile(posInGrid,PT.iceT);}
     }
-    void DestroyExplosion(){
+    void DestroyFreeze(){
         
         Destroy(this.gameObject);
     }
