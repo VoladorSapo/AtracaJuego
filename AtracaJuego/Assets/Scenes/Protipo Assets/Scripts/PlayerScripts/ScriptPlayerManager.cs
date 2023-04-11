@@ -96,6 +96,7 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void nextTurn(int player, bool die)
     {
+        print("holyshit");
         if (!die)
         {
             players[player].setTurn(true);
@@ -122,7 +123,11 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void endTurn()
     {
-        _turn.startTurns();
+        Debug.LogWarning("holisit");
+        if (Activated)
+        {
+            _turn.startTurns();
+        }
 
     }
     public void revive(PlayerBase player)

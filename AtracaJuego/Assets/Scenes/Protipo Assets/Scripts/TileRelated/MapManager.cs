@@ -16,7 +16,8 @@ public class MapManager : MonoBehaviour
     //public bool walkable;
 
     private void Awake(){
-
+        _GC = GameObject.Find("Grid").GetComponent<GridController>();
+        map = GameObject.Find("Ground").GetComponent<Tilemap>();
     }
     
     private void Update(){

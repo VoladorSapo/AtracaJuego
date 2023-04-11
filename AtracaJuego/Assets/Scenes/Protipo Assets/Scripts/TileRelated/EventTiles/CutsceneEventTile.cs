@@ -10,6 +10,10 @@ public class CutsceneEventTile : EventTile
     [SerializeField] string code;
     [SerializeField] DialogueController dc;
     [SerializeField] LocalizedString _localizedstring;
+    [SerializeField] TutorialController _tutorial;
+    [SerializeField] string tutorialcode;
+    [SerializeField] string type;
+    [SerializeField] bool hasReturn;
     // Start is called before the first frame update
 
     public override void PressEvent(PlayerBase _player)
@@ -42,15 +46,33 @@ public class CutsceneEventTile : EventTile
             dc.loadDialogs(list, this, null);
         }
     }
+    public override void SetGame()
+    {
+        base.SetGame();
+        _tutorial = GameObject.Find("Tutorial").GetComponent<TutorialController>();
+        dc = GameObject.Find("DialogueController").GetComponent<DialogueController>();
+        hasReturn = false;
+    }
     public void returnTurn()
     {
-        if (player.getAttack())
+        string newtype = hasReturn ? "hasReturn" : type;
+        print(newtype);
+        switch (newtype)
         {
-            player.ChangeMapShown(0);
-        }
-        else
-        {
-            player.ChangeMapShown(2);
+            case "tutorial":
+                _tutorial.loadDialogs(tutorialcode, null, this);
+                hasReturn = true;
+                break;
+            default:
+                if (player.getAttack())
+                {
+                    player.ChangeMapShown(0);
+                }
+                else
+                {
+                    player.ChangeMapShown(2);
+                }
+                break;
         }
     }
     // Update is called once per frame

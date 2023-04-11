@@ -11,6 +11,7 @@ public class cameraMove : MonoBehaviour
     Grid _grid;
     Camera cam;
     [SerializeField] Tilemap ground;
+    Vector3 startpos;
     public float[] limitesx;
     public float[] limitesy;
     // Start is called before the first frame update
@@ -19,12 +20,16 @@ public class cameraMove : MonoBehaviour
         _grid = GameObject.Find("Grid").GetComponent<Grid>();
         ground = GameObject.Find("Ground").GetComponent<Tilemap>();
         cam = GetComponent<Camera>();
+        startpos = transform.position;
         print(ground.cellBounds);
         limitesx = new float[] { _grid.CellToWorld(ground.cellBounds.min).x + (cam.orthographicSize * Screen.width / Screen.height), _grid.CellToWorld(ground.cellBounds.max).x - (cam.orthographicSize * Screen.width / Screen.height) };
         limitesy = new float[] { _grid.CellToWorld(ground.cellBounds.min).y + cam.orthographicSize, _grid.CellToWorld(ground.cellBounds.max).y - cam.orthographicSize };
         //limitesy = new float []{ 2, 2 };
     }
-
+    public void setGame()
+    {
+        transform.position = startpos;
+    }
     // Update is called once per frame
     void Update()
     {

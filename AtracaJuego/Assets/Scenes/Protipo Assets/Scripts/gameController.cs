@@ -12,14 +12,21 @@ public class gameController : MonoBehaviour
     [SerializeField] tunController _TC;
     [SerializeField] string table;
     [SerializeField] string code;
+    [SerializeField] string tutorialcode;
+    [SerializeField] string type;
+    [SerializeField] bool hasReturn;
     [SerializeField] GameObject retryConfirm;
     [SerializeField] int nextScene;
+    [SerializeField] TutorialController _tutorial;
+    [SerializeField] cameraMove camara;
     // Start is called before the first frame update
     void Start()
     {
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _TC = GameObject.Find("Controller").GetComponent<tunController>();
         _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>();
+        _tutorial = GameObject.Find("Tutorial").GetComponent<TutorialController>();
+        camara = GameObject.Find("Main Camera").GetComponent<cameraMove>();
         retryConfirm = GameObject.Find("RetryConfirm");
         retryConfirm.SetActive(false);
 
@@ -51,21 +58,34 @@ public class gameController : MonoBehaviour
     }
     public void returnFromCutscene(bool end)
     {
+        print("caspita");
         if (end)
         {
             SceneManager.LoadScene(nextScene);
         }
         else
         {
-            startGame();
-            print("jojojo");
+            string newtype = hasReturn ? "hasReturn" : type;
+            print(newtype);
+            switch (newtype)
+            {
+                case "tutorial":
+                    _tutorial.loadDialogs(tutorialcode,this,null);
+                    hasReturn = true;
+                    break;
+                default:
+                    startGame();
+                    print("jojojo");
+                    break;
+            }
+            
             
         }
     }
     public void startGame()
     {
         retryConfirm.SetActive(false);
-
+        hasReturn = false;
         _GC.setGame();
         _TC.startGame();
     }
@@ -109,5 +129,9 @@ public class gameController : MonoBehaviour
     public void setCondition(int cond)
     {
         winCondition = cond;
+    }
+    public void hideRetry()
+    {
+        retryConfirm.SetActive(false);
     }
 }

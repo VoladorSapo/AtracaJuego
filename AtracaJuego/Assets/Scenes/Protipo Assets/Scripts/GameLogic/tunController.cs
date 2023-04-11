@@ -45,7 +45,7 @@ public class tunController : MonoBehaviour
 
     public void startTurns()
     {
-        
+        print("waka");
         currentManager++;
         if(currentManager < Managers.Length)
         {
@@ -53,6 +53,7 @@ public class tunController : MonoBehaviour
             {
                 Managers[i].Activated = false;
             }
+            Debug.LogWarning(currentManager);
             Managers[currentManager].Activated = true;
             Managers[currentManager].StartTurns();
         }

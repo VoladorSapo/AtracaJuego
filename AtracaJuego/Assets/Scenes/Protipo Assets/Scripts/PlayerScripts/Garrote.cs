@@ -45,20 +45,27 @@ public class Garrote : EnemyCharacter
         }
         else
         {
+           hasTurn = true;
             ChangeMapShown(0);
         }
 
     }
     public override void ChangeMapShown(int setMode)
     {
+        print("jodeeeer");
         if(GC.grid.WorldToCell(transform.position) == objective)
         {
             animator.SetInteger("Anim", 2);
+        }
+        else
+        {
+            hasTurn = true;
         }
         SPM.nextTurn(teamNumb, false);
     }
     public override void InstantiatePrefab()
     {
         _MM.Damage(0, hit.x - GC.ogx, hit.y - GC.ogy);
+        hasTurn = true;
     }
 }

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8498376888489658143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8498376888489658141}
+  - component: {fileID: 8498376888489658142}
+  - component: {fileID: 8498376888489658140}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8498376888489658141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498376888489658143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7057973, y: 0.6381517, z: -0.2839689}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8498376888489658142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498376888489658143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118fa44a3506595449e967b3eafa8ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  tileDatas:
+  - {fileID: 11400000, guid: 77c2cbdbe7783cc41bdf28e93c57a219, type: 2}
+  - {fileID: 11400000, guid: fedb4afb74f1c384c882a0c6f3d104e4, type: 2}
+  _GC: {fileID: 0}
+  GameObjs:
+  - {fileID: 9186179475808065521, guid: 1711aecc90d28c644b3e80dd972c8ab2, type: 3}
+  - {fileID: 8615244106360014192, guid: 6ad6380dbaa3e7a468eecfd8f16dc6d3, type: 3}
+  - {fileID: 8812582700099835588, guid: cc402192585706344a0a0f7cde4cb5fa, type: 3}
+  - {fileID: 6958629044216408330, guid: 39a51b2b92365544d94b4c87d098427e, type: 3}
+--- !u!114 &8498376888489658140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498376888489658143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13ddff4e50469644b8a5d22395ee6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileList:
+  - {fileID: 11400000, guid: 6f71d72bebabc4e488d5c5189d5e1cf1, type: 2}
+  - {fileID: 11400000, guid: e5b077d94997140478b224f57e43e725, type: 2}
