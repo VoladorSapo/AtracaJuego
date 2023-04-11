@@ -84,6 +84,7 @@ public class PlayablePlayer : PlayerBase
         willAttack = false;
         hasMove = false;
         hasAttack = Cooldown > 1 ? true : false;
+        changeColor();
         if (Cooldown > 0) { Cooldown--;  }
     }
     

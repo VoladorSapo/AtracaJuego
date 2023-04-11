@@ -59,6 +59,6 @@ public class Garrote : EnemyCharacter
     }
     public override void InstantiatePrefab()
     {
-        _MM.Damage(1, hit.x - GC.ogx, hit.y - GC.ogy);
+        _MM.Damage(0, hit.x - GC.ogx, hit.y - GC.ogy);
     }
 }
