@@ -47,6 +47,7 @@ public class TileSpriteTable : MonoBehaviour
             case "piso1recepcion_78": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_79": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_80": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "piso1recepcion_82": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_86": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_87": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_88": id[0] = 1; id[1] = 8; id[2] = 16; break;
