@@ -131,7 +131,7 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(-1, 0, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                else { _GC.tiles[x, y].addEffect(3, true, 2, -1); }
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);
@@ -180,7 +180,7 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(0, 1, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                else { _GC.tiles[x, y].addEffect(3, true, 3, -1); }
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);
@@ -229,7 +229,7 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(0, -1, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                else { _GC.tiles[x, y].addEffect(3, true, 4, -1); }
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);

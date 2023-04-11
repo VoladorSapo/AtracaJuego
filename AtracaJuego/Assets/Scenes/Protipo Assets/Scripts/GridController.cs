@@ -74,7 +74,7 @@ public class GridController : MonoBehaviour
         {
             for (int j = 0; j < pathMap.size.y; j++)
             {
-
+                print("heh");
                 //nodos[i, j] = new Node(new Vector3Int(i + ogx, j + ogy), (!Top1.HasTile(new Vector3Int(i+ ogx, j + ogy)) && ground.HasTile(new Vector3Int(i+ ogx, j + ogy)))); Salta error
 
                 Vector3Int posTiles = new Vector3Int(i + ogx, j + ogy, 0);
