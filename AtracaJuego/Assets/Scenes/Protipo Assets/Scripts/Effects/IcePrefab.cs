@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IcePrefab : ObjectStuff
 {    
+    [SerializeField] private Animator anim;
     protected override void Awake()
     {
         base.Awake();
@@ -13,6 +14,7 @@ public class IcePrefab : ObjectStuff
         bypass=false;
         direction=0;
         FreezeTile(posGrid);
+        anim=GetComponent<Animator>();
     }
     /*protected override void Start(){
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
@@ -29,42 +31,83 @@ public class IcePrefab : ObjectStuff
         GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0,-1);
     }
 
-    
-
-    /*IEnumerator DestroyEffect(float sec){
-        WaitForSeconds wfs=new WaitForSeconds(sec);
-        yield return wfs;
-        _GC.tiles[posGrid.x-_GC.ogx,posGrid.y-_GC.ogy].SetTileEffect(2);
-        Destroy(this.gameObject);
-        
+    public void Melt(){
+        StartCoroutine(Melting(0.25f));
     }
 
-    IEnumerator PushCube(int direction){
-        _GC.tiles[posGrid.x-_GC.ogx ,posGrid.y-_GC.ogy].SetTileEffect(5);
-        int dx=0, dy=0;
-        switch(direction){
-            case 1: dx=1; break;
-            case 2: dx=-1; break;
-            case 3: dy=1; break;
-            case 4: dy=-1; break;
-        }
-        WaitForSeconds wfs=new WaitForSeconds(0);
-        int speed=50;
-        bool stop=false;
-        Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
-        if(_GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()<5){
-        while(!stop){
-            //&& _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5
-            //newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
-            transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);
-
-            if(transform.position==newPos){newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
-                if(_GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5){break;}
-                if(_GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetPlayer()!=null){_GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy+dy].GetPlayer().Push(dx,dy,5); break;}
+    IEnumerator Melting(float sec){
+        anim.SetInteger("ToMelt",1);
+        WaitForSeconds wfs= new WaitForSeconds(sec);
+        //Patron de 5x5
+        int rot=0;
+        int rotCont=0;
+        int rotSteps=1;
+        Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
+        int x=posGrid.x-GC.ogx; int y=posGrid.y-GC.ogy;
+        int prevx=x;
+        int prevy=y;
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].trySetEffect(2);
+        
+        for(int i=1; i<=(25); i++){
+            if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){
+                GC.tiles[prevx,prevy].trySetEffect(2); GC.tiles[x,y].trySetEffect(2);
             }
+            prevx=x; prevy=y;
+            switch(rot){
+                case 0: x++; break;
+                case 1: y--; break;
+                case 2: x--; break;
+                case 3: y++; break;
+            }
+            if(i%rotSteps==0){
+                if((rot)%4==0){
+                }
+                rot=(rot+1)%4;
+                rotCont++;
+                if(rotCont%2==0){
+                    rotSteps++;
+                }
+            }
+            
+        }
 
-            yield return wfs;
+        rot=0;
+        rotCont=0;
+        rotSteps=1;
+        x=posGrid.x-GC.ogx; y=posGrid.y-GC.ogy;
+        prevx=x; prevy=y;
+        for(int i=1; i<=(25); i++){
+            if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){
+                GC.tiles[prevx,prevy].addEffect(6,false,0,-1); GC.tiles[x,y].addEffect(6,false,0,-1);
+            }
+            prevx=x; prevy=y;
+            
+            
+
+            switch(rot){
+                case 0: x++; break;
+                case 1: y--; break;
+                case 2: x--; break;
+                case 3: y++; break;
+            }
+            if(i%rotSteps==0){
+                if((rot)%4==0){
+                    yield return wfs;
+                }
+                rot=(rot+1)%4;
+                rotCont++;
+                if(rotCont%2==0){
+                    rotSteps++;
+                }
+            }
+            
         }
-        }
-    }*/
 }
+
+    public void MeltedObject(){
+        Destroy(this.gameObject);
+    }
+
+}
+

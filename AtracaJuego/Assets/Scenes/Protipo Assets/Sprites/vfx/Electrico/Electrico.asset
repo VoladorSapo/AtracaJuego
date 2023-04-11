@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Electrico
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -919993239, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 1983527181, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -423387139, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 923719621, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -789661733, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 1654651537, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -436505945, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -647424060, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 988861204, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -928171182, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -1036108688, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 743829166, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -2021123368, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 1113714729, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -2061842028, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 210940407, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -1515118243, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: 2069746646, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -1591814128, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -214229697, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  - {fileID: -462793757, guid: dd1fcf91b03e1a1448524ca5bccc5681, type: 3}
+  m_MinSpeed: 35
+  m_MaxSpeed: 45
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

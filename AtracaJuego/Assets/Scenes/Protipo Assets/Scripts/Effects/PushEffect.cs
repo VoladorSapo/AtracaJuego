@@ -31,7 +31,7 @@ public class PushEffect : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-
+        int speed=60;
         Vector3Int tileO = _GC.grid.WorldToCell(transform.position);
         bool hayGas = false;
         int x = tileO.x - _GC.ogx;
@@ -76,11 +76,11 @@ public class PushEffect : MonoBehaviour
                     {
                         case "Player": auxDist = 5; break;
                         case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; break;
-                        case "IceCube": auxDist = 1000; break;
+                        case "StoneBox": auxDist = 3; speed=48; break;
+                        case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
-                    _GC.tiles[x, y].player.Push(1, 0, auxDist);
+                    _GC.tiles[x, y].player.Push(1, 0, auxDist, speed);
                 }
                 else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
                 if (!_iowa.getMove())
@@ -125,11 +125,11 @@ public class PushEffect : MonoBehaviour
                     {
                         case "Player": auxDist = 5; break;
                         case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; break;
-                        case "IceCube": auxDist = 1000; break;
+                        case "StoneBox": auxDist = 3; speed=48; break;
+                        case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
-                    _GC.tiles[x, y].player.Push(-1, 0, auxDist);
+                    _GC.tiles[x, y].player.Push(-1, 0, auxDist, speed);
                 }
                 else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
                 if (!_iowa.getMove())
@@ -174,11 +174,11 @@ public class PushEffect : MonoBehaviour
                     {
                         case "Player": auxDist = 5; break;
                         case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; break;
-                        case "IceCube": auxDist = 1000; break;
+                        case "StoneBox": auxDist = 3; speed=48; break;
+                        case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
-                    _GC.tiles[x, y].player.Push(0, 1, auxDist);
+                    _GC.tiles[x, y].player.Push(0, 1, auxDist, speed);
                 }
                 else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
                 if (!_iowa.getMove())
@@ -218,15 +218,16 @@ public class PushEffect : MonoBehaviour
 
                 if (_GC.tiles[x, y].GetPlayer() != null)
                 {
+                    
                     switch (_GC.tiles[x, y].GetPlayer().tag)
                     {
                         case "Player": auxDist = 5; break;
                         case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; break;
-                        case "IceCube": auxDist = 1000; break;
+                        case "StoneBox": auxDist = 3; speed=48; break;
+                        case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
-                    _GC.tiles[x, y].player.Push(0, -1, auxDist);
+                    _GC.tiles[x, y].player.Push(0, -1, auxDist, speed);
                 }
                 else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
                 if (!_iowa.getMove())

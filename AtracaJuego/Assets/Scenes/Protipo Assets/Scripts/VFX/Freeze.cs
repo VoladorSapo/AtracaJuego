@@ -14,7 +14,7 @@ public class Freeze : MonoBehaviour
 
     void SetFreeze(){
         Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
-        if(GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==4 || GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==12 || GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==13)
+        if(GC.tiles[posInGrid.x-GC.ogx,posInGrid.y-GC.ogy].GetTileEffect()==5)
         {PT.Charco.SetTile(posInGrid,PT.iceT);}
     }
     void DestroyFreeze(){
