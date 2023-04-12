@@ -23,7 +23,17 @@ protected override void Awake()
         isObject=true;
     }
 public override void Die(){
-
+    if(this.tag!="StoneBox"){
+    alive = false;
+    Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
+    CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
+    tile.setPlayer(null);
+    Destroy(this.gameObject);
+        switch(this.tag){
+            case "WoodBox": break; //Animacion de romper caja
+            case "IceCube": break; //Animacion de romper hielo
+        }
+    }
 }
 
 }

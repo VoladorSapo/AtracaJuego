@@ -136,29 +136,57 @@ public class Iowa : PlayablePlayer
         }
 
         WaitForSeconds wfs = new WaitForSeconds(0);
-        int speed = 60;
+        int speed = 70;
         bool stop = false;
         Vector3 newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
+        tileO = GC.grid.WorldToCell(transform.position);
+        x = tileO.x - GC.ogx;
+        y = tileO.y - GC.ogy;
+
         GC.tiles[x, y].setPlayer(null);
 
+        if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag!="StoneBox"){MM.Damage(0,x+dx,y+dy);}
+
+        if((GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"
+        || (GC.tiles[x + dx*2, y + dy*2].GetTileState() >= 5  && GC.tiles[x + dx, y + dy].GetTileState() != 9))
+        )){
+
+            if(GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy,5,48);}
+
+        }
+        else{
         while (!stop)
         {
-            tileO = GC.grid.WorldToCell(transform.position);
-            x = tileO.x - GC.ogx;
-            y = tileO.y - GC.ogy;
+            
+            
             transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
-            if (transform.position == newPos && (GC.tiles[x + dx, y + dy].GetTileState() < 5 || GC.tiles[x + dx, y + dy].GetTileState() == 9 || GC.tiles[x + dx, y + dy].GetTileState() == 11))
+            
+            if(transform.position == newPos && (GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx*2, y + dy*2].GetTileState() >= 5  && GC.tiles[x + dx, y + dy].GetTileState() != 9))){
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);} break;
+            }else{
+
+            if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+            
+            if (transform.position == newPos && (GC.tiles[x + dx, y + dy].GetTileState() < 5 || GC.tiles[x + dx, y + dy].GetTileState() == 9))
             {
+                //if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+                x=GC.grid.WorldToCell(transform.position).x-GC.ogx;
+                y=GC.grid.WorldToCell(transform.position).y-GC.ogy;
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy,5,48); break;}
+                if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);}
                 newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
                 //if transform.position coincide con una tile rompible, hacer efecto de romper (SetTileStats)
             }
-            else if (transform.position == newPos && (GC.tiles[x + dx, y + dy].GetTileState() >= 5 || GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx, y + dy].GetTileState() != 11))
+            else if (transform.position == newPos && (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9))
             {
-                stop = true;
+                break;
+            }
             }
 
             yield return wfs;
+        }
         }
         GC.tiles[x, y].setPlayer(this);
     }

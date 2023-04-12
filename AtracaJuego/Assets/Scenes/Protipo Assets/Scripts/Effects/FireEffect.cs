@@ -29,8 +29,9 @@ public class FireEffect : MonoBehaviour
 
             switch (p.tag)
             {
-                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); break;
-                case "WoodBox": CajasQuemables c = p as CajasQuemables; c.Burn(); break;
+                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1);} break;
+                case "WoodBox": CajasQuemables c = p as CajasQuemables; c.Burn(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1);} break;
+                default: _GC.tiles[x, y].addEffect(2, true, 0, -1); break;
             }
         }else{_GC.tiles[x, y].addEffect(2, true, 0, -1);} //Sprite 2, estado 1, efecto 2, int 1 fade 1 //Todos valores temporales que hay que ajustar en la tabla
 

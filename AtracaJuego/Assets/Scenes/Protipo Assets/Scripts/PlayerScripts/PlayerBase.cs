@@ -15,7 +15,7 @@ public class PlayerBase : MonoBehaviour
     public GridController GC;
     public gameController _gamecontroller;
     [SerializeField] private tunController _turnController;
-    [SerializeField] private MapManager MM;
+    [SerializeField] protected MapManager MM;
     [SerializeField] protected ScriptPlayerManager SPM;
     [SerializeField] protected int MaxDistance;
     private int[] prevX= new int[5];
@@ -35,7 +35,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int currentHealth;
     CustomTileClass _callTile;//La tile que se llama si has pasado por una tile importante
     List<Node> nodes;
-    private PlaceTiles PT;
+    protected PlaceTiles PT;
 
     bool isRunning=false;
     //Método Principal
@@ -307,8 +307,8 @@ public class PlayerBase : MonoBehaviour
             //newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
             if(GC.tiles[x + dx,y + dy].GetPlayer()==null){transform.position = Vector3.MoveTowards(transform.position, newPos, speed*Time.deltaTime);}else{
             GC.tiles[x,y].setPlayer(this);
-            if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;}
-            if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
+            if(this.tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;}
+            if(this.tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
             if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy, distance,speed);} break;  
             }
 
