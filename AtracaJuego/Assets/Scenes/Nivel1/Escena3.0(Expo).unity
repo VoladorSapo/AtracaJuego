@@ -22849,6 +22849,7 @@ MonoBehaviour:
   retryConfirm: {fileID: 0}
   nextScene: 6
   _tutorial: {fileID: 0}
+  camara: {fileID: 0}
 --- !u!114 &1230494196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23467,7 +23468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406748153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -3.5, z: -10}
+  m_LocalPosition: {x: -28.1, y: 22.6, z: -10}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -25629,6 +25630,9 @@ MonoBehaviour:
   _textbox: {fileID: 1991546683}
   _GDC: {fileID: 0}
   _DC: {fileID: 0}
+  _cutscenecamera: {fileID: 0}
+  _maincamera: {fileID: 0}
+  _fondoanimator: {fileID: 0}
 --- !u!1 &2048211704
 GameObject:
   m_ObjectHideFlags: 0
