@@ -65,7 +65,7 @@ public class Garrote : EnemyCharacter
     }
     public override void InstantiatePrefab()
     {
-        _MM.Damage(0, hit.x - GC.ogx, hit.y - GC.ogy);
+        _MM.Damage(codeDamage, hit.x - GC.ogx, hit.y - GC.ogy);
         hasTurn = true;
     }
 }

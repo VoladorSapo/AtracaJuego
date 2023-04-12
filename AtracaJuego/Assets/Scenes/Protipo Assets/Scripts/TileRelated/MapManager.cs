@@ -84,6 +84,9 @@ public class MapManager : MonoBehaviour
             case 3: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(2);}} break;
             case 4: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(5);}} break;
             case 5: if(p!=null){if(p.tag=="Player"){p.loseHealth(1);}else{p.loseHealth(2);}} break;
+            case 6: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(1); } } break; //Garrote
+            case 7: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(2); } } break; //SuperGarrote
+
         }
     }
 

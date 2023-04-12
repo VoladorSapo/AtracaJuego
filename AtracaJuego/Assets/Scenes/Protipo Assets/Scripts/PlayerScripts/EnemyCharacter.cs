@@ -9,6 +9,8 @@ public class EnemyCharacter : PlayerBase
         [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
     [SerializeField] protected int detectDistance;
     [SerializeField] protected bool activated;
+    public int codeDamage;
+
     protected Vector3Int objective; //La casilla en la que quieres llegar
     protected override void Awake()
     {

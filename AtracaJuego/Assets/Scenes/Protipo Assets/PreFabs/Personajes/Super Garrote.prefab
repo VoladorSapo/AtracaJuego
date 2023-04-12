@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4830600860637631673, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_Name
-      value: Garrote Variant
+      value: Super Garrote
       objectReference: {fileID: 0}
     - target: {fileID: 4830600860637631676, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_RootOrder
@@ -70,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: maxHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: codeDamage
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: MaxDistance
