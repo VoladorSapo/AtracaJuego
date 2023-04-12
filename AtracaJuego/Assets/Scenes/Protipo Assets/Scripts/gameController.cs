@@ -19,6 +19,7 @@ public class gameController : MonoBehaviour
     [SerializeField] int nextScene;
     [SerializeField] TutorialController _tutorial;
     [SerializeField] cameraMove camara;
+    public bool Pause;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,9 +72,11 @@ public class gameController : MonoBehaviour
             {
                 case "tutorial":
                     _tutorial.loadDialogs(tutorialcode,this,null);
+                    Pause = true;
                     hasReturn = true;
                     break;
                 default:
+                    Pause = false;
                     startGame();
                     print("jojojo");
                     break;
@@ -88,6 +91,7 @@ public class gameController : MonoBehaviour
         hasReturn = false;
         _GC.setGame();
         _TC.startGame();
+        Pause = false;
     }
     public void winTilePressed()
     {

@@ -21,17 +21,19 @@ public class Marl : PlayablePlayer
     public override void Update()
     {
         base.Update();
-
-        posMouse=GC.GetMousePosition();
-
-        if(!GC.isEmpty(posMouse, false, 2) && Mode == 2){
+        if (!SPM._gameController.Pause) { 
+            posMouse = GC.GetMousePosition();
+    }
+        if(!GC.isEmpty(posMouse, false, 2) && Mode == 2 && !SPM._gameController.Pause)
+        {
                 if(!InstHecho){
                 Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
                 
                 Instantiate(DisplayGas, posNew, Quaternion.identity);
                 InstHecho=true;
                 }
-                if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb){
+                if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer== teamNumb && !SPM._gameController.Pause)
+            {
                     placeHere=posMouse;
                     
                     Cooldown=3;

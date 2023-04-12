@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6213871888960041706}
   - component: {fileID: 6213871888960041707}
+  - component: {fileID: 8538934158117967268}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -440,3 +441,23 @@ MonoBehaviour:
   cross: {fileID: 21300000, guid: 806e47316ba878c4fa0aa748e135b8e2, type: 3}
   _tile: {fileID: 0}
   _cutscene: {fileID: 0}
+  evento: {fileID: 0}
+--- !u!114 &8538934158117967268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213871888960041705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a670a06a319d78438684c8f7cd9f8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textbox: {fileID: 6213871888683267340}
+  _GDC: {fileID: 0}
+  _DC: {fileID: 0}
+  _cutscenecamera: {fileID: 0}
+  _maincamera: {fileID: 0}
+  _fondoanimator: {fileID: 0}
+  _tutorial: {fileID: 6213871888960041707}

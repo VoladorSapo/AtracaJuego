@@ -21,7 +21,7 @@ public class PlayablePlayer : PlayerBase
     {
         if (SPM.currentPlayer == teamNumb && SPM.Activated && !moving && Mode == 1)
         {
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !SPM._gameController.Pause)
             {
                 if (GC.isEmpty(Camera.main.ScreenToWorldPoint(Input.mousePosition),true,0))
                 {
@@ -38,7 +38,7 @@ public class PlayablePlayer : PlayerBase
                 StartCoroutine("skipturn");
             }
         }
-        if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb&& SPM.Activated && !moving)
+        if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb&& SPM.Activated && !moving && !SPM._gameController.Pause)
         { 
             int newMode = (Mode + 1) % 3;
             if(!hasAttack || !hasMove){

@@ -1119,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 507535202837147037, guid: 6c5f7960ba67ace43a08f0a257ccf9ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 507535202837147037, guid: 6c5f7960ba67ace43a08f0a257ccf9ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1783,13 +1783,14 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene1
-  tutorialcode: 
-  type: 
+  tutorialcode: tutorial1
+  type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
   nextScene: 2
   _tutorial: {fileID: 0}
   camara: {fileID: 0}
+  Pause: 0
 --- !u!114 &513381606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,6 +2123,7 @@ MonoBehaviour:
   ogx: 0
   ogy: 0
   distanceRun: 0
+  _gc: {fileID: 0}
   posArrayPlayers: []
   canMoveHere: 0
   ReachablePos: []
@@ -2488,7 +2490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820996061}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35d2dadc364893040992979bfcbd6cdf, type: 3}
   m_Name: 
@@ -3270,7 +3272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144459110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0014343262, y: 0.045539856, z: 1.6666667}
+  m_LocalPosition: {x: 0, y: 0, z: 9.25}
   m_LocalScale: {x: 0.16666667, y: 0.16666667, z: 0.16666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3344,7 +3346,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 202.10527, y: 113.68421}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24505,6 +24507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueController
       objectReference: {fileID: 0}
+    - target: {fileID: 5232386627632228584, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5232386627632228585, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -24641,6 +24647,7 @@ MonoBehaviour:
   _cutscenecamera: {fileID: 0}
   _maincamera: {fileID: 0}
   _fondoanimator: {fileID: 0}
+  _tutorial: {fileID: 0}
 --- !u!4 &1580157668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
@@ -25204,6 +25211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 6213871888960041705, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6213871888960041706, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -25274,7 +25285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213871888960041706, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 6213871888960041706, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -25288,6 +25299,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8538934158117967268, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
+      propertyPath: _fondoanimator
+      value: 
+      objectReference: {fileID: 1144459112}
+    - target: {fileID: 8538934158117967268, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
+      propertyPath: _cutscenecamera
+      value: 
+      objectReference: {fileID: 1722255727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6b4c79476392347989b9bdef921281, type: 3}
 --- !u!224 &1958155357 stripped

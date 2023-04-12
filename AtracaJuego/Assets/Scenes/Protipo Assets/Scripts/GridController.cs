@@ -28,7 +28,7 @@ public class GridController : MonoBehaviour
     public int ogx, ogy;
     public int distanceRun;
     public Node[,] nodos;
-
+    [SerializeField] gameController _gc;
     public Vector2[] posArrayPlayers;
     Tile TileToPlace;
     public bool canMoveHere;
@@ -48,6 +48,7 @@ public class GridController : MonoBehaviour
         freeCursor = true;
         //Metodos de otros scripts
         tileTable = GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
+        _gc = GameObject.Find("Controller").GetComponent<gameController>();
         _eventtileparent = GameObject.Find("EventTileParent").GetComponent<EventTileList>();
         //De este script
         QualitySettings.vSyncCount = 0;
@@ -108,7 +109,7 @@ public class GridController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") && !_gc.Pause)
         {
             mousePos = GetMousePosition();
             int difX = mousePos.x - ogx;
@@ -117,7 +118,7 @@ public class GridController : MonoBehaviour
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);
         }
-        if (Input.GetKeyDown("t"))
+        if (Input.GetKeyDown("t") && !_gc.Pause)
         {
             mousePos = GetMousePosition();
             int difX = mousePos.x - ogx;
@@ -126,8 +127,10 @@ public class GridController : MonoBehaviour
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);
         }
-        mousePos = GetMousePosition();
-        if (!mousePos.Equals(previousMousePos))
+        if (!_gc.Pause) {
+            mousePos = GetMousePosition();
+        }
+        if (!mousePos.Equals(previousMousePos) && !_gc.Pause)
         {
 
             /*Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -175,8 +178,9 @@ public class GridController : MonoBehaviour
     }
     public Vector3Int GetMousePosition()
     {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mouseWorldPos);
+    
     }
 
     public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles, bool team, bool reset)

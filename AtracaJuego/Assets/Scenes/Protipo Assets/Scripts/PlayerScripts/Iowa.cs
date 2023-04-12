@@ -21,7 +21,7 @@ public class Iowa : PlayablePlayer
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
         x = tileO.x - GC.ogx;
         y = tileO.y - GC.ogy;
-        if (Input.GetMouseButtonDown(0) && Cooldown == 0 && SPM.currentPlayer == teamNumb && Mode == 2)
+        if (Input.GetMouseButtonDown(0) && Cooldown == 0 && SPM.currentPlayer == teamNumb && Mode == 2 && !SPM._gameController.Pause)
         {
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2))

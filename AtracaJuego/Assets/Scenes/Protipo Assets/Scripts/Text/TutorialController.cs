@@ -14,12 +14,13 @@ public class TutorialController : MonoBehaviour
     [SerializeField] Sprite cross;
     [SerializeField] CutsceneEventTile _tile;
     [SerializeField] gameController _cutscene;
+    [SerializeField] DialogEvent evento;
 
     private void Start()
     {
         gameobject.SetActive(false);
         List<string> dialoglist = new List<string>();
-
+        evento = GetComponent<DialogEvent>();
     }
     public void loadDialogs(string code, gameController _cut,CutsceneEventTile _til)
     {
@@ -49,9 +50,11 @@ public class TutorialController : MonoBehaviour
                 nextbutton.image.sprite = cross;
             }
             dialoglist.RemoveAt(0);
+            StartCoroutine(Waitsome());
         }
         else
         {
+            evento.EventHandler("SetFondo-0");
             gameobject.SetActive(false);
             if (_tile)
             {
@@ -62,5 +65,10 @@ public class TutorialController : MonoBehaviour
                 _cutscene.returnFromCutscene(false);
             }
         }
+    }
+    IEnumerator Waitsome()
+    {
+        yield return new WaitForEndOfFrame();
+        evento.CheckForLinkEvent();
     }
 }

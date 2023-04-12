@@ -9,43 +9,47 @@ public class Nev : PlayablePlayer
     public GameObject DisplayIce;
     Vector3Int posMouse;
     Vector3Int posNev;
-    private bool InstHecho=false;    
+    private bool InstHecho = false;
     protected override void Awake()
     {
         base.Awake();
-        effect=-1;
+        effect = -1;
     }
     public override void Update()
     {
         base.Update();
 
-        
-        posNev=GC.grid.WorldToCell(transform.position);
-        if(Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2){
-            if(!InstHecho){
-                Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
-                Vector3Int posNevCenter=posNev * 10 + new Vector3Int(5, 5, 0);
-                Instantiate(DisplayIce, posNevCenter, Quaternion.identity);
-                InstHecho=true;
-            }
-            if(Input.GetMouseButtonDown(0))
-            {   
-            
-            posMouse=GC.GetMousePosition();
-            Vector3Int posInGrid=GC.grid.WorldToCell(transform.position);
-            if(!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x-GC.ogx,posMouse.y-GC.ogy].player==null){
-                //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
-                Cooldown=3;
-                animator.SetInteger("Anim", 2);
 
+        posNev = GC.grid.WorldToCell(transform.position);
+        if (Cooldown == 0 && SPM.currentPlayer == teamNumb && Mode == 2)
+        {
+            if (!InstHecho)
+            {
+                Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
+                Vector3Int posNevCenter = posNev * 10 + new Vector3Int(5, 5, 0);
+                Instantiate(DisplayIce, posNevCenter, Quaternion.identity);
+                InstHecho = true;
             }
+            if (Input.GetMouseButtonDown(0) && !SPM._gameController.Pause)
+            {
+
+                posMouse = GC.GetMousePosition();
+                Vector3Int posInGrid = GC.grid.WorldToCell(transform.position);
+                if (!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy].player == null)
+                {
+                    //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
+                    Cooldown = 3;
+                    animator.SetInteger("Anim", 2);
+
+                }
             }
         }
-        
 
-        if(Cooldown!=0 || Mode!=2 || SPM.currentPlayer!=teamNumb || !alive){
+
+        if (Cooldown != 0 || Mode != 2 || SPM.currentPlayer != teamNumb || !alive)
+        {
             Destroy(GameObject.FindGameObjectWithTag("DisplayIceTag"));
-            InstHecho=false;
+            InstHecho = false;
         }
     }
     public override void InstantiatePrefab()
@@ -78,7 +82,8 @@ public class Nev : PlayablePlayer
         }
     }
 
-    public override void ChangeMapShown(int setMode){
+    public override void ChangeMapShown(int setMode)
+    {
         Mode = setMode;
         if (Mode == 1)
         {

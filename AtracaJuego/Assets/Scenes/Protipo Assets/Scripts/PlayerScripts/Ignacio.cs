@@ -17,7 +17,8 @@ public class Ignacio : PlayablePlayer
     public override void Update()
     {   
         base.Update();
-        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode ==2){
+        if(Input.GetMouseButtonDown(0) && Cooldown==0 && SPM.currentPlayer==teamNumb && Mode == 2 && !SPM._gameController.Pause)
+        {
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2)){
                 Cooldown=1;
