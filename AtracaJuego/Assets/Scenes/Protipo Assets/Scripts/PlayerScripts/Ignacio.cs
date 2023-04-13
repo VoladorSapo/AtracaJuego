@@ -70,12 +70,12 @@ public class Ignacio : PlayablePlayer
         {
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
-            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
+            GC.setReachablePos(transform.position,MaxDistance, true, true, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); }
         else
         {
-            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true);
         }
         _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
 

@@ -10,7 +10,6 @@ public class PlaceTiles : MonoBehaviour
     public Tilemap Gas;
     public Tilemap GasE;
     public Tilemap Ground;
-    
     //Podria ser array pero para que tan solo tenga unos 10 elementos mejor que tenga cada uno un nombre especifico
     public RuleTile elecT;
     public RuleTile fireT;
@@ -29,7 +28,7 @@ public class PlaceTiles : MonoBehaviour
         CharcoE=GameObject.Find("CharcosElec").GetComponent<Tilemap>();
         Gas=GameObject.Find("Gases").GetComponent<Tilemap>();
         GasE=GameObject.Find("GasesElec").GetComponent<Tilemap>();
-        
+        Ground = GameObject.Find("Ground").GetComponent<Tilemap>();
     }
 
     public void PlaceAfterBreak(int x, int y, int dx, int dy, int ogx, int ogy){
