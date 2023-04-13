@@ -19,15 +19,62 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 7423926272
-    m_Localized: <link="SetFondo-1">Sopitas</link>
+    m_Localized: "<link=\"SetFondo-2\">En tu turno podr\xE1s mover y atacar con tus
+      personajes.<br> Para selecionarlos haz click.</link>"
     m_Metadata:
       m_Items: []
   - m_Id: 60507037696
-    m_Localized: Mega Sopas
+    m_Localized: Los botones de arriba son para moverte, atacar, deseleccionar y
+      darle el turno a los enemigos.
     m_Metadata:
       m_Items: []
   - m_Id: 204819926081536
-    m_Localized: <link="SetFondo-0">Ultra Sopas</link>
+    m_Localized: "<link=\"SetFondo-0\">Crea una nube de gas con Marl (verde) y explotal\xE1
+      con Ignacio (rojo)</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460303041044480
+    m_Localized: <link="SetFondo-2">Iowa(amarilla) puede romper y empujar tanto personas
+      como objetos.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460306581037056
+    m_Localized: <link="SetFondo-0">Usa su habilidad para romper la pared.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460312583086080
+    m_Localized: <link="SetFondo-2">Pol(azul)  puede electrificar.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460883499163648
+    m_Localized: "<link=\"SetFondo-0\">Me pregunto como podr\xE1 acabar con los enemigos
+      sobre el charco de agua.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461023874129920
+    m_Localized: <link="SetFondo-2">Nev(el azul claro)  puede crear cubitos de hielo.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461026076139520
+    m_Localized: <link="SetFondo-0">Usa a Iowa para empujarlo hacia los enemigos.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461594584686592
+    m_Localized: <link="SetFondo-2">Pol tambien puede revivir a enemigos caidos con
+      su electricidad.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461901813260288
+    m_Localized: <link="SetFondo-0">Revive a Ignacio y derrota a los enemigos.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462130759344128
+    m_Localized: Derrota a los enemigos y llega al final del pasillo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462463908716544
+    m_Localized: "Ahora que tienes a los cinco tienes muchas combinaciones m\xE1s.
+      Intenta descubrirlas."
     m_Metadata:
       m_Items: []
   references:

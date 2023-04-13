@@ -13,6 +13,7 @@ public class Nev : PlayablePlayer
     protected override void Awake()
     {
         base.Awake();
+        print(this.GetType().ToString());
         effect = -1;
     }
     public override void Update()

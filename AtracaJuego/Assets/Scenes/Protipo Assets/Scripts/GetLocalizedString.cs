@@ -11,7 +11,7 @@ public class GetLocalizedString
         bool finish = false;
         int i = 0;
         LocalizedString _localizedstring = new LocalizedString();
-        while (!false)
+        while (!finish)
         {
             _localizedstring.TableReference = table;
             string reference = code + "_" + i;
@@ -29,7 +29,30 @@ public class GetLocalizedString
         }
         return list;
     }
+    public static int getLocalizedLength(string table, string code)
+    {
+        int count = 0;
+        bool finish = false;
 
+        LocalizedString _localizedstring = new LocalizedString();
+
+        while (!finish)
+        {
+            _localizedstring.TableReference = table;
+            string reference = code + "_" + count + "_0" ;
+            _localizedstring.TableEntryReference = reference;
+            if (!_localizedstring.GetLocalizedString().Contains("No translation found for"))
+            {
+                count++;
+            }
+            else
+            {
+                finish = true;
+                break;
+            }
+        }
+        return count;
+    }
     // Start is called before the first frame update
     void Start()
     {

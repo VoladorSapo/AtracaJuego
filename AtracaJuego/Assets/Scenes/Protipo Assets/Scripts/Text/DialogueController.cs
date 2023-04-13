@@ -50,10 +50,10 @@ public class DialogueController : MonoBehaviour
                 name_text.text = "Ignacio";
                 break;
             case 2:
-                name_text.text = "Marl";
+                name_text.text = "Iowa";
                 break;
             case 3:
-                name_text.text = "Iowa";
+                name_text.text = "Marl";
 
                 break;
             case 4:
@@ -66,6 +66,12 @@ public class DialogueController : MonoBehaviour
                 break;
             case 6:
                 name_text.text = "Guardia";
+                break;
+            case 7:
+                name_text.text = "Joseva";
+                break;
+            case 8:
+                name_text.text = "Jefe de Seguridad";
                 break;
         }
     }
@@ -110,6 +116,11 @@ public class DialogueController : MonoBehaviour
                 print("skip");
                 _text.SkipTalk();
             }
+        }
+        if(Input.GetMouseButtonDown(1) && _dialogbox.activeSelf)
+        {
+            dialogs.Clear();
+            nextDialog();
         }
     }
 }

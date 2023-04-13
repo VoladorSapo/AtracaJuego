@@ -5,7 +5,7 @@ using System;
 public class Garrote : EnemyCharacter
 {
     // Start is called before the first frame update
-    Vector3Int hit; //The tile of the player you want to hit
+     //The tile of the player you want to hit
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);

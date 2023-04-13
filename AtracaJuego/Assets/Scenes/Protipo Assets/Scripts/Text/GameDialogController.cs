@@ -8,6 +8,7 @@ public class GameDialogController : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] DialogEvent evento;
     public LocalizedString _localizedstring;
+    [SerializeField] GameObject _dialogbox;
     List<string> dialogs;
     bool writingtext;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class GameDialogController : MonoBehaviour
         _text = GetComponent<TextController>();
         List<string> loaddialos = new List<string>();
         evento = GetComponentInChildren<DialogEvent>();
+        _dialogbox.SetActive(false);
        dialogs = new List<string>();/*
         loaddialos.Add("<link="+"\""+ "SetAnim-1" + "\""+ "> Que culo nena </link>");
         loaddialos.Add("<link=" + "\"" + "SetAnim-3" + "\"" + ">Te voy a romper el orto pelotudo</link>");
@@ -26,8 +28,14 @@ public class GameDialogController : MonoBehaviour
     }
     public void loadDialogs(List<string> newdialog)
     {
-        dialogs.AddRange(newdialog);
-        writeText();
+        print("eeeeeeeee");
+        if (newdialog.Count > 0)
+        {
+            print("oooooooooo");
+            dialogs.AddRange(newdialog);
+            _dialogbox.SetActive(true);
+            writeText();
+        }
     }
     public void setAnim(int animint)
     {
@@ -48,6 +56,10 @@ public class GameDialogController : MonoBehaviour
             _text.StartText(dialogs[0]);
             dialogs.RemoveAt(0);
             evento.CheckForLinkEvent();
+        }
+        else
+        {
+            _dialogbox.SetActive(false);
         }
     }
     IEnumerator Text()

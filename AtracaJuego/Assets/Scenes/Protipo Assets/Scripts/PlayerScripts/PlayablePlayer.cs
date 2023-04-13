@@ -57,6 +57,7 @@ public class PlayablePlayer : PlayerBase
         if (alive && SPM.Activated && SPM.players[SPM.currentPlayer].Mode == 0)
         {
             print("yotoyroyt" +name+teamNumb);
+            CDH.SelectDialogue(GetType().ToString());
             SPM.ChangePlayer(teamNumb);
             //GC.setReachablePos(transform.position, MaxDistance, true);
         }

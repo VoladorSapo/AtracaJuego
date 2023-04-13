@@ -9,6 +9,7 @@ public class EnemyCharacter : PlayerBase
         [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
     [SerializeField] protected int detectDistance;
     [SerializeField] protected bool activated;
+   protected Vector3Int hit;
     public int codeDamage;
 
     protected Vector3Int objective; //La casilla en la que quieres llegar

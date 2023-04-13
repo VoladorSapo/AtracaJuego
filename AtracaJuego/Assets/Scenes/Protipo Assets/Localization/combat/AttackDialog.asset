@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: AttackDialog
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 1adee0b340e45274eb5567026f928d93, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: d35b54bf390059e47aa4b959d144d957, type: 2}
+  - {fileID: 11400000, guid: 57808b245ee7b1543be723988252647e, type: 2}
+  - {fileID: 11400000, guid: 7a405713ffd23e448bba4ea928a068ef, type: 2}
+  - {fileID: 11400000, guid: 83e679329ce3fda47a0a4a2d25b9d258, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

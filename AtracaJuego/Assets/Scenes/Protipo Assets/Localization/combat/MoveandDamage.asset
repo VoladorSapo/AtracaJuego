@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: MoveandDamage
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: c417993c62daf5945b5ed9817d49e7cf, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 988f620fbc15e0c4d894e42284da06b8, type: 2}
+  - {fileID: 11400000, guid: c11e8e1f7ac35f346ac47485a80a7279, type: 2}
+  - {fileID: 11400000, guid: 04c1d1b5ae354e548a58abab41daf51b, type: 2}
+  - {fileID: 11400000, guid: 767fc873f1a3e6f4a93447369b0e258c, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []
