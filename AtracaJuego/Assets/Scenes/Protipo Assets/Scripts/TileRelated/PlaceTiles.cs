@@ -31,7 +31,7 @@ public class PlaceTiles : MonoBehaviour
         Ground = GameObject.Find("Ground").GetComponent<Tilemap>();
     }
 
-    public void PlaceAfterBreak(int x, int y, int dx, int dy, int ogx, int ogy){
+    public void PlaceAfterBreak(int x, int y, int dx, int dy){
         Vector3Int pos= new Vector3Int(x,y,0);
         Vector3Int newPos=pos+new Vector3Int(dx,dy,0);
         Vector3 posOffGrif=_GC.grid.CellToWorld(newPos)+ new Vector3 (_GC.ogx*10,_GC.ogy*10,0);

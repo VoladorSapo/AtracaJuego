@@ -130,26 +130,38 @@ public class pathFinder : MonoBehaviour
         bool Continue = isDist ? vueltas < var : tilesoftype <= 0;
         
         switch(playerMode){
-        case 1: //Fuego y empuje
+        case 0: //Fuego
         Vector3Int posFE=nodo.pos;
         if(GC.tiles[posFE.x - ogx +1, posFE.y - ogy].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx +1, posFE.y - ogy]);}
         if(GC.tiles[posFE.x - ogx -1, posFE.y - ogy].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx -1, posFE.y - ogy]);}
         if(GC.tiles[posFE.x - ogx , posFE.y - ogy +1].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx , posFE.y - ogy +1]);}
         if(GC.tiles[posFE.x - ogx , posFE.y - ogy -1].GetTileState()<8){nearList.Add(nodos[posFE.x - ogx , posFE.y - ogy -1]);}
         break;
+        case 1: //Empuje
+        Vector3Int posEm=nodo.pos;
+        if(GC.tiles[posEm.x - ogx +1, posEm.y - ogy].GetTileState()<8 || GC.tiles[posEm.x - ogx +1, posEm.y - ogy].GetTileState()==9){nearList.Add(nodos[posEm.x - ogx +1, posEm.y - ogy]);}
+        if(GC.tiles[posEm.x - ogx -1, posEm.y - ogy].GetTileState()<8 || GC.tiles[posEm.x - ogx -1, posEm.y - ogy].GetTileState()==9){nearList.Add(nodos[posEm.x - ogx -1, posEm.y - ogy]);}
+        if(GC.tiles[posEm.x - ogx , posEm.y - ogy +1].GetTileState()<8 || GC.tiles[posEm.x - ogx, posEm.y - ogy +1].GetTileState()==9){nearList.Add(nodos[posEm.x - ogx , posEm.y - ogy +1]);}
+        if(GC.tiles[posEm.x - ogx , posEm.y - ogy -1].GetTileState()<8 || GC.tiles[posEm.x - ogx, posEm.y - ogy -1].GetTileState()==9){nearList.Add(nodos[posEm.x - ogx , posEm.y - ogy -1]);}
+        break;
         
         case 2: //Gas
-        Vector3Int posG=nodo.pos-new Vector3Int(3,3,0); //offset de Rango del ataque/2
-        for(int i=0; i<7; i++){
+        //Vector3Int posG=nodo.pos-new Vector3Int(3,3,0); //offset de Rango del ataque/2
+        Vector3Int posG2=nodo.pos;
+        for(int i=0; i<3; i++){if(GC.tiles[posG2.x - ogx +i +1, posG2.y - ogy].GetTileEffect()!=16){nearList.Add(nodos[posG2.x - ogx + i+1, posG2.y - ogy]);}else{break;}}
+        for(int i=0; i<3; i++){if(GC.tiles[posG2.x - ogx -i -1, posG2.y - ogy].GetTileEffect()!=16){nearList.Add(nodos[posG2.x - ogx -i-1, posG2.y - ogy]);}else{break;}}
+        for(int i=0; i<3; i++){if(GC.tiles[posG2.x - ogx, posG2.y - ogy+i+1].GetTileEffect()!=16){nearList.Add(nodos[posG2.x - ogx , posG2.y - ogy+i+1]);}else{break;}}
+        for(int i=0; i<3; i++){if(GC.tiles[posG2.x - ogx, posG2.y - ogy-i-1].GetTileEffect()!=16){nearList.Add(nodos[posG2.x - ogx , posG2.y - ogy-i-1]);}else{break;}}
+        /*for(int i=0; i<7; i++){
             for(int j=0; j<7; j++){
-                if(GC.tiles[posG.x - ogx +i, posG.y - ogy +j].GetTileState()<8){
+                if(GC.tiles[posG.x - ogx +i, posG.y - ogy +j].GetTileEffect()!=16){
                 if((i==3 || j==3) && i!=j){
                // print(i+","+j);
                 nearList.Add(nodos[posG.x - ogx + i, posG.y - ogy + j]);
                 }
                 }
             }
-        }
+        }*/
         
         break;
 

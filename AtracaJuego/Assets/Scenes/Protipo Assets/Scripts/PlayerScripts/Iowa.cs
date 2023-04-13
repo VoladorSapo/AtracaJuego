@@ -13,6 +13,7 @@ public class Iowa : PlayablePlayer
     {
         base.Awake();
         effect = -1;
+        MaxDistance=6;
     }
     public override void Update()
     {
@@ -113,13 +114,13 @@ public class Iowa : PlayablePlayer
         {
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
-            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, true, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); }
         else
         {
             print("waka");
-            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true);
         }
         _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
     }
@@ -166,7 +167,7 @@ public class Iowa : PlayablePlayer
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);} break;
             }else{
 
-            if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+            if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy); break;}
             
             if (transform.position == newPos && (GC.tiles[x + dx, y + dy].GetTileState() < 5 || GC.tiles[x + dx, y + dy].GetTileState() == 9))
             {
@@ -174,7 +175,7 @@ public class Iowa : PlayablePlayer
                 x=GC.grid.WorldToCell(transform.position).x-GC.ogx;
                 y=GC.grid.WorldToCell(transform.position).y-GC.ogy;
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy,5,48); break;}
-                if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+                if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy); break;}
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);}
                 newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
                 //if transform.position coincide con una tile rompible, hacer efecto de romper (SetTileStats)

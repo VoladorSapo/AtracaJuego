@@ -23,7 +23,7 @@ public class ElecEffect : MonoBehaviour
         if(_GC.tiles[x,y].player!=null){
             if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive() && _GC.tiles[x,y].TileIsSafe()){PlayablePlayer pl =_GC.tiles[x,y].player as PlayablePlayer;  pl.Revive(_GC.tiles[x,y].player);}
             else if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){ _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
-            
+            else if(_GC.tiles[x,y].player.tag!="Player"){_GC.tiles[x,y].addEffect(5,true,direction,-1);}
             //if(!_GC.tiles[x,y].player.GetAlive()){print("Revive");}
         }else{_GC.tiles[x,y].addEffect(5,true,direction,-1);}
 

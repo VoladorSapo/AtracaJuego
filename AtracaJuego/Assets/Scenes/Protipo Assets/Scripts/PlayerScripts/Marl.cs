@@ -17,6 +17,7 @@ public class Marl : PlayablePlayer
         base.Awake();
         effect=-1;
         prevMouse=posMouse;
+        MaxDistance=6;
     }
     public override void Update()
     {
@@ -83,12 +84,12 @@ public class Marl : PlayablePlayer
         {
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 2, true);
-            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, true, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); }
         else
         {
-            GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+            GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true);
         }
         _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
 

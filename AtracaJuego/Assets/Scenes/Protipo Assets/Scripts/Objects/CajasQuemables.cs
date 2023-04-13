@@ -34,4 +34,8 @@ public class CajasQuemables : ObjectStuff
         bypass=true;
         direction=0;
     }
+
+    public void BurntBox(){
+        Destroy(this.gameObject);
+    }
 }

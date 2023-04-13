@@ -68,4 +68,6 @@ public class Garrote : EnemyCharacter
         _MM.Damage(codeDamage, hit.x - GC.ogx, hit.y - GC.ogy);
         hasTurn = true;
     }
+
+    
 }

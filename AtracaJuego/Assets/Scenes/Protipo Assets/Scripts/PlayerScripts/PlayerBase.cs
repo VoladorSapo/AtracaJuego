@@ -224,8 +224,10 @@ public class PlayerBase : MonoBehaviour
         CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         //tile.setPlayer(null);
         SPM.playerDie(this);
-        if(this.tag!="Player"){sprite.enabled = false; tile.setPlayer(null);}
-        if(this.tag=="Player"){animator.SetInteger("Anim",3);}
+        if(this.tag!="Player"){tile.setPlayer(null); //sprite.enabled = false; 
+        }
+        
+        if(this.animator!=null){animator.SetInteger("Anim",3);}
         
     }
 
@@ -303,7 +305,7 @@ public class PlayerBase : MonoBehaviour
         bool stop=false;
         Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
         
-        if(GC.tiles[x + dx,y + dy].GetTileState()==9){PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy); GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);}
+        if(GC.tiles[x + dx,y + dy].GetTileState()==9){PT.PlaceAfterBreak(x,y,dx,dy); GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);}
         if(GC.tiles[x + dx, y + dy].GetTileState()<5 || GC.tiles[x + dx, y + dy].GetTileState()==9){
         while(!stop && distance>0){
             GC.tiles[x,y].setPlayer(null);
@@ -323,7 +325,7 @@ public class PlayerBase : MonoBehaviour
                 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
 
                 if(GC.tiles[x + dx,y + dy].GetTileState()>=5 && GC.tiles[x + dx,y + dy].GetTileState()!=9){ break;}
-                if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);  GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);} //16 para que no congele esta pared especifica
+                if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy);  GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);} //16 para que no congele esta pared especifica
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
                     if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;} 
                     if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}
@@ -342,7 +344,9 @@ public class PlayerBase : MonoBehaviour
         }
     }
 
-
+    public void DieNow(){
+        Destroy(this.gameObject);
+    }
 
     /*Intercambia los valores playerOnTop de las tiles*/
 }

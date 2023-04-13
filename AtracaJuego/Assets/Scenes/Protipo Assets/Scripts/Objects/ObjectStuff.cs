@@ -28,12 +28,15 @@ public override void Die(){
     Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
     CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
     tile.setPlayer(null);
-    Destroy(this.gameObject);
+    //Destroy(this.gameObject);
         switch(this.tag){
-            case "WoodBox": break; //Animacion de romper caja
-            case "IceCube": break; //Animacion de romper hielo
+            case "WoodBox": if(animator!=null){animator.SetInteger("Anim",3);} break; //Animacion de romper caja
+            case "IceCube": if(animator!=null){animator.SetInteger("Anim",3);} break; //Animacion de romper hielo
         }
     }
 }
+
+
+
 
 }

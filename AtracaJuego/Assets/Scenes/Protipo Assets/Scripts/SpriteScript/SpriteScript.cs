@@ -19,6 +19,7 @@ public class SpriteScript : MonoBehaviour
     }
 
     void SetDead(){
-        player.SetSpriteDead();
+        if(player.tag=="Player"){player.SetSpriteDead();}
+        else{player.DieNow();}
     }
 }

@@ -10,6 +10,7 @@ public class PushEffect : MonoBehaviour
     public Iowa _iowa;
     public GridController _GC;
     public MapManager _MM;
+    private PlaceTiles _PT;
 
     public GameObject IcePrefab;
     [SerializeField] private int distance = 5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
@@ -23,6 +24,7 @@ public class PushEffect : MonoBehaviour
     {
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
+        _PT = GameObject.Find("TileController").GetComponent<PlaceTiles>();
         w = transform.localScale.x;
         h = transform.localScale.y;
         auxDist = distance;
@@ -60,7 +62,7 @@ public class PushEffect : MonoBehaviour
                                     case -1: dist_++; list_.AddLast(new Vector2Int(x+i,y+k)); break;
                                 }
                                 hayGas = true;
-                            }
+                            }else{break;}
                         }
                         else { break; }
                     }
@@ -85,7 +87,8 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(1, 0, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 1, -1); }
+                else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,1,0);}else{_GC.tiles[x, y].addEffect(3, true, 1, -1);} }
+
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);
@@ -110,7 +113,7 @@ public class PushEffect : MonoBehaviour
                                     case -1: dist_++; list_.AddLast(new Vector2Int(x-i,y+k));break;
                                 }
                                 hayGas = true;
-                            }
+                            }else{break;}
                         }
                         else { break; }
                     }
@@ -134,7 +137,8 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(-1, 0, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 2, -1); }
+                else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,-1,0);}else{_GC.tiles[x, y].addEffect(3, true, 2, -1);} }
+
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);
@@ -159,7 +163,7 @@ public class PushEffect : MonoBehaviour
                                     case -1: dist_++; list_.AddLast(new Vector2Int(x+k,y+i)); break;
                                 }
                                 hayGas = true;
-                            }
+                            }else{break;}
                         }
                         else { break; }
                     }
@@ -183,7 +187,8 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(0, 1, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 3, -1); }
+                else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,1);}else{_GC.tiles[x, y].addEffect(3, true, 3, -1);} }
+
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);
@@ -207,7 +212,7 @@ public class PushEffect : MonoBehaviour
                                     case -1: dist_++; list_.AddLast(new Vector2Int(x+k,y-i)); break;
                                 }
                                 hayGas = true;
-                            }
+                            }else{break;}
                         }
                         else { break; }
                     }
@@ -232,7 +237,8 @@ public class PushEffect : MonoBehaviour
                     }
                     _GC.tiles[x, y].player.Push(0, -1, auxDist, speed);
                 }
-                else { _GC.tiles[x, y].addEffect(3, true, 4, -1); }
+                else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,-1);}else{_GC.tiles[x, y].addEffect(3, true, 4, -1);} }
+
                 if (!_iowa.getMove())
                 {
                     _iowa.ChangeMapShown(1);

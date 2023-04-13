@@ -173,7 +173,7 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetExposicion_6": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
-             case "tilesetExposicion_13": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExposicion_13": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_14": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_15": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_16": id[0] = 1; id[1] = 8; id[2] = 16; break;
