@@ -13,7 +13,6 @@ public class Iowa : PlayablePlayer
     {
         base.Awake();
         effect = -1;
-        MaxDistance=6;
     }
     public override void Update()
     {

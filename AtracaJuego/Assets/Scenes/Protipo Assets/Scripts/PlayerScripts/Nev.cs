@@ -15,7 +15,6 @@ public class Nev : PlayablePlayer
         base.Awake();
         print(this.GetType().ToString());
         effect = -1;
-        MaxDistance=7;
     }
     public override void Update()
     {

@@ -65,10 +65,11 @@ MonoBehaviour:
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
-  teamNumb: 0
+  teamNumb: 7
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}

@@ -17,7 +17,7 @@ public class Marl : PlayablePlayer
         base.Awake();
         effect=-1;
         prevMouse=posMouse;
-        MaxDistance=6;
+
     }
     public override void Update()
     {

@@ -205,7 +205,7 @@ MonoBehaviour:
   _turnController: {fileID: 0}
   MM: {fileID: 0}
   SPM: {fileID: 0}
-  MaxDistance: 0
+  MaxDistance: 6
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
@@ -255,6 +256,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
@@ -293,6 +295,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
@@ -331,6 +334,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}

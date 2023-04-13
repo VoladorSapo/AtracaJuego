@@ -202,7 +202,7 @@ MonoBehaviour:
   _turnController: {fileID: 0}
   MM: {fileID: 0}
   SPM: {fileID: 0}
-  MaxDistance: 0
+  MaxDistance: 8
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -215,6 +215,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 4
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   ElecPrefab: {fileID: 2704912516305452731, guid: f5f9cf3f7e564c04d9d9c24ade97ed30, type: 3}

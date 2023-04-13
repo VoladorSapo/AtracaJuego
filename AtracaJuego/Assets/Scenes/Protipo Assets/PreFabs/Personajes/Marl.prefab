@@ -82,7 +82,7 @@ MonoBehaviour:
   _turnController: {fileID: 0}
   MM: {fileID: 0}
   SPM: {fileID: 0}
-  MaxDistance: 0
+  MaxDistance: 7
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}

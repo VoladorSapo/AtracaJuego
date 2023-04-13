@@ -320,9 +320,6 @@ public class CustomTileClass
                     tileEffect=11; _PT.CharcoE.SetTile(tilePos+og,_PT.elecT);  _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,5,direction,3);
                 }
 
-                
-                
-                
             }
         }
         

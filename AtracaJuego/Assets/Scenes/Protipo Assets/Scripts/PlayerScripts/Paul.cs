@@ -12,7 +12,6 @@ public class Paul : PlayablePlayer
     {
         base.Awake();
         effect=-1;
-        MaxDistance=8;
     }
     public override void Update()
     {
