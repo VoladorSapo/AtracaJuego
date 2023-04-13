@@ -44,7 +44,7 @@ public class DialogueController : MonoBehaviour
         switch (animint)
         {
             case 0:
-                name_text.text = "";
+                name_text.text = " ";
                 break;
             case 1:
                 name_text.text = "Ignacio";

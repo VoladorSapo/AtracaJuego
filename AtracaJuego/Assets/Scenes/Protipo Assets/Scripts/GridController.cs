@@ -183,7 +183,10 @@ public class GridController : MonoBehaviour
         }
         return null;
         }
-
+    public Node GetNodeEffect(Vector3 startpos)
+    {
+        return _path.buscarNodoEffect(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos, tiles, ogx, ogy);
+    }
     //Cambio visual para el mapa de tiles entre mover o atacar
     public void changeAttackOrMove(bool displayMode){ //Falso, mover. True, atacar
         if(displayMode){CanAttackMap.ClearAllTiles(); CanAttackMap.RefreshAllTiles();}else{canMove.ClearAllTiles(); canMove.RefreshAllTiles();}

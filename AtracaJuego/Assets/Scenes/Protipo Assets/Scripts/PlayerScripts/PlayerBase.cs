@@ -33,6 +33,8 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] public bool alive;
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
+    [SerializeField] protected CombatDialogueHandler CDH;
+
     CustomTileClass _callTile;//La tile que se llama si has pasado por una tile importante
     List<Node> nodes;
     protected PlaceTiles PT;
@@ -50,7 +52,8 @@ public class PlayerBase : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         _turnController= GameObject.Find("Controller").GetComponent<tunController>();
         _gamecontroller=GameObject.Find("Controller").GetComponent<gameController>();
-        isObject=false;
+        CDH = GameObject.Find("GameDialogueController").GetComponent<CombatDialogueHandler>();
+        isObject =false;
         startPos = transform.position;
     }
     protected virtual void Start()
@@ -165,6 +168,7 @@ public class PlayerBase : MonoBehaviour
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             tile.setPlayer(null);
             print(name);
+            CDH.MoveDialogue(GetType().ToString());
             animator.SetInteger("Anim", 1);
             print(newPos.Count);
             nodes = newPos;
@@ -234,7 +238,9 @@ public class PlayerBase : MonoBehaviour
     {
         //if(animator!=null){animator.SetInteger("Anim", 4);}
         currentHealth -= health;
-        if(currentHealth <= 0)
+        CDH.DamageDialogue(GetType().ToString());
+
+        if (currentHealth <= 0)
         {
             Die();
         }

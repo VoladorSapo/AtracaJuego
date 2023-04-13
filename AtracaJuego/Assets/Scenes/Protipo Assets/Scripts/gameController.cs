@@ -38,6 +38,7 @@ public class gameController : MonoBehaviour
 
         yield return new WaitForSeconds(2);
         string fullcode = "start_" + code;
+        Pause = true;
         _cutsceneController.loadScene(table, fullcode, false);
     }
     // Update is called once per frame
@@ -53,7 +54,7 @@ public class gameController : MonoBehaviour
             //GC.setGame();
            // _TC.startGame();
             string fullcode = "start_" + code;
-            _cutsceneController.loadScene(table, fullcode,false);
+            //_cutsceneController.loadScene(table, fullcode,false);
            
         }
     }

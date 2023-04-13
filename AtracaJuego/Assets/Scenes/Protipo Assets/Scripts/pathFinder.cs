@@ -193,7 +193,44 @@ public class pathFinder : MonoBehaviour
 
         return nearList;
     }
-
+    public Node buscarNodoEffect(Node nodo, Node[,] nodos, CustomTileClass[,] tiles, int ogx, int ogy)
+    {
+        if (tiles[nodo.pos.x - ogx, nodo.pos.y - ogy].GetTileEffect() > 0 && tiles[nodo.pos.x - ogx, nodo.pos.y - ogy].GetTileEffect() < 16)
+        {
+            return (nodo);
+        }
+        bool Continue = true;
+        List<Node> borderList = new List<Node>();
+        List<Node> checkedList = new List<Node>();
+        borderList.Add(nodo);
+        int vueltas = 0;
+        while (Continue && vueltas < 40)
+        {
+            List<Node> newBorderList = new List<Node>(); ;
+            foreach (Node nodoBorde in borderList)
+            {
+                List<Node> supportList = nodosAdyacentes(nodoBorde, nodos, ogx, ogy);
+                for (int i = 0; i < supportList.Count; i++)
+                {
+                    if (!checkedList.Contains(supportList[i]) && !newBorderList.Contains(supportList[i]))
+                    {
+                        newBorderList.Add(supportList[i]);
+                        checkedList.Add(supportList[i]);
+                        if (tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() > 0 && tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() < 16)
+                        {
+                            print(vueltas);
+                            return supportList[i];
+                        }
+                    }
+                }
+            }
+            print(vueltas);
+            borderList.Clear();
+            borderList.AddRange(newBorderList);
+            vueltas++;
+        }
+        return null;
+    }
     private List<Node> fullPath(Node endNode)
     {
         List<Node> list = new List<Node>();

@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class StartEffect : MonoBehaviour
 {
-    public StartWet SW;
+    public StartWet[] SW;
     void Start(){
-        SW=FindObjectOfType<StartWet>();
+        SW=FindObjectsOfType<StartWet>();
     }
     public void StartEff(){
-        if(SW!=null){SW.Starting();}
+        if(SW.Length > 0){
+            foreach (StartWet sws in SW)
+            {
+                sws.Starting();
+            }
+}
     }
 }

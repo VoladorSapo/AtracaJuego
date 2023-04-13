@@ -320,15 +320,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f20c18adc8c342547bbd88591e4d0bef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 202.10527, y: 113.68421}
+  m_Size: {x: 249.875, y: 166.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &183999961
@@ -419,7 +419,7 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene2.0
-  tutorialcode: tutorial1
+  tutorialcode: tutorial2
   type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
@@ -1241,7 +1241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6046868465804204391, guid: c66bf66a2254b66428ec43a68d4e1763, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6046868465804204391, guid: c66bf66a2254b66428ec43a68d4e1763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1416,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.533009
+      value: 22.8
       objectReference: {fileID: 0}
     - target: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1509,6 +1509,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!114 &811016129
@@ -1545,6 +1546,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
 --- !u!4 &811016130
 Transform:
   m_ObjectHideFlags: 0
@@ -1870,6 +1872,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   LifeTime: 0
 --- !u!212 &925795038
 SpriteRenderer:
@@ -1936,7 +1939,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927074542
 GameObject:
@@ -6539,7 +6542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 968029455070343595, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 968029455070343595, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6899,6 +6902,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
@@ -6936,6 +6940,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!212 &1107416968
@@ -7134,7 +7139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213916830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7291,6 +7296,7 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
   LifeTime: 0
 --- !u!212 &1342439984
 SpriteRenderer:
@@ -8046,7 +8052,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011676219
 GameObject:
