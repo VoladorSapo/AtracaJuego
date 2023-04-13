@@ -12,9 +12,11 @@ public class GridController : MonoBehaviour
     RaycastHit2D objectHit;
     [SerializeField] private Tilemap interactiveMap = null;
     [SerializeField] private Tilemap pathMap = null;
-    [SerializeField] private Tilemap Top1 = null;
-    [SerializeField] private Tilemap ground = null;
+    public Tilemap Top;
+    public Tilemap ground = null;
+    [SerializeField] private Tilemap gasesE = null;
     [SerializeField] private Tilemap gases = null;
+    [SerializeField] private Tilemap charcosE = null;
     [SerializeField] private Tilemap charcos = null;
     public Tilemap canMove = null;
     public Tilemap CanAttackMap = null;
@@ -23,6 +25,7 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
     [SerializeField] private Tile canMoveTile = null;
     [SerializeField] private Tile attackTile=null;
+    
     [SerializeField] EventTileList _eventtileparent;
     public pathFinder _path = null;
     public int ogx, ogy;
@@ -40,12 +43,15 @@ public class GridController : MonoBehaviour
     public CustomTileClass[,] tiles;
     public TileSpriteTable tileTable;
     [SerializeField] private Vector3Int mousePos;
-
+    private StartEffect _SE;
     public ObjectStuff[] _OS;
     void Awake()
     {
         grid = gameObject.GetComponent<Grid>();
         freeCursor = true;
+        charcosE=GameObject.Find("CharcosElec").GetComponent<Tilemap>();
+        Top=GameObject.Find("Top").GetComponent<Tilemap>();
+        gasesE=GameObject.Find("GasesElec").GetComponent<Tilemap>();
         //Metodos de otros scripts
         tileTable = GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
         _gc = GameObject.Find("Controller").GetComponent<gameController>();
@@ -59,6 +65,7 @@ public class GridController : MonoBehaviour
         canMoveHere = true;
         TileToPlace = hoverTile;
         nodos = new Node[pathMap.size.x, pathMap.size.y];
+        _SE= GameObject.Find("MapManager").GetComponent<StartEffect>();
         
 
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
@@ -67,6 +74,7 @@ public class GridController : MonoBehaviour
     }
     public void setGame()
     {
+
         ogx = pathMap.origin.x;
         ogy = pathMap.origin.y;
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
@@ -101,10 +109,14 @@ public class GridController : MonoBehaviour
         {
             _event.SetGame();
         }
+        charcosE.ClearAllTiles();
         charcos.ClearAllTiles();
+        gasesE.ClearAllTiles();
         gases.ClearAllTiles();
         charcos.RefreshAllTiles();
         gases.RefreshAllTiles();
+
+        _SE.StartEff();
     }
     // Update is called once per frame
     void Update()

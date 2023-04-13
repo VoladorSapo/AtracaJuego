@@ -27,13 +27,13 @@ public class GasEffect : MonoBehaviour
         print(filas);
 
 
-        for(int i=0; i<filas; i++){
+        /*for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
                 _GC.tiles[i1,j1].trySetEffect(1);
             }
-        }
+        }*/
         for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;

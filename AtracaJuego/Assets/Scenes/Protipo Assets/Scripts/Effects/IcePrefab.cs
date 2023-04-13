@@ -49,7 +49,7 @@ public class IcePrefab : ObjectStuff
             GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
             GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].trySetEffect(2);
         
-        for(int i=1; i<=(25); i++){
+        /*for(int i=1; i<=(25); i++){
             if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){
                 GC.tiles[prevx,prevy].trySetEffect(2); GC.tiles[x,y].trySetEffect(2);
             }
@@ -70,16 +70,19 @@ public class IcePrefab : ObjectStuff
                 }
             }
             
-        }
+        }*/
 
-        rot=0;
+        /*rot=0;
         rotCont=0;
         rotSteps=1;
         x=posGrid.x-GC.ogx; y=posGrid.y-GC.ogy;
-        prevx=x; prevy=y;
+        prevx=x; prevy=y;*/
         for(int i=1; i<=(25); i++){
-            if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){
+            if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2
+            ||  GC.tiles[x+1,y].GetTileEffect()==6 || GC.tiles[x-1,y].GetTileEffect()==6 || GC.tiles[x,y+1].GetTileEffect()==6 || GC.tiles[x,y-1].GetTileEffect()==6
+            ){
                 GC.tiles[prevx,prevy].addEffect(6,false,0,-1); GC.tiles[x,y].addEffect(6,false,0,-1);
+                print(i);
             }
             prevx=x; prevy=y;
             

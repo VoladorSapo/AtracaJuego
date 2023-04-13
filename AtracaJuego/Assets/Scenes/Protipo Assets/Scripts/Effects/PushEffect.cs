@@ -38,6 +38,9 @@ public class PushEffect : MonoBehaviour
         int y = tileO.y - _GC.ogy;
 
         int dist1 = 0, dist0 = 0, dist_ = 0;
+        LinkedList<Vector2Int> list1= new LinkedList<Vector2Int>();
+        LinkedList<Vector2Int> list0= new LinkedList<Vector2Int>();
+        LinkedList<Vector2Int> list_= new LinkedList<Vector2Int>();
         switch (direction)
         {
             case 1:
@@ -46,15 +49,15 @@ public class PushEffect : MonoBehaviour
                 {
                     for (int i = 0; i < distance; i++)
                     {
-                        if (_GC.tiles[x + i, y + k].GetTileState() < 8)
+                        if (_GC.tiles[x + i, y + k].GetTileState() < 5)
                         {
                             if (_GC.tiles[x + i, y + k].GetTileEffect() == 1 || _GC.tiles[x + i, y + k].GetTileEffect() == 7)
                             {
                                 switch (k)
                                 {
-                                    case 1: dist1++; break;
-                                    case 0: dist0++; break;
-                                    case -1: dist_++; break;
+                                    case 1: dist1++; list1.AddLast(new Vector2Int(x+i,y+k)); break;
+                                    case 0: dist0++; list0.AddLast(new Vector2Int(x+i,y+k)); break;
+                                    case -1: dist_++; list_.AddLast(new Vector2Int(x+i,y+k)); break;
                                 }
                                 hayGas = true;
                             }
@@ -67,7 +70,7 @@ public class PushEffect : MonoBehaviour
 
                 if (hayGas)
                 {
-                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 1));
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 1,list1,list0,list_));
                 }
 
                 if (_GC.tiles[x, y].GetPlayer() != null)
@@ -102,9 +105,9 @@ public class PushEffect : MonoBehaviour
                             {
                                 switch (k)
                                 {
-                                    case 1: dist1++; break;
-                                    case 0: dist0++; break;
-                                    case -1: dist_++; break;
+                                    case 1: dist1++; list1.AddLast(new Vector2Int(x-i,y+k)); break;
+                                    case 0: dist0++; list0.AddLast(new Vector2Int(x-i,y+k));break;
+                                    case -1: dist_++; list_.AddLast(new Vector2Int(x-i,y+k));break;
                                 }
                                 hayGas = true;
                             }
@@ -116,7 +119,7 @@ public class PushEffect : MonoBehaviour
                 print(dist1 + ";" + dist0 + ";" + dist_);
                 if (hayGas)
                 {
-                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 2));
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 2,list1,list0,list_));
                 }
 
                 if (_GC.tiles[x, y].GetPlayer() != null)
@@ -151,9 +154,9 @@ public class PushEffect : MonoBehaviour
                             {
                                 switch (k)
                                 {
-                                    case 1: dist1++; break;
-                                    case 0: dist0++; break;
-                                    case -1: dist_++; break;
+                                    case 1: dist1++; list1.AddLast(new Vector2Int(x+k,y+i)); break;
+                                    case 0: dist0++; list0.AddLast(new Vector2Int(x+k,y+i)); break;
+                                    case -1: dist_++; list_.AddLast(new Vector2Int(x+k,y+i)); break;
                                 }
                                 hayGas = true;
                             }
@@ -165,7 +168,7 @@ public class PushEffect : MonoBehaviour
                 print(dist1 + ";" + dist0 + ";" + dist_);
                 if (hayGas)
                 {
-                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 3));
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 3,list1,list0,list_));
                 }
 
                 if (_GC.tiles[x, y].GetPlayer() != null)
@@ -199,9 +202,9 @@ public class PushEffect : MonoBehaviour
                             {
                                 switch (k)
                                 {
-                                    case 1: dist1++; break;
-                                    case 0: dist0++; break;
-                                    case -1: dist_++; break;
+                                    case 1: dist1++; list1.AddLast(new Vector2Int(x+k,y-i)); break;
+                                    case 0: dist0++; list0.AddLast(new Vector2Int(x+k,y-i)); break;
+                                    case -1: dist_++; list_.AddLast(new Vector2Int(x+k,y-i)); break;
                                 }
                                 hayGas = true;
                             }
@@ -213,7 +216,7 @@ public class PushEffect : MonoBehaviour
                 print(dist1 + ";" + dist0 + ";" + dist_);
                 if (hayGas)
                 {
-                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 4));
+                    StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 4, list1, list0, list_));
                 }
 
                 if (_GC.tiles[x, y].GetPlayer() != null)
@@ -312,322 +315,62 @@ public class PushEffect : MonoBehaviour
         }
     }
 
-    IEnumerator PushGas(float sec, int dist1, int dist0, int dist_, int x, int y, int dir)
+    IEnumerator PushGas(float sec, int dist1, int dist0, int dist_, int x, int y, int dir, LinkedList<Vector2Int> l1, LinkedList<Vector2Int> l0, LinkedList<Vector2Int> l_)
     {
         WaitForSeconds wfs = new WaitForSeconds(sec);
-        switch (dir)
-        {
-            case 1:
-                for (int j = 0; j < distanceMoved; j++)
-                {
-
-
-                    if (j <= dist1 && _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + (dist1 - 1) + j, y + 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + (dist1 - 1) + j + 1, y + 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist1 && _GC.tiles[x + 1 + j, y + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1 + j, y + 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1 + j, y + 1].addEffect(1, false, 0, -1);
-                                _GC.tiles[x + j, y + 1].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1 + j, y + 1].addEffect(7, false, 0, -1);
-                                _GC.tiles[x + j, y + 1].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-
-                    if (j <= dist0 && _GC.tiles[x + (dist0 - 1) + j + 1, y].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + (dist0 - 1) + j, y].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + (dist0 - 1) + j + 1, y].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + (dist0 - 1) + j + 1, y].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist0 && _GC.tiles[x + 1 + j, y].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1 + j, y].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1 + j, y].addEffect(1, false, 0, -1);
-                                _GC.tiles[x + j, y].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1 + j, y].addEffect(7, false, 0, -1);
-                                _GC.tiles[x + j, y].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    if (j <= dist_ && _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + (dist_ - 1) + j, y - 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + (dist_ - 1) + j + 1, y - 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist_ && _GC.tiles[x + 1 + j, y - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1 + j, y - 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1 + j, y - 1].addEffect(1, false, 0, -1);
-                                _GC.tiles[x + j, y - 1].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1 + j, y - 1].addEffect(7, false, 0, -1);
-                                _GC.tiles[x + j, y - 1].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-
-                    yield return wfs;
-                }
-                break;
-            case 2:
-                for (int j = 0; j < distanceMoved; j++)
-                {
-                    if (j <= dist1 && _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - (dist1 - 1) - j, y + 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - (dist1 - 1) - 1 - j, y + 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist1 && _GC.tiles[x - 1 - j, y + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1 - j, y + 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1 - j, y + 1].addEffect(1, false, 0, -1);
-                                _GC.tiles[x - j, y + 1].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1 - j, y + 1].addEffect(7, false, 0, -1);
-                                _GC.tiles[x - j, y + 1].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-
-                    if (j <= dist0 && _GC.tiles[x - (dist0 - 1) - j - 1, y].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - (dist0 - 1) - j, y].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - (dist0 - 1) - j - 1, y].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - (dist0 - 1) - j - 1, y].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist0 && _GC.tiles[x - 1 - j, y].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1 - j, y].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1 - j, y].addEffect(1, false, 0, -1);
-                                _GC.tiles[x - j, y].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1 - j, y].addEffect(7, false, 0, -1);
-                                _GC.tiles[x - j, y].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    if (j <= dist_ && _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - (dist_ - 1) - j, y - 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - (dist_ - 1) - j - 1, y - 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist_ && _GC.tiles[x - 1 - j, y - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1 - j, y - 1].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1 - j, y - 1].addEffect(1, false, 0, -1);
-                                _GC.tiles[x - j, y - 1].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1 - j, y - 1].addEffect(7, false, 0, -1);
-                                _GC.tiles[x - j, y - 1].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    yield return wfs;
-                }
-
-                break;
-            case 3:
-                for (int j = 0; j < distanceMoved; j++)
-                {
-
-                    if (j <= dist1 && _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1, y + (dist1 - 1) + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1, y + (dist1 - 1) + j + 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist1 && _GC.tiles[x + 1, y + 1 + j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1, y + 1 + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1, y + 1 + j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x + 1, y + j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1, y + 1 + j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x + 1, y + j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-
-                    if (j <= dist0 && _GC.tiles[x, y + (dist0 - 1) + j + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x, y + (dist0 - 1) + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x, y + (dist0 - 1) + j + 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x, y + (dist0 - 1) + j + 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist0 && _GC.tiles[x, y + 1 + j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x, y + 1 + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x, y + 1 + j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x, y + j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x, y + 1 + j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x, y + j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    if (j <= dist_ && _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1, y + (dist_ - 1) + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1, y + (dist_ - 1) + j + 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist_ && _GC.tiles[x - 1, y + 1 + j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1, y + 1 + j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1, y + 1 + j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x - 1, y + j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1, y + 1 + j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x - 1, y + j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    yield return wfs;
-                }
-                break;
-            case 4:
-                for (int j = 0; j < distanceMoved; j++)
-                {
-
-                    if (j <= dist1 && _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1, y - (dist1 - 1) - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1, y - (dist1 - 1) - 1 - j].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist1 && _GC.tiles[x + 1, y - 1 - j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x + 1, y - 1 - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x + 1, y - 1 - j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x + 1, y - j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x + 1, y - 1 - j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x + 1, y - j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-
-                    if (j <= dist0 && _GC.tiles[x, y - (dist0 - 1) - j - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x, y - (dist0 - 1) - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x, y - (dist0 - 1) - j - 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x, y - (dist0 - 1) - j - 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist0 && _GC.tiles[x, y - 1 - j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x, y - 1 - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x, y - 1 - j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x, y - j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x, y - 1 - j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x, y - j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    if (j <= dist_ && _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1, y - (dist_ - 1) - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].addEffect(1, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1, y - (dist_ - 1) - j - 1].addEffect(7, false, 0, -1); break;
-                        }
-                    }
-                    if (j <= dist_ && _GC.tiles[x - 1, y - 1 - j].GetTileState() < 8)
-                    {
-                        switch (_GC.tiles[x - 1, y - 1 - j].GetTileEffect())
-                        {
-                            case 1:
-                                _GC.tiles[x - 1, y - 1 - j].addEffect(1, false, 0, -1);
-                                _GC.tiles[x - 1, y - j].addEffect(0, false, 0, -1); break;
-                            case 7:
-                                _GC.tiles[x - 1, y - 1 - j].addEffect(7, false, 0, -1);
-                                _GC.tiles[x - 1, y - j].addEffect(0, false, 0, -1); break;
-                        }
-                    }
-
-                    yield return wfs;
-                }
-                break;
+        int effectAdd;
+        int dx=0; int dy=0;
+        switch(dir){
+            case 1: dx=1; break;
+            case 2: dx=-1; break;
+            case 3: dy=1; break;
+            case 4: dy=-1; break;
         }
+        for (int j = 0; j < distanceMoved; j++){
+                    if(l1.Count!=0){
+                    if (_GC.tiles[l1.Last.Value.x + dx, l1.Last.Value.y + dy].GetTileEffect()!=16){
+                    if(_GC.tiles[l1.Last.Value.x,l1.Last.Value.y].GetTileEffect()==1 || _GC.tiles[l1.Last.Value.x,l1.Last.Value.y].GetTileEffect()==7){effectAdd=_GC.tiles[l1.Last.Value.x,l1.Last.Value.y].GetTileEffect();
+                    _GC.tiles[l1.Last.Value.x + dx, l1.Last.Value.y + dy].addEffect(effectAdd,false,0,-1);}
+                    l1.AddLast(new Vector2Int(l1.Last.Value.x + dx, l1.Last.Value.y + dy));
+                    _GC.tiles[l1.First.Value.x,l1.First.Value.y].trySetNule();
+                    l1.RemoveFirst();
+                    
+                    }else{
+                    l1.RemoveLast();
+                    }
+                    }
+
+                    if(l0.Count!=0){
+                    if (_GC.tiles[l0.Last.Value.x + dx, l0.Last.Value.y + dy].GetTileEffect()!=16){
+                    if(_GC.tiles[l0.Last.Value.x,l0.Last.Value.y].GetTileEffect()==1 || _GC.tiles[l0.Last.Value.x,l0.Last.Value.y].GetTileEffect()==7){effectAdd=_GC.tiles[l0.Last.Value.x,l0.Last.Value.y].GetTileEffect();
+                    _GC.tiles[l0.Last.Value.x + dx, l0.Last.Value.y + dy].addEffect(effectAdd,false,0,-1);}
+                    l0.AddLast(new Vector2Int(l0.Last.Value.x + dx, l0.Last.Value.y + dy));
+                    _GC.tiles[l0.First.Value.x,l0.First.Value.y].trySetNule();
+                    l0.RemoveFirst();
+                    
+                    }else{
+                    l0.RemoveLast();
+                    }
+                    }
+
+                    if(l_.Count!=0){
+                    if (_GC.tiles[l_.Last.Value.x + dx, l_.Last.Value.y + dy].GetTileEffect()!=16){
+                    if(_GC.tiles[l_.Last.Value.x,l_.Last.Value.y].GetTileEffect()==1 || _GC.tiles[l_.Last.Value.x,l_.Last.Value.y].GetTileEffect()==7){effectAdd=_GC.tiles[l_.Last.Value.x,l_.Last.Value.y].GetTileEffect();
+                    _GC.tiles[l_.Last.Value.x + dx, l_.Last.Value.y + dy].addEffect(effectAdd,false,0,-1);}
+                    l_.AddLast(new Vector2Int(l_.Last.Value.x + dx, l_.Last.Value.y + dy));
+                    _GC.tiles[l_.First.Value.x,l_.First.Value.y].trySetNule();
+                    l_.RemoveFirst();
+                    
+                    }else{
+                    l_.RemoveLast();
+                    }
+
+                    
+                    }
+
+                    yield return wfs;
+        }
+        
     }
     IEnumerator DestroyEffect(float sec)
     {

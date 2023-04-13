@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuertaTest : MonoBehaviour
+public class PlacaTest: MonoBehaviour
 {
     [SerializeField] private Vector2Int[] Posiciones;
     [SerializeField] private bool Activate;

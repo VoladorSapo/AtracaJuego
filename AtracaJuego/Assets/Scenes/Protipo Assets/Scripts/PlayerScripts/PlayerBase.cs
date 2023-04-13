@@ -232,7 +232,7 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void loseHealth(int health)
     {
-        if(animator!=null){animator.SetInteger("Anim", 4);}
+        //if(animator!=null){animator.SetInteger("Anim", 4);}
         currentHealth -= health;
         if(currentHealth <= 0)
         {
@@ -292,14 +292,12 @@ public class PlayerBase : MonoBehaviour
         Vector3Int tileO = GC.grid.WorldToCell(transform.position);
         int x=tileO.x-GC.ogx;
         int y=tileO.y-GC.ogy;
-        
         WaitForSeconds wfs=new WaitForSeconds(0);
         
         bool stop=false;
         Vector3 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
-        Debug.LogWarning(transform.position); Debug.LogWarning(newPos);
         
-        if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+        if(GC.tiles[x + dx,y + dy].GetTileState()==9){PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy); GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);}
         if(GC.tiles[x + dx, y + dy].GetTileState()<5 || GC.tiles[x + dx, y + dy].GetTileState()==9){
         while(!stop && distance>0){
             GC.tiles[x,y].setPlayer(null);
@@ -319,7 +317,7 @@ public class PlayerBase : MonoBehaviour
                 newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);
 
                 if(GC.tiles[x + dx,y + dy].GetTileState()>=5 && GC.tiles[x + dx,y + dy].GetTileState()!=9){ break;}
-                if(GC.tiles[x + dx,y + dy].GetTileState()==9){GC.tiles[x + dx,y + dy].SetTileStats(1,0,0,0); PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);}
+                if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy,GC.ogx,GC.ogy);  GC.tiles[x + dx,y + dy].SetTileStats(1,0,16,0);} //16 para que no congele esta pared especifica
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
                     if(GC.tiles[x,y].GetPlayer().tag=="IceCube"){MM.Damage(0,x + dx,y + dy); distance=5;} 
                     if(GC.tiles[x,y].GetPlayer().tag=="StoneBox"){MM.Damage(4,x + dx,y + dy);}

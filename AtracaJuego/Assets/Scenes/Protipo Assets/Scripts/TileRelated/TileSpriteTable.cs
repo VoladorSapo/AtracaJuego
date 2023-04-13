@@ -27,6 +27,7 @@ public class TileSpriteTable : MonoBehaviour
             case "sheet_160": id[0]=0; id[1]=0; id[2]=0; break; //0 es que no tiene ningun effecto
             case "sheet_191": id[0]=1; id[1]=8; id[2]=16; break;
             case "sheet_80": id[0]=2; id[1]=9; id[2]=16; break;
+            case "sheet_201": id[0]=4; id[1]=6; id[2]=16; break;
             case "sheet_60": id[0]=3; id[1]=1; id[2]=0; break; //Quizas 16 es lo mejor
             case "piso1recepcion_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_17": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -120,25 +121,25 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetBaño_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_4": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_5": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_6": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetBaño_6": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_7": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_8": id[0] = 2; id[1] = 9; id[2] = 16; break;
             case "tilesetBaño_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_12": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_13": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_14": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_15": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_16": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_17": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetBaño_15": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_16": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_17": id[0] = 2; id[1] = 9; id[2] = 16; break;
             case "tilesetBaño_19": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_20": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_21": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_22": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_23": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_24": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_25": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetBaño_26": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetBaño_24": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_25": id[0] = 2; id[1] = 9; id[2] = 16; break;
+            case "tilesetBaño_26": id[0] = 2; id[1] = 9; id[2] = 16; break;
             case "tilesetBaño_27": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_28": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetBaño_29": id[0] = 1; id[1] = 8; id[2] = 16; break;

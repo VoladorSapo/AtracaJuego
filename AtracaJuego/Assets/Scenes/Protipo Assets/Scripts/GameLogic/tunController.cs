@@ -6,14 +6,14 @@ public class tunController : MonoBehaviour
 {
     public ScriptPlayerManager[] Managers;
     public int currentManager;
-
+    public PalancaTest _palancaTest;
     public GridController _GC;
     
     GridController _grid;
 
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
-        
+        _palancaTest=FindObjectOfType<PalancaTest>();
     }
     public void startGame()
     {
@@ -71,5 +71,6 @@ public class tunController : MonoBehaviour
             }
         }
         startTurns();
+        if(_palancaTest!=null){_palancaTest.LowerActives();}
     }
 }
