@@ -38,7 +38,7 @@ public class PushEffect : MonoBehaviour
         bool hayGas = false;
         int x = tileO.x - _GC.ogx;
         int y = tileO.y - _GC.ogy;
-
+        print(x+","+y);
         int dist1 = 0, dist0 = 0, dist_ = 0;
         LinkedList<Vector2Int> list1= new LinkedList<Vector2Int>();
         LinkedList<Vector2Int> list0= new LinkedList<Vector2Int>();
@@ -185,6 +185,7 @@ public class PushEffect : MonoBehaviour
                         case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
+                    
                     _GC.tiles[x, y].player.Push(0, 1, auxDist, speed);
                 }
                 else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,1);}else{_GC.tiles[x, y].addEffect(3, true, 3, -1);} }
@@ -235,6 +236,7 @@ public class PushEffect : MonoBehaviour
                         case "IceCube": auxDist = 1000; speed=75; break;
                         case "WoodBox": auxDist = 5; break;
                     }
+                    Debug.LogWarning("Movio");
                     _GC.tiles[x, y].player.Push(0, -1, auxDist, speed);
                 }
                 else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,-1);}else{_GC.tiles[x, y].addEffect(3, true, 4, -1);} }

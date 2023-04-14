@@ -372,7 +372,7 @@ public class PlayerBase : MonoBehaviour
                 yield return null;
             }
 
-
+            isRunning = false;
             yield return null;
         }
     }
