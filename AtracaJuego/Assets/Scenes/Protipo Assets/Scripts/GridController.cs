@@ -285,7 +285,7 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
         {
             print((tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team) + tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().name);
         }
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState == 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||*/ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) ||*/ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team
          || tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().isObject)))
         {
             return false;

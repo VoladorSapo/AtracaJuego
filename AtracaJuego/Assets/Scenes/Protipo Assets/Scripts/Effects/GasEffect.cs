@@ -46,18 +46,14 @@ public class GasEffect : MonoBehaviour
         int rotSteps=1;
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         int x=posGrid.x-GC.ogx; int y=posGrid.y-GC.ogy;
-        int prevx=x;
-        int prevy=y;
-            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(1,false,0,-1);
-        
+
+        GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(1,false,0,-1);
+        List<Vector2Int> listaG=new List<Vector2Int>();
         for(int i=1; i<=(25); i++){
-            if(GC.tiles[x+1,y].GetTileEffect()==1 || GC.tiles[x-1,y].GetTileEffect()==1 || GC.tiles[x,y+1].GetTileEffect()==1|| GC.tiles[x,y-1].GetTileEffect()==1
-            ||  GC.tiles[x+1,y].GetTileEffect()==7 || GC.tiles[x-1,y].GetTileEffect()==7 || GC.tiles[x,y+1].GetTileEffect()==7 || GC.tiles[x,y-1].GetTileEffect()==7
-            ){
-                GC.tiles[prevx,prevy].addEffect(1,false,0,-1); GC.tiles[x,y].addEffect(1,false,0,-1);
-                print(i);
+
+            if(GC.tiles[x,y].GetTileEffect()!=16){
+                     listaG.Add(new Vector2Int(x,y)); //listaG.Add(new Vector2Int(prevx,prevy)); //GC.tiles[prevx,prevy].addEffect(1,false,0,-1); GC.tiles[x,y].addEffect(1,false,0,-1);
             }
-            prevx=x; prevy=y;
             
             
 
@@ -76,7 +72,14 @@ public class GasEffect : MonoBehaviour
                     rotSteps++;
                 }
             }
-            
+            //listaG.Contains(new Vector2Int(v.x-1,v.y)) || listaG.Contains(new Vector2Int(v.x,v.y+1))  || listaG.Contains(new Vector2Int(v.x,v.y-1))
+        }
+
+        foreach(Vector2Int v in listaG){
+            if(GC.tiles[v.x+1,v.y].GetTileEffect()==1 ||  GC.tiles[v.x-1,v.y].GetTileEffect()==1 || GC.tiles[v.x,v.y+1].GetTileEffect()==1 || GC.tiles[v.x,v.y-1].GetTileEffect()==1
+            || GC.tiles[v.x+1,v.y].GetTileEffect()==7 ||  GC.tiles[v.x-1,v.y].GetTileEffect()==7 || GC.tiles[v.x,v.y+1].GetTileEffect()==7 || GC.tiles[v.x,v.y-1].GetTileEffect()==7){
+                GC.tiles[v.x,v.y].addEffect(1,false,0,-1);
+            }
         }
         StartCoroutine(DestroyEffect(2));
     }

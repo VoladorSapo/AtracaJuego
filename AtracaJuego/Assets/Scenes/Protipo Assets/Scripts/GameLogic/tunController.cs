@@ -10,10 +10,12 @@ public class tunController : MonoBehaviour
     public GridController _GC;
     
     GridController _grid;
+    private ObjectStuff[] objects;
 
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         _palancaTest=FindObjectOfType<PalancaTest>();
+        objects=FindObjectsOfType<ObjectStuff>();
     }
     public void startGame()
     {
@@ -41,6 +43,9 @@ public class tunController : MonoBehaviour
         currentManager = -1;
        
         startTurns();
+        foreach(ObjectStuff o in objects){
+            o.startTurn();
+        }
     }
 
     public void startTurns()

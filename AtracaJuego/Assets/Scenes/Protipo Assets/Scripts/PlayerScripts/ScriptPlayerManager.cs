@@ -11,11 +11,16 @@ public class ScriptPlayerManager : MonoBehaviour
     public List<PlayerBase> players;
     [SerializeField] PlayerBase[] startPlayer;
     [SerializeField] PlayerBase[] startDeadPlayer;
+    
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
     public bool isEnemy;
     public int[] MaxDistancePlayers = { 5, 6, 4, 3, 8 }; //Ignacio,Iowa,Marl,Nev,Paul
+
+    void Awake(){
+        
+    }
     void Update()
     {
 
@@ -36,6 +41,8 @@ public class ScriptPlayerManager : MonoBehaviour
             startDeadPlayer[i].setDeath();
             startDeadPlayer[i].team = isEnemy;
         }
+
+        
     }
     public void StartTurns()
     {
@@ -62,7 +69,11 @@ public class ScriptPlayerManager : MonoBehaviour
             {
                 players[0].ChangeMapShown(0);
             }
+
+            
         }
+
+        
     }
     public void ChangePlayer(int player)
     {

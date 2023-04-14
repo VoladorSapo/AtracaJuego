@@ -56,7 +56,7 @@ public class Garrote : EnemyCharacter
     }
     public override void ChangeMapShown(int setMode)
     {
-        print("jodeeeer");
+        
         if(GC.grid.WorldToCell(transform.position) == objective)
         {
             Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);

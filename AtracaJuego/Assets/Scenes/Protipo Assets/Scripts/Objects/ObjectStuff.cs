@@ -23,6 +23,7 @@ protected override void Awake()
         isObject=true;
     }
 public override void Die(){
+    Debug.LogWarning("Joder");
     if(this.tag!="StoneBox"){
     alive = false;
     Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
@@ -36,6 +37,13 @@ public override void Die(){
     }
 }
 
+public override void startTurn()
+{
+    
+    switch(this.tag){
+        case "WoodBox": CajasQuemables cq= this as CajasQuemables; cq.isBurning(); Debug.LogWarning("queso"); break;
+    }
+}
 
 
 

@@ -205,6 +205,11 @@ public class PlayerBase : MonoBehaviour
         animator.SetInteger("Anim", 0);
         CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
         sprite.sortingOrder = -(tilepos.y);
+        //Por si acaso, probablemente nunca ocurra pero nunca se sabe
+        if(tile.GetTileState()>5){
+        while(GC.tiles[tilepos.x, tilepos.y].GetTileState()>5){this.transform.position+=new Vector3Int(0,10,0); tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);}
+        tile= GC.tiles[tilepos.x, tilepos.y];
+        }
         tile.setPlayer(this);
         alive = true;
         currentHealth = maxHealth;

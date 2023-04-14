@@ -28,7 +28,13 @@ public class IcePrefab : ObjectStuff
     }
 
     public void FreezeTile(Vector3Int posGrid){
-        GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0,-1);
+        bool act=true;
+        for(int i=-1; i<=1; i++){
+            for(int j=-1; j<=1; j++){
+                if(GC.tiles[posGrid.x-GC.ogx+i, posGrid.y-GC.ogy+j].GetPlayer() is Nev){act=false;}
+            }
+        }
+        if(act){GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0,-1);}
     }
 
     public void Melt(){
@@ -81,7 +87,7 @@ public class IcePrefab : ObjectStuff
             if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2
             ||  GC.tiles[x+1,y].GetTileEffect()==6 || GC.tiles[x-1,y].GetTileEffect()==6 || GC.tiles[x,y+1].GetTileEffect()==6 || GC.tiles[x,y-1].GetTileEffect()==6
             ){
-                GC.tiles[prevx,prevy].addEffect(6,false,0,-1); GC.tiles[x,y].addEffect(6,false,0,-1);
+                if(GC.tiles[x,y].GetTileEffect()!=16){ GC.tiles[x,y].addEffect(6,false,0,-1); if(GC.tiles[x,y].GetTileEffect()==2 || GC.tiles[x,y].GetTileEffect()==6){GC.tiles[prevx,prevy].addEffect(6,false,0,-1);}}
                 print(i);
             }
             prevx=x; prevy=y;
