@@ -1416,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.8
+      value: 22.7
       objectReference: {fileID: 0}
     - target: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1510,6 +1510,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!114 &811016129
@@ -1547,6 +1548,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
 --- !u!4 &811016130
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,6 +1875,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
 --- !u!212 &925795038
 SpriteRenderer:
@@ -6907,6 +6910,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
@@ -6945,6 +6949,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!212 &1107416968
@@ -7301,6 +7306,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
 --- !u!212 &1342439984
 SpriteRenderer:
