@@ -55,19 +55,26 @@ public class Garrote : EnemyCharacter
         print("jodeeeer");
         if(GC.grid.WorldToCell(transform.position) == objective)
         {
+            Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+
+            CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+            CustomTileClass tile2 = GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy];
+            CDH.AttackDialogue(GetType().ToString(), tile, tile2);
             animator.SetInteger("Anim", 2);
         }
         else
         {
             hasTurn = true;
+            SPM.nextTurn(teamNumb, false);
         }
-        SPM.nextTurn(teamNumb, false);
     }
     public override void InstantiatePrefab()
     {
         _MM.Damage(codeDamage, hit.x - GC.ogx, hit.y - GC.ogy);
         hasTurn = true;
+        SPM.nextTurn(teamNumb, false);
+
     }
 
-    
+
 }

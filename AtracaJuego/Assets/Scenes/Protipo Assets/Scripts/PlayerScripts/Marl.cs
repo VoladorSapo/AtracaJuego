@@ -38,7 +38,12 @@ public class Marl : PlayablePlayer
                     placeHere=posMouse;
                     
                     Cooldown=3;
-                    animator.SetInteger("Anim", 2);
+                Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+
+                CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+                CustomTileClass tile2 = GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy];
+                CDH.AttackDialogue(GetType().ToString(), tile, tile2);
+                animator.SetInteger("Anim", 2);
                 }
         }
         if(prevMouse!=posMouse || Cooldown!=0 || Mode!=2 || !alive || SPM.currentPlayer!=teamNumb){

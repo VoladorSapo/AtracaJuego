@@ -26,8 +26,8 @@ public class Ignacio : PlayablePlayer
 
                 //print(tilepos);
                 CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
-                CustomTileClass tile2 = GC.tiles[tilepos.x, tilepos.y];
-               // CDH.AttackDialogue(GetType().ToString(),tile,tile2);
+                CustomTileClass tile2 = GC.tiles[posMouse.x- GC.ogx, posMouse.y- GC.ogy];
+                CDH.AttackDialogue(GetType().ToString(),tile,tile2);
 
                 animator.SetInteger("Anim",2);
 

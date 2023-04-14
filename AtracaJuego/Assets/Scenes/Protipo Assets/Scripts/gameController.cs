@@ -36,7 +36,7 @@ public class gameController : MonoBehaviour
     IEnumerator StartLate()
     {
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForEndOfFrame();
         string fullcode = "start_" + code;
         Pause = true;
         _cutsceneController.loadScene(table, fullcode, false);
@@ -52,10 +52,10 @@ public class gameController : MonoBehaviour
         {
             //returnFromCutscene(false);
             //GC.setGame();
-           // _TC.startGame();
+            // _TC.startGame();
             string fullcode = "start_" + code;
             //_cutsceneController.loadScene(table, fullcode,false);
-           
+
         }
     }
     public void returnFromCutscene(bool end)
@@ -72,7 +72,7 @@ public class gameController : MonoBehaviour
             switch (newtype)
             {
                 case "tutorial":
-                    _tutorial.loadDialogs(tutorialcode,this,null);
+                    _tutorial.loadDialogs(tutorialcode, this, null);
                     Pause = true;
                     hasReturn = true;
                     break;
@@ -82,8 +82,8 @@ public class gameController : MonoBehaviour
                     print("jojojo");
                     break;
             }
-            
-            
+
+
         }
     }
     public void startGame()
@@ -96,14 +96,15 @@ public class gameController : MonoBehaviour
     }
     public void winTilePressed()
     {
-        if(winCondition == 1)
+        if (winCondition == 1)
         {
             winRound();
         }
     }
     public void teamDie(ScriptPlayerManager manager)
     {
-        if (System.Array.IndexOf(_turn.Managers, manager) == 0){
+        if (System.Array.IndexOf(_turn.Managers, manager) == 0)
+        {
             loseRound();
         }
         else
@@ -120,7 +121,7 @@ public class gameController : MonoBehaviour
     {
         print("ganamos light");
         string fullcode = "end_" + code;
-        _cutsceneController.loadScene(table, fullcode,true);
+        _cutsceneController.loadScene(table, fullcode, true);
     }
     public void loseRound()
     {

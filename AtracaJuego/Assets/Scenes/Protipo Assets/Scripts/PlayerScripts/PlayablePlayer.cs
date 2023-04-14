@@ -81,10 +81,20 @@ public class PlayablePlayer : PlayerBase
     public override void setTurn(bool newTurn)
     {
         print("movidas chungas");
-        base.setTurn(newTurn);
-        willAttack = false;
-        hasMove = false;
-        hasAttack = Cooldown > 1 ? true : false;
+        // base.setTurn(newTurn);
+        if (!stunned)
+        {
+            willAttack = false;
+            hasTurn = false;
+            hasMove = false;
+            hasAttack = Cooldown > 1 ? true : false;
+        }
+        else
+        {
+            hasAttack = hasMove = hasTurn = true;
+            print("loquisimo");
+            stunned = false;
+        }
         changeColor();
         if (Cooldown > 0) { Cooldown--;  }
     }

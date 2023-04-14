@@ -226,12 +226,16 @@ public class pathFinder : MonoBehaviour
                 {
                     if (!checkedList.Contains(supportList[i]) && !newBorderList.Contains(supportList[i]))
                     {
-                        newBorderList.Add(supportList[i]);
                         checkedList.Add(supportList[i]);
-                        if (tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() > 0 && tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() < 16)
+                        if (findPath(nodo, supportList[i], nodos, ogx, ogy, true) != null)
                         {
-                            print(vueltas);
-                            return supportList[i];
+                            newBorderList.Add(supportList[i]);
+                            if (tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() > 0 && tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() < 16)
+                            {
+                                print(vueltas);
+                                return supportList[i];
+
+                            }
                         }
                     }
                 }

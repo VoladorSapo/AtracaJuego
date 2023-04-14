@@ -7,7 +7,7 @@ public class CombatDialogueHandler : MonoBehaviour
     [SerializeField] GameDialogController _GDC;
 
     // Start is called before the first frame update
-    public void sendDialog(string table,string code)
+    public void sendDialog(string table, string code)
     {
         Debug.LogWarning(table + "   " + code);
         int max = GetLocalizedString.getLocalizedLength(table, code);
@@ -24,10 +24,10 @@ public class CombatDialogueHandler : MonoBehaviour
     }
     public void MoveDialogue(string playername)
     {
-        
+
         string code = "move" + playername;
         sendDialog("MoveandDamage", code);
-        
+
     }
     public void SelectDialogue(string playername)
     {
@@ -56,15 +56,15 @@ public class CombatDialogueHandler : MonoBehaviour
                         break;
                     case 1:
                         type = "Gas";
-                            code = "IgnacioBoom";
+                        code = "IgnacioBoom";
                         break;
                     case 2:
                         type = "Water";
-                            code = "Vapor";
+                        code = "Vapor";
                         break;
                     case 3:
                         type = "Gasoline";
-                            code = "FireGasoline";
+                        code = "FireGasoline";
                         break;
                     case 4:
                         type = "Fire";
@@ -72,7 +72,7 @@ public class CombatDialogueHandler : MonoBehaviour
                         break;
                     case 5:
                         type = "Frozen";
-                            code = "IgnacioMeltIce";
+                        code = "IgnacioMeltIce";
                         break;
                     case 6:
 
@@ -219,7 +219,7 @@ public class CombatDialogueHandler : MonoBehaviour
                         break;
 
                         break;
-                   default:
+                    default:
                         type = "Nothing";
                         code = "Gas";
 
@@ -229,7 +229,7 @@ public class CombatDialogueHandler : MonoBehaviour
             case "Pol":
                 if (tile2.GetPlayer() != null && (tile2.GetPlayer().tag == "Player" || tile2.GetPlayer().tag == "Placa"))
                 {
-                    if(tile2.GetPlayer().tag == "Player")
+                    if (tile2.GetPlayer().tag == "Player")
                     {
                         switch (tile2.GetPlayer().GetType().ToString())
                         {

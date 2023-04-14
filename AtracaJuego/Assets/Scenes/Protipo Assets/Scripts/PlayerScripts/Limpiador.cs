@@ -10,29 +10,34 @@ public class Limpiador : EnemyCharacter
     // Update is called once per frame
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
 
         Node nodo = GC.GetNodeEffect(transform.position);
         if (nodo != null)
         {
             List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true);
+            print(path.Count);
             if(path != null)
             {
                 hit = path[path.Count - 1].pos;
                 objective = path[path.Count - 2].pos;
                 List<Node> turnpath = new List<Node>();
+                GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+                print(GC.ReachablePos.Length);
                 foreach (Node newnodo in path)
                 {
-                    if (Array.Exists(GC.ReachablePos, s => s == nodo.pos))
+                    if (Array.Exists(GC.ReachablePos, s => s == newnodo.pos))
                     {
-                        turnpath.Add(nodo);
+                        turnpath.Add(newnodo);
                     }
                     else
                     {
+
                         break;
                     }
                 }
+                print("jujujuj");
                 path = turnpath;
+
                 startMove(path);
             }
             else

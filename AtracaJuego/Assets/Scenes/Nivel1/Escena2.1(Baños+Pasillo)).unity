@@ -1724,7 +1724,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: code
-      value: start_scene
+      value: mid_scene2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: type
@@ -1736,7 +1736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: tutorialcode
-      value: tutorial3
+      value: tutorial4
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266181, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_Name
@@ -12224,7 +12224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: code
-      value: start_scene
+      value: mid_scene2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: type
@@ -12236,7 +12236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: tutorialcode
-      value: tutorial3
+      value: tutorial4
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266181, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_Name
@@ -13928,8 +13928,8 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene2.1
-  tutorialcode: 
-  type: 
+  tutorialcode: tutorail3
+  type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
   nextScene: 4
@@ -14513,7 +14513,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: code
-      value: start_scene
+      value: mid_scene2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: type
@@ -14525,7 +14525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: tutorialcode
-      value: tutorial3
+      value: tutorial4
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266181, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_Name

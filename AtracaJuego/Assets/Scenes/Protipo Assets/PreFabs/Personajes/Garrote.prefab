@@ -94,12 +94,14 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  stunned: 0
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
   detectDistance: 20
   activated: 0
-  codeDamage: 6
+  codeDamage: 7
 --- !u!1 &4830600861398896637
 GameObject:
   m_ObjectHideFlags: 0

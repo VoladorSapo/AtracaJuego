@@ -27,6 +27,10 @@ public class Iowa : PlayablePlayer
             if (!GC.isEmpty(posMouse, false, 2))
             {
                 Cooldown = 1;
+                CustomTileClass tile = GC.tiles[tileO.x - GC.ogx, tileO.y - GC.ogy];
+                CustomTileClass tile2 = GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy];
+                CDH.AttackDialogue(GetType().ToString(), tile, tile2);
+
                 animator.SetInteger("Anim", 2);
 
             }
