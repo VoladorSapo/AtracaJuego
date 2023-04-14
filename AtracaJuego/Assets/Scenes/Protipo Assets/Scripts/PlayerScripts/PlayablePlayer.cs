@@ -14,7 +14,6 @@ public class PlayablePlayer : PlayerBase
         base.Awake();
         SPM = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
         _turnbuttons = GameObject.Find("TurnButtons").GetComponent<turnButtonsController>();
-
     }
     protected override void OnTriggerEnter2D(Collider2D other){}
     public override void Update()

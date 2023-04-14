@@ -9,6 +9,7 @@ public class PlayerBase : MonoBehaviour
     protected bool bypass;
     public bool isObject;
     protected int direction;
+    
     Vector3 startPos;
     [SerializeField] private Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
@@ -56,6 +57,7 @@ public class PlayerBase : MonoBehaviour
         CDH = GameObject.Find("GameDialogueController").GetComponent<CombatDialogueHandler>();
         isObject = false;
         startPos = transform.position;
+        
     }
     protected virtual void Start()
     {
@@ -319,37 +321,50 @@ public class PlayerBase : MonoBehaviour
         if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); }
         if (GC.tiles[x + dx, y + dy].GetTileState() < 5 || GC.tiles[x + dx, y + dy].GetTileState() == 9)
         {
+            if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
+            {
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 5;}}
+                        else if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;} MM.Damage(4, x + dx, y + dy);}
+                        else{if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}}
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed);}
+            }
+
             while (!stop && distance > 0)
             {
                 GC.tiles[x, y].setPlayer(null);
+                transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
                 //&& _GC.tiles[posGrid.x-_GC.ogx + dx,posGrid.y-_GC.ogy + dy].GetTileState()>=5
                 //newPos=transform.position+new Vector3(10f*dx,10f*dy,0f);}
-                if (GC.tiles[x + dx, y + dy].GetPlayer() == null) { transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime); }
+                /*if (GC.tiles[x + dx, y + dy].GetPlayer() == null) { transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime); }
                 else
                 {
                     GC.tiles[x, y].setPlayer(this);
+                    
                     if (this.tag == "IceCube") { MM.Damage(0, x + dx, y + dy); distance = 5; }
                     if (this.tag == "StoneBox") { MM.Damage(4, x + dx, y + dy); }
-                    if (GC.tiles[x + dx, y + dy].GetPlayer() != null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); }
+                    if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed);  }
+                    
                     break;
-                }
-
-                if (transform.position == newPos || GC.tiles[x + dx, y + dy].GetPlayer() != null)
+                }*/
+                
+                if (transform.position == newPos)
                 {
+                    distance--;
                     x = GC.grid.WorldToCell(transform.position).x - GC.ogx;
                     y = GC.grid.WorldToCell(transform.position).y - GC.ogy;
                     GC.tiles[x, y].setPlayer(this); GC.tiles[x, y].addEffect(effect, bypass, direction, -1);
                     newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
 
-                    if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
-                    if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica
                     if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
                     {
-                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); distance = 5; }
-                        if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { MM.Damage(4, x + dx, y + dy); }
-                        if (GC.tiles[x + dx, y + dy].GetPlayer() != null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 5;}}
+                        if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;} MM.Damage(4, x + dx, y + dy);}
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
                     }
-                    distance--;
+                    if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
+                    if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica
+                    
+                    
                 }
 
 

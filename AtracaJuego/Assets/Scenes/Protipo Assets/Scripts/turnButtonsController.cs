@@ -12,11 +12,14 @@ public class turnButtonsController : MonoBehaviour
     [SerializeField] GameObject skipConfirm;
     [SerializeField] PlayablePlayer currentplayer;
 
+    private PlayablePlayer[] allPlayers;
+
     // Start is called before the first frame update
     void Start()
     {
         hideButtons();
         Skip(false);
+        allPlayers=FindObjectsOfType<PlayablePlayer>();
     }
 
     // Update is called once per frame
@@ -87,6 +90,9 @@ public class turnButtonsController : MonoBehaviour
     }
     public void Skip(bool show)
     {
+        
         skipConfirm.SetActive(show);
+        if(currentplayer!=null){currentplayer.ChangeMapShown(0);}
+        
     }
 }
