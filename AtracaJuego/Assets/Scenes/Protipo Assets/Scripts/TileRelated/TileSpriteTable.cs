@@ -36,6 +36,7 @@ public class TileSpriteTable : MonoBehaviour
             case "piso1recepcion_47": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_49": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "piso1recepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_64": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_65": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_66": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -101,7 +102,7 @@ public class TileSpriteTable : MonoBehaviour
             case "ampliacionTileSheetRecepcion2jardin_36": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_46": id[0] = 1; id[1] = 8; id[2] = 16; break;
-
+            case "tilenegro": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "cubiculo 1": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "cubiculo 1_0": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "cubiculo 1_1": id[0] = 1; id[1] = 8; id[2] = 16; break;
