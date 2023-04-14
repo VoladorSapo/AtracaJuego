@@ -185,6 +185,8 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetExposicion_30": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_31": id[0] = 1; id[1] = 8; id[2] = 16; break;
              case "tilesetExposicion_32": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExposicion_33": id[0] = 1; id[1] = 8; id[2] = 16; break;
+
             case "tilesetExposicion_37": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_25": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_26": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -194,6 +196,8 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetExposicion_35": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_36": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_38": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExposicion_39": id[0] = 1; id[1] = 8; id[2] = 16; break;
+
             case "tilesetExposicion_40": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetExposicion_41": id[0] = 1; id[1] = 8; id[2] = 16; break;
              case "tilesetExposicion_42": id[0] = 1; id[1] = 8; id[2] = 16; break;
