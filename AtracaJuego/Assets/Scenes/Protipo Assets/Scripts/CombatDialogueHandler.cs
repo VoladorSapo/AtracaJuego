@@ -20,7 +20,7 @@ public class CombatDialogueHandler : MonoBehaviour
 
             list = GetLocalizedString.getLocalizedString(table, newcode);
         }
-        _GDC.loadDialogs(list);
+        //_GDC.loadDialogs(list);
     }
     public void MoveDialogue(string playername)
     {

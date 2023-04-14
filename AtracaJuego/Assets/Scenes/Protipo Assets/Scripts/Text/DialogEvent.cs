@@ -63,7 +63,7 @@ public class DialogEvent : MonoBehaviour
                 }
                 break;
             case "SetFondo":
-                print("mr jagger");
+               // print("mr jagger");
                 _fondoanimator.SetInteger("Fondo", int.Parse(eventoarray[1]));
                 if (int.Parse(eventoarray[1]) == 0)
                 {

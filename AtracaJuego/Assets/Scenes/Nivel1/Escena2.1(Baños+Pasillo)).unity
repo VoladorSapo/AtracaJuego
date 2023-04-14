@@ -12805,6 +12805,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
 --- !u!212 &1179704021
 SpriteRenderer:
@@ -12994,6 +12995,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!114 &1200519070
@@ -13031,6 +13033,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
 --- !u!4 &1200519071
 Transform:
   m_ObjectHideFlags: 0
@@ -13226,6 +13229,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
 --- !u!212 &1242361061
 SpriteRenderer:
@@ -13928,7 +13932,7 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene2.1
-  tutorialcode: tutorail3
+  tutorialcode: tutorial3
   type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
@@ -19253,6 +19257,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
@@ -19291,6 +19296,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
 --- !u!212 &1927736293

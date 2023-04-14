@@ -56,7 +56,7 @@ MonoBehaviour:
   _turnController: {fileID: 0}
   MM: {fileID: 0}
   SPM: {fileID: 0}
-  MaxDistance: 0
+  MaxDistance: 7
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -65,11 +65,12 @@ MonoBehaviour:
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
-  teamNumb: 7
+  teamNumb: 8
   alive: 0
   maxHealth: 5
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
