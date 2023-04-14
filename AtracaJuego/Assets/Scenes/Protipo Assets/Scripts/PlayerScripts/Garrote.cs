@@ -6,6 +6,10 @@ public class Garrote : EnemyCharacter
 {
     // Start is called before the first frame update
      //The tile of the player you want to hit
+     protected override void Awake(){
+        base.Awake();
+        effect=-1;
+     }  
     public override void startTurn()
     {
         GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);

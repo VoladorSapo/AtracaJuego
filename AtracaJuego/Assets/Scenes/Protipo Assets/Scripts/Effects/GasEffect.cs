@@ -8,23 +8,23 @@ public class GasEffect : MonoBehaviour
     [SerializeField] private Vector3 posBL;
     [SerializeField] private float w;
     [SerializeField] private float h;
-    public GridController _GC;
+    public GridController GC;
     public MapManager _MM;
     public CustomTileClass[,] tilesCopy;
     void Awake(){
         w=transform.localScale.x;
         h=transform.localScale.y;
-        _GC=GameObject.Find("Grid").GetComponent<GridController>();
+        GC=GameObject.Find("Grid").GetComponent<GridController>();
         _MM=GameObject.Find("MapManager").GetComponent<MapManager>();
     }
 
     void Start(){
-        posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
+        /*posBL=new Vector3(transform.position.x-(w/2),transform.position.y-(h/2),0);
         int filas=Mathf.RoundToInt(w/10); // w/tamaño tiles
         int columnas=Mathf.RoundToInt(h/10); // h/tamaño tiles
         Vector3Int tileO = _GC.grid.WorldToCell(posBL);
         print((tileO.x-_GC.ogx)+" y "+(tileO.y-_GC.ogy));
-        print(filas);
+        print(filas);*/
 
 
         /*for(int i=0; i<filas; i++){
@@ -34,12 +34,49 @@ public class GasEffect : MonoBehaviour
                 _GC.tiles[i1,j1].trySetEffect(1);
             }
         }*/
-        for(int i=0; i<filas; i++){
+        /*for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
                 int i1=tileO.x+i-_GC.ogx;
                 int j1=tileO.y+j-_GC.ogy;
                 _GC.tiles[i1,j1].addEffect(1,false,0,-1);
             }
+        }*/
+        int rot=0;
+        int rotCont=0;
+        int rotSteps=1;
+        Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
+        int x=posGrid.x-GC.ogx; int y=posGrid.y-GC.ogy;
+        int prevx=x;
+        int prevy=y;
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(1,false,0,-1);
+        
+        for(int i=1; i<=(25); i++){
+            if(GC.tiles[x+1,y].GetTileEffect()==1 || GC.tiles[x-1,y].GetTileEffect()==1 || GC.tiles[x,y+1].GetTileEffect()==1|| GC.tiles[x,y-1].GetTileEffect()==1
+            ||  GC.tiles[x+1,y].GetTileEffect()==7 || GC.tiles[x-1,y].GetTileEffect()==7 || GC.tiles[x,y+1].GetTileEffect()==7 || GC.tiles[x,y-1].GetTileEffect()==7
+            ){
+                GC.tiles[prevx,prevy].addEffect(1,false,0,-1); GC.tiles[x,y].addEffect(1,false,0,-1);
+                print(i);
+            }
+            prevx=x; prevy=y;
+            
+            
+
+            switch(rot){
+                case 0: x++; break;
+                case 1: y--; break;
+                case 2: x--; break;
+                case 3: y++; break;
+            }
+            if(i%rotSteps==0){
+                if((rot)%4==0){
+                }
+                rot=(rot+1)%4;
+                rotCont++;
+                if(rotCont%2==0){
+                    rotSteps++;
+                }
+            }
+            
         }
         StartCoroutine(DestroyEffect(2));
     }

@@ -323,8 +323,8 @@ public class PlayerBase : MonoBehaviour
         {
             if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
             {
-                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 5;}}
-                        else if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;} MM.Damage(4, x + dx, y + dy);}
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 4;}}
+                        else if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") {  MM.Damage(4, x + dx, y + dy);} //if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
                         else{if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}}
                         if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed);}
             }
@@ -358,7 +358,7 @@ public class PlayerBase : MonoBehaviour
                     if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
                     {
                         if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 5;}}
-                        if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;} MM.Damage(4, x + dx, y + dy);}
+                        if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { MM.Damage(4, x + dx, y + dy);} // if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
                         if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
                     }
                     if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }

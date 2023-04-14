@@ -161,7 +161,9 @@ public class CustomTileClass
         //Implmentar combinaciones del excel aqui
         switch(effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet 7=GasElec
             case 0:
-                    if(tileEffect!=16){tileEffect=0; tileFadeEffect=0; _PT.CharcoE.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _PT.GasE.SetTile(tilePos+og,null); _PT.Gas.SetTile(tilePos+og,null); } break;
+                    if(tileEffect!=16){ tileEffect=0; tileFadeEffect=0; _PT.CharcoE.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _PT.GasE.SetTile(tilePos+og,null); _PT.Gas.SetTile(tilePos+og,null);
+                                        if(direction==-1){AddEffectAct(3,og,bypass,lock_,false,-1,0,0,null,null,null,null,0,5,direction,0,-1);}
+                     } break;
             case 1:
                     if(tileEffect!=16){
                     switch(tileEffect){
@@ -189,8 +191,8 @@ public class CustomTileClass
                         case 6: AddEffectAct(1,og,bypass,lock_,false,-1,0,0,null,null,null,null,0,0,direction,0,-1); break;//tileEffect=0; tileFadeEffect=0;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
                         case 7: AddEffectAct(7,og,bypass,lock_,false,-1,0,0,null,null,null,null,2,0,direction,1,0); break;//tileEffect=0; tileFadeEffect=0;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction,lock_); _MM.Damage(4,tilePos.x,tilePos.y); break; 
                         case 8: AddEffectAct(3,og,bypass,lock_,false,-1,2,3,null,null,null,_PT.wetT,2,4,direction,0,-1);; break;//tileEffect=2; tileFadeEffect=3;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,_PT.wetT); break;
-                        case 9: AddEffectAct(3,og,bypass,lock_,false,-1,3,3,null,null,null,_PT.gasolineT,0,0,direction,0,-1); break;//tileEffect=3; tileFadeEffect=3;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
-                        case 10: AddEffectAct(3,og,bypass,lock_,false,-1,3,3,null,null,null,_PT.gasolineT,0,0,direction,0,-1); break;//tileEffect=3; tileFadeEffect=3; _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
+                        case 9: AddEffectAct(3,og,bypass,lock_,false,-1,3,3,null,null,null,_PT.gasolineT,2,4,direction,0,-1); break;//tileEffect=3; tileFadeEffect=3;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
+                        case 10: AddEffectAct(3,og,bypass,lock_,false,-1,3,3,null,null,null,_PT.gasolineT,2,4,direction,0,-1); break;//tileEffect=3; tileFadeEffect=3; _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
                         case 11: AddEffectAct(7,og,bypass,lock_,false,-1,13,1,null,null,null,null,2,0,direction,2,0); break;//tileEffect=13; tileFadeEffect=1; _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _MM.SpreadEffectNoLimit(tilePos.x,tilePos.y,2,direction,lock_); _MM.Damage(2,tilePos.x,tilePos.y); break;
                         case 14: AddEffectAct(3,og,bypass,lock_,false,-1,11,3,null,null,_PT.elecT,_PT.gasolineT,2,2,direction,0,-1); break;//tileEffect=11; tileFadeEffect=3;_PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0,lock_);} break;
                         case 15: AddEffectAct(3,og,bypass,lock_,false,-1,11,3,null,null,_PT.elecT,_PT.gasolineT,2,2,direction,0,-1); break;//tileEffect=11; tileFadeEffect=3;_PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,2,0,5,0,lock_);} break;
@@ -198,9 +200,9 @@ public class CustomTileClass
             case 3:
                     if(tileEffect!=16){
                     switch(tileEffect){
-                        case 5: AddEffectAct(4,og,bypass,lock_,false,-1,8,tileFadeEffect+1,null,null,null,_PT.iceT,3,3,direction,3,2); break;//tileEffect=8; tileFadeEffect++;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
-                        case 9: AddEffectAct(4,og,bypass,lock_,false,-1,10,tileFadeEffect+1,null,null,null,_PT.gasolineFrzT,3,3,direction,3,3); break;//tileEffect=10; tileFadeEffect++;    _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
-                        case 14: AddEffectAct(4,og,bypass,lock_,false,-1,15,tileFadeEffect+1,null,null,null,_PT.gasolineFrzT,3,3,direction,3,3); break;//tileEffect=15; tileFadeEffect++;   _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
+                        case 5: AddEffectAct(4,og,bypass,lock_,false,-1,8,tileFadeEffect+1,null,null,null,_PT.iceT,3,5,direction,3,2); break;//tileEffect=8; tileFadeEffect++;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
+                        case 9: AddEffectAct(4,og,bypass,lock_,false,-1,10,tileFadeEffect+1,null,null,null,_PT.gasolineFrzT,3,5,direction,3,3); break;//tileEffect=10; tileFadeEffect++;    _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
+                        case 14: AddEffectAct(4,og,bypass,lock_,false,-1,15,tileFadeEffect+1,null,null,null,_PT.gasolineFrzT,3,5,direction,3,3); break;//tileEffect=15; tileFadeEffect++;   _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); if(bypass){_MM.SpreadEffectLimit(tilePos.x,tilePos.y,3,0,3,direction,lock_); _MM.Damage(3,tilePos.x,tilePos.y);} break;
                     }} break;
             case 4:
                     if(tileEffect!=16){
@@ -210,9 +212,9 @@ public class CustomTileClass
                         case 2: AddEffectAct(1,og,bypass,lock_,false,-1,5,tileFadeEffect+1,null,null,null,_PT.wetT,0,0,direction,0,1); break;//tileEffect=5; tileFadeEffect++;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,_PT.iceT); break;
                         case 3: AddEffectAct(1,og,bypass,lock_,false,-1,9,1000,null,null,null,_PT.gasolineFrzT,0,0,direction,0,-1); break;//tileEffect=9; tileFadeEffect=1000;  _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
                         case 4: AddEffectAct(1,og,bypass,lock_,false,-1,2,3,null,null,null,_PT.wetT,0,0,direction,0,-1); break;//tileEffect=2; tileFadeEffect=3;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,_PT.wetT); break;
-                        case 6: AddEffectAct(1,og,bypass,lock_,false,-1,5,5,null,_PT.elecT,null,_PT.wetT,0,0,direction,0,1); break;//tileEffect=5; tileFadeEffect=5;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,_PT.iceT); break;
+                        case 6: AddEffectAct(1,og,bypass,lock_,false,-1,5,5,null,null,null,_PT.wetT,0,0,direction,0,1); break;//tileEffect=5; tileFadeEffect=5;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,_PT.iceT); break;
                         case 7: AddEffectAct(1,og,bypass,lock_,false,-1,11,tileFadeEffect,null,_PT.elecT,null,_PT.gasolineT,0,0,direction,0,-1); break;//tileEffect=11; tileFadeEffect=tileFadeEffect;     _PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
-                        case 11: AddEffectAct(1,og,bypass,lock_,false,-1,14,1000,null,null,null,_PT.gasolineFrzT,0,0,direction,0,-1); break;//tileEffect=14; tileFadeEffect=1000;_PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
+                        case 11: AddEffectAct(1,og,bypass,lock_,false,-1,9,1000,null,null,null,_PT.gasolineFrzT,0,0,direction,0,-1); break;//tileEffect=14; tileFadeEffect=1000;_PT.Gas.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); break;
                         case 12: AddEffectAct(1,og,bypass,lock_,false,-1,2,3,null,null,null,_PT.wetT,0,0,direction,0,-1); break;
                         case 13: AddEffectAct(1,og,bypass,lock_,false,-1,2,3,null,null,null,_PT.wetT,0,0,direction,0,-1); break;
                     }} break;

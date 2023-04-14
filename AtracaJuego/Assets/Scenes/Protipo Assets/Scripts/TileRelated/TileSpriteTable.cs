@@ -28,7 +28,7 @@ public class TileSpriteTable : MonoBehaviour
             case "sheet_191": id[0]=1; id[1]=8; id[2]=16; break;
             case "sheet_80": id[0]=2; id[1]=9; id[2]=16; break;
             case "sheet_201": id[0]=4; id[1]=6; id[2]=16; break;
-            case "sheet_60": id[0]=3; id[1]=1; id[2]=0; break; //Quizas 16 es lo mejor
+            case "sheet_60": id[0]=3; id[1]=1; id[2]=16; break; //Quizas 16 es lo mejor
             case "piso1recepcion_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_17": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "piso1recepcion_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
