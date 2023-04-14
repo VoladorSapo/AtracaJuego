@@ -29,7 +29,7 @@ public class ElecEffect : MonoBehaviour
 
         if(_GC.tiles[x,y].GetTileState()==6){_GC.tiles[x,y].SetTileState(7); _GC.ground.SetTile(new Vector3Int(tileO.x,tileO.y,0),activatedTile);}
         else if(_GC.tiles[x,y].GetTileState()==7){_palanca.ResetActive(x,y);}
-        StartCoroutine(DestroyEffect(2.0f));
+        //StartCoroutine(DestroyEffect(2.0f));
     }
 
     // Update is called once per frame
