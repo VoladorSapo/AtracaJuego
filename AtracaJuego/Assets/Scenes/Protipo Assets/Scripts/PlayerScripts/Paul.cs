@@ -88,7 +88,7 @@ public class Paul : PlayablePlayer
         }
         else
         {
-            ChangeMapShown(1);
+            StartCoroutine(ChangeMapWait(1));
         }
         //else{} Las diagonales
 

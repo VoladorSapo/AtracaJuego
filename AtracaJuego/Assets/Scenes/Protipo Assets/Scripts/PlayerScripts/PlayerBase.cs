@@ -156,13 +156,18 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Move(Vector3 position)
     {
 
-        List<Node> newPos = GC.GetPath(this.transform.position, position, team);
+        List<Node> newPos = GC.GetPath(this.transform.position, position, team,true);
+        print("moririaporvos");
         Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         if (newPos != null && newPos.Count > 0)
         {
             startMove(newPos);
         }
 
+    }
+    public void Caca()
+    {
+        print("peroestanoche");
     }
     protected virtual void startMove(List<Node> newPos)
     {

@@ -9,7 +9,7 @@ public class pathFinder : MonoBehaviour
     private List<Node> closeList;
     private List<Node> nearList;
     public GridController GC;
-    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team)
+    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team,bool safe)
     {
         List<Node> list = new List<Node>();
         openList = new List<Node> {startNode};
@@ -38,7 +38,7 @@ public class pathFinder : MonoBehaviour
             foreach (Node nodoAdayacente in nodosAdyacentes(currentNode,nodos,ogx,ogy))
             {
                 if (closeList.Contains(nodoAdayacente)) continue;
-                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team) && nodoAdayacente != endNode) continue;
+                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team,safe) && nodoAdayacente != endNode) continue;
                 int tempG = currentNode.gCost + Distance(currentNode, nodoAdayacente);
                 if(tempG < nodoAdayacente.gCost)
                 {
@@ -95,7 +95,7 @@ public class pathFinder : MonoBehaviour
                 List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
                 for (int i = 0; i < supportList.Count; i++)
                 {
-                    bool shouldAdd = isDist ? GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos),false,team) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    bool shouldAdd = isDist ? GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos),false,team,false) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
                     //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
                     if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
                         newBorderList.Add(supportList[i]);
@@ -227,7 +227,7 @@ public class pathFinder : MonoBehaviour
                     if (!checkedList.Contains(supportList[i]) && !newBorderList.Contains(supportList[i]))
                     {
                         checkedList.Add(supportList[i]);
-                        if (findPath(nodo, supportList[i], nodos, ogx, ogy, true) != null)
+                        if (findPath(nodo, supportList[i], nodos, ogx, ogy, true,false) != null)
                         {
                             newBorderList.Add(supportList[i]);
                             if (tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() > 0 && tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() < 16)

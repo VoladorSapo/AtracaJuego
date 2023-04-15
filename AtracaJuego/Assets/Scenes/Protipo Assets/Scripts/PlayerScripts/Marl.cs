@@ -79,7 +79,7 @@ public class Marl : PlayablePlayer
         }
         else
         {
-            ChangeMapShown(1);
+            StartCoroutine(ChangeMapWait(1));
         }
     }
 

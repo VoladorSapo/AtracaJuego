@@ -14,7 +14,7 @@ public class FernandoBrazada : EnemyCharacter
         {
             if (LastPlayer != protas.players[i])
             {
-                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true);
+                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true,false);
                 if (newpath != null && (newpath.Count < path.Count || path.Count == 0))
                 {
                     elname = protas.players[i].name;

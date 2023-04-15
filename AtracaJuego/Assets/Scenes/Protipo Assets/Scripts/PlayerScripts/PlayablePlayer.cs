@@ -8,6 +8,7 @@ public class PlayablePlayer : PlayerBase
     protected int directionPush;
     [SerializeField] public int Cooldown;
     [SerializeField] protected turnButtonsController _turnbuttons;
+    [SerializeField] Color _circleColor;
     protected bool willAttack;
     protected override void Awake()
     {
@@ -79,10 +80,10 @@ public class PlayablePlayer : PlayerBase
     {
         base.setDeath();
     }
+    
     private void OnMouseOver()
     {
-        print(name);
-        GetComponentInChildren<Canvas>().enabled = true;
+        GetComponentInChildren<Canvas>().enabled = !_gamecontroller.Pause;
         GetComponentsInChildren<TMP_Text>()[0].text = currentHealth.ToString();
         GetComponentsInChildren<TMP_Text>()[1].text = Cooldown.ToString();
         GetComponentsInChildren<TMP_Text>()[2].text = MaxDistance.ToString();
@@ -128,6 +129,12 @@ public class PlayablePlayer : PlayerBase
         {
             sprite.color = new Color(255, 255, 255);
         }
+    }
+    public IEnumerator ChangeMapWait(int setMode)
+    {
+        yield return new WaitForSeconds(0.5f);
+        ChangeMapShown(setMode);
+
     }
     public override void startTurn()
     {

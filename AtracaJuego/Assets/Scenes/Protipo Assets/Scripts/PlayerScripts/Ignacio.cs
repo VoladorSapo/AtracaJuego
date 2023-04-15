@@ -61,7 +61,7 @@ public class Ignacio : PlayablePlayer
         }
         else
         {
-            ChangeMapShown(1);
+           StartCoroutine(ChangeMapWait(1));
         }
     }
     public override void ChangeMapShown(int setMode){
@@ -82,5 +82,8 @@ public class Ignacio : PlayablePlayer
     }
     /* if(AttackMode){AttackMode=false; GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,false,false);}
             else{AttackMode=true; GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true,true,true,true);}*/
+
+
+    
 }
     
