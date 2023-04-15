@@ -153,6 +153,23 @@ public class CustomTileClass
             case 7: tileEffect=0; tileFadeEffect=0; _PT.CharcoE.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _PT.GasE.SetTile(tilePos+og,null); _PT.Gas.SetTile(tilePos+og,null); break;
         }
     }
+
+    public bool CheckEffectDamage(PlayerBase p){
+        if(p.OnTileEffect!=tileEffect){
+            p.OnTileEffect=tileEffect;
+            if(!TileIsSafe()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void cleanEffects(int MaxRange){
+        if(tileEffect!=0 && tileEffect!=16){
+        int lock_=tileEffect;
+        _MM.CleanLimit(tilePos.x,tilePos.y,new Vector3(tilePos.x,tilePos.y,0),MaxRange,lock_);
+        }
+    }
     public void addEffect(int effect, bool bypass, int direction, int lock_){
         
         //Faltan implementar cambios de sprites y FadeEffects
@@ -161,9 +178,8 @@ public class CustomTileClass
         //Implmentar combinaciones del excel aqui
         switch(effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet 7=GasElec
             case 0:
-                    if(tileEffect!=16){ tileEffect=0; tileFadeEffect=0; _PT.CharcoE.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _PT.GasE.SetTile(tilePos+og,null); _PT.Gas.SetTile(tilePos+og,null);
-                                        if(direction==-1){AddEffectAct(3,og,bypass,lock_,false,-1,0,0,null,null,null,null,0,5,direction,0,-1);}
-                     } break;
+                    if(tileEffect!=16){ tileEffect=0; tileFadeEffect=0;
+                    _PT.CharcoE.SetTile(tilePos+og,null); _PT.Charco.SetTile(tilePos+og,null); _PT.GasE.SetTile(tilePos+og,null); _PT.Gas.SetTile(tilePos+og,null);} break;
             case 1:
                     if(tileEffect!=16){
                     switch(tileEffect){

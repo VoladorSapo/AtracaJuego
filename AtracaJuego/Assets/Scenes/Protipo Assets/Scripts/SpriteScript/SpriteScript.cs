@@ -14,6 +14,10 @@ public class SpriteScript : MonoBehaviour
         player.InstantiatePrefab();
     }
 
+    void CheckNext(){
+        player.CheckNext();
+    }
+
     void BeIdle(){
         player.BeIdle();
     }

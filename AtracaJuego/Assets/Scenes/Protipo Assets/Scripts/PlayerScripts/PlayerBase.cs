@@ -9,7 +9,7 @@ public class PlayerBase : MonoBehaviour
     protected bool bypass;
     public bool isObject;
     protected int direction;
-    
+    public int OnTileEffect;
     Vector3 startPos;
     [SerializeField] private Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
@@ -23,6 +23,7 @@ public class PlayerBase : MonoBehaviour
     private int[] prevY = new int[5];
     public bool team;
     protected bool moving;
+    private bool Damaged;
     [SerializeField] protected bool hasTurn;
     [SerializeField] protected bool hasMove;
     [SerializeField] protected bool hasAttack;
@@ -57,7 +58,8 @@ public class PlayerBase : MonoBehaviour
         CDH = GameObject.Find("GameDialogueController").GetComponent<CombatDialogueHandler>();
         isObject = false;
         startPos = transform.position;
-        
+        OnTileEffect=0;
+        Damaged=false;
     }
     protected virtual void Start()
     {
@@ -71,13 +73,31 @@ public class PlayerBase : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if (moving)
-        {
+        if (moving && alive)
+        {   
+            Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+            if(alive){
+                Moving();
+            }
+        }
+    }
 
+    /*private void MovingNew(){
+        Vector3 newPos=grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0);
+        transform.position = Vector3.MoveTowards(transform.position, newPos, Time.deltaTime * 50);
+        if(transform.position==newPos){Debug.LogWarning("hola");}
+    }*/
+    
+    private void Moving(){
             transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), Time.deltaTime * 50);
+            Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+            CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             //transform.position = Vector3.MoveTowards(transform.position, grid.CellToWorld(nodes[0].pos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
             if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
+                if(GC.tiles[tilepos.x,tilepos.y].CheckEffectDamage(this)){
+                    loseHealth(1);
+                }else if(animator.GetInteger("Anim")==1){
                 //  print("Batido PLeNysHakE" + this.name);
                 // print(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0));
                 //print(nodes[0].pos);
@@ -88,14 +108,12 @@ public class PlayerBase : MonoBehaviour
                 if (nodes.Count <= 0)
                 {
                     //  print("jonyniii");
-                    moving = false;
+                    
                     animator.SetInteger("Anim", 0);
                     sprite.sortingOrder = -(grid.WorldToCell(transform.position).y - GC.ogy);
                     //Turn();
-                    Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
-
-                    //print(tilepos);
-                    CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+                    tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+                    tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
                     if (!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && _callTile != null)
                     {
@@ -113,13 +131,15 @@ public class PlayerBase : MonoBehaviour
                     {
                         ChangeMapShown(2);
                     }
+                    moving=false;
+
                 }
                 else
                 {
                     //  print("icamefromalanddownunder");
                     //print(-grid.WorldToCell(transform.position).y);
-                    Vector3Int tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
-                    CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+                    tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
+                    tile = GC.tiles[tilepos.x, tilepos.y];
                     if (tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile))
                     {
                         _callTile = tile;
@@ -136,8 +156,8 @@ public class PlayerBase : MonoBehaviour
                         sprite.flipX = true;
                     }
                 }
+                }
             }
-        }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other) { }
@@ -157,8 +177,8 @@ public class PlayerBase : MonoBehaviour
     {
 
         List<Node> newPos = GC.GetPath(this.transform.position, position, team,true);
-        print("moririaporvos");
-        Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
+        //print("moririaporvos");
+        //Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         if (newPos != null && newPos.Count > 0)
         {
             startMove(newPos);
@@ -236,14 +256,15 @@ public class PlayerBase : MonoBehaviour
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x - GC.ogx, tilepos.y - GC.ogy];
-        //tile.setPlayer(null);
+
         SPM.playerDie(this);
+        tile.setPlayer(this);
         if (this.tag != "Player")
         {
             tile.setPlayer(null); //sprite.enabled = false; 
         }
 
-        if (this.animator != null) { animator.SetInteger("Anim", 3); }
+        if (this.animator != null) {animator.SetInteger("Anim", 3); }
 
     }
 
@@ -257,11 +278,6 @@ public class PlayerBase : MonoBehaviour
         if (animator != null) { animator.SetInteger("Anim", 4); }
         currentHealth -= health;
         CDH.DamageDialogue(GetType().ToString());
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
     }
 
     public virtual int GetMaxHealth()
@@ -276,6 +292,20 @@ public class PlayerBase : MonoBehaviour
     public virtual void InstantiatePrefab()
     {
 
+    }
+
+    public virtual void CheckNext(){
+        if (currentHealth <= 0)
+        {
+            Die();
+        }else{
+            if(moving){
+                Debug.LogWarning(moving);
+                this.animator.SetInteger("Anim",1);
+            }else{
+                this.animator.SetInteger("Anim",0);
+            }
+        }        
     }
 
     public virtual void BeIdle()

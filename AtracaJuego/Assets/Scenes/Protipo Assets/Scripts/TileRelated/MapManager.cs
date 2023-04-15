@@ -72,6 +72,30 @@ public class MapManager : MonoBehaviour
 
     }
 
+    public void CleanLimit(int x, int y, Vector3 og, int MaxRange, int lock_)
+    {
+        int up1 = y + 1;
+        int down1 = y - 1;
+        int left1 = x - 1;
+        int right1 = x + 1;
+
+        _GC.tiles[x, y].addEffect(0, false, 0, 0);
+        
+        
+        Debug.LogWarning("Arriba: "+x+",,"+up1+",,"+lock_);
+        
+            if (_GC.tiles[x, up1].GetTileEffect()==lock_ && Vector3.Distance(new Vector3(x,up1,0),og)<MaxRange) { Debug.LogWarning(x+",,"+y+",,"+lock_); CleanLimit(x, up1, og, MaxRange, lock_); }
+
+            if (_GC.tiles[x, down1].GetTileEffect()==lock_ && Vector3.Distance(new Vector3(x,down1,0),og)<MaxRange) { CleanLimit(x, down1, og, MaxRange, lock_); }
+
+            if (_GC.tiles[left1, y].GetTileEffect()==lock_ && Vector3.Distance(new Vector3(left1,y,0),og)<MaxRange) { CleanLimit(left1, y, og, MaxRange,lock_); }
+
+            if (_GC.tiles[right1, y].GetTileEffect()==lock_ && Vector3.Distance(new Vector3(right1,y,0),og)<MaxRange) { CleanLimit(right1, y, og, MaxRange, lock_); }
+
+
+
+    }
+
     public IEnumerator SNL(int x, int y, int effect, int dir, int lock_, float sec)
     {
         WaitForSeconds wfs = new WaitForSeconds(sec);
