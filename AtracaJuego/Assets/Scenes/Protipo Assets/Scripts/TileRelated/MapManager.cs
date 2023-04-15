@@ -84,6 +84,7 @@ public class MapManager : MonoBehaviour
 
     public void Damage(int codeDamage, int x, int y)
     {
+        print("jajas");
         PlayerBase p = _GC.tiles[x, y].player;
         switch (codeDamage)
         {
@@ -95,7 +96,7 @@ public class MapManager : MonoBehaviour
             case 5: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(2); } } break;
             case 7: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(1); } } break; //Garrote
             case 8: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(2); } } break; //SuperGarrote
-            case 9: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); p.getStunned(); } else { p.loseHealth(2); } } break; //SuperGarrote
+            case 9: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); p.getStunned();} else { p.loseHealth(2); } } break; //NanomaquinasHijo
 
 
             case 6: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else if (p.tag != "IceCube") { p.loseHealth(4); } } break;

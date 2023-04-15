@@ -67,4 +67,11 @@ public class Limpiador : EnemyCharacter
         }
         SPM.nextTurn(teamNumb, false);
     }
+    public override void InstantiatePrefab()
+    {
+        GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy].addEffect(0, true, -1, -1);
+        hasTurn = true;
+        SPM.nextTurn(teamNumb, false);
+
+    }
 }

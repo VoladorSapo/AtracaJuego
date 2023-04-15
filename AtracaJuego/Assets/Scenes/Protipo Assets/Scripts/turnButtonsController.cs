@@ -92,9 +92,10 @@ public class turnButtonsController : MonoBehaviour
     }
     public void Skip(bool show)
     {
-        _gameController=GameObject.Find("Controller").GetComponent<gameController>();
+        _gameController = GameObject.Find("Controller").GetComponent<gameController>();
+
         skipConfirm.SetActive(show);
-        
+        _gameController.Pause = show;
         //if(!_gameController.Pause){_gameController.Pause=true;}else{_gameController.Pause=false;}
         
         

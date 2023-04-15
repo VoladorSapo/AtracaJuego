@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using TMPro;
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
@@ -14,6 +14,8 @@ public class PlayablePlayer : PlayerBase
         base.Awake();
         SPM = GameObject.Find("Controller").GetComponent<ScriptPlayerManager>();
         _turnbuttons = GameObject.Find("TurnButtons").GetComponent<turnButtonsController>();
+        GetComponentInChildren<Canvas>().enabled = false;
+
     }
     protected override void OnTriggerEnter2D(Collider2D other){}
     public override void Update()
@@ -76,6 +78,20 @@ public class PlayablePlayer : PlayerBase
     public override void setDeath()
     {
         base.setDeath();
+    }
+    private void OnMouseOver()
+    {
+        print(name);
+        GetComponentInChildren<Canvas>().enabled = true;
+        GetComponentsInChildren<TMP_Text>()[0].text = currentHealth.ToString();
+        GetComponentsInChildren<TMP_Text>()[1].text = Cooldown.ToString();
+        GetComponentsInChildren<TMP_Text>()[2].text = MaxDistance.ToString();
+
+    }
+    private void OnMouseExit()
+    {
+        GetComponentInChildren<Canvas>().enabled = false;
+
     }
     public override void setTurn(bool newTurn)
     {
