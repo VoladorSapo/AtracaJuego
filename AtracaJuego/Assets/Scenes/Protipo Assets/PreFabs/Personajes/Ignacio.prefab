@@ -223,6 +223,7 @@ MonoBehaviour:
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &507535202837147032
 MonoBehaviour:
@@ -262,6 +263,7 @@ MonoBehaviour:
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!114 &507535202837147033
@@ -302,6 +304,7 @@ MonoBehaviour:
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
   DisplayGas: {fileID: 0}
 --- !u!114 &507535202837147030
@@ -342,6 +345,7 @@ MonoBehaviour:
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 0}
   DisplayIce: {fileID: 0}
@@ -401,7 +405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.95, y: 18.41381}
+  m_AnchoredPosition: {x: -5.4591017, y: 0}
   m_SizeDelta: {x: 7.604, y: 5.1207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5721130865896326251
@@ -536,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.5091, y: 18.41381}
+  m_AnchoredPosition: {x: 7, y: 0}
   m_SizeDelta: {x: 7.604, y: 5.1207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5091354651774199597
@@ -671,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.58, y: 20.93}
+  m_AnchoredPosition: {x: 0, y: 2.6}
   m_SizeDelta: {x: 21.0763, y: 25.7425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3421730009648444681
@@ -747,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.67, y: 18.41381}
+  m_AnchoredPosition: {x: 0.8208982, y: 0}
   m_SizeDelta: {x: 7.604, y: 5.1207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8081972790087233479
@@ -887,8 +891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 62.7, y: 106}
+  m_AnchoredPosition: {x: -1, y: 19}
+  m_SizeDelta: {x: 24.6411, y: 15.8594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6449341044976029743
 Canvas:
