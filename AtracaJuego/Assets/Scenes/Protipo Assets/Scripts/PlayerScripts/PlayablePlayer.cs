@@ -153,6 +153,14 @@ public class PlayablePlayer : PlayerBase
         {
             ChangeMapShown(2);
         }
+        /*Vector3Int tilepos = GC.grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
+        CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
+        if(tile.GetTileState()>5){
+        while(GC.tiles[tilepos.x, tilepos.y].GetTileState()>5){this.transform.position+=new Vector3Int(0,10,0); tilepos = GC.grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);}
+        tile= GC.tiles[tilepos.x, tilepos.y];
+        }
+        tile.setPlayer(this);*/
+        //sprite.sortingOrder = -(tilepos.y);
       
     }
     public void changeCircle(bool Colored)

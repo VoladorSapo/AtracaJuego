@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     {
         //pauseMenu = this.gameObject;
         pauseMenu = GameObject.Find("PauseMenu");
+        print("helou helou" + name);
         pauseMenu.SetActive(false);
     }
 

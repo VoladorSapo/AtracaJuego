@@ -78,6 +78,23 @@ public class CustomTileClass
         tileState=state;
         tileEffect=effect;
         tileFadeEffect=fade;
+        if(tileState>5 && player!=null){
+            RelocatePlayer(tilePos.x,tilePos.y);
+        }
+    }
+
+    public void RelocatePlayer(int x, int y){
+        player.transform.position+=new Vector3(0,10,0);
+        if(_GC.tiles[x,y+1].GetPlayer()==null){
+        _GC.tiles[x,y+1].setPlayer(player);
+        _GC.tiles[x,y+1].GetPlayer().sprite.sortingOrder = -(y+1);
+        }
+        
+        
+        if(_GC.tiles[x,y+1].GetTileState()>5 || (_GC.tiles[x,y+1].GetPlayer()!=null && _GC.tiles[x,y+1].GetPlayer()!=player)){
+            RelocatePlayer(tilePos.x,tilePos.y+1);
+        }
+        _GC.tiles[x,y].setPlayer(null);
     }
 
     public void SetTileStatsWith(CustomTileClass n){
