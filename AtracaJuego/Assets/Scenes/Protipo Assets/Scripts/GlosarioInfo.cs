@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GlosarioInfo : MonoBehaviour
 {
-    bool[] combinacionespermanentes;
+   public bool[] combinacionespermanentes;
     GlosarioController glosario;
     // Start is called before the first frame update
     void Awake()

@@ -2135,6 +2135,7 @@ MonoBehaviour:
   - {fileID: 1303072484}
   startDeadPlayer:
   - {fileID: 2104589403}
+  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -2803,6 +2804,7 @@ MonoBehaviour:
   - {fileID: 782671307}
   - {fileID: 621224124}
   startDeadPlayer: []
+  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -3891,6 +3893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combinaciones: 
+  Glosario: {fileID: 0}
+  openbutton: {fileID: 0}
+  closebutton: {fileID: 0}
 --- !u!1 &1091559864
 GameObject:
   m_ObjectHideFlags: 0
@@ -36758,6 +36763,7 @@ GameObject:
   - component: {fileID: 2055599628}
   - component: {fileID: 2055599627}
   - component: {fileID: 2055599626}
+  - component: {fileID: 2055599629}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -36854,6 +36860,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055599624}
   m_CullTransparentMesh: 1
+--- !u!114 &2055599629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055599624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f7001f4c34acb4f8dfabc9acd1285c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Valor: 000000000000000000000000
+  sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  interrogacion: {fileID: 0}
+  imagenes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  glosario: {fileID: 0}
 --- !u!1 &2059103220
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public List<PlayerBase> players;
     [SerializeField] PlayerBase[] startPlayer;
     [SerializeField] PlayerBase[] startDeadPlayer;
-    
+    [SerializeField] GlosarioController _glosario;
     public bool Activated;
     public int currentPlayer;
     public int deadPlayer;
@@ -19,7 +19,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public int[] MaxDistancePlayers = { 5, 6, 4, 3, 8 }; //Ignacio,Iowa,Marl,Nev,Paul
 
     void Awake(){
-        
+        _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
     }
     void Update()
     {
@@ -54,6 +54,8 @@ public class ScriptPlayerManager : MonoBehaviour
         }
         else
         {
+            _glosario.Buttons(!isEnemy);
+
             for (int i = 0; i < players.Count; i++)
             {
                 players[i].setTurn(false);
@@ -135,6 +137,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public void endTurn()
     {
         Debug.LogWarning("holisit");
+        _glosario.Buttons(isEnemy);
         if (Activated)
         {
             _turn.startTurns();
