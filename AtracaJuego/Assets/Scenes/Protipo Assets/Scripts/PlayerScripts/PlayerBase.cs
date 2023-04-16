@@ -36,6 +36,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected int maxHealth;
     [SerializeField] protected int currentHealth;
     [SerializeField] protected CombatDialogueHandler CDH;
+    [SerializeField] protected GameObject _circle;
     public bool stunned;
     CustomTileClass _callTile;//La tile que se llama si has pasado por una tile importante
     List<Node> nodes;

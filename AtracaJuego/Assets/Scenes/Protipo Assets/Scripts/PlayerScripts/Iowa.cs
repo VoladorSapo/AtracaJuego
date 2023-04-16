@@ -115,13 +115,15 @@ public class Iowa : PlayablePlayer
         Mode = setMode;
         if (Mode == 1)
         {
+            changeCircle(true);
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
             GC.setReachablePos(transform.position, MaxDistance, true, true, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); changeCircle(true); }
         else
         {
+            changeCircle(false);
             print("waka");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true);
         }

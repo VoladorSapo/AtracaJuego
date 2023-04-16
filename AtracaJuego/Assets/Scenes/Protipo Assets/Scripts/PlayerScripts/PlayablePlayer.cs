@@ -96,6 +96,7 @@ public class PlayablePlayer : PlayerBase
     }
     public override void setTurn(bool newTurn)
     {
+        changeCircle(false  );
         print("movidas chungas");
         // base.setTurn(newTurn);
         if (!stunned)
@@ -154,7 +155,20 @@ public class PlayablePlayer : PlayerBase
         }
       
     }
+    public void changeCircle(bool Colored)
+    {
+        print("se lo q hicisteis el ultimo verano");
+        if (Colored)
+        {
+            _circle.GetComponent<SpriteRenderer>().color = _circleColor;
+        }
+        else
+        {
+            print(name + " el colo");
+            _circle.GetComponent<SpriteRenderer>().color = _color;
 
+        }
+    }
     IEnumerator skipturn()
     {
         yield return new WaitForEndOfFrame();

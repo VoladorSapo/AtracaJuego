@@ -957,6 +957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -978,6 +979,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
 --- !u!212 &101548027
 SpriteRenderer:
@@ -1527,6 +1529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -1548,8 +1551,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &470175117
 MonoBehaviour:
@@ -1565,6 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 672508150}
   Mode: 0
   GC: {fileID: 672508148}
@@ -1586,8 +1592,10 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &470175118
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1876,6 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -1897,8 +1906,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &553211219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2425,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 6
   orthographic: 1
   orthographic size: 57.02
   m_Depth: -1
@@ -2469,7 +2480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820996061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: -12.9, z: -10}
+  m_LocalPosition: {x: 1.8, y: -12.9, z: -990}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3463,6 +3474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -3484,7 +3496,9 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   LifeTime: 0
+  Burning: 0
 --- !u!212 &1244378781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24392,6 +24406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 672508150}
   Mode: 0
   GC: {fileID: 672508148}
@@ -24413,8 +24428,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1561831422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24429,6 +24446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -24450,6 +24468,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
 --- !u!4 &1561831423
 Transform:
   m_ObjectHideFlags: 0

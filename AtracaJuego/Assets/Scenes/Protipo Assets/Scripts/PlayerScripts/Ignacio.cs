@@ -68,13 +68,15 @@ public class Ignacio : PlayablePlayer
         Mode = setMode;
         if (Mode == 1)
         {
+            changeCircle(true);
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 0, true);
             GC.setReachablePos(transform.position,MaxDistance, true, true, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 0, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 0, false); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true); changeCircle(true); }
         else
         {
+            changeCircle(false);
             GC.setAttackPos(transform.position, 1, true, true, false, 0, true); GC.setReachablePos(transform.position, MaxDistance, true, true, true, true);
         }
         _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);

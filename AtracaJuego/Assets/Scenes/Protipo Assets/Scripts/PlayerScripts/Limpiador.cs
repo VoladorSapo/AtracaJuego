@@ -21,6 +21,7 @@ public class Limpiador : EnemyCharacter
             {
                 hit = path[path.Count - 1].pos;
                 objective = path[path.Count - 2].pos;
+                path.RemoveAt(path.Count - 1);
                 List<Node> turnpath = new List<Node>();
                 GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
                 print(GC.ReachablePos.Length);
@@ -58,6 +59,7 @@ public class Limpiador : EnemyCharacter
     }
     public override void ChangeMapShown(int setMode)
     {
+        print("gors");
         if (hasClean)
         {
             hasTurn = true;
@@ -76,7 +78,8 @@ public class Limpiador : EnemyCharacter
     }
     public override void InstantiatePrefab()
     {
-        GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy].addEffect(0, true, -1, -1);
+        print("jujalag q hiciste");
+        GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy].cleanEffects(5);
         hasClean = true;
        
 
@@ -84,11 +87,13 @@ public class Limpiador : EnemyCharacter
     public override void BeIdle()
     {
         base.BeIdle();
-        goBack();
+        StartCoroutine(goBack());
     }
-    public void goBack()
+    public IEnumerator goBack()
     {
+        print("a mi me gusta tu primo");
         List<Node> path = GC.GetPath(transform.position, spawn.transform.position, true,false);
+        yield return new WaitForSeconds(0.2f);
         if(path!= null)
         {
             GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
