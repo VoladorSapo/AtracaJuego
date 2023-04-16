@@ -2180,6 +2180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -2201,8 +2202,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &1112165337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2269,6 +2272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -2290,6 +2294,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
 --- !u!4 &1112165339
 Transform:
   m_ObjectHideFlags: 0
@@ -12253,6 +12258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 2017550972}
   Mode: 0
   GC: {fileID: 2017550970}
@@ -12274,8 +12280,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1582222434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12290,6 +12298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -12311,6 +12320,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
 --- !u!4 &1582222435
 Transform:
   m_ObjectHideFlags: 0
@@ -14429,9 +14439,9 @@ MonoBehaviour:
   charcos: {fileID: 1651976914}
   canMove: {fileID: 2090197986}
   CanAttackMap: {fileID: 1859997225}
-  hoverTile: {fileID: 11400000, guid: aed8c3e5cbbf4984896b3c68b4f7e9b1, type: 2}
-  hoverTileNope: {fileID: 11400000, guid: 6393baf3ad915a24989d617a5e35a810, type: 2}
-  hoverTilePlayer: {fileID: 11400000, guid: a332d85a6ce95bb45814fbd515bc7b51, type: 2}
+  hoverTile: {fileID: 11400000, guid: 209de7714a2d9324bbcad0402c6e8bda, type: 2}
+  hoverTileNope: {fileID: 11400000, guid: 209de7714a2d9324bbcad0402c6e8bda, type: 2}
+  hoverTilePlayer: {fileID: 11400000, guid: 209de7714a2d9324bbcad0402c6e8bda, type: 2}
   canMoveTile: {fileID: 11400000, guid: ab9c22f31e5712a4993e1dcae711a82f, type: 2}
   attackTile: {fileID: 11400000, guid: 63ae22e250fd3d745ae5df4dbf014f19, type: 2}
   _eventtileparent: {fileID: 0}
@@ -41018,6 +41028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -41039,8 +41050,10 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &2036909635
 MonoBehaviour:
@@ -41056,6 +41069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 2017550972}
   Mode: 0
   GC: {fileID: 2017550970}
@@ -41077,8 +41091,10 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   CDH: {fileID: 0}
+  stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &2036909636
 SpriteRenderer:
   m_ObjectHideFlags: 0
