@@ -77,6 +77,7 @@ public class GridController : MonoBehaviour
 
         ogx = pathMap.origin.x;
         ogy = pathMap.origin.y;
+        print(pathMap.size + "tamaño");
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
 
         for (int i = 0; i < pathMap.size.x; i++)
