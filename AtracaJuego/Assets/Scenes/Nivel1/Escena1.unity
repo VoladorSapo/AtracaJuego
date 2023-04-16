@@ -1687,7 +1687,6 @@ GameObject:
   - component: {fileID: 513381609}
   - component: {fileID: 513381608}
   - component: {fileID: 513381607}
-  - component: {fileID: 513381611}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1873,47 +1872,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &513381611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513381603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b33b1b2fb17a334f9d51175996c2fc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effect: 0
-  isObject: 0
-  OnTileEffect: 0
-  grid: {fileID: 0}
-  Mode: 0
-  GC: {fileID: 0}
-  _gamecontroller: {fileID: 0}
-  _turnController: {fileID: 0}
-  MM: {fileID: 0}
-  SPM: {fileID: 0}
-  MaxDistance: 0
-  team: 0
-  hasTurn: 0
-  hasMove: 0
-  hasAttack: 0
-  _color: {r: 0, g: 0, b: 0, a: 0}
-  Cooldowns: 0
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  teamNumb: 0
-  alive: 0
-  maxHealth: 0
-  currentHealth: 0
-  CDH: {fileID: 0}
-  _circle: {fileID: 0}
-  stunned: 0
-  Cooldown: 0
-  _turnbuttons: {fileID: 0}
-  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &553211219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +1991,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 672508149}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &634571048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634571050}
+  - component: {fileID: 634571049}
+  m_Layer: 0
+  m_Name: GlosarioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &634571049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634571048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730d18b8a1caaba43985cb00e9004b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &634571050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634571048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7166974, y: -0.04555665, z: 0.0091752205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672508147
 GameObject:
@@ -2397,6 +2399,7 @@ GameObject:
   - component: {fileID: 820996062}
   - component: {fileID: 820996064}
   - component: {fileID: 820996063}
+  - component: {fileID: 820996066}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2491,6 +2494,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820996066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820996061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &824756227
 GameObject:
   m_ObjectHideFlags: 0
@@ -17618,7 +17654,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 40
-      m_TileSpriteIndex: 36
+      m_TileSpriteIndex: 42
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -21548,7 +21584,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 33
+      m_TileSpriteIndex: 39
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -21558,7 +21594,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 38
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -24039,28 +24075,28 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 195664766, guid: 07ad039c68c337643bfc67e6954d7523, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1165274026, guid: 07ad039c68c337643bfc67e6954d7523, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 938873795, guid: 07ad039c68c337643bfc67e6954d7523, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 539109085, guid: 4cf490d6ee374924e8fd7423ab541d30, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1994796398, guid: 4cf490d6ee374924e8fd7423ab541d30, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 938873795, guid: 07ad039c68c337643bfc67e6954d7523, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 236883895, guid: 07ad039c68c337643bfc67e6954d7523, type: 3}
   - m_RefCount: 1
@@ -25079,6 +25115,7 @@ MonoBehaviour:
   Posiciones:
   - {x: 8, y: 5}
   - {x: 6, y: 5}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 1
@@ -25096,6 +25133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Posiciones:
   - {x: 11, y: 7}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 0
