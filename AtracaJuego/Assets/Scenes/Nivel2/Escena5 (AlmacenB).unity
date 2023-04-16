@@ -554,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -574,8 +575,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 5347602195125805744, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   DisplayIce: {fileID: 0}
@@ -653,6 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 627972666}
   Mode: 0
   GC: {fileID: 627972664}
@@ -673,8 +680,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &128039885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -709,6 +722,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
 --- !u!4 &128039886
 Transform:
   m_ObjectHideFlags: 0
@@ -952,6 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -972,6 +990,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -1663,6 +1685,7 @@ MonoBehaviour:
   - {fileID: 547563628}
   - {fileID: 480197013}
   currentManager: 0
+  _palancaTest: {fileID: 0}
   _GC: {fileID: 0}
 --- !u!114 &547563630
 MonoBehaviour:
@@ -1719,6 +1742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -1739,8 +1763,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &547563633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1807,6 +1836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -1827,6 +1857,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
 --- !u!4 &547563635
 Transform:
   m_ObjectHideFlags: 0
@@ -2459,9 +2493,11 @@ MonoBehaviour:
   _mapManager: {fileID: 1079185230}
   interactiveMap: {fileID: 623421206}
   pathMap: {fileID: 789696028}
-  Top1: {fileID: 635721360}
+  Top: {fileID: 0}
   ground: {fileID: 789696028}
+  gasesE: {fileID: 0}
   gases: {fileID: 0}
+  charcosE: {fileID: 0}
   charcos: {fileID: 0}
   canMove: {fileID: 1820230181}
   CanAttackMap: {fileID: 1862636845}
@@ -3071,6 +3107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -3091,6 +3128,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -29147,6 +29188,7 @@ MonoBehaviour:
   attackButton: {fileID: 1609299420}
   skipConfirm: {fileID: 0}
   currentplayer: {fileID: 0}
+  _gameController: {fileID: 0}
 --- !u!1 &924580577
 GameObject:
   m_ObjectHideFlags: 0
@@ -29227,6 +29269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -29247,8 +29290,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!4 &924580581
@@ -29916,6 +29964,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1192261552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6505732906270427268, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
 --- !u!1 &1363245164
 GameObject:
   m_ObjectHideFlags: 0
@@ -30205,6 +30310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -30225,6 +30331,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -31219,6 +31329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -31239,8 +31350,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   ElecPrefab: {fileID: 2704912516305452731, guid: f5f9cf3f7e564c04d9d9c24ade97ed30, type: 3}
 --- !u!61 &2070457995
 BoxCollider2D:

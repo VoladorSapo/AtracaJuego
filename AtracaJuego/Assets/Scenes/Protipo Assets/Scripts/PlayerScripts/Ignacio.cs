@@ -22,6 +22,7 @@ public class Ignacio : PlayablePlayer
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2)){
                 Cooldown=1;
+                SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[0]);
                 Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 
                 //print(tilepos);

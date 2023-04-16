@@ -75,11 +75,20 @@ public class GasEffect : MonoBehaviour
             //listaG.Contains(new Vector2Int(v.x-1,v.y)) || listaG.Contains(new Vector2Int(v.x,v.y+1))  || listaG.Contains(new Vector2Int(v.x,v.y-1))
         }
 
+        Vector2Int prevV=new Vector2Int(posGrid.x-GC.ogx,posGrid.y-GC.ogy);
+        List<Vector2Int> listaG2=new List<Vector2Int>();
         foreach(Vector2Int v in listaG){
-            if(GC.tiles[v.x+1,v.y].GetTileEffect()==1 ||  GC.tiles[v.x-1,v.y].GetTileEffect()==1 || GC.tiles[v.x,v.y+1].GetTileEffect()==1 || GC.tiles[v.x,v.y-1].GetTileEffect()==1
-            || GC.tiles[v.x+1,v.y].GetTileEffect()==7 ||  GC.tiles[v.x-1,v.y].GetTileEffect()==7 || GC.tiles[v.x,v.y+1].GetTileEffect()==7 || GC.tiles[v.x,v.y-1].GetTileEffect()==7){
+
+            if(GC.tiles[v.x+1,v.y].GasBased() ||  GC.tiles[v.x-1,v.y].GasBased() || GC.tiles[v.x,v.y+1].GasBased() || GC.tiles[v.x,v.y-1].GasBased()
+            ){
                 GC.tiles[v.x,v.y].addEffect(1,false,0,-1);
+                if((GC.tiles[prevV.x+1,prevV.y].GasBased()||  GC.tiles[prevV.x-1,prevV.y].GasBased() || GC.tiles[prevV.x,prevV.y+1].GasBased() || GC.tiles[prevV.x,prevV.y-1].GasBased())){
+                if(!listaG2.Contains(prevV)){GC.tiles[prevV.x,prevV.y].addEffect(1,false,0,-1);}
+                }
+                
+                listaG2.Add(v);
             }
+            prevV=v;
         }
         StartCoroutine(DestroyEffect(2));
     }

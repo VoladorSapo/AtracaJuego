@@ -39,14 +39,15 @@ public class Nev : PlayablePlayer
                 if (!GC.isEmpty(posMouse, false, 2) && GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy].player == null)
                 {
                     //Vector3Int posNew=new Vector3Int(Mathf.FloorToInt(transform.position.x),Mathf.FloorToInt(transform.position.y),0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
+                    animator.SetInteger("Anim", 2);
                     Cooldown = 3;
                     Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
-
+                    SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[3]);
                     //print(tilepos);
                     CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
                     CustomTileClass tile2 = GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy];
                     CDH.AttackDialogue(GetType().ToString(), tile, tile2);
-                    animator.SetInteger("Anim", 2);
+                    
 
                 }
             }

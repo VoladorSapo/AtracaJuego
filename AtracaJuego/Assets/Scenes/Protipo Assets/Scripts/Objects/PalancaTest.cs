@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class PalancaTest : MonoBehaviour
 {
     [SerializeField] private Vector2Int[] Posiciones;
+    [SerializeField] private ObjectStuff[] Objetos;
     [SerializeField] private int[] active;
     [SerializeField] private bool Activate;
     [SerializeField] private bool Activated;
@@ -38,7 +39,7 @@ public class PalancaTest : MonoBehaviour
         if(Activate && !Activated){
             Debug.LogWarning("Palanca Activada "+indice);
             switch(indice){
-                case 0: Debug.LogWarning("bas"); break;
+                case 0: (Objetos[0] as PuertaTest).Open(); break;
                 case 1: Debug.LogWarning("te"); break;
                 //... Hasta el maximo que sea
             }
@@ -47,7 +48,7 @@ public class PalancaTest : MonoBehaviour
 
         if(!Activate && Activated){
             switch(indice){
-                case 0: Debug.LogWarning("Deshace bas"); break;
+                case 0:  (Objetos[0] as PuertaTest).Close(); break;
                 case 1: Debug.LogWarning("Deshace te"); break;
                 //... Hasta el maximo que sea
             }

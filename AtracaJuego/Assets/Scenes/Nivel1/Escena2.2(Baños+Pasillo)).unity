@@ -351,6 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -363,6 +364,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -370,9 +372,16 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 0
+  activated: 0
+  codeDamage: 0
 --- !u!61 &30812585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -997,6 +1006,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77c2cbdbe7783cc41bdf28e93c57a219, type: 2}
   - {fileID: 11400000, guid: fedb4afb74f1c384c882a0c6f3d104e4, type: 2}
   _GC: {fileID: 981740702}
+  GameObjs: []
 --- !u!114 &235601764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -1191,6 +1202,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -1198,9 +1210,16 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 0
+  activated: 0
+  codeDamage: 0
 --- !u!61 &294432586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1554,6 +1573,10 @@ MonoBehaviour:
   _textbox: {fileID: 0}
   _GDC: {fileID: 0}
   _DC: {fileID: 0}
+  _cutscenecamera: {fileID: 0}
+  _maincamera: {fileID: 0}
+  _fondoanimator: {fileID: 0}
+  _tutorial: {fileID: 0}
 --- !u!114 &425903392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,6 +1618,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _dialogbox: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -2207,6 +2231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -2219,6 +2244,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2226,8 +2252,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
   DisplayGas: {fileID: 5070135446965842197, guid: 13be77a770a63874b980ca6fc526bb29, type: 3}
 --- !u!61 &684659645
@@ -2559,6 +2590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -2571,6 +2603,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -2578,9 +2611,16 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 0
+  activated: 0
+  codeDamage: 0
 --- !u!61 &807661530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2773,11 +2813,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charco: {fileID: 0}
+  CharcoE: {fileID: 0}
   Gas: {fileID: 0}
+  GasE: {fileID: 0}
   Ground: {fileID: 0}
+  elecT: {fileID: 0}
+  fireT: {fileID: 0}
   iceT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
+  iceSpkT: {fileID: 0}
   wetT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
   gasT: {fileID: 11400000, guid: acf37915c3ede144bb982dce2ad896b9, type: 2}
+  gasolineT: {fileID: 0}
+  gasolineFrzT: {fileID: 0}
+  gasolineFrzSpkT: {fileID: 0}
+  tilesRotas: []
 --- !u!4 &863567175
 Transform:
   m_ObjectHideFlags: 0
@@ -13324,9 +13373,11 @@ MonoBehaviour:
   _mapManager: {fileID: 235601763}
   interactiveMap: {fileID: 3648742}
   pathMap: {fileID: 901146879}
-  Top1: {fileID: 1892297962}
+  Top: {fileID: 0}
   ground: {fileID: 901146879}
+  gasesE: {fileID: 0}
   gases: {fileID: 104908130}
+  charcosE: {fileID: 0}
   charcos: {fileID: 1079539802}
   canMove: {fileID: 659322952}
   CanAttackMap: {fileID: 1769180433}
@@ -13340,6 +13391,7 @@ MonoBehaviour:
   ogx: 0
   ogy: 0
   distanceRun: 0
+  _gc: {fileID: 0}
   posArrayPlayers: []
   canMoveHere: 0
   ReachablePos: []
@@ -13563,6 +13615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -13575,6 +13628,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13582,8 +13636,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   ElecPrefab: {fileID: 2704912516305452731, guid: f5f9cf3f7e564c04d9d9c24ade97ed30, type: 3}
 --- !u!50 &994021040
 Rigidbody2D:
@@ -13839,6 +13898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -13851,6 +13911,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -13858,6 +13919,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   LifeTime: 0
 --- !u!212 &1179704021
 SpriteRenderer:
@@ -14026,6 +14091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 981740704}
   Mode: 0
   GC: {fileID: 981740702}
@@ -14038,6 +14104,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -14045,8 +14112,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1200519070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14061,6 +14133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -14073,6 +14146,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -14080,6 +14154,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
 --- !u!4 &1200519071
 Transform:
   m_ObjectHideFlags: 0
@@ -14260,6 +14338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -14272,6 +14351,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -14279,7 +14359,12 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   LifeTime: 0
+  Burning: 0
 --- !u!212 &1242361061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14380,6 +14465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -14392,6 +14478,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -14399,8 +14486,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 2
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!50 &1284454154
@@ -14631,6 +14723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -14643,6 +14736,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -14650,9 +14744,16 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 0
+  activated: 0
+  codeDamage: 0
 --- !u!61 &1308954871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15253,6 +15354,10 @@ MonoBehaviour:
   _textbox: {fileID: 1468082499}
   _GDC: {fileID: 0}
   _DC: {fileID: 0}
+  _cutscenecamera: {fileID: 0}
+  _maincamera: {fileID: 0}
+  _fondoanimator: {fileID: 0}
+  _tutorial: {fileID: 0}
 --- !u!1 &1557056011
 GameObject:
   m_ObjectHideFlags: 0
@@ -15587,6 +15692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -15599,6 +15705,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -15606,8 +15713,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 5347602195125805744, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   DisplayIce: {fileID: 0}
@@ -15998,6 +16110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -16010,6 +16123,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -16017,8 +16131,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 0}
   DisplayIce: {fileID: 0}
@@ -16036,6 +16155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 981740704}
   Mode: 0
   GC: {fileID: 981740702}
@@ -16048,6 +16168,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 260472083}
@@ -16055,8 +16176,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   GasPrefab: {fileID: 8927941554537752734, guid: 5e9b0f48cfbb394448f834564343ddcd, type: 3}
   DisplayGas: {fileID: 0}
 --- !u!114 &1726316824
@@ -16073,6 +16199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -16085,6 +16212,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -16092,8 +16220,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!114 &1726316825
@@ -16110,6 +16243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -16122,6 +16256,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -16129,8 +16264,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 5
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!61 &1726316826
 BoxCollider2D:
@@ -16215,6 +16355,7 @@ MonoBehaviour:
   - {fileID: 1611125027}
   - {fileID: 994021039}
   startPlayer: []
+  startDeadPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -16236,6 +16377,7 @@ MonoBehaviour:
   - {fileID: 1749574154}
   - {fileID: 2053344059}
   currentManager: 0
+  _palancaTest: {fileID: 0}
   _GC: {fileID: 0}
 --- !u!114 &1749574156
 MonoBehaviour:
@@ -16257,7 +16399,14 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene1
+  tutorialcode: 
+  type: 
+  hasReturn: 0
   retryConfirm: {fileID: 1088969781}
+  nextScene: 0
+  _tutorial: {fileID: 0}
+  camara: {fileID: 0}
+  Pause: 0
 --- !u!114 &1749574157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16398,6 +16547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -16410,6 +16560,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -16417,9 +16568,16 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
+  detectDistance: 0
+  activated: 0
+  codeDamage: 0
 --- !u!61 &1760280896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16616,6 +16774,63 @@ Transform:
   m_Father: {fileID: 981740703}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1815429594
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6505732906270427268, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
 --- !u!1 &1829469972
 GameObject:
   m_ObjectHideFlags: 0
@@ -16811,6 +17026,7 @@ MonoBehaviour:
   attackButton: {fileID: 1664792877}
   skipConfirm: {fileID: 62819367}
   currentplayer: {fileID: 0}
+  _gameController: {fileID: 0}
 --- !u!1 &1875032594
 GameObject:
   m_ObjectHideFlags: 0
@@ -21716,6 +21932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -21728,6 +21945,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -21735,8 +21953,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   FirePrefab: {fileID: 1465191244800296946, guid: f0811f75ea3ab5f4c9de5c05713b554b, type: 3}
 --- !u!114 &1927736292
 MonoBehaviour:
@@ -21752,6 +21975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 981740704}
   Mode: 0
   GC: {fileID: 981740702}
@@ -21764,6 +21988,7 @@ MonoBehaviour:
   hasTurn: 0
   hasMove: 0
   hasAttack: 0
+  _color: {r: 0, g: 0, b: 0, a: 0}
   Cooldowns: 0
   animator: {fileID: 0}
   sprite: {fileID: 0}
@@ -21771,8 +21996,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &1927736293
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21994,6 +22224,7 @@ MonoBehaviour:
   Posiciones:
   - {x: 8, y: 5}
   - {x: 6, y: 5}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 1
@@ -22011,6 +22242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Posiciones:
   - {x: 11, y: 7}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 0
@@ -22067,6 +22299,7 @@ MonoBehaviour:
   - {fileID: 1308954870}
   - {fileID: 1760280895}
   startPlayer: []
+  startDeadPlayer: []
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0

@@ -41,6 +41,7 @@ public class PlayerBase : MonoBehaviour
     CustomTileClass _callTile;//La tile que se llama si has pasado por una tile importante
     List<Node> nodes;
     protected PlaceTiles PT;
+    [SerializeField] protected AudioSource src;
 
     bool isRunning = false;
     //Método Principal
@@ -48,6 +49,7 @@ public class PlayerBase : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Awake()
     {
+        src=GetComponent<AudioSource>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         GC = grid.GetComponent<GridController>();
         MM = GameObject.Find("MapManager").GetComponent<MapManager>();
@@ -81,6 +83,7 @@ public class PlayerBase : MonoBehaviour
                 Moving();
             }
         }
+
     }
 
     /*private void MovingNew(){
@@ -97,7 +100,9 @@ public class PlayerBase : MonoBehaviour
             if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
                 if(GC.tiles[tilepos.x,tilepos.y].CheckEffectDamage(this)){
+                    SoundManager.InstanceSound.StartFadeOut();
                     loseHealth(1);
+                    
                 }else if(animator.GetInteger("Anim")==1){
                 //  print("Batido PLeNysHakE" + this.name);
                 // print(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0));
@@ -109,7 +114,7 @@ public class PlayerBase : MonoBehaviour
                 if (nodes.Count <= 0)
                 {
                     //  print("jonyniii");
-                    
+                    SoundManager.InstanceSound.StartFadeOut();
                     animator.SetInteger("Anim", 0);
                     sprite.sortingOrder = -(grid.WorldToCell(transform.position).y - GC.ogy);
                     //Turn();
@@ -139,6 +144,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     //  print("icamefromalanddownunder");
                     //print(-grid.WorldToCell(transform.position).y);
+                    if(!SoundManager.InstanceSound.CheckPlaying()){SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[5]);}
                     tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
                     tile = GC.tiles[tilepos.x, tilepos.y];
                     if (tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile))
@@ -194,6 +200,7 @@ public class PlayerBase : MonoBehaviour
     {
         if (newPos != null && newPos.Count > 0)
         {
+            SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[5]);
             Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             tile.setPlayer(null);
@@ -276,9 +283,16 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void loseHealth(int health)
     {
+
         if (animator != null) { animator.SetInteger("Anim", 4); }
+        SoundManager.InstanceSound.HitSound(SoundGallery.InstanceClip.audioClips[7]);
         currentHealth -= health;
         CDH.DamageDialogue(GetType().ToString());
+    }
+    
+    private void thisLoseHealth(PlayerBase p, int health){
+        if (p.animator != null) { p.animator.SetInteger("Anim", 4); }
+        p.currentHealth -= health;
     }
 
     public virtual int GetMaxHealth()
@@ -364,10 +378,11 @@ public class PlayerBase : MonoBehaviour
         {
             if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
             {
-                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 4;}}
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){
+                            distance = 4;}}
                         else if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") {  MM.Damage(4, x + dx, y + dy);} //if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
-                        else{if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}}
-                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed);}
+                        else{if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){stop=true;}}
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed);}
             }
 
             while (!stop && distance > 0)
@@ -398,9 +413,9 @@ public class PlayerBase : MonoBehaviour
 
                     if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
                     {
-                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){distance = 5;}}
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){distance = 5;}}
                         if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { MM.Damage(4, x + dx, y + dy);} // if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
-                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
                     }
                     if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
                     if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica

@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -175,6 +176,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 3
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -347,6 +352,64 @@ MonoBehaviour:
   attackButton: {fileID: 1643562081}
   skipConfirm: {fileID: 0}
   currentplayer: {fileID: 0}
+  _gameController: {fileID: 0}
+--- !u!1001 &370171728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6505732906270427268, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
 --- !u!1 &377378509
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -845,6 +909,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -925,6 +993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 2029981104}
   Mode: 0
   GC: {fileID: 2029981102}
@@ -945,8 +1014,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &547784569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,6 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -981,6 +1056,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
 --- !u!4 &547784570
 Transform:
   m_ObjectHideFlags: 0
@@ -1744,7 +1823,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 39
-      m_TileSpriteIndex: 67
+      m_TileSpriteIndex: 75
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1794,7 +1873,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 42
-      m_TileSpriteIndex: 72
+      m_TileSpriteIndex: 74
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1944,7 +2023,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 46
-      m_TileSpriteIndex: 68
+      m_TileSpriteIndex: 72
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4027,10 +4106,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -449811894, guid: ff5ae31309aa4db429def06584e55749, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1660470790, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -4038,13 +4117,13 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -2088293898, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -526117248, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
+    m_Data: {fileID: -1660470790, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 158811857, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -526117248, guid: 6c965eb07c3359f4b934ae3578b72725, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -449811894, guid: ff5ae31309aa4db429def06584e55749, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 948363859, guid: ff5ae31309aa4db429def06584e55749, type: 3}
   - m_RefCount: 1
@@ -4163,6 +4242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -4183,8 +4263,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   IcePrefab: {fileID: 5347602195125805759, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   IceCube: {fileID: 5347602195125805744, guid: 0c109b9e38d2a9d41ad16f741901496f, type: 3}
   DisplayIce: {fileID: 0}
@@ -4526,6 +4611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -4546,6 +4632,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
@@ -9209,6 +9299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -9229,8 +9320,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   ElecPrefab: {fileID: 2704912516305452731, guid: f5f9cf3f7e564c04d9d9c24ade97ed30, type: 3}
 --- !u!61 &1044581339
 BoxCollider2D:
@@ -9523,6 +9619,7 @@ MonoBehaviour:
   - {fileID: 1158186014}
   - {fileID: 1798995838}
   currentManager: 0
+  _palancaTest: {fileID: 0}
   _GC: {fileID: 0}
 --- !u!114 &1158186016
 MonoBehaviour:
@@ -9579,6 +9676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -9599,8 +9697,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &1158186019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9667,6 +9770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -9687,6 +9791,10 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
 --- !u!4 &1158186021
 Transform:
   m_ObjectHideFlags: 0
@@ -11284,6 +11392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -11304,8 +11413,13 @@ MonoBehaviour:
   alive: 0
   maxHealth: 0
   currentHealth: 0
+  CDH: {fileID: 0}
+  _circle: {fileID: 0}
+  stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
+  _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
 --- !u!4 &1899794185
@@ -11584,9 +11698,11 @@ MonoBehaviour:
   _mapManager: {fileID: 1977093867}
   interactiveMap: {fileID: 491103403}
   pathMap: {fileID: 990064330}
-  Top1: {fileID: 797608321}
+  Top: {fileID: 0}
   ground: {fileID: 990064330}
+  gasesE: {fileID: 0}
   gases: {fileID: 0}
+  charcosE: {fileID: 0}
   charcos: {fileID: 0}
   canMove: {fileID: 897331217}
   CanAttackMap: {fileID: 897016002}

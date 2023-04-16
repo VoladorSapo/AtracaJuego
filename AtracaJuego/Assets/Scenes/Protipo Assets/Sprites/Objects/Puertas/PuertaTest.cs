@@ -7,6 +7,7 @@ public class PuertaTest : ObjectStuff
     [SerializeField] private Sprite[] OpenClosed;
     private SpriteRenderer spriteState;
     private bool isOpen;
+    private bool startDone=false;
     [SerializeField] private Transform posSprite;
     protected override void Start(){
         base.Start();
@@ -31,11 +32,13 @@ public class PuertaTest : ObjectStuff
     }
 
     public void Open(){
+        SoundManager.InstanceSound.PlaySoundDoor(SoundGallery.InstanceClip.audioClips[6]);
         Vector3Int posBL=GC.grid.WorldToCell(transform.position)-new Vector3Int(1,1,0);
 
         for(int i=0; i<=2; i++){
             for(int j=0; j<=2; j++){
-                GC.tiles[posBL.x+i - GC.ogx,posBL.y+j - GC.ogy].SetTileStats(0,0,16,0);
+                GC.tiles[posBL.x+i - GC.ogx,posBL.y+j - GC.ogy].addEffect(0,true,0,-1);
+                GC.tiles[posBL.x+i - GC.ogx,posBL.y+j - GC.ogy].SetTileStats(0,0,0,0);
             }
         }
         posSprite.position+=new Vector3(0,10,0);
@@ -45,10 +48,12 @@ public class PuertaTest : ObjectStuff
     }
 
     public void Close(){
+        if(startDone){SoundManager.InstanceSound.PlaySoundDoor(SoundGallery.InstanceClip.audioClips[7]);}
         Vector3Int posBL=GC.grid.WorldToCell(transform.position)-new Vector3Int(1,1,0);
-
+        
         for(int i=0; i<=2; i++){
             for(int j=0; j<=2; j++){
+                GC.tiles[posBL.x+i - GC.ogx,posBL.y+j - GC.ogy].addEffect(0,true,0,-1);
                 GC.tiles[posBL.x+i - GC.ogx,posBL.y+j - GC.ogy].SetTileStats(0,8,16,0);
             }
         }
@@ -57,6 +62,7 @@ public class PuertaTest : ObjectStuff
         spriteState.sprite=OpenClosed[0];
         spriteState.sortingLayerName="Ground";
         isOpen=false;
+        startDone=true;
     }
 }
 

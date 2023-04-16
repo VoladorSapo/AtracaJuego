@@ -394,6 +394,11 @@ public class CustomTileClass
             if(tileEffect==4 || tileEffect==6 || tileEffect==8 || tileEffect==10 || tileEffect==12|| tileEffect==13 || tileEffect==15){return false;}
             else{return true;}
         }
+
+        public bool GasBased(){
+            if(tileEffect==1 || tileEffect==3 || tileEffect==4 || tileEffect==7 || tileEffect==11 || tileEffect==12|| tileEffect==13){return true;}
+            else{return false;}
+        }
     }
 
 

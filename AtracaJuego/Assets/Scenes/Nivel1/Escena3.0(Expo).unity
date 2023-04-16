@@ -14169,6 +14169,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   LifeTime: 0
 --- !u!212 &302897915
 SpriteRenderer:
@@ -14457,6 +14458,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+--- !u!1001 &494262034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6505732906270427268, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_RootOrder
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
 --- !u!1001 &536105429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14672,6 +14730,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   LifeTime: 0
   Burning: 0
 --- !u!212 &567850639
@@ -21793,6 +21852,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   _circleColor: {r: 0, g: 0, b: 0, a: 0}
@@ -21835,6 +21895,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   _circleColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22657,6 +22718,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   Cooldown: 0
   _turnbuttons: {fileID: 0}
   _circleColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22698,6 +22760,7 @@ MonoBehaviour:
   CDH: {fileID: 0}
   _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
 --- !u!4 &1172989356
 Transform:
   m_ObjectHideFlags: 0
@@ -23529,6 +23592,7 @@ MonoBehaviour:
   Posiciones:
   - {x: 8, y: 5}
   - {x: 6, y: 5}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 1
@@ -23546,6 +23610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Posiciones:
   - {x: 11, y: 7}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 0
