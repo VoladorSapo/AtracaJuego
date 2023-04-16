@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlacaTest: MonoBehaviour
 {
     [SerializeField] private Vector2Int[] Posiciones;
+    [SerializeField] private ObjectStuff[] Objetos;
     [SerializeField] private bool Activate;
     [SerializeField] private bool Activated;
     private int n=0;
@@ -25,6 +26,7 @@ public class PlacaTest: MonoBehaviour
             if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==2){n++;}
         }
         if(n==Posiciones.Length){Activate=true;}
+        //if(n==Posiciones.Length){Activate=true;}
         }
         
         
@@ -32,7 +34,7 @@ public class PlacaTest: MonoBehaviour
         if(Activate && !Activated){
             Debug.LogWarning("Puerta Abierta "+indice);
             switch(indice){
-                case 0: Debug.LogWarning("Que"); break;
+                case 0: (Objetos[0] as PuertaTest).Open(); break;
                 case 1: Debug.LogWarning("so"); break;
                 //... Hasta el maximo que sea
             }

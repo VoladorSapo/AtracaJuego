@@ -1249,11 +1249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6046868464334824798, guid: c66bf66a2254b66428ec43a68d4e1763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 6046868464334824798, guid: c66bf66a2254b66428ec43a68d4e1763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 6.94
       objectReference: {fileID: 0}
     - target: {fileID: 6046868464334824798, guid: c66bf66a2254b66428ec43a68d4e1763, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
@@ -1587,6 +1588,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
 --- !u!4 &811016130
 Transform:
@@ -1915,6 +1917,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
   LifeTime: 0
 --- !u!212 &925795038
@@ -6951,6 +6954,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
@@ -6992,6 +6996,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
   Cooldown: 0
   _turnbuttons: {fileID: 0}
@@ -7351,6 +7356,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
   LifeTime: 0
   Burning: 0

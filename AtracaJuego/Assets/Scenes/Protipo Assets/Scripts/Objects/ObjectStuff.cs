@@ -12,7 +12,7 @@ public override void Update(){
         base.Update();
 }
 
-public void StartObject(){
+public virtual void StartObject(){
     Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
     //Debug.LogWarning(this);
     GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
