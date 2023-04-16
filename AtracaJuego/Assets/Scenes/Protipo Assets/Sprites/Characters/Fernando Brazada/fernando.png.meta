@@ -1,0 +1,3985 @@
+fileFormatVersion: 2
+guid: ed286aa9eab37674cb43ac2580264027
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fernando_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5220731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e5ffb9cef53c74cafa4caed6cf825a
+      internalID: -99826861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657a49ca95d82ce4d86ecb8578eec601
+      internalID: -1439483687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0004734500015b849a44329fdba44120
+      internalID: 1653538984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b65454cbf9195849ab77c17596267b2
+      internalID: 1739010756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_4
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2964f9d7799a86046a92da72761eae28
+      internalID: 611237396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_5
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de68834e4a17f624293c1b49bc260bf0
+      internalID: 1881171412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_6
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1514e93b4cb261346808e896c9b57566
+      internalID: 2146504123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_7
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcb4bacf9322b444a9c1bd20f7bb791
+      internalID: -1218563271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_8
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0160dff52c4935748832324fb1670681
+      internalID: 1748521953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_9
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1e771278391d647821a50bf49d757f
+      internalID: 2056406795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_10
+      rect:
+        serializedVersion: 2
+        x: 2580
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c694e4c6f9abe4693b53f747fb37a4
+      internalID: -611639547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_11
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951c4b9aaa2bc5a42b128cba37048d2d
+      internalID: -220831378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_12
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2590864f4d71149a909419f674d28f
+      internalID: -2089901648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_13
+      rect:
+        serializedVersion: 2
+        x: 3354
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db05c5d82754a648a41b051b24faa62
+      internalID: 1974378997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_14
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 3831
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20e0d450b3ccbc4fb122c587295fced
+      internalID: 2126827419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb68d206d5b30741a087e9e4d8f3db5
+      internalID: 1947089372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6325481f9ce5c984f82f0ecb5885ae70
+      internalID: -1957464143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_17
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d478a890a304b40b33603e6740035a
+      internalID: -1256248565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_18
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abc9a086f0c4de48ae4bb5e2df62bfa
+      internalID: 1717638367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_19
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc684104cf128694d85fd33e848d0179
+      internalID: 1472605732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_20
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 3566
+        width: 258
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958adbc40daab9d49af4bcad0ccd209b
+      internalID: 2012730712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_21
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444c43132db53f348bd99c1982143377
+      internalID: -1408125706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_22
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801c2c26161f2d0438900833f8773c58
+      internalID: -782838415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_23
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dd09a93dded1b43a5ed575bd779662
+      internalID: 663054533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_24
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ee7ce699c815b4b8719d3d5920109b
+      internalID: -1348278307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_25
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca620ce7405aaa4bbfc44cdd6dd5c7f
+      internalID: 2056958170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_26
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637a76f9211a75c41b34920a818268be
+      internalID: 1557660209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_27
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf4ecebf855f494d8225a19c4975d98
+      internalID: 218602418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_28
+      rect:
+        serializedVersion: 2
+        x: 3438
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218fe6ec5f0be3d47a21fe94f1f74425
+      internalID: 998106939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_29
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 3576
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c22ab6bcee2d544b8cd648e218e3ed
+      internalID: -64646172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6438a2f8be7ea7746afc999ae2d20a2e
+      internalID: 1739104501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_31
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3312
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cfc5331a4f16840a94ceef2810f9ec
+      internalID: -183520247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_32
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20746b98c2f5adc43b97e7b503052e55
+      internalID: 2069973273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_33
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ca8ce4a4a7b3a4b97193291a06e470
+      internalID: -1350641264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_34
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965de1cac8160d747a84a3e0f2b059fd
+      internalID: -2054583275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_35
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ccc1feb89ce1a43bd547598a6ad891
+      internalID: -2026632393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_36
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a966e83617fdbf344b1560905dcf7ccd
+      internalID: 1689436290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_37
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c488cdbbac4508458a2408c75ca23ea
+      internalID: 2101269496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_38
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3329300ce3d31744eae58c43ba4ea8cc
+      internalID: -1321058092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_39
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d86102987ee004181eeda26713239c
+      internalID: -2093375266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_40
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170cbd4370e764243953b5041236da86
+      internalID: 2067062348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_41
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a05f88f65e316842b48e066cde825b5
+      internalID: 174029837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_42
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081c860fc2f195c4b9320ba8fc79d6c2
+      internalID: -651695436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_43
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5308083b23cda4fb05e9a5798685b7
+      internalID: -355368065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_44
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3311
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0f9bd0bd869fc4b80a5ad9c6deb7e0
+      internalID: 332492626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121a1604bab4a0c45a03e70f276cff4e
+      internalID: 1971379613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_46
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8add08ccae1863e4f850bbf24ff766dd
+      internalID: 1993956485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_47
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbcf525833a2244aa680f28a0e4f0bd
+      internalID: -619609639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_48
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc51a1b0b784771458b8a9a276c62f4b
+      internalID: 1712965322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_49
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f1342caaf11af4a9df9299f9e5adfb
+      internalID: -1061736710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_50
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8af317b5573f48b827c46dc239687
+      internalID: 1270559450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_51
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c55cde8392425e4c84e125c11680183
+      internalID: 532221267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_52
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e8ee074ff325a40b1b00617c00027b
+      internalID: -667750897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_53
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7788cf19802954ebdf2af0d2aed978
+      internalID: -1743327553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_54
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6882f46172169bb44a1a892760544cab
+      internalID: 872253115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_55
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d03c52764e0914d9888f8644f9df4e
+      internalID: 1622499448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_56
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310717ac56110dc4b8ae3529f9e6ccd3
+      internalID: -203640334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_57
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f596f02f3528a542b9cd45e960dcccc
+      internalID: 2023903067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_58
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a64261cc393ee479a70ea76ff2911e
+      internalID: 653656540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_59
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3055
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126fe278855cd384cacb53efbebc3332
+      internalID: 849247314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c941e654673f49d4ca0583f57c0c7754
+      internalID: -123928671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_61
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d86a27233e0f742a7bad5c903cc01a
+      internalID: -352159538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_62
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4edacefd2567c4fbb2ebcfbc2ccb4f
+      internalID: 848924387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_63
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1fe7feca022bc41860cc1e3d32f791
+      internalID: -378340599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_64
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa31f12ce8a9cae4485086ffae9023de
+      internalID: -1387012174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_65
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f42172c256909449a87b54a0c0a19f
+      internalID: -351085488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_66
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8261deed2f1b0743b277f3c4ed121d4
+      internalID: 1707725842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_67
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e72cb612f256634aa757c93230532c7
+      internalID: -1961613582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_68
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09efc9456ef7c3449662782b9d27981
+      internalID: 1881389737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_69
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb3d0ecb1d87bd458b9ddde5bfa5cb3
+      internalID: -319175581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_70
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4cf96803b97e0499cac9cd8c878cfc
+      internalID: 1247795045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_71
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c754668a16bb54a888fd8803e8f7c2
+      internalID: -1632388730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_72
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19905ba39998db498a480a8ccaed8af
+      internalID: -2089159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_73
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddfcab266dab3746a804a930fd44f6c
+      internalID: 1270425435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_74
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2800
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773c49ac7d00a034da95585aff314378
+      internalID: -1998288270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_75
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea4c8ef2884ed541880ab79a912bd88
+      internalID: 1062216101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_76
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be914dfecf615e641987f0ee7ec8768f
+      internalID: -1145896759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_77
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803f22918c5658340a2bfcd55df244fc
+      internalID: -658733739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_78
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d23a29a4ce4ce547ab5c94a09cf00bb
+      internalID: -1852733545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_79
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b789cd0f2e581a45a2538526f05a577
+      internalID: 1966033492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_80
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4539d5876af22284db87c9cef3289562
+      internalID: -297031004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_81
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db671a6be948f5a4ba1d294b041e6355
+      internalID: -1159754640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_82
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75912b74be3bcac4aa5f13760f84cca1
+      internalID: -1205970862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_83
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c217f581ec7cb4e9beb43bd55c0f68
+      internalID: 1638466825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_84
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fea3edd252599449974763e5dc00edc
+      internalID: -747205294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_85
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e70ef6f49ed9284d9de1379042757c7
+      internalID: 339239120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_86
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c680aba1567a5f44c97f31ad64c3d08b
+      internalID: 471249731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_87
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467381e0b83fa364a97df2ae868a6ba3
+      internalID: -1370114659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5726a49d30f084041a634132fb8944e6
+      internalID: 128437072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_89
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ac34519cf7ca340a5359e3fcc7201c
+      internalID: 759682705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2545
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59aab33ec06d6448914d2e2d9ff88e6
+      internalID: 1043484522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_91
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2d406df1f699549a56e82a441c8e1c
+      internalID: 2042890164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_92
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a42283fc96b5148bc0e1718c8cae28
+      internalID: -2031778226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_93
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77ae57b41382614289a9f1c707dcabf
+      internalID: 1048477160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_94
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6a6337f5ce9be46a5dd28b85c3d20a
+      internalID: -70125779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_95
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eaf7b5eb126e54d92db8a30c464b87
+      internalID: -1323776828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_96
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d490c88b4976be94e9da82cc8114ac42
+      internalID: 1596745603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_97
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea1a34be9326c745a49538af6e14f18
+      internalID: -1885357678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_98
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b415d8228b6ddae41908ecf48ee791bb
+      internalID: 1484045882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_99
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8395ac4fcaba38946982f16252b38374
+      internalID: 1765491951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_100
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19c810c891d912439977be537cf7a37
+      internalID: 574404895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_101
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac86a0b42d42a541b43eb05cace07d2
+      internalID: 2002874356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_102
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6589b60be1fd468df40f9d104f213
+      internalID: -1608638316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_103
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b92ff140e57afd4985475d9df0ac6fc
+      internalID: -2098384903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_104
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2290
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc76c411da95d346af82fe8ef9d8182
+      internalID: -994817522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_105
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 2035
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25193fa3e60613842901eaad3e5e125f
+      internalID: -120856499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_106
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 2035
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c81f4c6f8b2da4aa533528e63dc82c
+      internalID: -1598646954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_107
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 2035
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ebfa6d67932b241acd0b26bf49846e
+      internalID: 560494558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_108
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1b11ab28427994bb787082d3a28c88
+      internalID: -177115340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_109
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac9be784c767e64caa43c8257b53afc
+      internalID: 586958694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_110
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf535231b54a3fc4c85c0e5e8b48196e
+      internalID: -1038757309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_111
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2a2bf6860660f47bb1a189db3dd351
+      internalID: 2135825500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_112
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38886b0f5950b740a379f9277472204
+      internalID: -2084943199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_113
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a027c3500e64a5a4ea03524077658b19
+      internalID: -1643085261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_114
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ebf16e482243649b81cb9f602507cc
+      internalID: 576736015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_115
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2053
+        width: 233
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d85f548ae4d0154ba220d715d00ff4e
+      internalID: 946830225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_116
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2035
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9116d73ae453124393b86477e449c39
+      internalID: -206311335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_117
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2035
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e218be330f37df43a7fd764eb68f6ea
+      internalID: -1605078527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_118
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2035
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba06c5a3d0f37f41804ad544bd25441
+      internalID: 819300441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_119
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2035
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be3a9038a3ebb84983ddb2cd70ae687
+      internalID: -1638175510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2035
+        width: 270
+        height: 255
+      alignment: 9
+      pivot: {x: 0.55, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff33c2f5601309b44ade869bbda0286e
+      internalID: -1564729974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd09069f4cf8a4847a1b507355387751
+      internalID: 267812147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_122
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71731c70e89006e46b82a13701c77445
+      internalID: 1553597819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_123
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ca9e7743ca66149bdfb84c5d9a1745
+      internalID: 30339820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_124
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103eacbabbde41849a6d49db375ba5fd
+      internalID: -1686705960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_125
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12002390944f9e6418d5fcb58ca28e6e
+      internalID: 622197977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_126
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931177f81606357419b015363eeec674
+      internalID: 95962370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_127
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c352aa3949967d4796b89a8fe08bb5d
+      internalID: 423976797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_128
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17018b1c702530840b85ba55731e4b4b
+      internalID: -66553491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_129
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a384d2bb88e733e48971a013a5bca90d
+      internalID: 519555576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_130
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f436f114c5b854e87d260589f8132e
+      internalID: -1702363729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_131
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b29d9b808903884e9d20aabeea04cef
+      internalID: -920980875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_132
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469e9c6243e6a374d866f54f0d460bd3
+      internalID: -659847655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_133
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80fb91f280957c4e8973319f69d5876
+      internalID: 1183569881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_134
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7459904646ac3d14fb54fb00a63e0f5c
+      internalID: 916522678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_135
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b497e7910c66a49987a924c30dd845
+      internalID: -1456951782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_136
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4214c3e2fb15e84ca68af2293055aa9
+      internalID: 1169286372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_137
+      rect:
+        serializedVersion: 2
+        x: 3824
+        y: 1780
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0389f08586a324b48a5333e2bee3580f
+      internalID: 641087931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac95f19eaee841418bf6aba11561da9
+      internalID: -1063368450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_139
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35d22b3cb05d2848af52458ea019453
+      internalID: -1784933784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_140
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86372428a49d8544a8f0dd6e4d95eb66
+      internalID: -809841788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_141
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4750ef8070d37044d900407da57ffd8a
+      internalID: -1332672376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_142
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63e3c02b2425024683b09bc4922a9b9
+      internalID: -410515582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_143
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9403629d92ed3a45804cd0d35e91891
+      internalID: -1791515363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_144
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fded1b334b9ab446a34e6889fc352c2
+      internalID: 1816910154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_145
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d5be86156da56468e163f7ca982f03
+      internalID: -576181226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_146
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e49c5db507f0544931a21f7c3edb31
+      internalID: -204886304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_147
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff0bcb015af1f14db5800a78599bc7d
+      internalID: 49807113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_148
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3274e164e361b4c9962ecd545c3b40
+      internalID: -1354751831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_149
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26ea1780b98a3344af88445e2e2d391
+      internalID: -1096366247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_150
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1148245c52b350c44a049a5807102207
+      internalID: 736990204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_151
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323c7f23232c5f145a2193f4df086c84
+      internalID: 1662523961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_152
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fd3abb02d9e3643afa678bdb6c252d
+      internalID: 715308439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_153
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91702e2e58284d47932e6ca3a20a112
+      internalID: 568334321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_154
+      rect:
+        serializedVersion: 2
+        x: 3824
+        y: 1525
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26975b308f1f00d43a401a30e202a86e
+      internalID: -1859533109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_155
+      rect:
+        serializedVersion: 2
+        x: 3824
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d47f0311b7e1649a9ccc529975a5fc
+      internalID: -1544019094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_156
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eed4d6807a5fa14a9e667c83c61cd34
+      internalID: 1503062552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_157
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d808e12ebd8e0469663203da3756c6
+      internalID: 1627740336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_158
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b165a123338b9ad47adb1a01b2b42fbc
+      internalID: 1540246836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_159
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e489a7d747008a4a90564320a7730f6
+      internalID: -1732782210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_160
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5b643a974bb624c9e2388bcba1417b
+      internalID: -1501142293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_161
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e148f5ee43defb94890971720747dbaa
+      internalID: -391837414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_162
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad34a8bcc3caf2d48be3d9c197779e3b
+      internalID: 977594479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_163
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d895197217c88584db7b83962742dd90
+      internalID: 1373655411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_164
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f00e503c00b87a4e8b1bfd369f19ca8
+      internalID: 147704905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_165
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e779d687a949ba54caa498f0f5f02217
+      internalID: -1031220801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_166
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3ac94e2ee61574e89bb365aa2349e2
+      internalID: 299762652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_167
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd78594a13c35e41b738a6aedb223e5
+      internalID: 2036863126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_168
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacd42f8398ab1b478d067311c3b6ac6
+      internalID: 1840918997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_169
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1292
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a4a655b6ca65140a709b5694c488db
+      internalID: -665018825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_170
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1293
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d354dee6e5611244bc1c39882e6f3c9
+      internalID: -1806431842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_171
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1270
+        width: 239
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6304452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfa890a65a52194d8a855a7d205a119
+      internalID: 981801000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1038
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf0fbc5e0eb93f448a803b76905e45c
+      internalID: -1465178463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_173
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1038
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f0a97332b40d646abc4ecf68234cc0
+      internalID: 1576914573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernando_174
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1038
+        width: 239
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5274721, y: 0.6214579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95be448ffe98a8f448458d1ca4ec88e7
+      internalID: 1168530020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      fernando_0: -99826861
+      fernando_1: -1439483687
+      fernando_10: -611639547
+      fernando_100: 574404895
+      fernando_101: 2002874356
+      fernando_102: -1608638316
+      fernando_103: -2098384903
+      fernando_104: -994817522
+      fernando_105: -120856499
+      fernando_106: -1598646954
+      fernando_107: 560494558
+      fernando_108: -177115340
+      fernando_109: 586958694
+      fernando_11: -220831378
+      fernando_110: -1038757309
+      fernando_111: 2135825500
+      fernando_112: -2084943199
+      fernando_113: -1643085261
+      fernando_114: 576736015
+      fernando_115: 946830225
+      fernando_116: -206311335
+      fernando_117: -1605078527
+      fernando_118: 819300441
+      fernando_119: -1638175510
+      fernando_12: -2089901648
+      fernando_120: -1564729974
+      fernando_121: 267812147
+      fernando_122: 1553597819
+      fernando_123: 30339820
+      fernando_124: -1686705960
+      fernando_125: 622197977
+      fernando_126: 95962370
+      fernando_127: 423976797
+      fernando_128: -66553491
+      fernando_129: 519555576
+      fernando_13: 1974378997
+      fernando_130: -1702363729
+      fernando_131: -920980875
+      fernando_132: -659847655
+      fernando_133: 1183569881
+      fernando_134: 916522678
+      fernando_135: -1456951782
+      fernando_136: 1169286372
+      fernando_137: 641087931
+      fernando_138: -1063368450
+      fernando_139: -1784933784
+      fernando_14: 2126827419
+      fernando_140: -809841788
+      fernando_141: -1332672376
+      fernando_142: -410515582
+      fernando_143: -1791515363
+      fernando_144: 1816910154
+      fernando_145: -576181226
+      fernando_146: -204886304
+      fernando_147: 49807113
+      fernando_148: -1354751831
+      fernando_149: -1096366247
+      fernando_15: 1947089372
+      fernando_150: 736990204
+      fernando_151: 1662523961
+      fernando_152: 715308439
+      fernando_153: 568334321
+      fernando_154: -1859533109
+      fernando_155: -1544019094
+      fernando_156: 1503062552
+      fernando_157: 1627740336
+      fernando_158: 1540246836
+      fernando_159: -1732782210
+      fernando_16: -1957464143
+      fernando_160: -1501142293
+      fernando_161: -391837414
+      fernando_162: 977594479
+      fernando_163: 1373655411
+      fernando_164: 147704905
+      fernando_165: -1031220801
+      fernando_166: 299762652
+      fernando_167: 2036863126
+      fernando_168: 1840918997
+      fernando_169: -665018825
+      fernando_17: -1256248565
+      fernando_170: -1806431842
+      fernando_171: 981801000
+      fernando_172: -1465178463
+      fernando_173: 1576914573
+      fernando_174: 1168530020
+      fernando_18: 1717638367
+      fernando_19: 1472605732
+      fernando_2: 1653538984
+      fernando_20: 2012730712
+      fernando_21: -1408125706
+      fernando_22: -782838415
+      fernando_23: 663054533
+      fernando_24: -1348278307
+      fernando_25: 2056958170
+      fernando_26: 1557660209
+      fernando_27: 218602418
+      fernando_28: 998106939
+      fernando_29: -64646172
+      fernando_3: 1739010756
+      fernando_30: 1739104501
+      fernando_31: -183520247
+      fernando_32: 2069973273
+      fernando_33: -1350641264
+      fernando_34: -2054583275
+      fernando_35: -2026632393
+      fernando_36: 1689436290
+      fernando_37: 2101269496
+      fernando_38: -1321058092
+      fernando_39: -2093375266
+      fernando_4: 611237396
+      fernando_40: 2067062348
+      fernando_41: 174029837
+      fernando_42: -651695436
+      fernando_43: -355368065
+      fernando_44: 332492626
+      fernando_45: 1971379613
+      fernando_46: 1993956485
+      fernando_47: -619609639
+      fernando_48: 1712965322
+      fernando_49: -1061736710
+      fernando_5: 1881171412
+      fernando_50: 1270559450
+      fernando_51: 532221267
+      fernando_52: -667750897
+      fernando_53: -1743327553
+      fernando_54: 872253115
+      fernando_55: 1622499448
+      fernando_56: -203640334
+      fernando_57: 2023903067
+      fernando_58: 653656540
+      fernando_59: 849247314
+      fernando_6: 2146504123
+      fernando_60: -123928671
+      fernando_61: -352159538
+      fernando_62: 848924387
+      fernando_63: -378340599
+      fernando_64: -1387012174
+      fernando_65: -351085488
+      fernando_66: 1707725842
+      fernando_67: -1961613582
+      fernando_68: 1881389737
+      fernando_69: -319175581
+      fernando_7: -1218563271
+      fernando_70: 1247795045
+      fernando_71: -1632388730
+      fernando_72: -2089159
+      fernando_73: 1270425435
+      fernando_74: -1998288270
+      fernando_75: 1062216101
+      fernando_76: -1145896759
+      fernando_77: -658733739
+      fernando_78: -1852733545
+      fernando_79: 1966033492
+      fernando_8: 1748521953
+      fernando_80: -297031004
+      fernando_81: -1159754640
+      fernando_82: -1205970862
+      fernando_83: 1638466825
+      fernando_84: -747205294
+      fernando_85: 339239120
+      fernando_86: 471249731
+      fernando_87: -1370114659
+      fernando_88: 128437072
+      fernando_89: 759682705
+      fernando_9: 2056406795
+      fernando_90: 1043484522
+      fernando_91: 2042890164
+      fernando_92: -2031778226
+      fernando_93: 1048477160
+      fernando_94: -70125779
+      fernando_95: -1323776828
+      fernando_96: 1596745603
+      fernando_97: -1885357678
+      fernando_98: 1484045882
+      fernando_99: 1765491951
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
