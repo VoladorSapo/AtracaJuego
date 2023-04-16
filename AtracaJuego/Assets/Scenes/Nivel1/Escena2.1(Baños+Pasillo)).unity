@@ -1738,11 +1738,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.8
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.5
+      value: -7.1000004
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12242,11 +12242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.8
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.6
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14535,11 +14535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.8
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.9
+      value: -17.500002
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266187, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19531,6 +19531,7 @@ MonoBehaviour:
   Posiciones:
   - {x: 8, y: 5}
   - {x: 6, y: 5}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 1
@@ -19548,6 +19549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Posiciones:
   - {x: 11, y: 7}
+  Objetos: []
   Activate: 0
   Activated: 0
   indice: 0
