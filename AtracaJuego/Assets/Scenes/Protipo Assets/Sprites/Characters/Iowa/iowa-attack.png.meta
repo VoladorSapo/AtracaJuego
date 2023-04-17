@@ -1,0 +1,1631 @@
+fileFormatVersion: 2
+guid: f70fa2f10d5065344914bcadffdcb53b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: iowa-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861a997bedf20694e8c7e4e989043e32
+      internalID: 342945096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830a5d227cfedab4abb3cb12726b1098
+      internalID: -1928115662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_2
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed916fce3d070040afc36854c499996
+      internalID: -1128278452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_3
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e529b4265b7c8be4a86cc0d219a052ca
+      internalID: 958686248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_4
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d5dedfc4ced8148bded5a59a16c1a6
+      internalID: -1805608014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_5
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ee98d421f4f7e46b5b9d2c9858b56b
+      internalID: 859849841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_6
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76466fea56fe5944a933aa2091e9963
+      internalID: -1000199215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_7
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394a7efc958128a489b3d05e32dfc8c5
+      internalID: -545539371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_8
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 3692
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc9376698adf45489fe7d1beaa4a301
+      internalID: 1048567987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68055c12872f98f48847723ffdea99fc
+      internalID: 1083042785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_10
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95e4ef3636411a48850b1f93e76cba7
+      internalID: 78217270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_11
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a561115f3237045b014a91e0640e64
+      internalID: -1253722230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_12
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c2cb5056116a14b8698e7234422570
+      internalID: 760168222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_13
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990e057266443bd4a82aeeec53275ae0
+      internalID: 45990108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_14
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c8f597dfb38a74f89ffeac9bfc2efd
+      internalID: 1467431066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_15
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b929cf063445a334dbfdd72a761ca7b8
+      internalID: -637883526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_16
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24765cd6fa6f0f14795b9f03424fcc01
+      internalID: -316169974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_17
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 3288
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8575b4fc98029e479a2cf7b334aad22
+      internalID: -1861570834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b92f0822c2bb6418dfb7eebeccf736
+      internalID: -788002451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_19
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1bd44ca6fa6524ebdbf4395a2674e9
+      internalID: 250270977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_20
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2f8c33ef4c8344d8ada6b05d924b4e
+      internalID: 2141780359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_21
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a379abe3cb790e44835ab8eeb71542b
+      internalID: 289706461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_22
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fa04ea44cbd1247a8b7ff3cdcc813a
+      internalID: 1377163047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_23
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e07b6f3e81b604f85e4f029231dd0e
+      internalID: -512008315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_24
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c3c6ad80ca6104e9152174a75ffe7c
+      internalID: -100926007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_25
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e2abcac8d32a44f885440231b958b0
+      internalID: -1524914686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_26
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2884
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415dc5dfd1e74b64fac8ae5723dd4a2b
+      internalID: -1323734704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d1633427212b643a8a7b539239cc80
+      internalID: -1687018744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_28
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbed10d0c2e23884c87e859489d30ca3
+      internalID: -1571349493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_29
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfa66448348f87498e7bd7895f5ff4d
+      internalID: -1670428328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_30
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404b16496550ab8498b91109083fbe07
+      internalID: 1864920279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_31
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906c1b060f0cc9b45bef69992f4467dc
+      internalID: -1774686442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_32
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bb3e299f6c54344a0e2c2f73c7e892
+      internalID: 1392491992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_33
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9f8f474d00343478cbf8decff7ecfe
+      internalID: 964111790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_34
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44450b50414e99a44b5aeceb99438b55
+      internalID: 1279642333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_35
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2480
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a19c05dc40d7f545b503ec9b6a7eda0
+      internalID: 458601895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2076
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceef01e5ae55d0c46891c78c44a9076d
+      internalID: 1240619772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_37
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2076
+        width: 411
+        height: 404
+      alignment: 9
+      pivot: {x: 0.4729468, y: 0.4561695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad21200a2fa676b42a52be5f86f75227
+      internalID: -840341582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_38
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180fc9c1d949df043ba279193cc121ac
+      internalID: 1929150916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_39
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bf098677187d44f81da3000bf099a2
+      internalID: 1150004765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_40
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afa8e0c8920c604abeef5a47e295337
+      internalID: -1660829879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_41
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca03cdc5e7607b4da6bf3f360c15b5a
+      internalID: 680756425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_42
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc6f3a432ac19040b23d2bb63a49665
+      internalID: 1231974714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_43
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478ba4cf230cf6647bb2375285d28c3f
+      internalID: -1264536947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_44
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0603fc9a352f34191d119d7518c436
+      internalID: 1202122914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_45
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b6daa171acd3840a089f09301993a2
+      internalID: 352388574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_46
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fb03fb02d29984e862a35e28f0a042
+      internalID: -1786679429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_47
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc06e6f0388511f4c8775b218f2283d7
+      internalID: 1172829928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_48
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 2272
+        width: 209
+        height: 208
+      alignment: 9
+      pivot: {x: 0.3928126, y: 0.5556816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55abbecad66c40428dc6401ed0a2351
+      internalID: 1120856185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_49
+      rect:
+        serializedVersion: 2
+        x: 3121
+        y: 1970
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5208434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c915e0a3023b84d885b8582ab55c49
+      internalID: 1632994803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd6ac286e1e7fa4ba334e133300d8c1
+      internalID: -1048989769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_51
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8967166461d802b4482f949391145bcd
+      internalID: 322565939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_52
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e16586c02e38b4c94ae1f8b4b0eefc
+      internalID: 1509730876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_53
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25314875e918a7b44ae667f8e3197f80
+      internalID: -2135641154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_54
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d251abb5624fdc84fb6a799c184861b6
+      internalID: -246765075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_55
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5505260b5681f3419d0518b592e7bda
+      internalID: 1935210817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_56
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 1460
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0ec8117771d354eb629e75cb5ba0f3
+      internalID: 1494269379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c632f2d8460ed45ac76021bd2fda23
+      internalID: -1882803213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_58
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40539f6436fe414b827c1da5f6a3ede
+      internalID: 1271626600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_59
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5120617f3fc1ae46b7ebebce6437784
+      internalID: 89223065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_60
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1c6688e23c27b409a45cdc436a716f
+      internalID: 988368464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_61
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b342047217bf45340801988f06db38c8
+      internalID: 803386846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_62
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3916a167afa2d4f954fc2af33dda34
+      internalID: 1529455662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_63
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 950
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850571017f3449448b08a1ff7ae974b2
+      internalID: -1224535016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce5507e54ee7784eb2299b720bf6c84
+      internalID: 1925553765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_65
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 440
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a74cd3faa03c4a4cb722843e4e6855b
+      internalID: 2146868956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_66
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 440
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77501583ad198b6429887b5bf74b450c
+      internalID: -582437828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iowa-attack_67
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 440
+        width: 532
+        height: 510
+      alignment: 9
+      pivot: {x: 0.6405305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a810e854c17f01f4693dc7e29a30ef9a
+      internalID: 109938297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      iowa-attack_0: -1039069451
+      iowa-attack_1: 1678609673
+      iowa-attack_10: 1048567987
+      iowa-attack_11: 1083042785
+      iowa-attack_12: 78217270
+      iowa-attack_13: -1253722230
+      iowa-attack_14: 760168222
+      iowa-attack_15: 45990108
+      iowa-attack_16: 1467431066
+      iowa-attack_17: -637883526
+      iowa-attack_18: -316169974
+      iowa-attack_19: -1861570834
+      iowa-attack_2: 342945096
+      iowa-attack_20: -788002451
+      iowa-attack_21: 250270977
+      iowa-attack_22: 2141780359
+      iowa-attack_23: 289706461
+      iowa-attack_24: 1377163047
+      iowa-attack_25: -512008315
+      iowa-attack_26: -100926007
+      iowa-attack_27: -1524914686
+      iowa-attack_28: -1323734704
+      iowa-attack_29: -1687018744
+      iowa-attack_3: -1928115662
+      iowa-attack_30: -1571349493
+      iowa-attack_31: -1670428328
+      iowa-attack_32: 1864920279
+      iowa-attack_33: -1774686442
+      iowa-attack_34: 1392491992
+      iowa-attack_35: 964111790
+      iowa-attack_36: 1279642333
+      iowa-attack_37: 458601895
+      iowa-attack_38: 1240619772
+      iowa-attack_39: -840341582
+      iowa-attack_4: -1128278452
+      iowa-attack_40: 1706694942
+      iowa-attack_41: -48163149
+      iowa-attack_42: -1158936292
+      iowa-attack_43: -840860534
+      iowa-attack_44: 1929150916
+      iowa-attack_45: 1150004765
+      iowa-attack_46: -1660829879
+      iowa-attack_47: 680756425
+      iowa-attack_48: 1231974714
+      iowa-attack_49: -1264536947
+      iowa-attack_5: 958686248
+      iowa-attack_50: 1202122914
+      iowa-attack_51: 352388574
+      iowa-attack_52: -1786679429
+      iowa-attack_53: 1172829928
+      iowa-attack_54: 1120856185
+      iowa-attack_55: 1632994803
+      iowa-attack_56: -1048989769
+      iowa-attack_57: 322565939
+      iowa-attack_58: 1509730876
+      iowa-attack_59: -2135641154
+      iowa-attack_6: -1805608014
+      iowa-attack_60: -246765075
+      iowa-attack_61: 1935210817
+      iowa-attack_62: -105846468
+      iowa-attack_63: 540443344
+      iowa-attack_64: 1389094580
+      iowa-attack_65: 621482533
+      iowa-attack_66: -744263957
+      iowa-attack_67: 1870413180
+      iowa-attack_7: 859849841
+      iowa-attack_8: -1000199215
+      iowa-attack_9: -545539371
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

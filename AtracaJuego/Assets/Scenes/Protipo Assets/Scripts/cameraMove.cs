@@ -8,6 +8,9 @@ public class cameraMove : MonoBehaviour
 {
     public float borde;
     public float speed;
+    private float shakePower, shakeTimeRemaining, shakeFadeTime;
+    public float fuerzaVibracion = 0.8f;
+    public float tiempoVibracion = 0.4f;    
     Grid _grid;
     Camera cam;
     [SerializeField] Tilemap ground;
@@ -65,9 +68,34 @@ public class cameraMove : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, limitesy[0], -10);
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartShake(tiempoVibracion, fuerzaVibracion);
+        }
+    }
+
+    private void LateUpdate(){
+        if (shakeTimeRemaining > 0){
+            shakeTimeRemaining -= Time.deltaTime;
+
+            float xamount = Random.Range(-1f, 1f) * shakePower;
+            float yamount = Random.Range(-1f, 1f) * shakePower;
+
+            transform.position += new Vector3(xamount, yamount, 0f);
+
+            shakePower = Mathf.MoveTowards(shakePower, 0f, shakeFadeTime * Time.deltaTime);
+        }
     }
     public void setPosition(Vector3 pos)
     {
         //transform.position = new Vector3(pos.x, pos.y, -10);
+    }
+
+    public void StartShake(float length, float power){
+
+        shakeTimeRemaining = length;
+        shakePower = power;
+
+        shakeFadeTime = power / length;
     }
 }
