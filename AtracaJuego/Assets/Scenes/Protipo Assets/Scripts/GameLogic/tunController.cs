@@ -43,6 +43,8 @@ public class tunController : MonoBehaviour
         currentManager = -1;
        
         startTurns();
+
+        objects=FindObjectsOfType<ObjectStuff>();
         foreach(ObjectStuff o in objects){
             o.startTurn();
         }

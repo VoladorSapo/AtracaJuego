@@ -128,6 +128,9 @@ public class GridController : MonoBehaviour
             int difX = mousePos.x - ogx;
             int difY = mousePos.y - ogy;
             tiles[difX, difY].DisplayStats();
+            /*foreach (ObjectStuff os in _OS){
+            os.startTurn();
+            }*/
             //tiles[difX, difY].addEffect(1,false,0,-1);
             //print("Tile en: " + (0 + difX) + "," + (0 + difY) + " tiene el sprite: " + tiles[0 + difX, 0 + difY].tileSpriteId + " y tiene las propiedades " + tiles[0 + difX, 0 + difY].tileState + " y " + tiles[0 + difX, 0 + difY].tileEffect);
             //print("y " + tiles[difX, difY].tilePos);

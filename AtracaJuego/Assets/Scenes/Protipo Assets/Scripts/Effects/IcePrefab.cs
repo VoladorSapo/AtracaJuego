@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class IcePrefab : ObjectStuff
 {    
-    [SerializeField] private Animator anim;
+    //[SerializeField] private Animator anim;
+    
     protected override void Awake()
     {
         base.Awake();
+        LifeTime=3;
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
         GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].setPlayer(this);
         effect=4;
         bypass=false;
         direction=0;
         FreezeTile(posGrid);
-        anim=GetComponent<Animator>();
+        //anim=GetComponent<Animator>();
     }
     /*protected override void Start(){
         Vector3Int posGrid=GC.grid.WorldToCell(transform.position);
@@ -37,12 +39,17 @@ public class IcePrefab : ObjectStuff
         if(act){GC.tiles[posGrid.x-GC.ogx, posGrid.y-GC.ogy].addEffect(4, false,0,-1);}
     }
 
+    public void isMelting(){
+        LifeTime--;
+        if(LifeTime<=0){animator.SetInteger("ToMelt",1);}
+    }
+
     public void Melt(){
         StartCoroutine(Melting(0.25f));
     }
 
     IEnumerator Melting(float sec){
-        anim.SetInteger("ToMelt",1);
+        animator.SetInteger("ToMelt",1);
         WaitForSeconds wfs= new WaitForSeconds(sec);
         //Patron de 5x5
         int rot=0;

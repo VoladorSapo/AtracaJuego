@@ -39,9 +39,11 @@ public override void Die(){
 
 public override void startTurn()
 {
-    
+    if(this!=null){
     switch(this.tag){
-        case "WoodBox": CajasQuemables cq= this as CajasQuemables; cq.isBurning(); Debug.LogWarning("queso"); break;
+        case "WoodBox": CajasQuemables cq= this as CajasQuemables; cq.isBurning(); break;
+        case "IceCube": IcePrefab ip= this as IcePrefab; ip.isMelting(); break;
+    }
     }
 }
 
