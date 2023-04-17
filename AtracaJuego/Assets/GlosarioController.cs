@@ -9,16 +9,21 @@ public class GlosarioController : MonoBehaviour
     public GameObject Glosario;
     [SerializeField] Button openbutton;
     [SerializeField] Button closebutton;
+    [SerializeField] public GlosarioInfo _info;
+    [SerializeField] GameObject infoprefab;
     // Start is called before the first frame update
     void Awake()
     {
         closeGlosario();
         Buttons(false);
+        combinaciones[0] = true;
+
     }
-   public void Buttons(bool set)
+    public void Buttons(bool set)
     {
         openbutton.gameObject.SetActive(set);
         closebutton.gameObject.SetActive(false);
+        SceneManager.sceneUnloaded += LeaveScene;
 
     }
     // Update is called once per frame
@@ -49,9 +54,20 @@ public class GlosarioController : MonoBehaviour
         Glosario.SetActive(false);
 
     }
-    public void newEntry()
+    public void newEntry(int num)
     {
-
+        if (!combinaciones[num])
+        {
+            
+        }
+    }
+    void LeaveScene(Scene scene)
+    {
+        if(_info == null)
+        {
+            _info = Instantiate(infoprefab).GetComponent<GlosarioInfo>();
+            _info.combinacionespermanentes = combinaciones;
+        }
     }
     public void ChangeGlosario(int baseeffect, int neweffect,bool iceCube, Vector3 pos)
     {
@@ -62,7 +78,6 @@ public class GlosarioController : MonoBehaviour
                 switch (neweffect)
                 {
                     case 4:
-
                         break;
                     case 5:
 
@@ -78,7 +93,7 @@ public class GlosarioController : MonoBehaviour
                     switch (neweffect)
                     {
                         case 1:
-
+                            newEntry(1);
                             break;
                         case 5:
 

@@ -27,6 +27,7 @@ public class GlosarioInfo : MonoBehaviour
         {
             glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
             glosario.combinaciones = combinacionespermanentes;
+            glosario._info = this;
         }
     }
 }
