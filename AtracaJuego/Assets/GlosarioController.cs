@@ -99,7 +99,8 @@ public class GlosarioController : MonoBehaviour
                 }
                 break;
             case 2: //Fire
-                newEntry(5);                break;
+                newEntry(5);
+                break;
             case 3: //Push
                 if (!iceCube)
                 {

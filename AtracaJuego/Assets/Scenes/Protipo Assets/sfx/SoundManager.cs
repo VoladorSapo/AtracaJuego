@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager InstanceSound;
     private bool isFading=false;
     public AudioSource _music, _sfx, _hits, _doors, _dialog, _move;
-    Scene currentScene;
+
 
     //SoundManager.InstanceSound.PlaySound...(SoundGallery.InstanceClip.audioClips[i])
     void Awake(){
@@ -22,7 +22,7 @@ public class SoundManager : MonoBehaviour
     }
 
     void Start(){
-        currentScene = SceneManager.GetActiveScene();
+
     }
     /*public void PlaySound(AudioClip clip){
         _sfx.PlayOneShot(clip);
@@ -68,7 +68,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlayMusic(float fadeSpeed, AudioClip clip){
-        StartCoroutine(FadeInMusic(currentScene,fadeSpeed,clip));
+        StartCoroutine(FadeInMusic(fadeSpeed,clip));
     }
 
     public void ChangeMusic(float fadeOutDuration, float fadeInSpeed, AudioClip a){
@@ -87,7 +87,7 @@ public class SoundManager : MonoBehaviour
 
         _music.Stop();
         _music.volume = startVolume;
-        StartCoroutine(FadeInMusic(currentScene,fadeIn,a));
+        StartCoroutine(FadeInMusic(fadeIn,a));
     }
 
 
@@ -109,13 +109,16 @@ public class SoundManager : MonoBehaviour
 
     
 
-    private IEnumerator FadeInMusic(Scene scene,float fadeInSpeed, AudioClip clip)
+    private IEnumerator FadeInMusic(float fadeInSpeed, AudioClip clip)
     {
         float initialVolume = _music.volume;
         _music.volume = 0f;
         if(clip==null){
-        switch(scene.name){
-            case "Escena1": _music.clip=SoundGallery.InstanceClip.audioClips[21];
+        
+        Scene _scene = SceneManager.GetActiveScene();
+        switch(_scene.name){
+            case "Escena1": 
+                            _music.clip=SoundGallery.InstanceClip.audioClips[21];
                             _music.Play(); break;
             default: break;
         }
@@ -131,6 +134,7 @@ public class SoundManager : MonoBehaviour
 
             yield return null;
         }
+        
         _music.volume = initialVolume;
     }
 }

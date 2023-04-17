@@ -40,7 +40,7 @@ public class gameController : MonoBehaviour
     }
     IEnumerator StartLate()
     {
-        SoundManager.InstanceSound.SetVolume(0.5f,SoundManager.InstanceSound._music);
+        SoundManager.InstanceSound.SetVolume(0.4f,SoundManager.InstanceSound._music);
         SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
         yield return new WaitForEndOfFrame();
         string fullcode = "start_" + code;
@@ -65,6 +65,9 @@ public class gameController : MonoBehaviour
         }
         if(Input.GetKeyDown("v")){
             winRound();
+        }
+        if(Input.GetKeyDown("l")){
+            loseRound();
         }
     }
 
@@ -95,6 +98,8 @@ public class gameController : MonoBehaviour
                     break;
                 default:
                     //SoundManager.InstanceSound.StartFadeOut(SoundManager.InstanceSound._music);
+                    //SoundManager.InstanceSound.PlayMusic(0.5f,SoundGallery.InstanceClip.audioClips[21]);
+
                     SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
 
                     Pause = false;
