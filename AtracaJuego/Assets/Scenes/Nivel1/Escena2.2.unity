@@ -3240,7 +3240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1043, y: 963}
+  m_AnchoredPosition: {x: 1861, y: 1024}
   m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797023730
@@ -4168,6 +4168,8 @@ MonoBehaviour:
   Glosario: {fileID: 1606060614}
   openbutton: {fileID: 1776003034}
   closebutton: {fileID: 797023730}
+  _info: {fileID: 0}
+  infoprefab: {fileID: 0}
 --- !u!1 &1091559864
 GameObject:
   m_ObjectHideFlags: 0
