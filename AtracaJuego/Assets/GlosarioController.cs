@@ -17,8 +17,8 @@ public class GlosarioController : MonoBehaviour
     }
    public void Buttons(bool set)
     {
-        openbutton.enabled = set;
-        closebutton.enabled = set;
+        openbutton.gameObject.SetActive(set);
+        closebutton.gameObject.SetActive(false);
 
     }
     // Update is called once per frame
@@ -32,8 +32,8 @@ public class GlosarioController : MonoBehaviour
     }
     public void openGlosario()
     {
-        closebutton.enabled = true;
-        openbutton.enabled = false;
+        closebutton.gameObject.SetActive(true);
+        openbutton.gameObject.SetActive(false);
 
         Glosario.SetActive(true);
         GlosarioEntry[] entrys = Glosario.GetComponentsInChildren<GlosarioEntry>();
@@ -44,8 +44,8 @@ public class GlosarioController : MonoBehaviour
     }
     public void closeGlosario()
     {
-        closebutton.enabled = false;
-        openbutton.enabled = true;
+        closebutton.gameObject.SetActive(false);
+        openbutton.gameObject.SetActive(true);
         Glosario.SetActive(false);
 
     }
@@ -58,10 +58,87 @@ public class GlosarioController : MonoBehaviour
         print(baseeffect + " " + neweffect +" glosario");
         switch (baseeffect)
         {
-            case 1:
+            case 1: //Gas
                 switch (neweffect)
                 {
+                    case 4:
 
+                        break;
+                    case 5:
+
+                        break;
+                    case 6:
+
+                        break;
+                }
+                break;
+            case 2: //Fire
+                if (iceCube)
+                {
+                    switch (neweffect)
+                    {
+                        case 1:
+
+                            break;
+                        case 5:
+
+                            break;
+                        case 7:
+
+                            break;
+                        case 8:
+
+                            break;
+                        case 9:
+
+                            break;
+                        case 10:
+
+                            break;
+                    }
+                }
+                break;
+            case 3: //Push
+                if (iceCube)
+                {
+                    switch (neweffect)
+                    {
+                        case 5:
+
+                            break;
+                        case 9:
+
+                            break;
+                      
+                    }
+                }
+                break;
+            case 4: //Ice
+                switch (neweffect)
+                {
+                    case 1:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                }
+                break;
+            case 5: //Elec
+                switch (neweffect)
+                {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
                 }
                 break;
         }
