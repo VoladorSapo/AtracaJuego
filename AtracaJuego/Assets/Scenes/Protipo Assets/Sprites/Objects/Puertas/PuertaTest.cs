@@ -32,7 +32,7 @@ public class PuertaTest : ObjectStuff
     }
 
     public void Open(){
-        SoundManager.InstanceSound.PlaySoundDoor(SoundGallery.InstanceClip.audioClips[6]);
+        SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._doors,SoundGallery.InstanceClip.audioClips[6]);
         Vector3Int posBL=GC.grid.WorldToCell(transform.position)-new Vector3Int(1,1,0);
 
         for(int i=0; i<=2; i++){
@@ -48,7 +48,7 @@ public class PuertaTest : ObjectStuff
     }
 
     public void Close(){
-        if(startDone){SoundManager.InstanceSound.PlaySoundDoor(SoundGallery.InstanceClip.audioClips[7]);}
+        if(startDone){SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._doors,SoundGallery.InstanceClip.audioClips[7]);}
         Vector3Int posBL=GC.grid.WorldToCell(transform.position)-new Vector3Int(1,1,0);
         
         for(int i=0; i<=2; i++){

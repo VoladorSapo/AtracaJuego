@@ -26,8 +26,13 @@ public class Iowa : PlayablePlayer
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2))
             {
+                Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
+                switch(Mathf.Sign(directionVec.x)){
+                    case 1: sprite.flipX = false; break;
+                    case -1: sprite.flipX = true; break;
+                }
                 Cooldown = 1;
-                SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[1]);
+                SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[1]);
                 CustomTileClass tile = GC.tiles[tileO.x - GC.ogx, tileO.y - GC.ogy];
                 CustomTileClass tile2 = GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy];
                 CDH.AttackDialogue(GetType().ToString(), tile, tile2);
@@ -81,13 +86,13 @@ public class Iowa : PlayablePlayer
                     if (x == 1)
                     {
                         PushPrefab.GetComponent<PushEffect>().direction = 1;
-                        sprite.flipX = false;
+                        
                         Instantiate(PushPrefab, posNew, Quaternion.identity);
                     }
                     else
                     {
                         PushPrefab.GetComponent<PushEffect>().direction = 2;
-                        sprite.flipX = true;
+                        
                         Instantiate(PushPrefab, posNew, Quaternion.identity);
                     }
                     break;

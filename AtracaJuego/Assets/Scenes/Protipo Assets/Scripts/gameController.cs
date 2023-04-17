@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 public class gameController : MonoBehaviour
@@ -20,6 +21,8 @@ public class gameController : MonoBehaviour
     [SerializeField] int nextScene;
     [SerializeField] TutorialController _tutorial;
     [SerializeField] cameraMove camara;
+    [SerializeField] Animator anim;
+    [SerializeField] Image Img;
     public bool Pause;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +40,8 @@ public class gameController : MonoBehaviour
     }
     IEnumerator StartLate()
     {
-
+        SoundManager.InstanceSound.SetVolume(0.5f,SoundManager.InstanceSound._music);
+        SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
         yield return new WaitForEndOfFrame();
         string fullcode = "start_" + code;
         Pause = true;
@@ -59,26 +63,40 @@ public class gameController : MonoBehaviour
             //_cutsceneController.loadScene(table, fullcode,false);
 
         }
+        if(Input.GetKeyDown("v")){
+            winRound();
+        }
     }
+
+    public void loadNext(){
+    SceneManager.LoadScene(nextScene);
+    }
+
     public void returnFromCutscene(bool end)
     {
         print("caspita");
         if (end)
         {
-            SceneManager.LoadScene(nextScene);
+            anim.SetBool("Fade",true);
         }
         else
         {
             string newtype = hasReturn ? "hasReturn" : type;
             print(newtype);
+            
             switch (newtype)
             {
                 case "tutorial":
+                    
                     _tutorial.loadDialogs(tutorialcode, this, null);
+                    //SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
                     Pause = true;
                     hasReturn = true;
                     break;
                 default:
+                    //SoundManager.InstanceSound.StartFadeOut(SoundManager.InstanceSound._music);
+                    SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
+
                     Pause = false;
                     startGame();
                     print("jojojo");
@@ -121,10 +139,15 @@ public class gameController : MonoBehaviour
     }
     public void winRound()
     {
-        print("ganamos light");
         string fullcode = "end_" + code;
         _cutsceneController.loadScene(table, fullcode, true);
+        //StartCoroutine(FadingWin());
     }
+
+    /*IEnumerator FadingWin(){
+        animatorImg.SetBool("Fade",true);
+        yield return new WaitUntil(()=>Img.color.a==1);
+    }*/
     public void loseRound()
     {
         retryConfirm.SetActive(true);

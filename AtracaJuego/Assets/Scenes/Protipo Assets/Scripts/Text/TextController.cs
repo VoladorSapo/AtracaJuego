@@ -52,10 +52,48 @@ public class TextController : MonoBehaviour
         print(textinfo.characterCount);
         while (currentChar < textinfo.characterCount)
         {
+            
+
             TextDisplay.maxVisibleCharacters++;
             yield return delay;
             //yield return new WaitForSecondsRealtime(0.2f) ;
             currentChar++;
+            if(_dialogcontroller!=null && !terminado){
+            switch(_dialogcontroller.name_text.text){
+                case "Ignacio": 
+                                SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                                SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[10]);
+                break;
+                case "Iowa": 
+                             SoundManager.InstanceSound.SetVolume(0.25f, SoundManager.InstanceSound._dialog);
+                             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[11]);
+                break;
+                case "Marl": 
+                             SoundManager.InstanceSound.SetVolume(0.65f, SoundManager.InstanceSound._dialog);
+                             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[12]);
+                break;
+                case "Pol": 
+                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[14]);
+                break;
+                case "Nev": 
+                            SoundManager.InstanceSound.SetVolume(0.4f, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[13]);
+                break;
+                case "Joseva":
+                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[16]);
+                break;
+                case "Guardia":
+                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[9]);
+                break;
+                case "Jefe de Seguridad":
+                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[9]);
+                break;
+            }
+            }
         }
         terminado = true;
         if (_gamedialogcontroller != null)

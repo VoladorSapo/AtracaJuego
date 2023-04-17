@@ -7,10 +7,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager InstanceSound;
     private bool isFading=false;
-    private float fadeDuration=0.4f;
-    public float fadeInSpeed = 0.25f;
-    [SerializeField] private AudioSource _music, _sfx, _hits, _doors, _dialog;
-    
+    public AudioSource _music, _sfx, _hits, _doors, _dialog, _move;
+    Scene currentScene;
 
     //SoundManager.InstanceSound.PlaySound...(SoundGallery.InstanceClip.audioClips[i])
     void Awake(){
@@ -20,13 +18,13 @@ public class SoundManager : MonoBehaviour
         }else{
             Destroy(gameObject);
         }
+        _music.loop=true;
     }
 
     void Start(){
-        Scene currentScene = SceneManager.GetActiveScene();
-        StartCoroutine(FadeInMusic(currentScene));
+        currentScene = SceneManager.GetActiveScene();
     }
-    public void PlaySound(AudioClip clip){
+    /*public void PlaySound(AudioClip clip){
         _sfx.PlayOneShot(clip);
     }
 
@@ -47,42 +45,83 @@ public class SoundManager : MonoBehaviour
     public bool CheckPlaying(){
         if(_sfx.isPlaying){return true;}
         else{return false;}
+    }*/
+
+    public void PlaySound(AudioSource a, AudioClip clip){
+        a.PlayOneShot(clip);
     }
 
-    public void StartFadeOut()
+    public bool CheckPlaying(AudioSource a){
+        return a.isPlaying;
+    }
+    public void StartFadeOut(float fadeOut,AudioSource a)
     {
         if (!isFading)
         {
             isFading = true;
-            StartCoroutine(FadeOut());
+            StartCoroutine(FadeOut(fadeOut,a));
         }
     }
 
-    private IEnumerator FadeOut()
-    {
-        float startVolume = _sfx.volume;
+    public void SetVolume(float volume, AudioSource a){
+        a.volume=volume;
+    }
 
-        while (_sfx.volume > 0)
+    public void PlayMusic(float fadeSpeed, AudioClip clip){
+        StartCoroutine(FadeInMusic(currentScene,fadeSpeed,clip));
+    }
+
+    public void ChangeMusic(float fadeOutDuration, float fadeInSpeed, AudioClip a){
+        StartCoroutine(FadeOutMusic(fadeOutDuration,a,fadeInSpeed));
+    }
+    private IEnumerator FadeOutMusic(float fadeDuration, AudioClip a, float fadeIn)
+    {
+        float startVolume = _music.volume;
+
+        while (_music.volume > 0)
         {
-            _sfx.volume -= startVolume * Time.deltaTime / fadeDuration;
+            _music.volume -= startVolume * Time.deltaTime / fadeDuration;
 
             yield return null;
         }
 
-        _sfx.Stop();
-        _sfx.volume = startVolume;
+        _music.Stop();
+        _music.volume = startVolume;
+        StartCoroutine(FadeInMusic(currentScene,fadeIn,a));
+    }
+
+
+    private IEnumerator FadeOut(float fadeDuration, AudioSource a)
+    {
+        float startVolume = a.volume;
+
+        while (a.volume > 0)
+        {
+            a.volume -= startVolume * Time.deltaTime / fadeDuration;
+
+            yield return null;
+        }
+
+        a.Stop();
+        a.volume = startVolume;
         isFading = false;
     }
 
     
 
-    private IEnumerator FadeInMusic(Scene scene)
+    private IEnumerator FadeInMusic(Scene scene,float fadeInSpeed, AudioClip clip)
     {
         float initialVolume = _music.volume;
         _music.volume = 0f;
+        if(clip==null){
         switch(scene.name){
-            case "Protipo": _music.PlayOneShot(SoundGallery.InstanceClip.audioClips[21]); break;
+            case "Escena1": _music.clip=SoundGallery.InstanceClip.audioClips[21];
+                            _music.Play(); break;
             default: break;
+        }
+        }else{
+            _music.clip=clip;
+            _music.Play();
         }
         
         

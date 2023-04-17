@@ -147,7 +147,8 @@ public class CustomTileClass
         }
 
         if(tileState==1 || tileState==2){
-            if(newplayer==null){tileState=1; Debug.LogWarning("no placa");}else{tileState=2; Debug.LogWarning("placa");}
+            if(newplayer==null){tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[27]);}
+            else{tileState=2; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[28]);}
         }
     }
     public void sendEvent(PlayerBase newplayer)

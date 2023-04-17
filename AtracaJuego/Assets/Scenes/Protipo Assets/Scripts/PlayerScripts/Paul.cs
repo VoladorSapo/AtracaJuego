@@ -23,11 +23,16 @@ public class Paul : PlayablePlayer
         if (Input.GetMouseButtonDown(0) && Cooldown == 0 && SPM.currentPlayer == teamNumb && Mode == 2 && !SPM._gameController.Pause)
         {
             posMouse = GC.GetMousePosition();
-            SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[4]);
+            
             if (!GC.isEmpty(posMouse, false, 2))
             {
                 Cooldown=1;
-                
+                SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[4]);
+                Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
+                switch(Mathf.Sign(directionVec.x)){
+                    case 1: sprite.flipX = false; break;
+                    case -1: sprite.flipX = true; break;
+                }
                 Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 
                 //print(tilepos);

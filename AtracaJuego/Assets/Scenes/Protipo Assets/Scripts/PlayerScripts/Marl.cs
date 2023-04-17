@@ -27,7 +27,7 @@ public class Marl : PlayablePlayer
             posMouse = GC.GetMousePosition();
         }
         if(!GC.isEmpty(posMouse, false, 2) && Mode == 2 && !SPM._gameController.Pause)
-        {
+        {  
                 if(!InstHecho){
                 Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
                 
@@ -38,10 +38,18 @@ public class Marl : PlayablePlayer
                 }
                 if(Input.GetMouseButton(0) && Cooldown==0 && SPM.currentPlayer== teamNumb && !SPM._gameController.Pause)
                 {
+
                     placeHere=posMouse;
-                    
+
+                    Vector3 directionVec = placeHere - GC.grid.WorldToCell(transform.position);
+                    switch(Mathf.Sign(directionVec.x)){
+                    case 1: sprite.flipX = false; break;
+                    case -1: sprite.flipX = true; break;
+                    }
+
+
                     Cooldown=2;
-                    SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[2]);
+                    SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[2]);
                 Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 
                 CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];

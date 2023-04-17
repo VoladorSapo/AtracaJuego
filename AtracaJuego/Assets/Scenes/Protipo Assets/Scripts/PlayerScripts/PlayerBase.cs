@@ -100,7 +100,7 @@ public class PlayerBase : MonoBehaviour
             if (Vector3.Distance(grid.CellToWorld(nodes[0].pos) + new Vector3(5f, 5f, 0), transform.position) < 0.00001f)
             {
                 if(GC.tiles[tilepos.x,tilepos.y].CheckEffectDamage(this)){
-                    SoundManager.InstanceSound.StartFadeOut();
+                    SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
                     loseHealth(1);
                     
                 }else if(animator.GetInteger("Anim")==1){
@@ -114,7 +114,7 @@ public class PlayerBase : MonoBehaviour
                 if (nodes.Count <= 0)
                 {
                     //  print("jonyniii");
-                    SoundManager.InstanceSound.StartFadeOut();
+                    SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
                     animator.SetInteger("Anim", 0);
                     sprite.sortingOrder = -(grid.WorldToCell(transform.position).y - GC.ogy);
                     //Turn();
@@ -144,7 +144,7 @@ public class PlayerBase : MonoBehaviour
                 {
                     //  print("icamefromalanddownunder");
                     //print(-grid.WorldToCell(transform.position).y);
-                    if(!SoundManager.InstanceSound.CheckPlaying()){SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[5]);}
+                    if(!SoundManager.InstanceSound.CheckPlaying(SoundManager.InstanceSound._move)){SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._move,SoundGallery.InstanceClip.audioClips[5]);}
                     tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
                     tile = GC.tiles[tilepos.x, tilepos.y];
                     if (tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile))
@@ -200,7 +200,7 @@ public class PlayerBase : MonoBehaviour
     {
         if (newPos != null && newPos.Count > 0)
         {
-            SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[5]);
+            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._move,SoundGallery.InstanceClip.audioClips[5]);
             Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             tile.setPlayer(null);
@@ -285,7 +285,7 @@ public class PlayerBase : MonoBehaviour
     {
 
         if (animator != null) { animator.SetInteger("Anim", 4); }
-        SoundManager.InstanceSound.HitSound(SoundGallery.InstanceClip.audioClips[7]);
+        SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[7]);
         currentHealth -= health;
         CDH.DamageDialogue(GetType().ToString());
     }

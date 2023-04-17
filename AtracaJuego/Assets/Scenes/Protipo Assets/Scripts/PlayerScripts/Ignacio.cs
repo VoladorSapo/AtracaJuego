@@ -22,7 +22,7 @@ public class Ignacio : PlayablePlayer
             posMouse = GC.GetMousePosition();
             if (!GC.isEmpty(posMouse, false, 2)){
                 Cooldown=1;
-                SoundManager.InstanceSound.PlaySound(SoundGallery.InstanceClip.audioClips[0]);
+                SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[0]);
                 Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 
                 //print(tilepos);
@@ -30,25 +30,21 @@ public class Ignacio : PlayablePlayer
                 CustomTileClass tile2 = GC.tiles[posMouse.x- GC.ogx, posMouse.y- GC.ogy];
                 CDH.AttackDialogue(GetType().ToString(),tile,tile2);
 
+                Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
+                switch(Mathf.Sign(directionVec.x)){
+                    case 1: sprite.flipX = false; break;
+                    case -1: sprite.flipX = true; break;
+                }
                 animator.SetInteger("Anim",2);
-
-                /* hasAttack= true;
-                if (hasMove)
-                {
-                   // SPM.endTurn(teamNumb, false);
-                }
-                else
-                {
-                    ChangeMapShown(1);
-                }
-                //FireCooldown++;
-                //_SPM.CanAttack[0]=false;*/
             }
         }
 
     }
 
     public override void InstantiatePrefab(){
+
+        
+
         Vector3Int posNew=posMouse*10+new Vector3Int(5,5,0); //*10 por el tamaño de las tiles + offset de (10/2,10/2,0)=(5,5,0)
         Instantiate(FirePrefab, posNew, Quaternion.identity);
         hasAttack = true;

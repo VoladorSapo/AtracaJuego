@@ -10,8 +10,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] GameObject _dialogbox;
     [SerializeField] CutsceneEventTile _tile;
     [SerializeField] cutsceneController _cutscene;
-    [SerializeField] TMP_Text name_text;
+    [SerializeField] public TMP_Text name_text;
     List<string> dialogs;
+
 
     public void nextDialog()
     {
