@@ -8,7 +8,7 @@ public class tunController : MonoBehaviour
     public int currentManager;
     public PalancaTest _palancaTest;
     public GridController _GC;
-    
+    private turnButtonsController tBC;
     GridController _grid;
     private ObjectStuff[] objects;
 
@@ -16,6 +16,7 @@ public class tunController : MonoBehaviour
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         _palancaTest=FindObjectOfType<PalancaTest>();
         objects=FindObjectsOfType<ObjectStuff>();
+        tBC=GameObject.Find("TurnButtons").GetComponent<turnButtonsController>();
     }
     public void startGame()
     {
@@ -33,8 +34,9 @@ public class tunController : MonoBehaviour
         //    startGame();
         //}
 
-        if(Input.GetKeyDown("p")){
-            nextTurn();
+        if(Input.GetKeyDown("space")){
+            tBC.Skip(true);
+            //nextTurn();
         }
     }
     // Start is called before the first frame update
