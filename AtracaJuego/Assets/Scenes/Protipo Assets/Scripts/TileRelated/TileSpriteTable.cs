@@ -327,6 +327,32 @@ public class TileSpriteTable : MonoBehaviour
             case "TilesetAlmacen_54": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetAlmacen_55": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetAlmacen_56": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_0": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_1": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_2": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_9": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_12": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_18": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_19": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_20": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_21": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_22": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_23": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_29": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_30": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_31": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_32": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_33": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_34": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_40": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_41": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_44": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetBossfight_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
             
 
 
