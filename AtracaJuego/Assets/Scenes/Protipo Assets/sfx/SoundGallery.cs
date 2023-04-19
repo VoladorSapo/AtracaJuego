@@ -6,6 +6,7 @@ public class SoundGallery : MonoBehaviour
 {
     public static SoundGallery InstanceClip;
     public AudioClip[] audioClips;
+    public AudioClip[] musicClips;
     void Awake(){
         if(InstanceClip==null){
             InstanceClip=this;

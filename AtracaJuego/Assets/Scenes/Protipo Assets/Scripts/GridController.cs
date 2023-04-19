@@ -118,6 +118,7 @@ public class GridController : MonoBehaviour
         gases.RefreshAllTiles();
 
         _SE.StartEff();
+        SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
     }
     // Update is called once per frame
     void Update()

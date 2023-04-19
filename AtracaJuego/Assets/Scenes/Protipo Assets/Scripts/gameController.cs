@@ -105,7 +105,7 @@ public class gameController : MonoBehaviour
                     //SoundManager.InstanceSound.StartFadeOut(SoundManager.InstanceSound._music);
                     //SoundManager.InstanceSound.PlayMusic(0.5f,SoundGallery.InstanceClip.audioClips[21]);
 
-                    SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
+                    //SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
 
                     Pause = false;
                     startGame();
