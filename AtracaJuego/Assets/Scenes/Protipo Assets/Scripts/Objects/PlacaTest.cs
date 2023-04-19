@@ -20,7 +20,7 @@ public class PlacaTest: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GC.tiles!=null && GC.tiles[0,0]!=null){
+        if(GC.tiles[0,0]!=null){
         n=0;
         for(int i=0; i<Posiciones.Length; i++){
             if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==2){n++;}

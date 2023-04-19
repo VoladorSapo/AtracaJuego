@@ -164,7 +164,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -354,6 +353,63 @@ MonoBehaviour:
   skipConfirm: {fileID: 0}
   currentplayer: {fileID: 0}
   _gameController: {fileID: 0}
+--- !u!1001 &370171728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6505732906270427268, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505732906270427386, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0303a791cbb6c364dbc6f766f87d6742, type: 3}
 --- !u!1 &377378509
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   borde: 50
   speed: 40
-  fuerzaVibracion: 0.8
-  tiempoVibracion: 0.4
   ground: {fileID: 0}
   limitesx:
   - -70
@@ -843,7 +897,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -949,7 +1002,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 1158186014}
   MaxDistance: 5
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -992,7 +1044,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -4200,7 +4251,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -4265,67 +4315,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &876208286
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8439375804310925244, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 131.29846
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -40.561375
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.3103611
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070112, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439375804854070113, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
-      propertyPath: m_Name
-      value: All_In 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ae46d23c95d0804e8e088a699650e1c, type: 3}
 --- !u!1 &897016001
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4620,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -9320,7 +9308,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -9611,7 +9598,6 @@ MonoBehaviour:
   - {fileID: 0}
   startPlayer: []
   startDeadPlayer: []
-  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -9662,8 +9648,6 @@ MonoBehaviour:
   nextScene: 0
   _tutorial: {fileID: 0}
   camara: {fileID: 0}
-  anim: {fileID: 0}
-  Img: {fileID: 0}
   Pause: 0
 --- !u!114 &1158186017
 MonoBehaviour:
@@ -9701,7 +9685,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -9796,7 +9779,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -11272,7 +11254,6 @@ MonoBehaviour:
   - {fileID: 0}
   startPlayer: []
   startDeadPlayer: []
-  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -11420,7 +11401,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
-  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0

@@ -202,10 +202,8 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetExposicion_41": id[0] = 1; id[1] = 8; id[2] = 16; break;
              case "tilesetExposicion_42": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "estanteriabaja": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetRegalos_2": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_4": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tilesetRegalos_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_9": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetdescanso_0": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -355,16 +353,7 @@ public class TileSpriteTable : MonoBehaviour
             case "TilesetBossfight_41": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetBossfight_44": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetBossfight_45": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_0": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_1": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_2": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_4": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_5": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_6": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "tirao_9": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            
 
 
                 //case "sheet_191": id[0] = 1; id[1] = 8; id[2] = 16; break;

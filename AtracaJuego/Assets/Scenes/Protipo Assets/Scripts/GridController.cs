@@ -90,8 +90,7 @@ public class GridController : MonoBehaviour
                 Vector3Int posTiles = new Vector3Int(i + ogx, j + ogy, 0);
                 Tile actualTile = ground.GetTile<Tile>(posTiles);
                 Vector3Int posTileInGrid = new Vector3Int(i, j, 0);
-                print(actualTile==null);
-                
+                print(posTileInGrid);
                 int[] stats = tileTable.GetTileStats(actualTile);
                 //print("Tile en: "+(i + ogx)+","+(j + ogy)+" tiene el sprite: "+stats[0]);
                 
@@ -119,7 +118,6 @@ public class GridController : MonoBehaviour
         gases.RefreshAllTiles();
 
         _SE.StartEff();
-        SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
     }
     // Update is called once per frame
     void Update()

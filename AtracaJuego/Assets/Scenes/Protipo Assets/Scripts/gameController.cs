@@ -35,14 +35,13 @@ public class gameController : MonoBehaviour
         camara = GameObject.Find("Main Camera").GetComponent<cameraMove>();
         retryConfirm = GameObject.Find("RetryConfirm");
         retryConfirm.SetActive(false);
-        anim=GameObject.Find("FadeInOut").GetComponent<Animator>();
-        Img=GameObject.Find("FadeInOut").GetComponent<Image>();
 
         StartCoroutine(StartLate());
     }
     IEnumerator StartLate()
     {
-        
+        SoundManager.InstanceSound.SetVolume(0.4f,SoundManager.InstanceSound._music);
+        SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
         yield return new WaitForEndOfFrame();
         string fullcode = "start_" + code;
         Pause = true;
@@ -51,7 +50,7 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("q")) 
+        if (Input.GetKeyDown("q"))
         {
             SaveController.Save(SceneManager.GetActiveScene().buildIndex,new bool[8]);
         }
@@ -106,7 +105,7 @@ public class gameController : MonoBehaviour
                     //SoundManager.InstanceSound.StartFadeOut(SoundManager.InstanceSound._music);
                     //SoundManager.InstanceSound.PlayMusic(0.5f,SoundGallery.InstanceClip.audioClips[21]);
 
-                    
+                    SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
 
                     Pause = false;
                     startGame();
@@ -121,11 +120,9 @@ public class gameController : MonoBehaviour
     {
         retryConfirm.SetActive(false);
         hasReturn = false;
-        anim.SetBool("Fade",false);
         _GC.setGame();
         _TC.startGame();
         Pause = false;
-        
     }
     public void winTilePressed()
     {

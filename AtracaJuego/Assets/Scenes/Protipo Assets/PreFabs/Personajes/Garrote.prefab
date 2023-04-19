@@ -74,7 +74,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
-  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -83,7 +82,6 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
-  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -97,21 +95,13 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 0
   CDH: {fileID: 0}
-  _circle: {fileID: 0}
   stunned: 0
-  src: {fileID: 0}
   _MM: {fileID: 0}
   Objetivo: {fileID: 0}
   protas: {fileID: 0}
   detectDistance: 20
   activated: 0
   codeDamage: 7
-  animatorsTypes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  numType: 0
 --- !u!1 &4830600861398896637
 GameObject:
   m_ObjectHideFlags: 0
