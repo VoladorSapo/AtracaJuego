@@ -48,7 +48,7 @@ public class Marl : PlayablePlayer
                     }
 
 
-                    Cooldown=2;
+                    Cooldown=maxCooldown;
                     SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[2]);
                 Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 

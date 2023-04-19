@@ -19,7 +19,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public int[] MaxDistancePlayers = { 5, 6, 4, 3, 8 }; //Ignacio,Iowa,Marl,Nev,Paul
 
     void Awake(){
-        _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
+      //  _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
     }
     void Update()
     {
@@ -54,7 +54,7 @@ public class ScriptPlayerManager : MonoBehaviour
         }
         else
         {
-            _glosario.Buttons(!isEnemy);
+           // _glosario.Buttons(!isEnemy);
 
             for (int i = 0; i < players.Count; i++)
             {
@@ -109,7 +109,6 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void nextTurn(int player, bool die)
     {
-        print("holyshit");
         if (!die)
         {
             players[player].setTurn(true);
@@ -118,10 +117,8 @@ public class ScriptPlayerManager : MonoBehaviour
         print(players.Count);
         for (int i = 0; i < players.Count; i++)
         {
-            print("ai");
             if (!players[i].getTurn())
             {
-                print("Noa");
                 currentPlayer = i;
                 players[i].startTurn();
                 break;
@@ -137,7 +134,7 @@ public class ScriptPlayerManager : MonoBehaviour
     public void endTurn()
     {
         Debug.LogWarning("holisit");
-        _glosario.Buttons(isEnemy);
+      //  _glosario.Buttons(isEnemy);
         if (Activated)
         {
             _turn.startTurns();

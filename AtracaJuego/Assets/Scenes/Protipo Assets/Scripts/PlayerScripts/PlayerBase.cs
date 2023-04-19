@@ -11,7 +11,7 @@ public class PlayerBase : MonoBehaviour
     protected int direction;
     public int OnTileEffect;
     Vector3 startPos;
-    [SerializeField] private Grid grid;
+    [SerializeField] protected Grid grid;
     [SerializeField] public int Mode; //Si esta atacando (2),moviendose(1) o ninguna (0)
     public GridController GC;
     public gameController _gamecontroller;
@@ -19,6 +19,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] protected MapManager MM;
     [SerializeField] protected ScriptPlayerManager SPM;
     [SerializeField] protected int MaxDistance;
+    public int maxCooldown;
     private int[] prevX = new int[5];
     private int[] prevY = new int[5];
     public bool team;
@@ -127,6 +128,7 @@ public class PlayerBase : MonoBehaviour
                     }
                     hasMove = true;
                     changeColor();
+                    print("jodeeeeeeeeeeeeeeeeeeer");
                     if (hasAttack)
                     {
                         print("endturn");

@@ -38,7 +38,7 @@ public class pathFinder : MonoBehaviour
             foreach (Node nodoAdayacente in nodosAdyacentes(currentNode,nodos,ogx,ogy))
             {
                 if (closeList.Contains(nodoAdayacente)) continue;
-                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos),false,team,safe) && nodoAdayacente != endNode) continue;
+                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos), false, team, safe) && nodoAdayacente != endNode) { print("voy a saltar por la ventana"); continue; } 
                 int tempG = currentNode.gCost + Distance(currentNode, nodoAdayacente);
                 if(tempG < nodoAdayacente.gCost)
                 {
@@ -51,6 +51,7 @@ public class pathFinder : MonoBehaviour
                         openList.Add(nodoAdayacente);
                     }
                 }
+
             }
         }
         return null;

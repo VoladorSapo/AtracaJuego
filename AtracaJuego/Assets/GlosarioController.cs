@@ -11,9 +11,11 @@ public class GlosarioController : MonoBehaviour
     [SerializeField] Button closebutton;
     [SerializeField] public GlosarioInfo _info;
     [SerializeField] GameObject infoprefab;
+    [SerializeField] gameController _GC;
     // Start is called before the first frame update
     void Awake()
     {
+        _GC = GameObject.Find("Controller").GetComponent<gameController>();
         closeGlosario();
         Buttons(false);
         combinaciones[0] = true;
@@ -58,7 +60,8 @@ public class GlosarioController : MonoBehaviour
     {
         if (!combinaciones[num])
         {
-            
+            combinaciones[num] = true;
+            //Añadir algo epicardo
         }
     }
     void LeaveScene(Scene scene)
@@ -66,6 +69,7 @@ public class GlosarioController : MonoBehaviour
         if(_info == null)
         {
             _info = Instantiate(infoprefab).GetComponent<GlosarioInfo>();
+            SaveController.Save(_GC.nextScene,combinaciones);
             _info.combinacionespermanentes = combinaciones;
         }
     }
@@ -99,7 +103,32 @@ public class GlosarioController : MonoBehaviour
                 }
                 break;
             case 2: //Fire
-                newEntry(5);
+                if (!iceCube)
+                {
+                    switch (neweffect)
+                    {
+                        case 1:
+                            newEntry(1);
+                            break;
+                        case 5:
+                            newEntry(2);
+                            break;
+                        case 3:
+                            newEntry(11);
+                            break;
+                        case 2:
+                            newEntry(15);
+                            break;
+                        case 9:
+                            newEntry(16);
+                            break;
+                    }
+                }
+                else
+                {
+                    newEntry(5);
+
+                }
                 break;
             case 3: //Push
                 if (!iceCube)
@@ -114,6 +143,11 @@ public class GlosarioController : MonoBehaviour
                             break;
                       
                     }
+                }
+                else
+                {
+                    newEntry(4);
+
                 }
                 break;
             case 4: //Ice

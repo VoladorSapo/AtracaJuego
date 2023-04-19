@@ -26,7 +26,7 @@ public class Paul : PlayablePlayer
             
             if (!GC.isEmpty(posMouse, false, 2))
             {
-                Cooldown=1;
+                Cooldown=maxCooldown;
                 SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[4]);
                 Vector3 directionVec = posMouse - GC.grid.WorldToCell(transform.position);
                 switch(Mathf.Sign(directionVec.x)){

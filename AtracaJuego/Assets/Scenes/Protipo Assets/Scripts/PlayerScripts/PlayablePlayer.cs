@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
+
 public class PlayablePlayer : PlayerBase
 {
     protected int directionPush;
@@ -86,9 +88,17 @@ public class PlayablePlayer : PlayerBase
     {
         GetComponentInChildren<Canvas>().enabled = !_gamecontroller.Pause;
         GetComponentsInChildren<TMP_Text>()[0].text = currentHealth.ToString();
-        GetComponentsInChildren<TMP_Text>()[1].text = Cooldown.ToString();
-        GetComponentsInChildren<TMP_Text>()[2].text = MaxDistance.ToString();
-
+        if (maxCooldown > 1 && Cooldown > 0)
+        {
+            GetComponentsInChildren<TMP_Text>()[1].enabled = true;
+            GetComponentsInChildren<Image>()[2].enabled = true;
+            GetComponentsInChildren<TMP_Text>()[1].text = Cooldown.ToString();
+        }
+        else
+        {
+            GetComponentsInChildren<TMP_Text>()[1].enabled = false;
+            GetComponentsInChildren<Image>()[2].enabled = false;
+        }
     }
     private void OnMouseExit()
     {

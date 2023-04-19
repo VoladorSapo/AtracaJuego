@@ -31,7 +31,7 @@ public class Iowa : PlayablePlayer
                     case 1: sprite.flipX = false; break;
                     case -1: sprite.flipX = true; break;
                 }
-                Cooldown = 1;
+                Cooldown = maxCooldown;
                 SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx, SoundGallery.InstanceClip.audioClips[1]);
                 CustomTileClass tile = GC.tiles[tileO.x - GC.ogx, tileO.y - GC.ogy];
                 CustomTileClass tile2 = GC.tiles[posMouse.x - GC.ogx, posMouse.y - GC.ogy];

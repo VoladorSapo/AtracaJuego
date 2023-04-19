@@ -18,7 +18,7 @@ public class gameController : MonoBehaviour
     [SerializeField] string type;
     [SerializeField] bool hasReturn;
     [SerializeField] GameObject retryConfirm;
-    [SerializeField] int nextScene;
+    public int nextScene;
     [SerializeField] TutorialController _tutorial;
     [SerializeField] cameraMove camara;
     [SerializeField] Animator anim;
@@ -50,9 +50,14 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("l"))
+        if (Input.GetKeyDown("q"))
         {
-            SceneManager.LoadScene(1);
+            SaveController.Save(SceneManager.GetActiveScene().buildIndex,new bool[8]);
+        }
+        if (Input.GetKeyDown("w"))
+        {
+            SaveData data = SaveController.Load();
+            SceneManager.LoadScene(data.escena);
         }
         if (Input.GetKeyDown("space"))
         {
