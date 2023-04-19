@@ -1,0 +1,1905 @@
+fileFormatVersion: 2
+guid: 31d478c6409c6654596dafd9703f8f21
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: garrote_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c343776fbe331a0800000000000000
+      internalID: -6830856765996516301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c0cbc7950a7c2e0800000000000000
+      internalID: -2105537994567185266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7b8db80b1443a30800000000000000
+      internalID: 4194049379505059783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd68a3aa8834cd30800000000000000
+      internalID: 4450744499851259383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe44ccdca6ecb5d0800000000000000
+      internalID: -3045305617896681742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d47a6cc0c5feb240800000000000000
+      internalID: 4809551660490323154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1e2982995c82340800000000000000
+      internalID: 4839335061210980836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710594ff29aade510800000000000000
+      internalID: 1580106592601853975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedffb83136b1a140800000000000000
+      internalID: 4729261406237490668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 3874
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fa6d679997af8a0800000000000000
+      internalID: -6270565831129256078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbc4eb2f201229a0800000000000000
+      internalID: -6259422737305646093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f1d3ac378e9adf0800000000000000
+      internalID: -168347927037796491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f4f5ce97a65efc0800000000000000
+      internalID: -3466247266302472407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76105e633930bf430800000000000000
+      internalID: 3817649039942680935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565eaf5360b6ab610800000000000000
+      internalID: 1637739088922207589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb33644535c2c800800000000000000
+      internalID: 631283730356583398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba72f20b13b574860800000000000000
+      internalID: 7514074772258367403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfee343746599170800000000000000
+      internalID: 8185668661541793733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4077584, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47470b2f287f30730800000000000000
+      internalID: 3964284238805628020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 3652
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4077584, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0a6d781bebfb030800000000000000
+      internalID: 3512735904069755049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e861e053e7bb5e0800000000000000
+      internalID: -1892780452044435839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8777560aa383df0800000000000000
+      internalID: -200345722846480154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d965f6dd4c1719a0800000000000000
+      internalID: -6262505636190918187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb514e7f4ba24e70800000000000000
+      internalID: 9098022555150801902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11652a77d851a750800000000000000
+      internalID: 6314425835040629021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c679cedba8f7b5190800000000000000
+      internalID: -7972638481460717716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d99b510116f50070800000000000000
+      internalID: 8072128460029139414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe5a14b91148d5b0800000000000000
+      internalID: -5343449379223478544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bceeb41cbab99dd0800000000000000
+      internalID: -2478744802926072656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 3430
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1eaa145836e0ed00800000000000000
+      internalID: 1000052246879841823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3208
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b09bb57557651d80800000000000000
+      internalID: -8280598723105681228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3208
+        width: 198
+        height: 222
+      alignment: 9
+      pivot: {x: 0.4308776, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6265b398b619cf0800000000000000
+      internalID: -247298267378473261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3189
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.70628923, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa629d9686948db40800000000000000
+      internalID: 5465198860615362223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_33
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3189
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.6739711, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a1354dcc15b3030800000000000000
+      internalID: 3475461477623863960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_34
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 3189
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.6364343, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e2e17853ac62b30800000000000000
+      internalID: 4262316428601732728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_35
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 3189
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.60177875, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19dbb39b4c9e88b0800000000000000
+      internalID: -5148005475622856417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_36
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 3189
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5730798, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fd4fb0349c4b2d0800000000000000
+      internalID: -3263762540136177878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.53895277, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940d92205a4daed20800000000000000
+      internalID: 3308690681428037705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_38
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.50679255, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d028bec16f2401f90800000000000000
+      internalID: -6985009397237054963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_39
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.47039437, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721a8ac2b32b7bd30800000000000000
+      internalID: 4447219124273717543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_40
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.4281492, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa49a4ca242811110800000000000000
+      internalID: 1229907396118877354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_41
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.36618945, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fb6a308fe33e760800000000000000
+      internalID: 7485896240553967444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_42
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2948
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.36900574, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ed69cd888f883f0800000000000000
+      internalID: -898194858960298496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.38468707, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84f2d2ad100137f0800000000000000
+      internalID: -634725945196743538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_44
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.37927812, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeeac2535be29eb60800000000000000
+      internalID: 7775797587447951086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_45
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.37657353, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8b02ae4080c2b80800000000000000
+      internalID: -8418344786261395290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_46
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.37657335, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f69773b9946fbe0800000000000000
+      internalID: -1443885699526201479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_47
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.37657335, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded451b3db188b620800000000000000
+      internalID: 2790122618896076269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_48
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 2707
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.37657335, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4447042b9ca3ce00800000000000000
+      internalID: 1063883719313933389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2466
+        width: 324
+        height: 241
+      alignment: 9
+      pivot: {x: 0.3736563, y: 0.5991606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597520966c87ce600800000000000000
+      internalID: 498906452291901333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_50
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ea19dd28aabb410800000000000000
+      internalID: 1493975180443233938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_51
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bc5b51fb089f640800000000000000
+      internalID: 5114260410047253253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_52
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bbdfef3d3c94370800000000000000
+      internalID: 8307386302945147678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_53
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4544c84ea20a4a0800000000000000
+      internalID: -6584215494121466636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_54
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab1ba15f70fb04b0800000000000000
+      internalID: -5473016492517024854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_55
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e0b1e3abface620800000000000000
+      internalID: 2804809882385714725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_56
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b4f7d96b105d290800000000000000
+      internalID: -7866379290294662291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_57
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b847b26804b727ad0800000000000000
+      internalID: -2705964909037128565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_58
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bb1a6652ba8af30800000000000000
+      internalID: 4587104397600865118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_59
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 2494
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224ca1a2ce896a720800000000000000
+      internalID: 2857139153699259426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77345808b4084b1f0800000000000000
+      internalID: -1030057352993881225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_61
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d37b0666a151df0800000000000000
+      internalID: -210232780591252153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_62
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b765270c52887cdc0800000000000000
+      internalID: -3618774079845017989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_63
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7daf345981eb2b6b0800000000000000
+      internalID: -5281950400159417641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_64
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2ef3d91d07d2870800000000000000
+      internalID: 8659701704092017386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_65
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40eb101e6a1ee9310800000000000000
+      internalID: 1413815439896722948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_66
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2317a130f3076a0800000000000000
+      internalID: -6453588983460842779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_67
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9656a6db154c9d30800000000000000
+      internalID: 4439499318548125338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_68
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542e4080cb414a250800000000000000
+      internalID: 5954907405111583301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_69
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 2253
+        width: 170
+        height: 213
+      alignment: 9
+      pivot: {x: 0.4236682, y: 0.5448669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21d2b437e67e48d0800000000000000
+      internalID: -2860217977940029140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_70
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 2253
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c67d9fc9392a8670800000000000000
+      internalID: 8541684971534644933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08699beb09402cac0800000000000000
+      internalID: -3836498912844605824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_72
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c9f0286ff6f4ff0800000000000000
+      internalID: -49697966343087044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_73
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d9a2e625df02e70800000000000000
+      internalID: 9088542578511093044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_74
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17098758fdb4d1690800000000000000
+      internalID: -7629858770306690959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_75
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1115b4802cc52eb70800000000000000
+      internalID: 8926799399834308881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_76
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4959291e0f3f378f0800000000000000
+      internalID: -543822914079517292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_77
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2458c8dc0fe933b0800000000000000
+      internalID: -5532127828792290259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_78
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452ee4f3fb59ada80800000000000000
+      internalID: -8441269902919146924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_79
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 2038
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336ba785a1835c5b0800000000000000
+      internalID: -5348807296627853773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garrote_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1823
+        width: 219
+        height: 215
+      alignment: 9
+      pivot: {x: 0.4618444, y: 0.5245038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d569cff37a9613d70800000000000000
+      internalID: 9021107695653787229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      garrote_0: -6830856765996516301
+      garrote_1: -2105537994567185266
+      garrote_10: -6259422737305646093
+      garrote_11: -168347927037796491
+      garrote_12: -3466247266302472407
+      garrote_13: 3817649039942680935
+      garrote_14: 1637739088922207589
+      garrote_15: 631283730356583398
+      garrote_16: 7514074772258367403
+      garrote_17: 8185668661541793733
+      garrote_18: 3964284238805628020
+      garrote_19: 3512735904069755049
+      garrote_2: 4194049379505059783
+      garrote_20: -1892780452044435839
+      garrote_21: -200345722846480154
+      garrote_22: -6262505636190918187
+      garrote_23: 9098022555150801902
+      garrote_24: 6314425835040629021
+      garrote_25: -7972638481460717716
+      garrote_26: 8072128460029139414
+      garrote_27: -5343449379223478544
+      garrote_28: -2478744802926072656
+      garrote_29: 1000052246879841823
+      garrote_3: 4450744499851259383
+      garrote_30: -8280598723105681228
+      garrote_31: -247298267378473261
+      garrote_32: 5465198860615362223
+      garrote_33: 3475461477623863960
+      garrote_34: 4262316428601732728
+      garrote_35: -5148005475622856417
+      garrote_36: -3263762540136177878
+      garrote_37: 3308690681428037705
+      garrote_38: -6985009397237054963
+      garrote_39: 4447219124273717543
+      garrote_4: -3045305617896681742
+      garrote_40: 1229907396118877354
+      garrote_41: 7485896240553967444
+      garrote_42: -898194858960298496
+      garrote_43: -634725945196743538
+      garrote_44: 7775797587447951086
+      garrote_45: -8418344786261395290
+      garrote_46: -1443885699526201479
+      garrote_47: 2790122618896076269
+      garrote_48: 1063883719313933389
+      garrote_49: 498906452291901333
+      garrote_5: 4809551660490323154
+      garrote_50: 1493975180443233938
+      garrote_51: 5114260410047253253
+      garrote_52: 8307386302945147678
+      garrote_53: -6584215494121466636
+      garrote_54: -5473016492517024854
+      garrote_55: 2804809882385714725
+      garrote_56: -7866379290294662291
+      garrote_57: -2705964909037128565
+      garrote_58: 4587104397600865118
+      garrote_59: 2857139153699259426
+      garrote_6: 4839335061210980836
+      garrote_60: -1030057352993881225
+      garrote_61: -210232780591252153
+      garrote_62: -3618774079845017989
+      garrote_63: -5281950400159417641
+      garrote_64: 8659701704092017386
+      garrote_65: 1413815439896722948
+      garrote_66: -6453588983460842779
+      garrote_67: 4439499318548125338
+      garrote_68: 5954907405111583301
+      garrote_69: -2860217977940029140
+      garrote_7: 1580106592601853975
+      garrote_70: 8541684971534644933
+      garrote_71: -3836498912844605824
+      garrote_72: -49697966343087044
+      garrote_73: 9088542578511093044
+      garrote_74: -7629858770306690959
+      garrote_75: 8926799399834308881
+      garrote_76: -543822914079517292
+      garrote_77: -5532127828792290259
+      garrote_78: -8441269902919146924
+      garrote_79: -5348807296627853773
+      garrote_8: 4729261406237490668
+      garrote_80: 9021107695653787229
+      garrote_9: -6270565831129256078
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

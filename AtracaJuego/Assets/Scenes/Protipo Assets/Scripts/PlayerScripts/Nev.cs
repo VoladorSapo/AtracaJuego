@@ -28,7 +28,18 @@ public class Nev : PlayablePlayer
             {
                 Vector3Int posNew = posMouse * 10 + new Vector3Int(5, 5, 0);
                 Vector3Int posNevCenter = posNev * 10 + new Vector3Int(5, 5, 0);
-                Instantiate(DisplayIce, posNevCenter, Quaternion.identity);
+                Vector3Int posDisplay;
+
+                for(int i=-1; i<=1; i++){
+                    for(int j=-1; j<=1; j++){
+                        posDisplay=posNevCenter+new Vector3Int(10*i,10*j,0);
+                        Vector3Int posDisplayInted=GC.grid.WorldToCell(posDisplay)-new Vector3Int(GC.ogx,GC.ogy,0);
+                        if(GC.tiles[posDisplayInted.x,posDisplayInted.y].GetTileEffect()!=16){
+                        Instantiate(DisplayIce, posDisplay, Quaternion.identity);
+                        }
+                    }
+                }
+                //Instantiate(DisplayIce, posNevCenter, Quaternion.identity);
                 InstHecho = true;
             }
             if (Input.GetMouseButtonDown(0) && !SPM._gameController.Pause)
@@ -62,7 +73,11 @@ public class Nev : PlayablePlayer
 
         if (Cooldown != 0 || Mode != 2 || SPM.currentPlayer != teamNumb || !alive)
         {
-            Destroy(GameObject.FindGameObjectWithTag("DisplayIceTag"));
+            GameObject[] displays=GameObject.FindGameObjectsWithTag("DisplayIceTag");
+            foreach(GameObject go in displays){
+                Destroy(go);
+            }
+            //Destroy(GameObject.FindGameObjectWithTag("DisplayIceTag"));
             InstHecho = false;
         }
     }
