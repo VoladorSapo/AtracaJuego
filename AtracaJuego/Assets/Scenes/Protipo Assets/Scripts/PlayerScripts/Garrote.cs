@@ -12,6 +12,8 @@ public class Garrote : EnemyCharacter
      }
     public override void startTurn()
     {
+        GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+
         print(name + "Start");
         int[] distancias = getDistances();
         List<Node> path = new List<Node>();
@@ -42,7 +44,6 @@ public class Garrote : EnemyCharacter
             }
         }
 
-
         if (path != null && activated)
         {
 
@@ -50,19 +51,31 @@ public class Garrote : EnemyCharacter
             hit = path[path.Count - 1].pos;
             objective = path[path.Count - 2].pos;
             List<Node> turnpath = new List<Node>();
-            GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
             foreach (Node nodo in path)
             {
-                if (Array.Exists(GC.ReachablePos, s => s == nodo.pos))
+                if (Array.Exists(GC.ReachablePos, s => s == nodo.pos) ||GC.tiles[nodo.pos.x - GC.ogx, nodo.pos.y - GC.ogy].GetPlayer().team == team)
                 {
                     turnpath.Add(nodo);
+                }
+            }
+            List<Node> deletelist = new List<Node>();
+            for (int i = turnpath.Count-1; i >= 0; i--)
+            {
+                print(i);
+                if(GC.tiles[turnpath[i].pos.x - GC.ogx, turnpath[i].pos.y - GC.ogy].GetPlayer() != null && GC.tiles[turnpath[i].pos.x - GC.ogx, turnpath[i].pos.y - GC.ogy].GetPlayer() != null == team)
+                {
+                    deletelist.Add(turnpath[i]);
                 }
                 else
                 {
                     break;
                 }
             }
-            path = turnpath;
+            foreach (Node nodo in deletelist)
+            {
+                turnpath.Remove(nodo);
+            }
+                path = turnpath;
             startMove(path);
         }
         else

@@ -220,7 +220,6 @@ public class GridController : MonoBehaviour
         reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
         ReachablePos = new Vector3Int[reachableNodes.Count];
         canMove.ClearAllTiles();
-        print("jijijiji");
         for (int i = 0; i < reachableNodes.Count; i++)
         {
             ReachablePos[i] = reachableNodes[i].pos;
