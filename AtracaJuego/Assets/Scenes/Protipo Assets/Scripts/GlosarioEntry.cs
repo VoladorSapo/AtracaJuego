@@ -27,7 +27,7 @@ public class GlosarioEntry : MonoBehaviour
         {
             print(i);
             print(Valor[i]);
-            //glosario = GetComponentInParent<GlosarioController>();
+            glosario = GetComponentInParent<GlosarioController>();
             print(glosario.name);
             imagenes[i].sprite = glosario.combinaciones[Valor[i]]? sprites[i] : interrogacion;
         }

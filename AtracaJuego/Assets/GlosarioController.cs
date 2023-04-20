@@ -83,11 +83,11 @@ public class GlosarioController : MonoBehaviour
      */
     public void ChangeGlosario(int baseeffect, int neweffect,bool iceCube, Vector3 pos)
     {
-        print(baseeffect + " " + neweffect +" glosario");
-        switch (baseeffect)
+        print(baseeffect + " " + neweffect + "" + iceCube + " glosario");
+        switch (neweffect)
         {
             case 1: //Gas
-                switch (neweffect)
+                switch (baseeffect)
                 {
                     case 4:
                         newEntry(18);
@@ -105,7 +105,7 @@ public class GlosarioController : MonoBehaviour
             case 2: //Fire
                 if (!iceCube)
                 {
-                    switch (neweffect)
+                    switch (baseeffect)
                     {
                         case 1:
                             newEntry(1);
@@ -133,13 +133,13 @@ public class GlosarioController : MonoBehaviour
             case 3: //Push
                 if (!iceCube)
                 {
-                    switch (neweffect)
+                    switch (baseeffect)
                     {
                         case 5:
-                            newEntry(2);
+                            newEntry(13);
                             break;
                         case 9:
-                            newEntry(16);
+                            newEntry(14);
                             break;
                       
                     }
@@ -151,7 +151,7 @@ public class GlosarioController : MonoBehaviour
                 }
                 break;
             case 4: //Ice
-                switch (neweffect)
+                switch (baseeffect)
                 {
                     case 1:
                         newEntry(7);
@@ -162,10 +162,13 @@ public class GlosarioController : MonoBehaviour
                     case 4:
                         newEntry(19);
                         break;
+                    case 7:
+                        newEntry(7);
+                        break;
                 }
                 break;
             case 5: //Elec
-                switch (neweffect)
+                switch (baseeffect)
                 {
                     case 1:
                         newEntry(8);
