@@ -11,7 +11,7 @@ public class PushEffect : MonoBehaviour
     public GridController _GC;
     public MapManager _MM;
     private PlaceTiles _PT;
-
+    private bool HayPlayer=false;
     public GameObject IcePrefab;
     [SerializeField] private int distance = 5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
     [SerializeField] private int distanceMoved = 5; //Mueve n tiles
@@ -43,6 +43,18 @@ public class PushEffect : MonoBehaviour
         LinkedList<Vector2Int> list1= new LinkedList<Vector2Int>();
         LinkedList<Vector2Int> list0= new LinkedList<Vector2Int>();
         LinkedList<Vector2Int> list_= new LinkedList<Vector2Int>();
+        if (_GC.tiles[x, y].GetPlayer() != null)
+                {
+                    switch (_GC.tiles[x, y].GetPlayer().tag)
+                    {
+                        case "Player": auxDist = 5; break;
+                        case "Enemy": auxDist = 5; break;
+                        case "StoneBox": auxDist = 5; speed=48; break;
+                        case "IceCube": auxDist = 1000; speed=75; break;
+                        case "WoodBox": auxDist = 5; break;
+                    }
+                HayPlayer=true;
+                }
         switch (direction)
         {
             case 1:
@@ -75,19 +87,9 @@ public class PushEffect : MonoBehaviour
                     StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 1,list1,list0,list_));
                 }
 
-                if (_GC.tiles[x, y].GetPlayer() != null)
-                {
-                    switch (_GC.tiles[x, y].GetPlayer().tag)
-                    {
-                        case "Player": auxDist = 5; break;
-                        case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; speed=48; break;
-                        case "IceCube": auxDist = 1000; speed=75; break;
-                        case "WoodBox": auxDist = 5; break;
-                    }
+                if(HayPlayer){
                     _GC.tiles[x, y].player.Push(1, 0, auxDist, speed);
-                }
-                else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,1,0);}else{_GC.tiles[x, y].addEffect(3, true, 1, -1);} }
+                }else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,1,0);}else{_GC.tiles[x, y].addEffect(3, true, 1, -1);} }
 
                 if (!_iowa.getMove())
                 {
@@ -125,16 +127,8 @@ public class PushEffect : MonoBehaviour
                     StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 2,list1,list0,list_));
                 }
 
-                if (_GC.tiles[x, y].GetPlayer() != null)
+                if (HayPlayer)
                 {
-                    switch (_GC.tiles[x, y].GetPlayer().tag)
-                    {
-                        case "Player": auxDist = 5; break;
-                        case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; speed=48; break;
-                        case "IceCube": auxDist = 1000; speed=75; break;
-                        case "WoodBox": auxDist = 5; break;
-                    }
                     _GC.tiles[x, y].player.Push(-1, 0, auxDist, speed);
                 }
                 else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,-1,0);}else{_GC.tiles[x, y].addEffect(3, true, 2, -1);} }
@@ -175,17 +169,8 @@ public class PushEffect : MonoBehaviour
                     StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 3,list1,list0,list_));
                 }
 
-                if (_GC.tiles[x, y].GetPlayer() != null)
+                if (HayPlayer)
                 {
-                    switch (_GC.tiles[x, y].GetPlayer().tag)
-                    {
-                        case "Player": auxDist = 5; break;
-                        case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; speed=48; break;
-                        case "IceCube": auxDist = 1000; speed=75; break;
-                        case "WoodBox": auxDist = 5; break;
-                    }
-                    
                     _GC.tiles[x, y].player.Push(0, 1, auxDist, speed);
                 }
                 else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,1);}else{_GC.tiles[x, y].addEffect(3, true, 3, -1);} }
@@ -225,18 +210,8 @@ public class PushEffect : MonoBehaviour
                     StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 4, list1, list0, list_));
                 }
 
-                if (_GC.tiles[x, y].GetPlayer() != null)
+                if (HayPlayer)
                 {
-                    
-                    switch (_GC.tiles[x, y].GetPlayer().tag)
-                    {
-                        case "Player": auxDist = 5; break;
-                        case "Enemy": auxDist = 5; break;
-                        case "StoneBox": auxDist = 3; speed=48; break;
-                        case "IceCube": auxDist = 1000; speed=75; break;
-                        case "WoodBox": auxDist = 5; break;
-                    }
-                    Debug.LogWarning("Movio");
                     _GC.tiles[x, y].player.Push(0, -1, auxDist, speed);
                 }
                 else { if(_GC.tiles[x,y].GetTileState()==9){_PT.PlaceAfterBreak(x,y,0,-1);}else{_GC.tiles[x, y].addEffect(3, true, 4, -1);} }

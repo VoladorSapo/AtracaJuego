@@ -612,17 +612,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turn: {fileID: 183999963}
   _text: {fileID: 0}
-  winCondition: 1
+  winCondition: 0
   _cutsceneController: {fileID: 0}
   _GC: {fileID: 0}
   _TC: {fileID: 0}
   table: Level1_Scenes
-  code: scene2.0
-  tutorialcode: tutorial2
-  type: tutorial
+  code: 
+  tutorialcode: 
+  type: 
   hasReturn: 0
   retryConfirm: {fileID: 0}
-  nextScene: 3
+  nextScene: 0
   _tutorial: {fileID: 0}
   camara: {fileID: 0}
   anim: {fileID: 0}
