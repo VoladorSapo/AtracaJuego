@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
 
     private IEnumerator PlayTitle(){
         PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
-        yield return new WaitForSeconds(SoundGallery.InstanceClip.musicClips[9].length);
+        yield return new WaitForSeconds(SoundGallery.InstanceClip.musicClips[9].length-1);
         _music.clip=SoundGallery.InstanceClip.musicClips[10];
         _music.Play();
     }
