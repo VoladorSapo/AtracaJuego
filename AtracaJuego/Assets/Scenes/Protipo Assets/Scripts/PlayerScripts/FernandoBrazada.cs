@@ -7,14 +7,14 @@ public class FernandoBrazada : EnemyCharacter
     PlayerBase LastPlayer;
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false, throughTeam);
         List<Node> path = new List<Node>();
         string elname = "Null";
         for (int i = 0; i < protas.players.Count; i++)
         {
             if (LastPlayer != protas.players[i])
             {
-                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true,false);
+                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true,false, throughTeam);
                 if (newpath != null && (newpath.Count < path.Count || path.Count == 0))
                 {
                     elname = protas.players[i].name;

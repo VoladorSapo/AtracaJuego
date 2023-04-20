@@ -90,14 +90,24 @@ public class PlayablePlayer : PlayerBase
         GetComponentsInChildren<TMP_Text>()[0].text = currentHealth.ToString();
         if (maxCooldown > 1 && Cooldown > 0)
         {
+            GetComponentsInChildren<Image>()[1].enabled = false;
+            GetComponentsInChildren<Image>()[0].enabled = true;
             GetComponentsInChildren<TMP_Text>()[1].enabled = true;
-            GetComponentsInChildren<Image>()[2].enabled = true;
+            GetComponentsInChildren<Image>()[3].enabled = true;
+            GetComponentsInChildren<Image>()[2].transform.localPosition = new Vector3(2.11f, 0.3f, 0);
+            GetComponentsInChildren<TMP_Text>()[0].transform.localPosition = new Vector3(6.48f, 0, 0);
             GetComponentsInChildren<TMP_Text>()[1].text = Cooldown.ToString();
         }
         else
         {
+            GetComponentsInChildren<Image>()[1].enabled = true;
+            GetComponentsInChildren<Image>()[0].enabled = false;
+
+            GetComponentsInChildren<TMP_Text>()[0].transform.localPosition = new Vector3(3.73f, 0, 0);
+            GetComponentsInChildren<Image>()[2].transform.localPosition = new Vector3(-2.42f, 0.3f, 0);
+
             GetComponentsInChildren<TMP_Text>()[1].enabled = false;
-            GetComponentsInChildren<Image>()[2].enabled = false;
+            GetComponentsInChildren<Image>()[3].enabled = false;
         }
     }
     private void OnMouseExit()

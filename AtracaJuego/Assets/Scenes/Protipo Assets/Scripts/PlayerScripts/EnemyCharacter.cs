@@ -9,6 +9,7 @@ public class EnemyCharacter : PlayerBase
     [SerializeField] protected ScriptPlayerManager protas; //El SPM de los protas para poder acceder a sus posiciones
     [SerializeField] protected int detectDistance;
     [SerializeField] protected bool activated;
+    [SerializeField] protected bool throughTeam;
     protected Vector3Int hit;
     public int codeDamage;
 
@@ -31,16 +32,16 @@ public class EnemyCharacter : PlayerBase
     {
         if (GC.tiles[0, 0] != null)
         {
-            GC.setReachablePos(transform.position, MaxDistance, true, 2, team, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, 2, team, false,throughTeam);
         }
     }
     private void OnMouseExit()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, 2, team, true);
+        GC.setReachablePos(transform.position, MaxDistance, true, 2, team, true, throughTeam);
     }
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false, throughTeam);
         print("hei");
         int i = 0;
         bool poswalkable;

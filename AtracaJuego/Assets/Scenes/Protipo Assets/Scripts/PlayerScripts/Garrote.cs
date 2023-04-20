@@ -12,7 +12,7 @@ public class Garrote : EnemyCharacter
      }
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false, throughTeam);
 
         print(name + "Start");
         int[] distancias = getDistances();
@@ -25,7 +25,7 @@ public class Garrote : EnemyCharacter
             if (distancias[i] <= currentlength)
             {
                 print(name);
-                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true, false);
+                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true, false, throughTeam);
                 if (newpath != null && (newpath.Count < path.Count || path.Count == 0))
                 {
                     print(newpath.Count);

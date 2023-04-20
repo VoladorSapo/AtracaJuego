@@ -55,10 +55,13 @@ public class DialogEvent : MonoBehaviour
                 }
                 else
                 {
-                    _DC.setAnim(int.Parse(eventoarray[1]));
                     if (eventoarray.Length > 2)
                     {
-                        _DC.setEmote(int.Parse(eventoarray[2]));
+                        _DC.setAnim(int.Parse(eventoarray[1]), int.Parse(eventoarray[2]));
+                    }
+                    else
+                    {
+                        _DC.setAnim(int.Parse(eventoarray[1]), 0);
                     }
                 }
                 break;
@@ -83,7 +86,8 @@ public class DialogEvent : MonoBehaviour
                         _tutorial.transform.localPosition = new Vector3(0, -337, 0);
                     }
                 }
-
+                break;
+            case "SetSondido":
 
                 break;
         }

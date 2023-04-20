@@ -39,12 +39,13 @@ public class DialogueController : MonoBehaviour
             }
         }
     }
-    public void setAnim(int animint)
+    public void setAnim(int animint,int emote)
     {
         anim.SetInteger("Character", animint);
+        anim.SetInteger("Emote", emote);
         switch (animint)
         {
-            case 0:
+            default:
                 name_text.text = " ";
                 break;
             case 1:
@@ -66,7 +67,7 @@ public class DialogueController : MonoBehaviour
 
                 break;
             case 6:
-                name_text.text = "Guardia";
+                name_text.text = "Guardia " + emote;
                 break;
             case 7:
                 name_text.text = "Joseva";

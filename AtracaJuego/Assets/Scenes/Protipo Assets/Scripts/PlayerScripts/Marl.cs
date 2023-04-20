@@ -103,13 +103,13 @@ public class Marl : PlayablePlayer
             changeCircle(true);
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 2, true);
-            GC.setReachablePos(transform.position, MaxDistance, true, 1, false, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, 1, false, false, true);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, MaxDistance, true, 1, true, true); changeCircle(true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 2, false); GC.setReachablePos(transform.position, MaxDistance, true, 1, true, true, true); changeCircle(true); }
         else
         {
             changeCircle(false);
-            GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, MaxDistance, true, 1, true, true);
+            GC.setAttackPos(transform.position, 1, true, true, false, 2, true); GC.setReachablePos(transform.position, MaxDistance, true, 1, true, true, true);
         }
         _turnbuttons.showButtons(this, setMode, !hasMove, !hasAttack);
 

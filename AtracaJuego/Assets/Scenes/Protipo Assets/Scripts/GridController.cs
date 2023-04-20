@@ -180,7 +180,7 @@ public class GridController : MonoBehaviour
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
-    public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team,bool safe)
+    public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team,bool safe,bool throughTeam)
     {
         if (ReachablePos.Contains(grid.WorldToCell(endpos))||team)
         {
@@ -190,14 +190,14 @@ public class GridController : MonoBehaviour
             {
                 List<Node> camino = null;
                 if (tiles[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy].TileIsSafe()) {
-                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, safe);
+                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, safe,throughTeam);
                     print(camino == null);
                 }
                 if(camino == null && safe)
                 {
                     print("jdr");
                    tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();
-                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, false);
+                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, false,throughTeam);
 
                 }
                 return camino;
@@ -209,9 +209,9 @@ public class GridController : MonoBehaviour
         }
         return null;
         }
-    public Node GetNodeEffect(Vector3 startpos)
+    public Node GetNodeEffect(Vector3 startpos,int distance)
     {
-        return _path.buscarNodoEffect(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos, tiles, ogx, ogy);
+        return _path.buscarNodoEffect(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos, tiles, ogx, ogy,distance);
     }
     //Cambio visual para el mapa de tiles entre mover o atacar
     public void changeAttackOrMove(bool displayMode){ //Falso, mover. True, atacar
@@ -224,12 +224,12 @@ public class GridController : MonoBehaviour
     
     }
 
-    public void setReachablePos(Vector3 pos, int var, bool isDist, int showTiles, bool team, bool reset)
+    public void setReachablePos(Vector3 pos, int var, bool isDist, int showTiles, bool team, bool reset,bool throughTeam)
     {   
         List<Node> reachableNodes;
         if (!reset) {
             Vector3Int convertedPos = grid.WorldToCell(pos);
-            reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
+            reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team,throughTeam);
             ReachablePos = new Vector3Int[reachableNodes.Count];
             if (showTiles < 2) {canMove.ClearAllTiles(); }
             for (int i = 0; i < reachableNodes.Count; i++)
@@ -308,14 +308,14 @@ public bool isEmpty(Vector3 position, bool wantMove, int mode) //wantMove sirve 
         }
         return true;*/
     }
-    public bool isWalkable(Vector3 position, bool wantMove, bool team, bool safe) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
+    public bool isWalkable(Vector3 position, bool wantMove, bool team, bool safe, bool throughTeam) //Por ejemplo un personaje de tu equipo que puedes atravesar pero no te puedes poner encima
     {
        
       /*  if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null)
         {
             print((tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team) + tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().name);
         }*/
-        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) */ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team
+        if (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].tileState >= 8 || /*(!ReachablePos.Contains(grid.WorldToCell(position)) && wantMove) */ (tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer() != null && (!throughTeam || tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().getTeam() != team
          || tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].GetPlayer().isObject))||safe && !tiles[grid.WorldToCell(position).x - ogx, grid.WorldToCell(position).y - ogy].TileIsSafe())
         {
             return false;

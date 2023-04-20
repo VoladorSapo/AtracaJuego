@@ -9,7 +9,7 @@ public class pathFinder : MonoBehaviour
     private List<Node> closeList;
     private List<Node> nearList;
     public GridController GC;
-    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team,bool safe)
+    public List<Node> findPath(Node startNode, Node endNode, Node[,] nodos,int ogx,int ogy,bool team,bool safe,bool throughTeam)
     {
         List<Node> list = new List<Node>();
         openList = new List<Node> {startNode};
@@ -38,7 +38,7 @@ public class pathFinder : MonoBehaviour
             foreach (Node nodoAdayacente in nodosAdyacentes(currentNode,nodos,ogx,ogy))
             {
                 if (closeList.Contains(nodoAdayacente)) continue;
-                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos), false, team, safe) && nodoAdayacente != endNode) { print("voy a saltar por la ventana"); continue; } 
+                if (!GC.isWalkable(GC.grid.CellToWorld(nodoAdayacente.pos), false, team, safe,throughTeam) && nodoAdayacente != endNode) { print("voy a saltar por la ventana"); continue; } 
                 int tempG = currentNode.gCost + Distance(currentNode, nodoAdayacente);
                 if(tempG < nodoAdayacente.gCost)
                 {
@@ -78,7 +78,7 @@ public class pathFinder : MonoBehaviour
 
         return list;
     }
-    public List<Node> nodosEnDistancia(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist,bool team)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
+    public List<Node> nodosEnDistancia(Node nodo,Node[,] nodos,CustomTileClass[,] tiles, int ogx, int ogy,int var,bool isDist,bool team,bool throughTeam)//Saca todas las posiciones a cierta distancia o de un tipo de elemnto juntos todos. var es distancia/tipo y isDist si busca distancia o tipo
     {
         nearList = new List<Node>();
         List<Node> borderList = new List<Node>();
@@ -96,7 +96,7 @@ public class pathFinder : MonoBehaviour
                 List<Node> supportList = nodosAdyacentes(nodoBorde,nodos,ogx,ogy);
                 for (int i = 0; i < supportList.Count; i++)
                 {
-                    bool shouldAdd = isDist ? GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos),false,team,false) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
+                    bool shouldAdd = isDist ? GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos),false,team,false,throughTeam) : tiles[supportList[i].pos.x -ogx, supportList[i].pos.y-ogy].GetTileEffect() == var;
                     //print(nearList.Contains(supportList[i]) + " " + supportList[i].pos);
                     if(!nearList.Contains(supportList[i]) && shouldAdd && !newBorderList.Contains(supportList[i])){
                         newBorderList.Add(supportList[i]);
@@ -206,7 +206,7 @@ public class pathFinder : MonoBehaviour
 
         return nearList;
     }
-    public Node buscarNodoEffect(Node nodo, Node[,] nodos, CustomTileClass[,] tiles, int ogx, int ogy)
+    public Node buscarNodoEffect(Node nodo, Node[,] nodos, CustomTileClass[,] tiles, int ogx, int ogy,int distance)
     {
         if (tiles[nodo.pos.x - ogx, nodo.pos.y - ogy].GetTileEffect() > 0 && tiles[nodo.pos.x - ogx, nodo.pos.y - ogy].GetTileEffect() < 16)
         {
@@ -217,8 +217,7 @@ public class pathFinder : MonoBehaviour
         List<Node> checkedList = new List<Node>();
         borderList.Add(nodo);
         int vueltas = 0;
-        while (Continue && vueltas < 40)
-        {
+        while (Continue && vueltas < distance) { 
             List<Node> newBorderList = new List<Node>(); ;
             foreach (Node nodoBorde in borderList)
             {
@@ -227,8 +226,9 @@ public class pathFinder : MonoBehaviour
                 {
                     if (!checkedList.Contains(supportList[i]) && !newBorderList.Contains(supportList[i]))
                     {
+                        print("Nova Nodo");
                         checkedList.Add(supportList[i]);
-                        if (findPath(nodo, supportList[i], nodos, ogx, ogy, true,false) != null)
+                        if (GC.isWalkable(GC.grid.CellToWorld(supportList[i].pos), false, true, false,false)/* findPath(nodo, supportList[i], nodos, ogx, ogy, true,false) != null*/)
                         {
                             newBorderList.Add(supportList[i]);
                             if (tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() > 0 && tiles[supportList[i].pos.x - ogx, supportList[i].pos.y - ogy].GetTileEffect() < 16)

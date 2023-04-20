@@ -12,35 +12,40 @@ public class Limpiador : EnemyCharacter
     public override void startTurn()
     {
         hasClean = false;
-        Node nodo = GC.GetNodeEffect(transform.position);
+        Node nodo = GC.GetNodeEffect(transform.position,MaxDistance);
         if (nodo != null)
         {
-            List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true, false);
+            List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true, false, throughTeam);
             print(path.Count);
             if(path != null)
             {
-                hit = path[path.Count - 1].pos;
-                objective = path[path.Count - 2].pos;
-                path.RemoveAt(path.Count - 1);
-                List<Node> turnpath = new List<Node>();
-                GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
-                print(GC.ReachablePos.Length);
-                foreach (Node newnodo in path)
+                if (path.Count > 1)
                 {
-                    if (Array.Exists(GC.ReachablePos, s => s == newnodo.pos))
+                    hit = path[path.Count - 1].pos;
+                    objective = path[path.Count - 2].pos;
+                    path.RemoveAt(path.Count - 1);
+                    List<Node> turnpath = new List<Node>();
+                    GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false,throughTeam);
+                    print(GC.ReachablePos.Length);
+                    foreach (Node newnodo in path)
                     {
-                        turnpath.Add(newnodo);
+                        if (Array.Exists(GC.ReachablePos, s => s == newnodo.pos))
+                        {
+                            turnpath.Add(newnodo);
+                        }
                     }
-                    else
-                    {
+                    print("jujujuj");
+                    path = turnpath;
 
-                        break;
-                    }
+                    startMove(path);
                 }
-                print("jujujuj");
-                path = turnpath;
+                else
+                {
+                   // objective = GC.grid.WorldToCell(transform.position);
+                   // hit = GC.grid.WorldToCell(transform.position);
 
-                startMove(path);
+                   // ChangeMapShown(0);
+                }
             }
             else
             {
@@ -92,11 +97,11 @@ public class Limpiador : EnemyCharacter
     public IEnumerator goBack()
     {
         print("a mi me gusta tu primo");
-        List<Node> path = GC.GetPath(transform.position, spawn.transform.position, true,false);
+        List<Node> path = GC.GetPath(transform.position, spawn.transform.position, true,false, throughTeam);
         yield return new WaitForSeconds(0.2f);
         if(path!= null)
         {
-            GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false, throughTeam);
             print(GC.ReachablePos.Length);
             List<Node> turnpath = new List<Node>();
 
