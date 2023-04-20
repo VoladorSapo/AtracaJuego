@@ -35,6 +35,7 @@ public class gameController : MonoBehaviour
         _tutorial = GameObject.Find("Tutorial").GetComponent<TutorialController>();
         camara = GameObject.Find("Main Camera").GetComponent<cameraMove>();
         retryConfirm = GameObject.Find("RetryConfirm");
+        anim=GameObject.Find("FadeInOut").GetComponent<Animator>();
         retryConfirm.SetActive(false);
 
         StartCoroutine(StartLate());
