@@ -24,11 +24,18 @@ public class SoundManager : MonoBehaviour
         CheckScene();
     }
 
-    private IEnumerator PlayTitle(){
+    private IEnumerator WaitTillEnd(int mode, AudioSource a,AudioClip clip){
+        switch(mode){
+        case 0:
         PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
-        yield return new WaitForSeconds(SoundGallery.InstanceClip.musicClips[9].length-1);
-        _music.clip=SoundGallery.InstanceClip.musicClips[10];
-        _music.Play();
+        yield return new WaitForSeconds(clip.length-1);
+        a.clip=SoundGallery.InstanceClip.musicClips[10];
+        a.Play(); break;
+        case 1:
+        yield return new WaitForSeconds(clip.length);
+        a.volume=1;
+        break;
+        }
     }
     void CheckScene(){
         hasDialogTutorial=false;
@@ -38,7 +45,7 @@ public class SoundManager : MonoBehaviour
         switch(_scene.name){
             case "Inicio":
                 //PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
-                StartCoroutine(PlayTitle());
+                StartCoroutine(WaitTillEnd(0,_music,SoundGallery.InstanceClip.musicClips[9]));
                 break;
             case "Escena1":
                 hasDialogTutorial=true;
@@ -95,7 +102,11 @@ public class SoundManager : MonoBehaviour
         if(_sfx.isPlaying){return true;}
         else{return false;}
     }*/
-
+    public void PlaySoundWithVolume(float volume, AudioSource a, AudioClip clip){
+        a.volume=volume;
+        a.PlayOneShot(clip);
+        StartCoroutine(WaitTillEnd(1,a,clip));
+    }
     public void PlaySound(AudioSource a, AudioClip clip){
         a.pitch=1;
         if(a==_dialog){

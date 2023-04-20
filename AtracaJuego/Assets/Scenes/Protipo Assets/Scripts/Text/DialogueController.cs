@@ -13,7 +13,6 @@ public class DialogueController : MonoBehaviour
     [SerializeField] public TMP_Text name_text;
     List<string> dialogs;
 
-
     public void nextDialog()
     {
         if (dialogs.Count > 0)
@@ -74,6 +73,12 @@ public class DialogueController : MonoBehaviour
                 break;
             case 8:
                 name_text.text = "Jefe de Seguridad";
+                break;
+            case 9:
+                name_text.text = "Conserje";
+                break;
+            case 10:
+                name_text.text = "Fernando";
                 break;
         }
     }
