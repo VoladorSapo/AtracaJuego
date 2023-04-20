@@ -4075,17 +4075,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turn: {fileID: 1580831186}
   _text: {fileID: 0}
-  winCondition: 0
+  winCondition: 1
   _cutsceneController: {fileID: 0}
   _GC: {fileID: 0}
   _TC: {fileID: 0}
   table: Level1_Scenes
-  code: scene2.2
+  code: 
   tutorialcode: 
   type: 
   hasReturn: 0
   retryConfirm: {fileID: 0}
-  nextScene: 0
+  nextScene: 10
   _tutorial: {fileID: 0}
   camara: {fileID: 0}
   anim: {fileID: 0}
