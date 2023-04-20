@@ -22,6 +22,8 @@ public class PlaceTiles : MonoBehaviour
     public RuleTile gasolineFrzSpkT;
 
     public RuleTile[] tilesRotas;
+
+    public Tile[] tilesPlacasPalancas;
     
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();

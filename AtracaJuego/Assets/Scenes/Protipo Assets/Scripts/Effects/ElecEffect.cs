@@ -23,7 +23,7 @@ public class ElecEffect : MonoBehaviour
         if(_GC.tiles[x,y].player!=null){
             if(_GC.tiles[x,y].player.tag=="Player" && !_GC.tiles[x,y].player.GetAlive()){PlayablePlayer pl =_GC.tiles[x,y].player as PlayablePlayer;  pl.Revive(_GC.tiles[x,y].player);
             SoundManager.InstanceSound.SetVolume(0.6f,SoundManager.InstanceSound._hits);
-            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[25]);
+            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[19]);
             SoundManager.InstanceSound.SetVolume(1,SoundManager.InstanceSound._hits);
             }
             else if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){ _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
