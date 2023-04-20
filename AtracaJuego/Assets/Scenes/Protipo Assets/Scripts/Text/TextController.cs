@@ -86,7 +86,7 @@ public class TextController : MonoBehaviour
                 break;
                 case "Joseva":
                             SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
-                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[16]);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[17]);
                 break;
                 case "Guardia":
                             SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
