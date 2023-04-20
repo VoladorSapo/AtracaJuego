@@ -83,7 +83,7 @@ public class Limpiador : EnemyCharacter
     }
     public override void InstantiatePrefab()
     {
-        print("jujalag q hiciste");
+        SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._sfx,SoundGallery.InstanceClip.audioClips[24]);
         GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy].cleanEffects(5);
         hasClean = true;
        

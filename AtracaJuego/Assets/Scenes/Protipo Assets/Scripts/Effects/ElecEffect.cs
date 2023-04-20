@@ -26,7 +26,9 @@ public class ElecEffect : MonoBehaviour
             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[19]);
             SoundManager.InstanceSound.SetVolume(1,SoundManager.InstanceSound._hits);
             }
-            else if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){ _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
+            else if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){
+                SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[20]);
+                _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
             else if(_GC.tiles[x,y].player is not Iowa){_GC.tiles[x,y].addEffect(5,true,direction,-1);}
             //if(!_GC.tiles[x,y].player.GetAlive()){print("Revive");}
         }else{_GC.tiles[x,y].addEffect(5,true,direction,-1);}

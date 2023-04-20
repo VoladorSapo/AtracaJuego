@@ -32,4 +32,12 @@ public class GlosarioEntry : MonoBehaviour
             imagenes[i].sprite = glosario.combinaciones[Valor[i]]? sprites[i] : interrogacion;
         }
     }
+    public void showData(int num)
+    {
+
+    }
+    public void hideData()
+    {
+
+    }
 }
