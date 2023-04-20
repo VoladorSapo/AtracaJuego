@@ -93,8 +93,8 @@ public class TextController : MonoBehaviour
                             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[9]);
                 break;
                 case "Jefe de Seguridad":
-                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
-                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[9]);
+                            SoundManager.InstanceSound.SetVolume(0.3f, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[16]);
                 break;
             }
             }

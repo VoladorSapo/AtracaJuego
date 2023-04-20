@@ -175,6 +175,7 @@ public class Iowa : PlayablePlayer
         yield return new WaitUntil(() => animator.GetInteger("Carga") == 2);
 
         vfx.GetComponent<Animator>().SetInteger("Carga",1);
+        SoundManager.InstanceSound.PlaySoundWithVolume(0.3f,SoundManager.InstanceSound._sfx,SoundGallery.InstanceClip.audioClips[21]);
         if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag!="StoneBox"){MM.Damage(0,x+dx,y+dy);}
 
         if((GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"
