@@ -58,8 +58,12 @@ public class TextController : MonoBehaviour
             yield return delay;
             //yield return new WaitForSecondsRealtime(0.2f) ;
             currentChar++;
+            
+            
             if(_dialogcontroller!=null && !terminado && textinfo.characterInfo[currentChar].character != '.'){
-            switch(_dialogcontroller.name_text.text){
+            string nombre=_dialogcontroller.name_text.text;
+            if(nombre.Contains("Guardia")){nombre="Guardia";}
+            switch(nombre){
                 case "Ignacio": 
                                 SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
 
@@ -92,7 +96,11 @@ public class TextController : MonoBehaviour
                             SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
                             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[9]);
                 break;
-                case "Jefe de Seguridad":
+                case "Conserje":
+                            SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
+                            SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[23]);
+                break;
+                case "Fernando":
                             SoundManager.InstanceSound.SetVolume(0.3f, SoundManager.InstanceSound._dialog);
                             SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._dialog,SoundGallery.InstanceClip.audioClips[16]);
                 break;
