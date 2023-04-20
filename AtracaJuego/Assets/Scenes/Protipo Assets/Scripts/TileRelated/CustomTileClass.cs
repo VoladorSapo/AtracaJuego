@@ -149,17 +149,21 @@ public class CustomTileClass
         if(tileState==1 || tileState==2){
             Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
             if(newplayer==null){
-                tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]);
+                
+                Debug.LogWarning(tileSpriteId);
                 switch(tileSpriteId){
-                    case 3: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[1]); break;
-                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[3]); break;
+                    case 3: if(newplayer.tag=="StoneBox"){_PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[2]);
+                            tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]);} break;
+                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[4]); 
+                            tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]); break;
                 }
             }
             else{
                 tileState=2; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[17]);
+                Debug.LogWarning(tileSpriteId);
                 switch(tileSpriteId){
-                    case 3: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[0]); break;
-                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[2]); break;
+                    case 3: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[1]); break;
+                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[3]); break;
                 }
             }
         }

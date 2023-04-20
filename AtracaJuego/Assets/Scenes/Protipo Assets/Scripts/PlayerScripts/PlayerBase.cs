@@ -289,12 +289,18 @@ public class PlayerBase : MonoBehaviour
         if (animator != null) { animator.SetInteger("Anim", 4); }
         SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[7]);
         currentHealth -= health;
+        if(isObject && currentHealth<=0){Die();}
+        
         CDH.DamageDialogue(GetType().ToString());
     }
     
     private void thisLoseHealth(PlayerBase p, int health){
-        if (p.animator != null) { p.animator.SetInteger("Anim", 4); }
         p.currentHealth -= health;
+        if(!p.isObject){
+        if (p.animator != null) { p.animator.SetInteger("Anim", 4); }
+        }else{
+        if(p.animator!=null && p.currentHealth<=0){Die();}
+        }
     }
 
     public virtual int GetMaxHealth()

@@ -30,8 +30,9 @@ public override void Die(){
     CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
     tile.setPlayer(null);
     //Destroy(this.gameObject);
+    Debug.LogWarning("Rompido");
         switch(this.tag){
-            case "WoodBox": if(animator!=null){animator.SetInteger("Anim",3);} break; //Animacion de romper caja
+            case "WoodBox": if(animator!=null){animator.SetInteger("Anim",3); Debug.LogWarning("Rompido");} break; //Animacion de romper caja
             case "IceCube": if(animator!=null){animator.SetInteger("Anim",3);} break; //Animacion de romper hielo
         }
     }

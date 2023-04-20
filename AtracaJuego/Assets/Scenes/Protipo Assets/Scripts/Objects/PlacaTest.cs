@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlacaTest: MonoBehaviour
 {
     [SerializeField] private Vector2Int[] Posiciones;
+    private Vector2Int[] PosicionesCond;
+
     [SerializeField] private ObjectStuff[] Objetos;
     [SerializeField] private bool Activate;
     [SerializeField] private bool Activated;
