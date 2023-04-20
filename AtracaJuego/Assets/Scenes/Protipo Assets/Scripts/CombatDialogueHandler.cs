@@ -41,6 +41,11 @@ public class CombatDialogueHandler : MonoBehaviour
         string code = "damage" + playername;
         sendDialog("MoveandDamage", code);
     }
+    public void DieDialogue(string playername)
+    {
+        string code = "die" + playername;
+        sendDialog("MoveandDamage", code);
+    }
     public void AttackDialogue(string playername, CustomTileClass tile1, CustomTileClass tile2)
     {
         string type;

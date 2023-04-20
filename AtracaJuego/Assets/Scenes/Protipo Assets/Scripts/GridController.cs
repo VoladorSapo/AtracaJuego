@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 using System.Linq;
+using UnityEngine.EventSystems;
 
 public class GridController : MonoBehaviour
 {
@@ -19,11 +20,14 @@ public class GridController : MonoBehaviour
     [SerializeField] private Tilemap charcosE = null;
     [SerializeField] private Tilemap charcos = null;
     public Tilemap canMove = null;
+    public Tilemap enemyMove = null;
+
     public Tilemap CanAttackMap = null;
     [SerializeField] private Tile hoverTile = null;
     [SerializeField] private Tile hoverTileNope = null; //Sería usada para indicar que ciertas casillas son inaccesibles, por colisión o por estar fuera de rango
     [SerializeField] private Tile hoverTilePlayer = null; //Para indicar un posible cambio de Player
     [SerializeField] private Tile canMoveTile = null;
+    [SerializeField] private Tile enemyMoveTile = null;
     [SerializeField] private Tile attackTile=null;
     
     [SerializeField] EventTileList _eventtileparent;
@@ -52,6 +56,8 @@ public class GridController : MonoBehaviour
         charcosE=GameObject.Find("CharcosElec").GetComponent<Tilemap>();
         Top=GameObject.Find("Top").GetComponent<Tilemap>();
         gasesE=GameObject.Find("GasesElec").GetComponent<Tilemap>();
+        enemyMove = GameObject.Find("enemyMove").GetComponent<Tilemap>();
+
         //Metodos de otros scripts
         tileTable = GameObject.Find("MapManager").GetComponent<TileSpriteTable>();
         _gc = GameObject.Find("Controller").GetComponent<gameController>();
@@ -149,7 +155,7 @@ public class GridController : MonoBehaviour
         if (!_gc.Pause) {
             mousePos = GetMousePosition();
         }
-        if (!mousePos.Equals(previousMousePos) && !_gc.Pause)
+        if (!mousePos.Equals(previousMousePos) && !_gc.Pause || EventSystem.current.IsPointerOverGameObject())
         {
 
             /*Vector2 mousePos2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -165,8 +171,10 @@ public class GridController : MonoBehaviour
                 }
             }*/
             interactiveMap.SetTile(previousMousePos, null); //Quita la anterior tile de indicación
+            if (!EventSystem.current.IsPointerOverGameObject()) { 
             interactiveMap.SetTile(mousePos, TileToPlace);
             previousMousePos = mousePos;
+        }
         }
 
     }
@@ -180,13 +188,16 @@ public class GridController : MonoBehaviour
             Vector3 mouseWorldPos = endpos;
             if (tiles[grid.WorldToCell(mouseWorldPos).x - ogx, grid.WorldToCell(mouseWorldPos).y - ogy].GetPlayer() == null || team)
             {
-                List<Node> camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team,safe);
-                print(camino == null);
+                List<Node> camino = null;
+                if (tiles[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy].TileIsSafe()) {
+                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, safe);
+                    print(camino == null);
+                }
                 if(camino == null && safe)
                 {
                     print("jdr");
-                    //tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();
-                    //camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, false);
+                   tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();
+                    camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, false);
 
                 }
                 return camino;
@@ -213,27 +224,31 @@ public class GridController : MonoBehaviour
     
     }
 
-    public void setReachablePos(Vector3 pos, int var, bool isDist, bool showTiles, bool team, bool reset)
+    public void setReachablePos(Vector3 pos, int var, bool isDist, int showTiles, bool team, bool reset)
     {   
         List<Node> reachableNodes;
-        if(!reset){
-        Vector3Int convertedPos = grid.WorldToCell(pos);
-        reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
-        ReachablePos = new Vector3Int[reachableNodes.Count];
-        canMove.ClearAllTiles();
-        for (int i = 0; i < reachableNodes.Count; i++)
-        {
-            ReachablePos[i] = reachableNodes[i].pos;
-            if (showTiles)
+        if (!reset) {
+            Vector3Int convertedPos = grid.WorldToCell(pos);
+            reachableNodes = _path.nodosEnDistancia(nodos[convertedPos.x - ogx, convertedPos.y - ogy], nodos, tiles, ogx, ogy, var, isDist, team);
+            ReachablePos = new Vector3Int[reachableNodes.Count];
+            if (showTiles < 2) {canMove.ClearAllTiles(); }
+            for (int i = 0; i < reachableNodes.Count; i++)
             {
-                canMove.SetTile(ReachablePos[i], canMoveTile);
+                ReachablePos[i] = reachableNodes[i].pos;
+                if (showTiles == 1)
+                {
+                    canMove.SetTile(ReachablePos[i], canMoveTile);
+                }
+                if (showTiles == 2)
+                {
+                    enemyMove.SetTile(ReachablePos[i], enemyMoveTile);
+                }
             }
+            canMove.RefreshAllTiles();
+            freeCursor = false;
+        } else { if (showTiles < 2) { canMove.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); reachableNodes = null; } else { enemyMove.ClearAllTiles(); } }
         }
-        canMove.RefreshAllTiles();
-        freeCursor = false;
-        }else{canMove.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); reachableNodes=null;}
-    }
-
+    
     //
     public List<Node> setAttackPos(Vector3 pos, int range, bool isDist, bool showTiles, bool team, int playerMode, bool reset)
     {

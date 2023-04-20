@@ -13,12 +13,12 @@ public class Player1 : PlayablePlayer
         {
             print("move");
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
-            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, false, false);
+            GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, 1, false, false);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 1, false); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, 1, true, true); }
         else
         {
-            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, true, true, true);
+            GC.setAttackPos(transform.position, 1, true, true, false, 1, true); GC.setReachablePos(transform.position, SPM.MaxDistancePlayers[teamNumb], true, 1, true, true);
         }
     }
 }

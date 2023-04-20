@@ -27,9 +27,20 @@ public class EnemyCharacter : PlayerBase
         base.setGame();
         activated = false;
     }
+    private void OnMouseOver()
+    {
+        if (GC.tiles[0, 0] != null)
+        {
+            GC.setReachablePos(transform.position, MaxDistance, true, 2, team, false);
+        }
+    }
+    private void OnMouseExit()
+    {
+        GC.setReachablePos(transform.position, MaxDistance, true, 2, team, true);
+    }
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
         print("hei");
         int i = 0;
         bool poswalkable;

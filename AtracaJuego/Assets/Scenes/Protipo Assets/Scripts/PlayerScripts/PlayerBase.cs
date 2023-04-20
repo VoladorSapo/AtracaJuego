@@ -122,7 +122,7 @@ public class PlayerBase : MonoBehaviour
                     tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
                     tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
-                    if (!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && _callTile != null)
+                    if (!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && _callTile != null && !team)
                     {
                         _callTile.sendEvent(this);
                     }
@@ -266,7 +266,7 @@ public class PlayerBase : MonoBehaviour
         alive = false;
         Vector3Int tilepos = grid.WorldToCell(transform.position);
         CustomTileClass tile = GC.tiles[tilepos.x - GC.ogx, tilepos.y - GC.ogy];
-
+        CDH.DieDialogue(GetType().ToString());
         SPM.playerDie(this);
         tile.setPlayer(this);
         if (this.tag != "Player")

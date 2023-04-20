@@ -86,6 +86,7 @@ public class turnButtonsController : MonoBehaviour
     }
     public void nextTurn()
     {
+        _gameController._GC.setAttackPos(transform.position, 1, true, true, false, 4, true); _gameController._GC.setReachablePos(transform.position, 0, true, 1, true, true);
         hideButtons();
         Skip(false);
         currentplayer.getSPM().endTurn();

@@ -23,7 +23,7 @@ public class Limpiador : EnemyCharacter
                 objective = path[path.Count - 2].pos;
                 path.RemoveAt(path.Count - 1);
                 List<Node> turnpath = new List<Node>();
-                GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+                GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
                 print(GC.ReachablePos.Length);
                 foreach (Node newnodo in path)
                 {
@@ -96,7 +96,7 @@ public class Limpiador : EnemyCharacter
         yield return new WaitForSeconds(0.2f);
         if(path!= null)
         {
-            GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+            GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
             print(GC.ReachablePos.Length);
             List<Node> turnpath = new List<Node>();
 

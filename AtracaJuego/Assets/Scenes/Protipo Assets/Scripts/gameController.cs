@@ -10,13 +10,14 @@ public class gameController : MonoBehaviour
     [SerializeField] TextController _text;
     [SerializeField] private int winCondition;
     [SerializeField] cutsceneController _cutsceneController;
-    [SerializeField] GridController _GC;
+    [SerializeField] public GridController _GC;
     [SerializeField] tunController _TC;
     [SerializeField] string table;
     [SerializeField] string code;
     [SerializeField] string tutorialcode;
     [SerializeField] string type;
     [SerializeField] bool hasReturn;
+
     [SerializeField] GameObject retryConfirm;
     public int nextScene;
     [SerializeField] TutorialController _tutorial;
@@ -40,8 +41,8 @@ public class gameController : MonoBehaviour
     }
     IEnumerator StartLate()
     {
-        SoundManager.InstanceSound.SetVolume(0.4f,SoundManager.InstanceSound._music);
-        SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
+       // SoundManager.InstanceSound.SetVolume(0.4f,SoundManager.InstanceSound._music);
+       // SoundManager.InstanceSound.PlayMusic(0.25f,SoundGallery.InstanceClip.audioClips[17]);
         yield return new WaitForEndOfFrame();
         string fullcode = "start_" + code;
         Pause = true;

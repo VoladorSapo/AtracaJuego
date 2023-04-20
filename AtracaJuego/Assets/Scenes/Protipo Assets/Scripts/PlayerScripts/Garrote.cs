@@ -12,7 +12,7 @@ public class Garrote : EnemyCharacter
      }
     public override void startTurn()
     {
-        GC.setReachablePos(transform.position, MaxDistance, true, false, team, false);
+        GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false);
 
         print(name + "Start");
         int[] distancias = getDistances();
@@ -44,7 +44,7 @@ public class Garrote : EnemyCharacter
             }
         }
 
-        if (path != null && activated)
+        if (path != null && activated && path.Count >= 0 )
         {
 
             print(path.Count);
@@ -53,7 +53,7 @@ public class Garrote : EnemyCharacter
             List<Node> turnpath = new List<Node>();
             foreach (Node nodo in path)
             {
-                if (Array.Exists(GC.ReachablePos, s => s == nodo.pos) ||GC.tiles[nodo.pos.x - GC.ogx, nodo.pos.y - GC.ogy].GetPlayer().team == team)
+                if (Array.Exists(GC.ReachablePos, s => s == nodo.pos) || GC.tiles[nodo.pos.x - GC.ogx, nodo.pos.y - GC.ogy].GetPlayer() != null && GC.tiles[nodo.pos.x - GC.ogx, nodo.pos.y - GC.ogy].GetPlayer().team == team)
                 {
                     turnpath.Add(nodo);
                 }
@@ -76,7 +76,14 @@ public class Garrote : EnemyCharacter
                 turnpath.Remove(nodo);
             }
                 path = turnpath;
-            startMove(path);
+            if (path.Count > 0)
+            {
+                startMove(path);
+            }
+            else
+            {
+                ChangeMapShown(0);
+            }
         }
         else
         {
