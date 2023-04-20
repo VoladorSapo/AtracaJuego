@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class GlosarioController : MonoBehaviour
 {
     public bool[] combinaciones;
@@ -12,10 +13,13 @@ public class GlosarioController : MonoBehaviour
     [SerializeField] public GlosarioInfo _info;
     [SerializeField] GameObject infoprefab;
     [SerializeField] gameController _GC;
+    [SerializeField] GameObject extraData;
+    [SerializeField] GameObject Canvas;
     // Start is called before the first frame update
     void Awake()
     {
         _GC = GameObject.Find("Controller").GetComponent<gameController>();
+        Canvas = GameObject.Find("Canvas");
         closeGlosario();
         Buttons(false);
         combinaciones[0] = true;
@@ -31,7 +35,21 @@ public class GlosarioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (extraData.activeSelf && Input.GetKey("p"))
+        {
+            RectTransform datatransform = extraData.GetComponent<RectTransform>();
+            RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
+            datatransform.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 pos = datatransform.localPosition;
 
+            Vector3 minPosition = canvastransform.rect.min - datatransform.rect.min;
+            Vector3 maxPosition = canvastransform.rect.max - datatransform.rect.max;
+
+            pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
+            pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
+            datatransform.localPosition = pos;
+
+        }
     }
     public void printar()
     {
@@ -72,6 +90,34 @@ public class GlosarioController : MonoBehaviour
             SaveController.Save(_GC.nextScene,combinaciones);
             _info.combinacionespermanentes = combinaciones;
         }
+    }
+    public void showExtraData(int boolnum,string code)
+    {
+        extraData.SetActive(true);
+        RectTransform datatransform = extraData.GetComponent<RectTransform>();
+        RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
+        datatransform.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 pos = datatransform.localPosition;
+
+        Vector3 minPosition = canvastransform.rect.min - datatransform.rect.min;
+        Vector3 maxPosition = canvastransform.rect.max - datatransform.rect.max;
+
+        pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
+        pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
+        if (combinaciones[boolnum])
+        {
+            extraData.GetComponentsInChildren<TMP_Text>()[0].text = "Combinación Conocida";
+            extraData.GetComponentsInChildren<TMP_Text>()[1].text = "Sopas";
+        }
+        else
+        {
+            extraData.GetComponentsInChildren<TMP_Text>()[0].text = "Combinación Desconocida";
+            extraData.GetComponentsInChildren<TMP_Text>()[1].text = "Prueba Cosas";
+        }
+    }
+    public void hideExtraData()
+    {
+        extraData.SetActive(false);
     }
     /* Lista combinaciones
      * 1 = Explosion;    2 = Derretir Hielo;    3 = Congelar Agua;    4 = Empujar Hielo;    5 = Derretir Cubo;    
