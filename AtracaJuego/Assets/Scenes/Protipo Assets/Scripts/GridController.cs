@@ -246,7 +246,7 @@ public class GridController : MonoBehaviour
             }
             canMove.RefreshAllTiles();
             freeCursor = false;
-        } else { if (showTiles < 2) { canMove.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); reachableNodes = null; } else { enemyMove.ClearAllTiles(); } }
+        } else { if (showTiles < 2) { Debug.LogWarning("aiuda"); canMove.ClearAllTiles(); CanAttackMap.RefreshAllTiles(); reachableNodes = null; } else { enemyMove.ClearAllTiles(); } }
         }
     
     //

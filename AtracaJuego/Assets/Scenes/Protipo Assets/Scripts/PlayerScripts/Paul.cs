@@ -113,7 +113,7 @@ public class Paul : PlayablePlayer
             GC.setAttackPos(transform.position, 1, true, true, false, 1, true);
             GC.setReachablePos(transform.position, MaxDistance, true, 1, false, false, true);
         }
-        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 4, false); GC.setReachablePos(transform.position, MaxDistance, true, 11, true, true, true); changeCircle(true); }
+        else if (Mode == 2) { GC.setAttackPos(transform.position, 1, true, true, false, 4, false); GC.setReachablePos(transform.position, MaxDistance, true, 1, true, true, true); changeCircle(true); }
         else
         {
             changeCircle(false);

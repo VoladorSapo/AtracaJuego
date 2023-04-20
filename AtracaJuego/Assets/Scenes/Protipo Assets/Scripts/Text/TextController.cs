@@ -58,7 +58,7 @@ public class TextController : MonoBehaviour
             yield return delay;
             //yield return new WaitForSecondsRealtime(0.2f) ;
             currentChar++;
-            if(_dialogcontroller!=null && !terminado){
+            if(_dialogcontroller!=null && !terminado && textinfo.characterInfo[currentChar].character != '.'){
             switch(_dialogcontroller.name_text.text){
                 case "Ignacio": 
                                 SoundManager.InstanceSound.SetVolume(1, SoundManager.InstanceSound._dialog);
