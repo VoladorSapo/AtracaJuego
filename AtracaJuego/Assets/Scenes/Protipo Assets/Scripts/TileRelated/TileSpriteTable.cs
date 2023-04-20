@@ -365,7 +365,32 @@ public class TileSpriteTable : MonoBehaviour
             case "tirao_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tirao_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tirao_9": id[0] = 1; id[1] = 8; id[2] = 16; break;
-
+            case "tilesetExtra_0": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_1": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_2": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_4": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_5": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_6": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_7": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_8": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_9": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_12": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_13": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_14": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_15": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_16": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_17": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_18": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_19": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_20": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_21": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_22": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_23": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_24": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "tilesetExtra_25": id[0] = 1; id[1] = 8; id[2] = 16; break;
                 //case "sheet_191": id[0] = 1; id[1] = 8; id[2] = 16; break;
                 //case "sheet_191": id[0] = 1; id[1] = 8; id[2] = 16; break;
         }
