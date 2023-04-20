@@ -50,6 +50,11 @@ public class tunController : MonoBehaviour
         foreach(ObjectStuff o in objects){
             o.startTurn();
         }
+        for(int i=0; i<_GC.tiles.GetLength(0); i++){
+            for(int j=0; j<_GC.tiles.GetLength(1); j++){
+                _GC.tiles[i,j].LowerFade();
+            }
+        }
     }
 
     public void startTurns()

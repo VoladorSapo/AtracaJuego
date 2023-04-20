@@ -34,7 +34,7 @@ public class CustomTileClass
     }
 
     public void DisplayStats(){
-        Debug.Log("La Tile tiene el sprite "+tileSpriteId+" y el estado "+tileState+" con el efecto "+tileEffect+" y "+tileFadeEffect);
+        Debug.Log("La Tile tiene el sprite "+tileSpriteId+" y el estado "+tileState+" con el efecto "+tileEffect+" y el fade "+tileFadeEffect);
         Debug.Log("Su pos es: "+tilePos);
         Debug.Log(GetPlayer());
         if(player!=null){
@@ -122,6 +122,7 @@ public class CustomTileClass
     }
 
     public void LowerFade(){
+        Debug.LogWarning("ueu");
         if(tileFadeEffect>0){
             tileFadeEffect--;
             if(tileFadeEffect==0){addEffect(0,false,0,-1);}
@@ -167,6 +168,11 @@ public class CustomTileClass
                 }
             }
         }
+
+        /*if(CheckEffectDamage(newplayer)){
+            SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
+            newplayer.loseHealth(1);
+        }*/
     }
     public void sendEvent(PlayerBase newplayer)
     {
@@ -191,12 +197,14 @@ public class CustomTileClass
     }
 
     public bool CheckEffectDamage(PlayerBase p){
-        if(p.OnTileEffect!=tileEffect){
+
+        if(p!=null && p.OnTileEffect!=tileEffect){
             p.OnTileEffect=tileEffect;
             if(!TileIsSafe()){
                 return true;
             }
         }
+        
         return false;
     }
 

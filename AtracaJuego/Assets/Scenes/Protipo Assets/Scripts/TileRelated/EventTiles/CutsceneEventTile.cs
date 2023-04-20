@@ -20,7 +20,7 @@ public class CutsceneEventTile : EventTile
     {
         player = _player;
         print("waka waka");
-        if (!GetComponentInParent<EventTileList>().eventlist.Contains(code))
+        if (!GetComponentInParent<EventTileList>().eventlist.Contains(code) && player.tag=="Player")
         {
             GetComponentInParent<EventTileList>().eventlist.Add(code);
             List<string> list = GetLocalizedString.getLocalizedString(table, code);
