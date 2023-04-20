@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 12f6a35cec9f37d4b92118eb981cee7e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: garroteAzulOwie_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 817
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b90c27bde7f284396b9e882d743898
+      internalID: 372284447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 817
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f86b9dbeb3ecab45afa2f2fd650d332
+      internalID: 1295818975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 817
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c3aebdcce952e4a94be78d1574d200
+      internalID: 1536405233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 817
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d0269948ecb894b939f14dc5071f34
+      internalID: 602603960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 817
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524e57232d714da468e635ee6720b45f
+      internalID: -2064626389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1477c97607b72144a899de0b3f889a6b
+      internalID: 1319754500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 610
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f6a1239d6a07743953a22aa4e97c59
+      internalID: 372293483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_7
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 610
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149065506c88803438e0289764a5c004
+      internalID: 1716003674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_8
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 610
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2066a33525af18d4c8e8bf7e9658d348
+      internalID: -1096441155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_9
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 610
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870fdca2c837f324dbc60a7e7245dc15
+      internalID: 433697346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e1f02343f820545be1ab885cda3765
+      internalID: -1750473588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 403
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecacb09dca286047842d2597f6fd448
+      internalID: 1196593785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 403
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bda28091bcf15d41acc1822847d5b67
+      internalID: -1292075547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 403
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1e89a01484c9f4ea7209d1a1d641f8
+      internalID: -1722588283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_14
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 196
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb7efa5ea98284eac9136675a5fa5c
+      internalID: 1558327651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garroteAzulOwie_15
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 196
+        width: 198
+        height: 207
+      alignment: 9
+      pivot: {x: 0.449503, y: 0.5305895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e58f7a547866f940abe3bfadbcbaa91
+      internalID: -1460325356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      garroteAzulOwie_0: 372284447
+      garroteAzulOwie_1: 1295818975
+      garroteAzulOwie_10: -1750473588
+      garroteAzulOwie_11: 1196593785
+      garroteAzulOwie_12: -1292075547
+      garroteAzulOwie_13: -1722588283
+      garroteAzulOwie_14: 1558327651
+      garroteAzulOwie_15: -1460325356
+      garroteAzulOwie_2: 1536405233
+      garroteAzulOwie_3: 602603960
+      garroteAzulOwie_4: -2064626389
+      garroteAzulOwie_5: 1319754500
+      garroteAzulOwie_6: 372293483
+      garroteAzulOwie_7: 1716003674
+      garroteAzulOwie_8: -1096441155
+      garroteAzulOwie_9: 433697346
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
