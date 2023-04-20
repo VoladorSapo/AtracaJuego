@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896608, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d8ec0526fd84ec14d8cce0a9da9aa737, type: 2}
     - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_Sprite
       value: 
