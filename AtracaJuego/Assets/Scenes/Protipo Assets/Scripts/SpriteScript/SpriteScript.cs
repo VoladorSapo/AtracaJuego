@@ -22,6 +22,11 @@ public class SpriteScript : MonoBehaviour
         player.BeIdle();
     }
 
+    void StartDescarga(){
+        if(player is Iowa){
+            player.animator.SetInteger("Carga",2);
+        }
+    }
     void SetDead(){
         if(player.tag=="Player"){player.SetSpriteDead();}
         else{player.DieNow();}

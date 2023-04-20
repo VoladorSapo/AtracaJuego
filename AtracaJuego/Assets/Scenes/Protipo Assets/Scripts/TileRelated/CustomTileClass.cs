@@ -15,7 +15,7 @@ public class CustomTileClass
     public PlaceTiles _PT;
     public int tileFadeEffect;
     public EventTile _eventile;
-    //public GlosarioController _glosario;
+    public GlosarioController _glosario;
     //Referencias a scripts de efectos por si acaso
     public GasEffect GasEf;
 
@@ -28,7 +28,7 @@ public class CustomTileClass
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
         tileFadeEffect=fade;
         _PT=GameObject.Find("TileController").GetComponent<PlaceTiles>();
-        //_glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
+        _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
 
         //GO_explode=GameObject.Find("PreFabExplosion");
     }
@@ -147,8 +147,21 @@ public class CustomTileClass
         }
 
         if(tileState==1 || tileState==2){
-            if(newplayer==null){tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[27]);}
-            else{tileState=2; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[28]);}
+            Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
+            if(newplayer==null){
+                tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]);
+                switch(tileSpriteId){
+                    case 3: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[1]); break;
+                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[3]); break;
+                }
+            }
+            else{
+                tileState=2; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[17]);
+                switch(tileSpriteId){
+                    case 3: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[0]); break;
+                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[2]); break;
+                }
+            }
         }
     }
     public void sendEvent(PlayerBase newplayer)
@@ -194,7 +207,7 @@ public class CustomTileClass
         //Faltan implementar cambios de sprites y FadeEffects
         Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
         if(lock_==-1){lock_=GetTileEffect();}
-       // _glosario.ChangeGlosario(tileEffect, effect, false, tilePos);
+        _glosario.ChangeGlosario(tileEffect, effect, false, tilePos);
 
         //Implmentar combinaciones del excel aqui
         switch (effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet 7=GasElec

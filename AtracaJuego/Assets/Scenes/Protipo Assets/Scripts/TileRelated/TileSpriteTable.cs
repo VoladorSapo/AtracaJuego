@@ -324,10 +324,10 @@ public class TileSpriteTable : MonoBehaviour
             case "TilesetAlmacen_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetAlmacen_49": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetAlmacen_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "TilesetAlmacen_51": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "TilesetAlmacen_52": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "TilesetAlmacen_53": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "TilesetAlmacen_54": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "TilesetAlmacen_51": id[0]=3; id[1]=1; id[2]=16; break;
+            case "TilesetAlmacen_52": id[0]=3; id[1]=2; id[2]=16; break;
+            case "TilesetAlmacen_53": id[0]=4; id[1]=1; id[2]=16; break;
+            case "TilesetAlmacen_54": id[0]=4; id[1]=2; id[2]=16; break;
             case "TilesetAlmacen_55": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetAlmacen_56": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "TilesetBossfight_0": id[0] = 1; id[1] = 8; id[2] = 16; break;

@@ -235,6 +235,7 @@ MonoBehaviour:
   _circleColor: {r: 1, g: 0.997756, b: 0, a: 1}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
+  vfx: {fileID: 0}
 --- !u!61 &1379793704691751752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -625,7 +626,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -1256105479
+  m_SortingLayerID: -832276769
   m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &7661741408687755856
@@ -874,9 +875,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -832276769
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1256105479
+  m_SortingLayer: 1
+  m_SortingOrder: 9999
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

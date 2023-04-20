@@ -9,10 +9,12 @@ public class Iowa : PlayablePlayer
     public Vector3Int posMouse;
     private int x, y;
 
+    [SerializeField] private Transform vfx;
     protected override void Awake()
     {
         base.Awake();
         effect = -1;
+        vfx=transform.Find("iowa-attack_49");
     }
     public override void Update()
     {
@@ -139,12 +141,23 @@ public class Iowa : PlayablePlayer
     IEnumerator RageOn(int direction)
     {
         int dx = 0, dy = 0;
+        animator.SetInteger("Carga",1);
+        
+        Debug.LogWarning("fg");
         switch (direction)
         {
-            case 1: dx = 1; break;
-            case 2: dx = -1; break;
-            case 3: dy = 1; break;
-            case 4: dy = -1; break;
+            case 1: dx = 1; sprite.flipX = false; vfx.GetComponent<Transform>().localPosition=new Vector3(-8,5,0); vfx.GetComponent<SpriteRenderer>().flipX=false;
+            vfx.GetComponent<Transform>().localRotation=Quaternion.Euler(0,0,0);
+            break;
+            case 2: dx = -1; sprite.flipX = true; vfx.GetComponent<Transform>().localPosition=new Vector3(8,5,0); vfx.GetComponent<SpriteRenderer>().flipX=true;
+            vfx.GetComponent<Transform>().localRotation=Quaternion.Euler(0,0,0);
+            break;
+            case 3: dy = 1; sprite.flipX = false; vfx.GetComponent<Transform>().localPosition=new Vector3(0,-2,0); vfx.GetComponent<SpriteRenderer>().flipX=false;
+            vfx.GetComponent<Transform>().localRotation=Quaternion.Euler(0,0,90);
+            break;
+            case 4: dy = -1; sprite.flipX = false; vfx.GetComponent<Transform>().localPosition=new Vector3(0,12,0); vfx.GetComponent<SpriteRenderer>().flipX=false;
+            vfx.GetComponent<Transform>().localRotation=Quaternion.Euler(0,0,-90);
+            break;
         }
 
         WaitForSeconds wfs = new WaitForSeconds(0);
@@ -156,8 +169,12 @@ public class Iowa : PlayablePlayer
         x = tileO.x - GC.ogx;
         y = tileO.y - GC.ogy;
 
+        
         GC.tiles[x, y].setPlayer(null);
+        
+        yield return new WaitUntil(() => animator.GetInteger("Carga") == 2);
 
+        vfx.GetComponent<Animator>().SetInteger("Carga",1);
         if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag!="StoneBox"){MM.Damage(0,x+dx,y+dy);}
 
         if((GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"
@@ -200,6 +217,9 @@ public class Iowa : PlayablePlayer
             yield return wfs;
         }
         }
+
+        animator.SetInteger("Carga",0);
+        vfx.GetComponent<Animator>().SetInteger("Carga",0);
         GC.tiles[x, y].setPlayer(this);
     }
 
