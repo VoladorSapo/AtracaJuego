@@ -52,16 +52,18 @@ public class tunController : MonoBehaviour
         }
         
         if(_GC.tilesConEffects.Count!=0){
-        /*foreach(CustomTileClass t in _GC.tilesConEffects){
+        
+        foreach(CustomTileClass t in _GC.tilesConEffects.ToArray()){
             t.LowerFade();
         }
-        }*/
+        }
+        /*
         for(int i=0; i<_GC.tiles.GetLength(0); i++){
             for(int j=0; j<_GC.tiles.GetLength(1); j++){
                 _GC.tiles[i,j].LowerFade();
             }
         }
-        }
+        }*/
     }
 
     public void startTurns()

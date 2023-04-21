@@ -73,7 +73,7 @@ public class GridController : MonoBehaviour
         TileToPlace = hoverTile;
         nodos = new Node[pathMap.size.x, pathMap.size.y];
         _SE= GameObject.Find("MapManager").GetComponent<StartEffect>();
-        
+        tilesConEffects=new List<CustomTileClass>();
 
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
         _OS=FindObjectsOfType<ObjectStuff>();
