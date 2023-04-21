@@ -298,6 +298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
 --- !u!1 &67700183
@@ -1604,6 +1608,10 @@ PrefabInstance:
     - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: detectDistance
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
@@ -3165,6 +3173,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
 --- !u!114 &983925033 stripped
@@ -3388,6 +3400,10 @@ PrefabInstance:
     - target: {fileID: 4830600860637631676, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
@@ -3781,9 +3797,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830600861398896609, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5114260410047253253, guid: 5fe71e83993d9724f8991b2d7b773674, type: 3}
+      objectReference: {fileID: 1240450579, guid: 2cd27294a35aa8e44854906049e11272, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
 --- !u!114 &1327509387 stripped
@@ -3842,6 +3862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventlist: []
+  spawnList: 
 --- !u!1001 &1390251550
 PrefabInstance:
   m_ObjectHideFlags: 0
