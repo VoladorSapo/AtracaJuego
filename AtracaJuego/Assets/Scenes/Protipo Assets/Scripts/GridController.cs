@@ -48,7 +48,7 @@ public class GridController : MonoBehaviour
     public List<CustomTileClass> tilesConEffects=new List<CustomTileClass>();
     public TileSpriteTable tileTable;
     [SerializeField] private Vector3Int mousePos;
-    //private StartEffect _SE;
+    private StartEffect _SE;
     public ObjectStuff[] _OS;
     void Awake()
     {
@@ -72,7 +72,7 @@ public class GridController : MonoBehaviour
         canMoveHere = true;
         TileToPlace = hoverTile;
         nodos = new Node[pathMap.size.x, pathMap.size.y];
-        //_SE= GameObject.Find("MapManager").GetComponent<StartEffect>();
+        _SE= GameObject.Find("MapManager").GetComponent<StartEffect>();
         tilesConEffects=new List<CustomTileClass>();
 
         tiles = new CustomTileClass[pathMap.size.x, pathMap.size.y];
@@ -124,7 +124,7 @@ public class GridController : MonoBehaviour
         charcos.RefreshAllTiles();
         gases.RefreshAllTiles();
 
-        //_SE.StartEff();
+        _SE.StartEff();
         SoundManager.InstanceSound.ChangeMusic(0.3f,0.25f,null);
     }
     // Update is called once per frame
