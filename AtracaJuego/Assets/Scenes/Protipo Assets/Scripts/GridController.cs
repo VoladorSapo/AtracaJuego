@@ -45,6 +45,7 @@ public class GridController : MonoBehaviour
     public Vector3Int[] AttackPos;
     public bool freeCursor; //El cursor solo esta limitado cuando tienen que elegir una posicion. En otros casos lo puedes mover donde sea.
     public CustomTileClass[,] tiles;
+    public List<CustomTileClass> tilesConEffects=new List<CustomTileClass>();
     public TileSpriteTable tileTable;
     [SerializeField] private Vector3Int mousePos;
     private StartEffect _SE;

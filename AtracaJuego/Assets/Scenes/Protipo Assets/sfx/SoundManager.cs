@@ -61,10 +61,10 @@ public class SoundManager : MonoBehaviour
             case "Escena2.2":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[4]);
                 break;
-            case "Escena3.0":
+            case "Escena3.0(Expo)":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[5]);
                 break;
-            case "Escena3.1":
+            case "Escena3.1(Cocina)":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[4]);
                 break;
             case "Escena1.2":
@@ -73,7 +73,7 @@ public class SoundManager : MonoBehaviour
             case "Escena2(Gym)":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[6]);
                 break;
-            case "Escena2(FinalBossFight)":
+            case "Escena2 (FinalBossFight)":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[7]);
                 break;
                 

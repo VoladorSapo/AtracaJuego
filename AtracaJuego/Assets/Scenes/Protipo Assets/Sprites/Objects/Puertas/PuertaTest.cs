@@ -8,7 +8,7 @@ public class PuertaTest : ObjectStuff
     private bool Activate;
     private bool Activated;
     private int n=0;
-    private int[] activoPor;
+    [SerializeField] private int[] activoPor;
 
     [SerializeField] private Sprite[] OpenClosed;
     private SpriteRenderer spriteState;
@@ -57,11 +57,15 @@ public class PuertaTest : ObjectStuff
             Activated=true;
         }
     }
-
+    public void ResetPanel(int x, int y){
+        for(int i=0; i<Posiciones.Length; i++){
+            if(Posiciones[i].x==x && Posiciones[i].y==y){activoPor[i]=3;}
+        }
+    }
     private void PorPanel(){
         n=0;
         for(int i=0; i<Posiciones.Length; i++){
-            if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==7){n++; if(activoPor[i]<0){activoPor[i]=3;}}
+            if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==7){n++; if(activoPor[i]<=0){activoPor[i]=3;}}
         }
         if(n==Posiciones.Length){Activate=true;}
 

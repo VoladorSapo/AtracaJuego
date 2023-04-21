@@ -8,10 +8,13 @@ public class ElecEffect : MonoBehaviour
     public int direction;
     public Tile activatedTile;
     public GridController _GC;
-    public PalancaTest _palanca;
+    public PuertaTest[] _puertas;
+    public PlaceTiles _PT;
     // Start is called before the first frame update
     void Awake(){
         _GC=GameObject.Find("Grid").GetComponent<GridController>();
+        _PT=GameObject.Find("TileController").GetComponent<PlaceTiles>();
+        _puertas=FindObjectsOfType<PuertaTest>();
     }
     void Start()
     {
@@ -27,14 +30,18 @@ public class ElecEffect : MonoBehaviour
             SoundManager.InstanceSound.SetVolume(1,SoundManager.InstanceSound._hits);
             }
             else if(_GC.tiles[x,y].player is Iowa && _GC.tiles[x,y].player.GetAlive()){
+                _GC.tiles[x,y].player.loseHealth(1);
+                if(_GC.tiles[x,y].player.GetCurrentHealth()>0){
                 SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[20]);
                 _GC.tiles[x,y].GetPlayer().GetComponent<Iowa>().StartRage(direction);}
+                }
             else if(_GC.tiles[x,y].player is not Iowa){_GC.tiles[x,y].addEffect(5,true,direction,-1);}
             //if(!_GC.tiles[x,y].player.GetAlive()){print("Revive");}
         }else{_GC.tiles[x,y].addEffect(5,true,direction,-1);}
 
-        if(_GC.tiles[x,y].GetTileState()==6){_GC.tiles[x,y].SetTileState(7); _GC.ground.SetTile(new Vector3Int(tileO.x,tileO.y,0),activatedTile);}
-        else if(_GC.tiles[x,y].GetTileState()==7){_palanca.ResetActive(x,y);}
+        
+        if(_GC.tiles[x,y].GetTileState()==6){_GC.tiles[x,y].SetTileState(7); _GC.ground.SetTile(new Vector3Int(tileO.x,tileO.y,0),_PT.tilesPlacasPalancas[5]);}
+        else if(_GC.tiles[x,y].GetTileState()==7){foreach(PuertaTest pt in _puertas){pt.ResetPanel(x,y);}}
         //StartCoroutine(DestroyEffect(2.0f));
     }
 

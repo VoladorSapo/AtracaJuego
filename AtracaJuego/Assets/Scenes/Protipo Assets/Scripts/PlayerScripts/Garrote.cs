@@ -4,11 +4,13 @@ using UnityEngine;
 using System;
 public class Garrote : EnemyCharacter
 {
+    [SerializeField] private bool isFacingLeft;
     // Start is called before the first frame update
      //The tile of the player you want to hit
      protected override void Awake(){
         base.Awake();
         effect=-1;
+        sprite.flipX=isFacingLeft;
      }
     public override void startTurn()
     {

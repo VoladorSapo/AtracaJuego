@@ -43,6 +43,7 @@ public class PushEffect : MonoBehaviour
         LinkedList<Vector2Int> list1= new LinkedList<Vector2Int>();
         LinkedList<Vector2Int> list0= new LinkedList<Vector2Int>();
         LinkedList<Vector2Int> list_= new LinkedList<Vector2Int>();
+        HayPlayer=false;
         if (_GC.tiles[x, y].GetPlayer() != null)
                 {
                     switch (_GC.tiles[x, y].GetPlayer().tag)
@@ -55,6 +56,8 @@ public class PushEffect : MonoBehaviour
                     }
                 HayPlayer=true;
                 }
+        print(HayPlayer+", dir: "+direction);
+            
         switch (direction)
         {
             case 1:

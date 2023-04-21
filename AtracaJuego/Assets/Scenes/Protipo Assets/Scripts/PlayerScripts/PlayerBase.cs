@@ -411,7 +411,7 @@ public class PlayerBase : MonoBehaviour
                     break;
                 }*/
                 
-                if (transform.position == newPos)
+                if (transform.position == newPos && animator.GetInteger("Anim")==0)
                 {
                     distance--;
                     x = GC.grid.WorldToCell(transform.position).x - GC.ogx;
@@ -419,6 +419,11 @@ public class PlayerBase : MonoBehaviour
                     GC.tiles[x, y].setPlayer(this); GC.tiles[x, y].addEffect(effect, bypass, direction, -1);
                     newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
 
+                    if(GC.tiles[x+dx,y+dy].CheckEffectDamage(this)){
+                        SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
+                        loseHealth(1);
+                    }
+                    else{
                     if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
                     {
                         if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){distance = 5;}}
@@ -427,7 +432,7 @@ public class PlayerBase : MonoBehaviour
                     }
                     if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
                     if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica
-                    
+                    }
                     
                 }
 
@@ -436,9 +441,11 @@ public class PlayerBase : MonoBehaviour
                 yield return null;
             }
 
-            isRunning = false;
+            
             yield return null;
         }
+        isRunning = false;
+        GC.tiles[x, y].setPlayer(this);
     }
 
     public void DieNow()

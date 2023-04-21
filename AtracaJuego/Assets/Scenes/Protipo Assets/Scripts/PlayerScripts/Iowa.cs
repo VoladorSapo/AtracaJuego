@@ -178,12 +178,10 @@ public class Iowa : PlayablePlayer
         SoundManager.InstanceSound.PlaySoundWithVolume(0.3f,SoundManager.InstanceSound._sfx,SoundGallery.InstanceClip.audioClips[21]);
         if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag!="StoneBox"){MM.Damage(0,x+dx,y+dy);}
 
-        if((GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"
-        || (GC.tiles[x + dx*2, y + dy*2].GetTileState() >= 5  && GC.tiles[x + dx, y + dy].GetTileState() != 9))
+        if((GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9 || GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox")
         )){
 
             if(GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy,5,48);}
-
         }
         else{
         while (!stop)
@@ -192,9 +190,9 @@ public class Iowa : PlayablePlayer
             
             transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
             
-            if(transform.position == newPos && (GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx*2, y + dy*2].GetTileState() >= 5  && GC.tiles[x + dx, y + dy].GetTileState() != 9))){
+            /*if(transform.position == newPos && (GC.tiles[x + dx,y + dy].GetPlayer()!=null && (GC.tiles[x + dx*2, y + dy*2].GetTileState() >= 5  && GC.tiles[x + dx, y + dy].GetTileState() != 9))){
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);} break;
-            }else{
+            }else{*/
 
             if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy); break;}
             
@@ -205,7 +203,23 @@ public class Iowa : PlayablePlayer
                 y=GC.grid.WorldToCell(transform.position).y-GC.ogy;
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().tag=="StoneBox"){GC.tiles[x + dx,y + dy].GetPlayer().Push(dx,dy,5,48); break;}
                 if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy); break;}
-                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){MM.Damage(0,x+dx,y+dy);}
+                if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
+                    MM.Damage(0,x+dx,y+dy);
+                    if(GC.tiles[x + dx,y + dy].GetPlayer().GetCurrentHealth()>0){
+                        stop=true;
+                        for(int i=1; i<15; i++){
+                            
+                            if(GC.tiles[x + dx*i,y + dy*i].GetPlayer()==null && (GC.tiles[x + dx*i,y + dy*i].GetTileState()<5 || GC.tiles[x + dx*i,y + dy*i].GetTileState()==9)){
+                                stop=false; break;
+                            }
+                            if(GC.tiles[x + dx*i,y + dy*i].GetTileState()>=5 && GC.tiles[x + dx*i,y + dy*i].GetTileState()!=9){
+                                break;
+                            }
+                        }
+                        if(stop){break;}
+                    }
+                    
+                }
                 newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
                 //if transform.position coincide con una tile rompible, hacer efecto de romper (SetTileStats)
             }
@@ -213,7 +227,7 @@ public class Iowa : PlayablePlayer
             {
                 break;
             }
-            }
+            //}
 
             yield return wfs;
         }
@@ -224,6 +238,16 @@ public class Iowa : PlayablePlayer
         GC.tiles[x, y].setPlayer(this);
     }
 
+    private bool checkContinue(int x, int y, int dx, int dy, bool hay){
+        Debug.Log("DentroContinue"+hay);
+        if(GC.tiles[x+dy,y+dy].GetTileState()>=5 && GC.tiles[x+dy,y+dy].GetTileState()!=9){
+            return false;
+        }else if(hay || GC.tiles[x+dy,y+dy].GetTileState()==9){
+            return checkContinue(x+dx,y+dy,dx,dy,GC.tiles[x+dx,y+dy].GetPlayer()!=null);
+        }
+        
+        return true;
+    }
 
 }
 

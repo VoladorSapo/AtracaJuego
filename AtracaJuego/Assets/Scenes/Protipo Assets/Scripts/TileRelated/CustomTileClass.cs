@@ -169,10 +169,7 @@ public class CustomTileClass
             }
         }
 
-        /*if(CheckEffectDamage(newplayer)){
-            SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
-            newplayer.loseHealth(1);
-        }*/
+        
     }
     public void sendEvent(PlayerBase newplayer)
     {
@@ -220,6 +217,9 @@ public class CustomTileClass
         Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
         if(lock_==-1){lock_=GetTileEffect();}
         _glosario.ChangeGlosario(tileEffect, effect, false, tilePos);
+
+        if(effect==0 || effect==16){_GC.tilesConEffects.Remove(this);}
+        else if(!_GC.tilesConEffects.Contains(this)){_GC.tilesConEffects.Add(this);}
 
         //Implmentar combinaciones del excel aqui
         switch (effect){ //0=None 1=Gas 2=Fire 3=Push 4=Ice 5=Elec //Especiales 6=Wet 7=GasElec
