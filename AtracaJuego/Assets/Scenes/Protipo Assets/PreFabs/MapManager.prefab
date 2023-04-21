@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8498376888489658141}
   - component: {fileID: 8498376888489658142}
   - component: {fileID: 8498376888489658140}
-  - component: {fileID: 8130378410750663252}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -71,15 +70,3 @@ MonoBehaviour:
   tileList:
   - {fileID: 11400000, guid: 6f71d72bebabc4e488d5c5189d5e1cf1, type: 2}
   - {fileID: 11400000, guid: e5b077d94997140478b224f57e43e725, type: 2}
---- !u!114 &8130378410750663252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8498376888489658143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b26894ef70072342b770a3fe916211a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

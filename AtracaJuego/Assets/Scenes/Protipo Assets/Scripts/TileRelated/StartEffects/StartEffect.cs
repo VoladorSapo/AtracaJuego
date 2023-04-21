@@ -14,6 +14,6 @@ public class StartEffect : MonoBehaviour
             {
                 sws.Starting();
             }
-}
+        }
     }
 }
