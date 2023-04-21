@@ -15,7 +15,7 @@ public class Limpiador : EnemyCharacter
         Node nodo = GC.GetNodeEffect(transform.position,MaxDistance);
         if (nodo != null)
         {
-            List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true, false, throughTeam);
+            List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true, false, throughTeam,detectDistance);
             print(path.Count);
             if(path != null)
             {
@@ -97,7 +97,7 @@ public class Limpiador : EnemyCharacter
     public IEnumerator goBack()
     {
         print("a mi me gusta tu primo");
-        List<Node> path = GC.GetPath(transform.position, spawn.transform.position, true,false, throughTeam);
+        List<Node> path = GC.GetPath(transform.position, spawn.transform.position, true,false, throughTeam, detectDistance);
         yield return new WaitForSeconds(0.2f);
         if(path!= null)
         {

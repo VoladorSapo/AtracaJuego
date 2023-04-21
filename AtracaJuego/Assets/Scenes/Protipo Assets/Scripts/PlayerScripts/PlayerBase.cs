@@ -185,7 +185,7 @@ public class PlayerBase : MonoBehaviour
     protected virtual void Move(Vector3 position)
     {
 
-        List<Node> newPos = GC.GetPath(this.transform.position, position, team,true, true);
+        List<Node> newPos = GC.GetPath(this.transform.position, position, team,true, true,MaxDistance);
         //print("moririaporvos");
         //Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS" + name);
         if (newPos != null && newPos.Count > 0)

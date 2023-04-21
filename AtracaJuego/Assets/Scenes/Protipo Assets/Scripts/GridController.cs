@@ -180,7 +180,7 @@ public class GridController : MonoBehaviour
     }
 
     //Transforma la posición del ratón a coordenadas dentro de la Grid
-    public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team,bool safe,bool throughTeam)
+    public List<Node> GetPath(Vector3 startpos, Vector3 endpos, bool team,bool safe,bool throughTeam, int distance)
     {
         if (ReachablePos.Contains(grid.WorldToCell(endpos))||team)
         {
@@ -193,7 +193,7 @@ public class GridController : MonoBehaviour
                     camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, safe,throughTeam);
                     print(camino == null);
                 }
-                if(camino == null && safe)
+                if(camino == null && safe || camino.Count > distance && safe)
                 {
                     print("jdr");
                    tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();

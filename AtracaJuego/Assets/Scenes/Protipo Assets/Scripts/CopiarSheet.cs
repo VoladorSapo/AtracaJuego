@@ -1,11 +1,11 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
 public class SpriteCopy : EditorWindow
 {
 
-    Object copyFrom;
+    /*Object copyFrom;
     Object copyTo;
 
     // Creates a new option in "Windows"
@@ -73,5 +73,5 @@ public class SpriteCopy : EditorWindow
 
         AssetDatabase.ImportAsset(copyToPath, ImportAssetOptions.ForceUpdate);
 
-    }
-}
+    }*/
+//}

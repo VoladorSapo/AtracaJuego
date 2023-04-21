@@ -25,7 +25,7 @@ public class Garrote : EnemyCharacter
             if (distancias[i] <= currentlength)
             {
                 print(name);
-                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true, false, throughTeam);
+                List<Node> newpath = GC.GetPath(transform.position, protas.players[i].transform.position, true, false, throughTeam, detectDistance);
                 if (newpath != null && (newpath.Count < path.Count || path.Count == 0))
                 {
                     print(newpath.Count);

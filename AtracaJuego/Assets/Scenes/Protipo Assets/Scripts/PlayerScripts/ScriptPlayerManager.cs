@@ -149,4 +149,12 @@ public class ScriptPlayerManager : MonoBehaviour
             players[i].teamNumb = i;
         }
     }
+    public void addPlayers(PlayerBase[] newplayers)
+    {
+        players.AddRange(players);
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].teamNumb = i;
+        }
+    }
 }
