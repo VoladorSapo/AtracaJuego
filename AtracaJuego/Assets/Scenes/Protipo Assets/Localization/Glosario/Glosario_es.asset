@@ -86,8 +86,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10707542220812
-    m_Localized: "Iowa puede empujar los bloques de hielo de Nev. Estos avanzar\xE1n
-      haciendo da\xF1o hasta chocar con una pared o un enemigo poderoso."
+    m_Localized: "Iowa puede empujar los bloques de hielo, que avanzar\xE1n haciendo
+      da\xF1o hasta chocar contra una pared o enemigo poderoso."
     m_Metadata:
       m_Items: []
   - m_Id: 10707542220813
@@ -112,6 +112,14 @@ MonoBehaviour:
   - m_Id: 10707542220817
     m_Localized: "Si el agua entra en contacto con el fuego esta se evaporar\xE1
       y dejar\xE1 una casilla vac\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97916970606592
+    m_Localized: "Una explosi\xF3n que da\xF1a a los personejes dentro de ella."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99989174886400
+    m_Localized: "Iowa, el m\xFAsculo de la operaci\xF3n."
     m_Metadata:
       m_Items: []
   references:

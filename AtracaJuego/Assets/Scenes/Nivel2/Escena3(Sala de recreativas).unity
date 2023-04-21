@@ -164,6 +164,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
+  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -185,7 +186,9 @@ MonoBehaviour:
   protas: {fileID: 0}
   detectDistance: 0
   activated: 0
+  throughTeam: 0
   codeDamage: 0
+  isFacingLeft: 0
 --- !u!61 &105241090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -542,6 +545,7 @@ GameObject:
   - component: {fileID: 416882295}
   - component: {fileID: 416882297}
   - component: {fileID: 416882296}
+  - component: {fileID: 416882299}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -576,7 +580,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 57.02
+  orthographic size: 54
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -606,6 +610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   borde: 50
   speed: 40
+  fuerzaVibracion: 0.8
+  tiempoVibracion: 0.4
   ground: {fileID: 0}
   limitesx:
   - -70
@@ -636,6 +642,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416882299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416882294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &469867617
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +936,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
+  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -918,7 +958,9 @@ MonoBehaviour:
   protas: {fileID: 0}
   detectDistance: 0
   activated: 0
+  throughTeam: 0
   codeDamage: 0
+  isFacingLeft: 0
 --- !u!61 &544813964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1002,6 +1044,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 1158186014}
   MaxDistance: 5
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -1044,6 +1087,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -4251,6 +4295,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -4620,6 +4665,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
+  maxCooldown: 0
   team: 1
   hasTurn: 0
   hasMove: 0
@@ -4641,7 +4687,9 @@ MonoBehaviour:
   protas: {fileID: 0}
   detectDistance: 0
   activated: 0
+  throughTeam: 0
   codeDamage: 0
+  isFacingLeft: 0
 --- !u!61 &923763023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9308,6 +9356,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -9598,6 +9647,7 @@ MonoBehaviour:
   - {fileID: 0}
   startPlayer: []
   startDeadPlayer: []
+  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -9648,6 +9698,8 @@ MonoBehaviour:
   nextScene: 0
   _tutorial: {fileID: 0}
   camara: {fileID: 0}
+  anim: {fileID: 0}
+  Img: {fileID: 0}
   Pause: 0
 --- !u!114 &1158186017
 MonoBehaviour:
@@ -9685,6 +9737,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -9779,6 +9832,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 5
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -11254,6 +11308,7 @@ MonoBehaviour:
   - {fileID: 0}
   startPlayer: []
   startDeadPlayer: []
+  _glosario: {fileID: 0}
   Activated: 0
   currentPlayer: 0
   deadPlayer: 0
@@ -11401,6 +11456,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -11422,6 +11478,7 @@ MonoBehaviour:
   _circleColor: {r: 0, g: 0, b: 0, a: 0}
   PushPrefab: {fileID: 968029455070343593, guid: 1429cd22e08af3f449d2a83363c687a9, type: 3}
   posMouse: {x: 0, y: 0, z: 0}
+  vfx: {fileID: 0}
 --- !u!4 &1899794185
 Transform:
   m_ObjectHideFlags: 0
@@ -11705,11 +11762,13 @@ MonoBehaviour:
   charcosE: {fileID: 0}
   charcos: {fileID: 0}
   canMove: {fileID: 897331217}
+  enemyMove: {fileID: 0}
   CanAttackMap: {fileID: 897016002}
   hoverTile: {fileID: 11400000, guid: aed8c3e5cbbf4984896b3c68b4f7e9b1, type: 2}
   hoverTileNope: {fileID: 11400000, guid: 6393baf3ad915a24989d617a5e35a810, type: 2}
   hoverTilePlayer: {fileID: 11400000, guid: a332d85a6ce95bb45814fbd515bc7b51, type: 2}
   canMoveTile: {fileID: 11400000, guid: ab9c22f31e5712a4993e1dcae711a82f, type: 2}
+  enemyMoveTile: {fileID: 0}
   attackTile: {fileID: 11400000, guid: 63ae22e250fd3d745ae5df4dbf014f19, type: 2}
   _eventtileparent: {fileID: 0}
   _path: {fileID: 0}

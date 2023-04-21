@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class glosarioPicture : MonoBehaviour
+using UnityEngine.EventSystems;
+public class glosarioPicture : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
 {
     [SerializeField] GlosarioEntry _glosario;
     public int pos;
@@ -17,12 +17,17 @@ public class glosarioPicture : MonoBehaviour
     {
         
     }
-    private void OnMouseOver()
+    
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
+        print("dkfshk");
         _glosario.showData(pos);
     }
-    private void OnMouseExit()
+
+    public void OnPointerExit(PointerEventData eventData)
     {
+        print("papulince");
         _glosario.hideData();
     }
 }

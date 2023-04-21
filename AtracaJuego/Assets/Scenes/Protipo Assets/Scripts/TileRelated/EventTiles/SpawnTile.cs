@@ -11,7 +11,7 @@ public class SpawnTile : EventTile
     public override void SetGame()
     {
         eventlist = GetComponentInParent<EventTileList>();
-        _SPM = GameObject.Find("EnemyControler").GetComponent<ScriptPlayerManager>();
+        _SPM = GameObject.Find("EnemyController").GetComponent<ScriptPlayerManager>();
         base.SetGame();
         for (int i = 0; i < SpawnList.Length; i++)
         {

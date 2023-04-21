@@ -151,7 +151,7 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void addPlayers(PlayerBase[] newplayers)
     {
-        players.AddRange(players);
+        players.AddRange(newplayers);
         for (int i = 0; i < players.Count; i++)
         {
             players[i].teamNumb = i;

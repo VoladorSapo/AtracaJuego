@@ -122,7 +122,7 @@ public class PlayerBase : MonoBehaviour
                     tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
                     tile = GC.tiles[tilepos.x, tilepos.y];
                     tile.setPlayer(this);
-                    if (!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && _callTile != null && !team)
+                    if (!(tile._eventile is WinEvent) && !(tile._eventile is CutsceneEventTile) && !(tile._eventile is SpawnTile) && _callTile != null && !team)
                     {
                         _callTile.sendEvent(this);
                     }
@@ -149,7 +149,7 @@ public class PlayerBase : MonoBehaviour
                     if(!SoundManager.InstanceSound.CheckPlaying(SoundManager.InstanceSound._move)){SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._move,SoundGallery.InstanceClip.audioClips[5]);}
                     tilepos = grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
                     tile = GC.tiles[tilepos.x, tilepos.y];
-                    if (tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile))
+                    if (tile._eventile != null && (tile._eventile is WinEvent || tile._eventile is CutsceneEventTile || tile._eventile is SpawnTile))
                     {
                         _callTile = tile;
                     }

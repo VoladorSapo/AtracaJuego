@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GlosarioEntry : MonoBehaviour
 {
     [SerializeField] int[] Valor;
+    [SerializeField] string[] codes;
     [SerializeField] Sprite[] sprites;
     [SerializeField]Sprite interrogacion;
     [SerializeField]Image[] imagenes;
@@ -34,10 +35,10 @@ public class GlosarioEntry : MonoBehaviour
     }
     public void showData(int num)
     {
-
+        glosario.showExtraData(Valor[num],codes[num],transform.GetSiblingIndex());
     }
     public void hideData()
     {
-
+        glosario.hideExtraData();
     }
 }
