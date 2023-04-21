@@ -286,8 +286,12 @@ public class PlayerBase : MonoBehaviour
     {
 
         if (animator != null) { animator.SetInteger("Anim", 4); }
+        Vector3Int tilePos= GC.grid.WorldToCell(transform.position);
         SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[7]);
         currentHealth -= health;
+        if(!GC.tiles[tilePos.x-GC.ogx,tilePos.y-GC.ogy].TileIsSafe()){
+            OnTileEffect=GC.tiles[tilePos.x-GC.ogx,tilePos.y-GC.ogy].GetTileEffect();
+        }
         if(isObject && currentHealth<=0){Die();}
         
         CDH.DamageDialogue(GetType().ToString());
@@ -365,9 +369,8 @@ public class PlayerBase : MonoBehaviour
     {
         stunned = true;
     }
-    public void Push(int dx, int dy, int distance, int speed)
+    public virtual void Push(int dx, int dy, int distance, int speed)
     {
-
         if (!isRunning) { StartCoroutine(GetPush(dx, dy, distance, speed)); }
     }
     public IEnumerator GetPush(int dx, int dy, int distance, int speed)
@@ -410,8 +413,29 @@ public class PlayerBase : MonoBehaviour
                     
                     break;
                 }*/
-                
-                if (transform.position == newPos && animator.GetInteger("Anim")==0)
+                if(this.tag=="StoneBox" && transform.position==newPos){
+                    distance--;
+                    x = GC.grid.WorldToCell(transform.position).x - GC.ogx;
+                    y = GC.grid.WorldToCell(transform.position).y - GC.ogy;
+                    GC.tiles[x, y].setPlayer(this); GC.tiles[x, y].addEffect(effect, bypass, direction, -1);
+                    newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
+
+                    if(CheckEffectOn(x, y, dx, dy)){
+                        SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
+                        loseHealth(1);
+                    }
+                    else{
+                    if (GC.tiles[x + dx, y + dy].GetPlayer() != null)
+                    {
+                        if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){distance = 5;}}
+                        if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { MM.Damage(4, x + dx, y + dy);} // if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
+                    }
+                    if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
+                    if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica
+                    }
+                }
+                else if (transform.position == newPos && animator.GetInteger("Anim")==0)
                 {
                     distance--;
                     x = GC.grid.WorldToCell(transform.position).x - GC.ogx;
@@ -419,7 +443,7 @@ public class PlayerBase : MonoBehaviour
                     GC.tiles[x, y].setPlayer(this); GC.tiles[x, y].addEffect(effect, bypass, direction, -1);
                     newPos = transform.position + new Vector3(10f * dx, 10f * dy, 0f);
 
-                    if(GC.tiles[x+dx,y+dy].CheckEffectDamage(this)){
+                    if(CheckEffectOn(x, y, dx, dy)){
                         SoundManager.InstanceSound.StartFadeOut(0.4f,SoundManager.InstanceSound._move);
                         loseHealth(1);
                     }
@@ -446,6 +470,10 @@ public class PlayerBase : MonoBehaviour
         }
         isRunning = false;
         GC.tiles[x, y].setPlayer(this);
+    }
+
+    public virtual bool CheckEffectOn(int x, int y, int dx, int dy){
+        return GC.tiles[x+dx,y+dy].CheckEffectDamage(this);
     }
 
     public void DieNow()

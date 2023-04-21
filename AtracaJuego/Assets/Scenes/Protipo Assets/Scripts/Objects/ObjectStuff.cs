@@ -38,6 +38,10 @@ public override void Die(){
     }
 }
 
+public override bool CheckEffectOn(int x, int y, int dx, int dy){
+    return GC.tiles[x+dx,y+dy].CheckEffectDamageObj(this);
+}
+
 public override void startTurn()
 {
     if(this!=null){

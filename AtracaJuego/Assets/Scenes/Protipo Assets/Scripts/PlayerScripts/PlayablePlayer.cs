@@ -208,14 +208,14 @@ public class PlayablePlayer : PlayerBase
     public void Revive(PlayerBase player)
     {
         player.alive = true;
-        //Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
+        Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
         //CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         //tile.setPlayer(null);
         //hasAttack = hasTurn = hasMove = false;
         currentHealth = maxHealth;
         player.animator.enabled=true;
         player.animator.SetInteger("Anim", 0);
-
+         OnTileEffect=GC.tiles[tilepos.x-GC.ogx,tilepos.y-GC.ogy].GetTileEffect();
         SPM.revive(this);
         
         //player.sprite.enabled = true;

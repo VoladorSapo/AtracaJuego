@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: 0
   isObject: 0
+  OnTileEffect: 0
   grid: {fileID: 0}
   Mode: 0
   GC: {fileID: 0}
@@ -107,6 +108,7 @@ MonoBehaviour:
   MM: {fileID: 0}
   SPM: {fileID: 0}
   MaxDistance: 0
+  maxCooldown: 0
   team: 0
   hasTurn: 0
   hasMove: 0
@@ -120,5 +122,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   CDH: {fileID: 0}
+  _circle: {fileID: 0}
   stunned: 0
+  src: {fileID: 0}
   LifeTime: 0

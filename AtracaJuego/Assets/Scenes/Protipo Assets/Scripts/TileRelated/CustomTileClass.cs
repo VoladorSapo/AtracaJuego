@@ -147,6 +147,16 @@ public class CustomTileClass
             sendEvent(player);
         }
 
+        if(newplayer is CajasReforzadas){
+            Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
+            if(tileEffect==8){
+                tileEffect=5;
+                _PT.Charco.SetTile(tilePos+og,_PT.iceT);
+            }
+            if(tileEffect==10){
+                tileEffect=9; _PT.Charco.SetTile(tilePos+og,_PT.gasolineFrzT);
+            }
+        }
         if(tileState==1 || tileState==2){
             Vector3Int og=new Vector3Int(_GC.ogx,_GC.ogy,0);
             if(newplayer==null){
@@ -203,6 +213,24 @@ public class CustomTileClass
         }
         
         return false;
+    }
+
+    public bool CheckEffectDamageObj(ObjectStuff o){
+        if(o!=null && o.OnTileEffect!=tileEffect){
+        o.OnTileEffect=tileEffect;
+        if(o is CajasQuemables){if(!TileIsSafeObject(0)){return true;}}
+        if(o is IcePrefab){if(!TileIsSafeObject(0)){return true;}}
+        }
+        return false;
+    }
+
+    public bool TileIsSafeObject(int mode){
+            switch(mode){
+                case 0: if(tileEffect==4 || tileEffect==8 || tileEffect==10 || tileEffect==12|| tileEffect==13 || tileEffect==15){return false;} break;
+                case 1: if(tileEffect==4 || tileEffect==8 || tileEffect==10 || tileEffect==12|| tileEffect==13 || tileEffect==15){return false;} break;
+            }
+            
+            return true;
     }
 
     public void cleanEffects(int MaxRange){
