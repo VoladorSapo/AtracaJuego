@@ -162,9 +162,11 @@ public class GlosarioController : MonoBehaviour
         RectTransform datatransform = extraData.GetComponent<RectTransform>();
         RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
         //datatransform.transform.position = Input.mousePosition;
+        //Vector2 newpos;
+        datatransform.position = Input.mousePosition; //+ (new Vector2(240,175));
         Vector2 newpos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-        datatransform.position = newpos; //+ (new Vector2(240,175));
+        //datatransform.position = newpos; //+ (new Vector2(240,175));
         int fila = pos / 3;
         int columna = pos % 3;
         int obj = 0;
@@ -176,7 +178,8 @@ public class GlosarioController : MonoBehaviour
         {
             obj +=2;
         }
-        extraData.transform.GetChild(0).transform.position = points[obj].transform.position;
+        //extraData.transform.GetChild(0).transform.position = points[obj].transform.position;
+        extraData.transform.GetChild(0).transform.position = newpos;
         if (combinaciones[boolnum])
         {
             _localizedstring.TableReference = "Glosario";

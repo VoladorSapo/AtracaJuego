@@ -9,17 +9,17 @@ public class SaveController
     {
         SaveData data = new SaveData { escena = scene, combos = combinaciones };
         string json = JsonUtility.ToJson(data);
-        File.WriteAllText(Application.dataPath + "/save.txt", json);
+        File.WriteAllText(Application.persistentDataPath + "/save.txt", json);
     }
     public static SaveData Load()
     {
-        string file = File.ReadAllText(Application.dataPath + "/save.txt");
+        string file = File.ReadAllText(Application.persistentDataPath + "/save.txt");
         SaveData loaddata = JsonUtility.FromJson<SaveData>(file);
         return loaddata;
     }
     public static bool saveExists()
     {
-        return File.Exists(Application.dataPath + "/save.txt");
+        return File.Exists(Application.persistentDataPath + "/save.txt");
     }
 }
 public class SaveData
