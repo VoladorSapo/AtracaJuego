@@ -205,7 +205,7 @@ public class Iowa : PlayablePlayer
                 if(GC.tiles[x + dx,y + dy].GetTileState()==9){ PT.PlaceAfterBreak(x,y,dx,dy); break;}
                 if(GC.tiles[x + dx,y + dy].GetPlayer()!=null){
                     MM.Damage(0,x+dx,y+dy);
-                    if(GC.tiles[x + dx,y + dy].GetPlayer().GetCurrentHealth()>0){
+                    if(GC.tiles[x + dx,y + dy].GetPlayer()!=null && GC.tiles[x + dx,y + dy].GetPlayer().GetCurrentHealth()>0){
                         stop=true;
                         for(int i=1; i<15; i++){
                             
