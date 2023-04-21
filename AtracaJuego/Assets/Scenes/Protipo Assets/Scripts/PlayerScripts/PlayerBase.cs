@@ -251,7 +251,6 @@ public class PlayerBase : MonoBehaviour
     }
     public virtual void setDeath()
     {
-        print("jijijijiaaa");
         transform.position = startPos;
         Vector3Int tilepos = grid.WorldToCell(transform.position) - new Vector3Int(GC.ogx, GC.ogy);
         animator.enabled = true;
@@ -319,7 +318,8 @@ public class PlayerBase : MonoBehaviour
 
     public virtual void CheckNext(){
         if (currentHealth <= 0)
-        {
+        {   
+            
             Die();
         }else{
             if(moving){

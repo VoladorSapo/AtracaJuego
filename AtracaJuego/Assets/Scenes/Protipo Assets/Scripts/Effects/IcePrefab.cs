@@ -60,7 +60,7 @@ public class IcePrefab : ObjectStuff
         int prevx=x;
         int prevy=y;
             GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(0,false,0,-1);
-            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].trySetEffect(2);
+            GC.tiles[posGrid.x-GC.ogx,posGrid.y-GC.ogy].addEffect(6,false,0,-1);
         
         /*for(int i=1; i<=(25); i++){
             if(GC.tiles[x+1,y].GetTileEffect()==2 || GC.tiles[x-1,y].GetTileEffect()==2 || GC.tiles[x,y+1].GetTileEffect()==2 || GC.tiles[x,y-1].GetTileEffect()==2){

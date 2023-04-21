@@ -43,7 +43,7 @@ public class PlayablePlayer : PlayerBase
                 StartCoroutine("skipturn");
             }
         }
-        if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb&& SPM.Activated && !moving && !SPM._gameController.Pause)
+        if (Input.GetMouseButtonDown(1) && SPM.currentPlayer==teamNumb && SPM.Activated && !moving && SPM.players.Contains(this) && !SPM._gameController.Pause)
         { 
             int newMode = (Mode + 1) % 3;
             if(!hasAttack || !hasMove){
@@ -211,7 +211,7 @@ public class PlayablePlayer : PlayerBase
         //Vector3Int tilepos = GC.grid.WorldToCell(transform.position);
         //CustomTileClass tile = GC.tiles[tilepos.x -GC.ogx, tilepos.y -GC.ogy];
         //tile.setPlayer(null);
-        hasAttack = hasTurn = hasMove = false;
+        //hasAttack = hasTurn = hasMove = false;
         currentHealth = maxHealth;
         player.animator.enabled=true;
         player.animator.SetInteger("Anim", 0);
