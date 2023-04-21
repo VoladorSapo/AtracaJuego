@@ -16,9 +16,10 @@ public class Limpiador : EnemyCharacter
         if (nodo != null)
         {
             List<Node> path = GC.GetPath(transform.position, GC.grid.CellToWorld(nodo.pos),true, false, throughTeam,detectDistance);
-            print(path.Count);
+            //
             if(path != null)
             {
+                print(path.Count);
                 if (path.Count > 1)
                 {
                     hit = path[path.Count - 1].pos;
