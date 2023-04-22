@@ -1,8 +1,10 @@
+using UnityEngine.Localization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
 
 public class Camaraa : MonoBehaviour
 {
@@ -35,9 +37,17 @@ public class Camaraa : MonoBehaviour
             confirmnew.SetActive(confirm);
 
     }
+    public void changeLenguage(int change)
+    {
+        Scene actualScene = SceneManager.GetActiveScene();
+        if (actualScene.buildIndex == 0)
+        {
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[change];
+        }
+    }
     public void LoadNewGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(11);
 
     }
     public void NewGame()

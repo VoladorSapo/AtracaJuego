@@ -41,80 +41,6 @@ public class GlosarioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (extraData.activeSelf && Input.GetKey("p"))
-        {
-            RectTransform datatransform = extraData.GetComponent<RectTransform>();
-            RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
-            //datatransform.transform.position = Input.mousePosition;
-            Vector2 newpos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-            datatransform.position = newpos; //+ (new Vector2(240,175));
-            extraData.transform.GetChild(0).transform.position = points[0].transform.position;
-             Vector3 pos = datatransform.localPosition;
-
-             //Vector3 minPosition = canvastransform.rect.min - (datatransform.rect.min/2);
-             //Vector3 maxPosition = canvastransform.rect.max -( datatransform.rect.max/2);
-
-            // pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
-            // pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
-            // datatransform.localPosition = pos;
-
-        }
-        if (extraData.activeSelf && Input.GetKey("o"))
-        {
-            RectTransform datatransform = extraData.GetComponent<RectTransform>();
-            RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
-            //datatransform.transform.position = Input.mousePosition;
-            Vector2 newpos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-            datatransform.position = newpos; //+ (new Vector2(240,175));
-            extraData.transform.GetChild(0).transform.position = points[1].transform.position;
-            //Vector3 pos = datatransform.localPosition;
-
-            //Vector3 minPosition = canvastransform.rect.min - (datatransform.rect.min / 2);
-            //Vector3 maxPosition = canvastransform.rect.max - (datatransform.rect.max / 2);
-
-            //pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
-            //pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
-            //datatransform.localPosition = pos;
-
-        }
-        if (extraData.activeSelf && Input.GetKey("i"))
-        {
-            RectTransform datatransform = extraData.GetComponent<RectTransform>();
-            RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
-            //datatransform.transform.position = Input.mousePosition;
-            Vector2 newpos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-            datatransform.position = newpos; //+ (new Vector2(240,175));
-            extraData.transform.GetChild(0).transform.position = points[2].transform.position;
-
-            //Vector3 minPosition = canvastransform.rect.min - (datatransform.rect.min/2);
-            //Vector3 maxPosition = canvastransform.rect.max -( datatransform.rect.max/2);
-
-            // pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
-            // pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
-            // datatransform.localPosition = pos;
-
-        }
-        if (extraData.activeSelf && Input.GetKey("u"))
-        {
-            RectTransform datatransform = extraData.GetComponent<RectTransform>();
-            RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
-            //datatransform.transform.position = Input.mousePosition;
-            Vector2 newpos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-            datatransform.position = newpos; //+ (new Vector2(240,175));
-            extraData.transform.GetChild(0).transform.position = points[3].transform.position;            //Vector3 pos = datatransform.localPosition;
-
-            //Vector3 minPosition = canvastransform.rect.min - (datatransform.rect.min / 2);
-            //Vector3 maxPosition = canvastransform.rect.max - (datatransform.rect.max / 2);
-
-            //pos.x = Mathf.Clamp(datatransform.localPosition.x, minPosition.x, maxPosition.x);
-            //pos.y = Mathf.Clamp(datatransform.localPosition.y, minPosition.y, maxPosition.y);
-            //datatransform.localPosition = pos;
-
-        }
     }
     public void printar()
     {
@@ -159,27 +85,6 @@ public class GlosarioController : MonoBehaviour
     public void showExtraData(int boolnum,string code,int pos)
     {
         extraData.SetActive(true);
-        RectTransform datatransform = extraData.GetComponent<RectTransform>();
-        RectTransform canvastransform = Canvas.GetComponent<RectTransform>();
-        //datatransform.transform.position = Input.mousePosition;
-        //Vector2 newpos;
-        datatransform.position = Input.mousePosition; //+ (new Vector2(240,175));
-        Vector2 newpos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvastransform, Input.mousePosition, camara, out newpos);
-        //datatransform.position = newpos; //+ (new Vector2(240,175));
-        int fila = pos / 3;
-        int columna = pos % 3;
-        int obj = 0;
-        if(columna < 2 )
-        {
-            obj ++;
-        }
-        if(fila < 4)
-        {
-            obj +=2;
-        }
-        //extraData.transform.GetChild(0).transform.position = points[obj].transform.position;
-        extraData.transform.GetChild(0).transform.position = newpos;
         if (combinaciones[boolnum])
         {
             _localizedstring.TableReference = "Glosario";

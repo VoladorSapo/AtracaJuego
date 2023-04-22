@@ -23,6 +23,12 @@ public class EnemyCharacter : PlayerBase
 
 
     }
+    public override void Die()
+    {
+        base.Die();
+        print("ooooooooooo nooooooooooo");
+        GC.setReachablePos(transform.position, MaxDistance, true, 2, team, true, throughTeam);
+    }
     public override void setGame()
     {
         base.setGame();
@@ -30,7 +36,7 @@ public class EnemyCharacter : PlayerBase
     }
     private void OnMouseOver()
     {
-        if (GC.tiles[0, 0] != null)
+        if (GC.tiles[0, 0] != null && currentHealth > 0)
         {
             GC.setReachablePos(transform.position, MaxDistance, true, 2, team, false,throughTeam);
         }

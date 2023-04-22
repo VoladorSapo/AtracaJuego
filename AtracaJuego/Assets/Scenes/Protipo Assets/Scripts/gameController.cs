@@ -28,7 +28,6 @@ public class gameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[3];
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _TC = GameObject.Find("Controller").GetComponent<tunController>();
         _cutsceneController = GameObject.Find("Controller").GetComponent<cutsceneController>();

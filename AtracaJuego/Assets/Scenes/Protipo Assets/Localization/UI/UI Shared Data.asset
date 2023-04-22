@@ -15,12 +15,56 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: 18eddd913abf5984c83f7e812410553c
   m_Entries:
-  - m_Id: 27833409536
+  - m_Id: 6372615853711360
+    m_Key: skipturn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372644819574784
+    m_Key: StartGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372699068702720
+    m_Key: isPaused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372786247311360
+    m_Key: retrylevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6377442801360896
     m_Key: New Entry
     m_Metadata:
       m_Items: []
-  - m_Id: 209381228552192
-    m_Key: New Entry 1
+  - m_Id: 6377865117442048
+    m_Key: NewGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6380154276290560
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6380380693209088
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381354245693440
+    m_Key: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381615995428864
+    m_Key: Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381837697949696
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6382322819538944
+    m_Key: Repetir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6383195851333632
+    m_Key: Menu
     m_Metadata:
       m_Items: []
   m_Metadata:

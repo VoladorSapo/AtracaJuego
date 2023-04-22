@@ -17,7 +17,61 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 18eddd913abf5984c83f7e812410553c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 6372786247311360
+    m_Localized: Retry Level?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6380380693209088
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6380154276290560
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372615853711360
+    m_Localized: Skip Turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372699068702720
+    m_Localized: Game Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6372644819574784
+    m_Localized: 'Do you want to start a new game?
+
+      Your saved progress will
+      be lost.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6377865117442048
+    m_Localized: 'Do you want to start a new game?
+
+      Your saved progress will
+      be lost.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381354245693440
+    m_Localized: Skip Turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381615995428864
+    m_Localized: Game Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6381837697949696
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6382322819538944
+    m_Localized: Retry Level?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6383195851333632
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

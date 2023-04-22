@@ -40,6 +40,8 @@ public class turnButtonsController : MonoBehaviour
                 moveButton.interactable = false;
                 attackButton.interactable = false;
                 attackButton.transform.GetChild(0).gameObject.SetActive(false);
+                attackButton.transform.GetChild(1).gameObject.SetActive(false);
+
                 outButton.interactable = false;
                 break;
             case 1:
@@ -47,9 +49,13 @@ public class turnButtonsController : MonoBehaviour
                 moveButton.interactable = false;
                 attackButton.interactable = !newplayer.getAttack();
                 attackButton.transform.GetChild(0).gameObject.SetActive(false);
-                if (currentplayer.Cooldown > 0)
+                attackButton.transform.GetChild(1).gameObject.SetActive(false);
+
+                if (currentplayer.Cooldown > 0 && currentplayer.maxCooldown > 1)
                 {
                     attackButton.transform.GetChild(0).gameObject.SetActive(true);
+                    attackButton.transform.GetChild(1).gameObject.SetActive(true);
+
                     attackButton.GetComponentInChildren<TMP_Text>().text = currentplayer.Cooldown.ToString();
                 }
                 outButton.interactable = true;
@@ -58,9 +64,14 @@ public class turnButtonsController : MonoBehaviour
                 print("heybaby");
                 moveButton.interactable = !newplayer.getMove();
                 attackButton.interactable = false;
-                if(currentplayer.Cooldown > 0)
+                attackButton.transform.GetChild(0).gameObject.SetActive(false);
+                attackButton.transform.GetChild(1).gameObject.SetActive(false);
+
+                if (currentplayer.Cooldown > 0 && currentplayer.maxCooldown > 1)
                 {
                     attackButton.transform.GetChild(0).gameObject.SetActive(true);
+                    attackButton.transform.GetChild(1).gameObject.SetActive(true);
+
                     attackButton.GetComponentInChildren<TMP_Text>().text = currentplayer.Cooldown.ToString();
                 }
                 outButton.interactable = true;
