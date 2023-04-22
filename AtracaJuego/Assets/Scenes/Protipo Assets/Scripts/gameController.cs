@@ -179,4 +179,8 @@ public class gameController : MonoBehaviour
     {
         retryConfirm.SetActive(false);
     }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

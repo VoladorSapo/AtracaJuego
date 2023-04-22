@@ -192,12 +192,11 @@ public class GridController : MonoBehaviour
                 List<Node> camino = null;
                 if (tiles[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy].TileIsSafe()) {
                     camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, safe,throughTeam);
-                    print(camino == null);
                 }
-                if(camino == null && safe || camino != null && camino.Count > distance && safe)
+                if((camino == null && safe )||( camino != null && (camino.Count-1) > distance && safe))
                 {
                     print("jdr");
-                   tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();
+                   //tiles[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy].GetPlayer().Caca();
                     camino = _path.findPath(nodos[grid.WorldToCell(startpos).x - ogx, grid.WorldToCell(startpos).y - ogy], nodos[grid.WorldToCell(endpos).x - ogx, grid.WorldToCell(endpos).y - ogy], nodos, ogx, ogy, team, false,throughTeam);
 
                 }

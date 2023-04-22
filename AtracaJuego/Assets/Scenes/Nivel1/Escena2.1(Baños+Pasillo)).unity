@@ -16931,8 +16931,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1749574156}
     - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: hideRetry
+      value: LoadMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -17174,7 +17178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1379793704691751759, guid: acdd979054a80464b8180bcfe1a07c42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65
+      value: -25.2
       objectReference: {fileID: 0}
     - target: {fileID: 1379793704691751759, guid: acdd979054a80464b8180bcfe1a07c42, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18143,6 +18147,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878208867}
     m_Modifications:
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1749574156}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: gameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610365499907085288, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1749574158}
+    - target: {fileID: 4610365499907085288, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DesPausar
+      objectReference: {fileID: 0}
     - target: {fileID: 4610365500043058503, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -6055,6 +6055,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950764604}
     m_Modifications:
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 513381605}
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559489170729939578, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: gameController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6559489171454457014, guid: d7a689daa31fbe04e9bffaffaa22c037, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6272,6 +6292,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950764604}
     m_Modifications:
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 513381605}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: gameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 234825840905398287, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610365499907085288, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 513381608}
+    - target: {fileID: 4610365499907085288, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DesPausar
+      objectReference: {fileID: 0}
     - target: {fileID: 4610365500043058503, guid: 8001ebf93072fbe43a873a93bec2ac29, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
