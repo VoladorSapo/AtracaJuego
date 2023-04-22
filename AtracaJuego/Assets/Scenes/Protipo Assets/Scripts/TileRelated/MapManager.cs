@@ -113,7 +113,7 @@ public class MapManager : MonoBehaviour
         switch (codeDamage)
         {
             case 0: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(3); } } break;
-            case 1: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(4); } } break;
+            case 1: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(5); } } break;
             case 2: if (p != null) { if (p.tag == "Player") { p.loseHealth(3); } else { p.loseHealth(7); } } break;
             case 3: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(2); } } break;
             case 4: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(5); } } break;
@@ -121,6 +121,8 @@ public class MapManager : MonoBehaviour
             case 7: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(1); } } break; //Garrote
             case 8: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(2); } } break; //SuperGarrote
             case 9: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); p.getStunned();} else { p.loseHealth(2); } } break; //NanomaquinasHijo
+            case 10: if (p != null) { if (p.tag == "Player") { p.loseHealth(2); } else { p.loseHealth(2); } } break; //Garrote Morado
+            case 11: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else { p.loseHealth(1); } } break; //Garrote Azul
 
 
             case 6: if (p != null) { if (p.tag == "Player") { p.loseHealth(1); } else if (p.tag != "IceCube") { p.loseHealth(4); } } break;
