@@ -38,7 +38,7 @@ public class cameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_gamecontroller.Pause) {
+        if (_gamecontroller!=null && !_gamecontroller.Pause) {
             if (Input.mousePosition.x > Screen.width - borde)
             {
                 transform.position += new Vector3(speed * Time.deltaTime, 0);

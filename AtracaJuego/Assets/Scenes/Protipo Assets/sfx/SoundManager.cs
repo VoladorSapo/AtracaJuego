@@ -11,9 +11,11 @@ public class SoundManager : MonoBehaviour
     private bool hasDialogTutorial=false;
     private Scene _scene;
 
+    [SerializeField] private cameraMove moveCam;
+
     //SoundManager.InstanceSound.PlaySound...(SoundGallery.InstanceClip.audioClips[i])
     void Awake(){
-    
+        moveCam=GetComponent<cameraMove>();
         if(InstanceSound==null){
             InstanceSound=this;
             //DontDestroyOnLoad(gameObject);
@@ -30,14 +32,19 @@ public class SoundManager : MonoBehaviour
     private IEnumerator WaitTillEnd(int mode, AudioSource a,AudioClip clip){
         switch(mode){
         case 0:
-        PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
-        yield return new WaitForSeconds(clip.length-1);
-        a.clip=SoundGallery.InstanceClip.musicClips[10];
-        a.Play(); break;
+            PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
+            yield return new WaitForSeconds(clip.length-1);
+            a.clip=SoundGallery.InstanceClip.musicClips[10];
+            a.Play(); break;
         case 1:
-        yield return new WaitForSeconds(clip.length);
-        a.volume=1;
+            yield return new WaitForSeconds(clip.length);
+            a.volume=1;
         break;
+        case 2:
+            PlayMusic(0.25f,clip);
+            yield return new WaitForSeconds(clip.length);
+            SceneManager.LoadScene(1);
+            break;
         }
     }
     void CheckScene(){
@@ -48,7 +55,11 @@ public class SoundManager : MonoBehaviour
         switch(_scene.name){
             case "Inicio":
                 //PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[9]);
-                StartCoroutine(WaitTillEnd(0,_music,SoundGallery.InstanceClip.musicClips[9]));
+                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[10]);
+                break;
+            case "Escena0.5":
+                hasDialogTutorial=true;
+                StartCoroutine(WaitTillEnd(2,_music,SoundGallery.InstanceClip.musicClips[9]));
                 break;
             case "Escena1":
                 hasDialogTutorial=true;

@@ -30,7 +30,9 @@ public class Camaraa : MonoBehaviour
 
     public void confirmActive(bool confirm)
     {
-        confirmnew.SetActive(confirm);
+        Scene actualScene=SceneManager.GetActiveScene();
+        if(actualScene.buildIndex==0)
+            confirmnew.SetActive(confirm);
 
     }
     public void LoadNewGame()

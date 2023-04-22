@@ -313,6 +313,7 @@ MonoBehaviour:
   _doors: {fileID: 6505732907076805721}
   _dialog: {fileID: 3454253898855761144}
   _move: {fileID: 1351439176705731994}
+  moveCam: {fileID: 0}
 --- !u!1 &6505732906404117438
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +768,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70fc6d725a35f8044b201692ad67dc6f, type: 3}
   - {fileID: 8300000, guid: 7986cf4a1e9fc424ea06949f7f2f9d32, type: 3}
   - {fileID: 8300000, guid: 7b7ae2eecfc1b4b46a5d56e6fab86e1e, type: 3}
+  - {fileID: 8300000, guid: 85a0c9ecb6dcfe34db6b8d6018ce52ce, type: 3}
   musicClips:
   - {fileID: 8300000, guid: 7ab2cf608ef8a1f468f5be1fc6364f30, type: 3}
   - {fileID: 8300000, guid: 333b2d530f6f9674e9e2b7b2832b9521, type: 3}

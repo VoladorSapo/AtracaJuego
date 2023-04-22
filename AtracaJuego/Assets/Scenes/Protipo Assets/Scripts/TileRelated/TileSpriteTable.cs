@@ -82,8 +82,7 @@ public class TileSpriteTable : MonoBehaviour
             case "ampliacionTileSheetRecepcion_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_49": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "estanteriabaja 1": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "estanteriabaja 2 1": id[0] = 1; id[1] = 8; id[2] = 16; break;    
+            
             case "ampliacionTileSheetRecepcion2jardin_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_12": id[0] = 1; id[1] = 8; id[2] = 16; break;
@@ -207,6 +206,8 @@ public class TileSpriteTable : MonoBehaviour
             case "tilesetExposicion_41": id[0] = 1; id[1] = 8; id[2] = 16; break;
              case "tilesetExposicion_42": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "estanteriabaja": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "estanteriabaja 1": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "estanteriabaja 2 1": id[0] = 1; id[1] = 8; id[2] = 16; break;    
             case "tilesetRegalos_2": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_3": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "tilesetRegalos_4": id[0] = 1; id[1] = 8; id[2] = 16; break;
