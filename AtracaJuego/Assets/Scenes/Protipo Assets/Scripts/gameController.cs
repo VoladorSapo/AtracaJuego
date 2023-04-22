@@ -96,6 +96,9 @@ public class gameController : MonoBehaviour
             
             switch (newtype)
             {
+                case "cutscene":
+                    SceneManager.LoadScene(nextScene);
+                    break;
                 case "tutorial":
                     
                     _tutorial.loadDialogs(tutorialcode, this, null);

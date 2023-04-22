@@ -56,14 +56,18 @@ public class FernandoBrazada : EnemyCharacter
     public override void ChangeMapShown(int setMode)
     {
         print("jodeeeer");
+        print(objective);
+        print(GC.grid.WorldToCell(transform.position));
         if (GC.grid.WorldToCell(transform.position) == objective)
         {
+            print("oiiii");
             Vector3Int tilepos = GC.grid.WorldToCell(transform.position - new Vector3(5f, 5f, 0)) - new Vector3Int(GC.ogx, GC.ogy);
 
             CustomTileClass tile = GC.tiles[tilepos.x, tilepos.y];
             CustomTileClass tile2 = GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy];
-            CDH.AttackDialogue(GetType().ToString(), tile, tile2);
             animator.SetInteger("Anim", 2);
+            // CDH.AttackDialogue(GetType().ToString(), tile, tile2);
+            print("loco");
         }
         else
         {
@@ -73,6 +77,7 @@ public class FernandoBrazada : EnemyCharacter
     }
     public override void InstantiatePrefab()
     {
+        print("MOMOMO");
         LastPlayer = GC.tiles[hit.x - GC.ogx, hit.y - GC.ogy].GetPlayer();
         print(GC.grid.WorldToCell(transform.position).x.CompareTo(hit.x));
         print(GC.grid.WorldToCell(transform.position).y.CompareTo(hit.y));
