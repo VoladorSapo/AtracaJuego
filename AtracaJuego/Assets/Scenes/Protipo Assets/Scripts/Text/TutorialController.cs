@@ -24,7 +24,7 @@ public class TutorialController : MonoBehaviour
     }
     public void loadDialogs(string code, gameController _cut,CutsceneEventTile _til)
     {
-        dialoglist = GetLocalizedString.getLocalizedString("tutorial", code);
+        dialoglist = GetLocalizedString.getLocalizedString("Tutoriales", code);
         
         gameobject.SetActive(true);
         _tile = _til;

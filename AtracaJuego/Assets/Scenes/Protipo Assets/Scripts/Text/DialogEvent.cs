@@ -12,11 +12,13 @@ public class DialogEvent : MonoBehaviour
     [SerializeField] Camera _maincamera;
     [SerializeField] Animator _fondoanimator;
     [SerializeField] TutorialController _tutorial;
+    [SerializeField] SoundManager _sound;
     private void Awake()
     {
         _textbox = GetComponentInChildren<TMP_Text>();
         _GDC = GetComponentInChildren<GameDialogController>();
         _DC = GetComponentInChildren<DialogueController>();
+        _sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         _maincamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         _cutscenecamera = GameObject.Find("CutsceneCamera").GetComponent<Camera>();
         _cutscenecamera.enabled = false;
@@ -44,7 +46,9 @@ public class DialogEvent : MonoBehaviour
     }
     public void EventHandler(string evento)
     {
+        print("uffff");
         string[] eventoarray = evento.Split('-');
+        print(eventoarray[0]);
         switch (eventoarray[0])
         {
             case "SetAnim":
@@ -66,7 +70,7 @@ public class DialogEvent : MonoBehaviour
                 }
                 break;
             case "SetFondo":
-               // print("mr jagger");
+                 print("mr jagger");
                 _fondoanimator.SetInteger("Fondo", int.Parse(eventoarray[1]));
                 if (int.Parse(eventoarray[1]) == 0)
                 {
@@ -87,8 +91,11 @@ public class DialogEvent : MonoBehaviour
                     }
                 }
                 break;
-            case "SetSondido":
-
+            case "SetSound":
+             //   _sound.PlaySound();
+                break;
+            case "SetMusic":
+             //   _sound.PlayMusic();
                 break;
         }
     }

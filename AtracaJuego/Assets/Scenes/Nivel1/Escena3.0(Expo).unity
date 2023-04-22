@@ -25559,8 +25559,8 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene3.0
-  tutorialcode: 
-  type: 
+  tutorialcode: tutorial5
+  type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
   nextScene: 6
@@ -26588,15 +26588,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 16fbf08e5a9d01942b88b6e4546eee93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 202.10527, y: 113.68421}
+  m_Size: {x: 43.011307, y: 25.999998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1557911822
@@ -32775,6 +32775,7 @@ MonoBehaviour:
   _maincamera: {fileID: 0}
   _fondoanimator: {fileID: 0}
   _tutorial: {fileID: 0}
+  _sound: {fileID: 0}
 --- !u!1 &2048211704
 GameObject:
   m_ObjectHideFlags: 0

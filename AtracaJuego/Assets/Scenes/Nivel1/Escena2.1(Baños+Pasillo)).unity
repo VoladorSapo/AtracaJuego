@@ -368,7 +368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: detectDistance
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4830600861398896608, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_Controller
@@ -16858,7 +16858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266180, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: tutorialcode
-      value: tutorial4
+      value: tutorial3
       objectReference: {fileID: 0}
     - target: {fileID: 7202814510610266181, guid: dc5d95e6714d2f2439624e2802ab0c0d, type: 3}
       propertyPath: m_Name
@@ -18989,7 +18989,7 @@ MonoBehaviour:
   _TC: {fileID: 0}
   table: Level1_Scenes
   code: scene2.1
-  tutorialcode: tutorial3
+  tutorialcode: tutorial2
   type: tutorial
   hasReturn: 0
   retryConfirm: {fileID: 0}
@@ -19316,7 +19316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4830600860637631678, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: detectDistance
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4830600861398896608, guid: c9dee6e5518f64e4c963b82e359c4d50, type: 3}
       propertyPath: m_Controller

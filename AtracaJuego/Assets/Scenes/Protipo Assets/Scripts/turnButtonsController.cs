@@ -11,7 +11,7 @@ public class turnButtonsController : MonoBehaviour
     [SerializeField] Button attackButton;
     [SerializeField] GameObject skipConfirm;
     [SerializeField] PlayablePlayer currentplayer;
-
+    [SerializeField] Button _glosario;
     [SerializeField] gameController _gameController;
 
     private PlayablePlayer[] allPlayers;
@@ -32,7 +32,7 @@ public class turnButtonsController : MonoBehaviour
     public void showButtons(PlayablePlayer newplayer, int type,bool canMove,bool canAttack)
     {
         print("heybghh");
-
+        _glosario = GameObject.Find("OpenButton").GetComponent<Button>();
         currentplayer = newplayer;
         switch (type)
         {
@@ -86,6 +86,11 @@ public class turnButtonsController : MonoBehaviour
     public void hideButtons()
     {
         print("hakunamatata");
+        //_glosario = GameObject.Find("OpenButton").GetComponent<Button>();
+        if (_glosario != null)
+        {
+            _glosario.gameObject.SetActive(false);
+        }
         attackButton.gameObject.SetActive(false);
         moveButton.gameObject.SetActive(false);
         outButton.gameObject.SetActive(false);

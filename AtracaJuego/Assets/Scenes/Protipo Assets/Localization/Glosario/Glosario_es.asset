@@ -18,8 +18,8 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 25220358144
-    m_Localized: "Los dedos de Ignacio crean fuego como lo har\xEDa un mechero."
+  - m_Id: 380735936536576
+    m_Localized: "Iowa, el m\xFAsculo de la operaci\xF3n."
     m_Metadata:
       m_Items: []
   - m_Id: 30303854592
@@ -39,21 +39,72 @@ MonoBehaviour:
       cargas."
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220802
-    m_Localized: La habilidad de Nev congela el suelo ha su alrededor
+  - m_Id: 380703933997056
+    m_Localized: "Una explosi\xF3n que da\xF1a a los personejes dentro de ella."
     m_Metadata:
       m_Items: []
   - m_Id: 10707542220803
     m_Localized: El ataque de Nev hace aparecer un cubo de hielo.
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220804
-    m_Localized: Al derretir el hielo o el cubo se crea un charco de agua
+  - m_Id: 380674263490560
+    m_Localized: "Si el agua entra en contacto con el fuego esta se evaporar\xE1
+      y dejar\xE1 una casilla vac\xEDa."
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220805
-    m_Localized: "Pol puede electrificar los charcos de agua. Esto tambi\xE9n hace
-      da\xF1o a los personajes que anden por estos."
+  - m_Id: 380648829231104
+    m_Localized: Nev puede congelar la gasolina haciendo que se comporte igual que
+      el hielo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380621016801280
+    m_Localized: "Si pol electrocuta a Iowa est\xE1 se lanzar\xE1 hac\xEDa delante
+      destruyendo todo a su paso. Esta habilidad tambi\xE9n da\xF1a a Iowa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380586191495168
+    m_Localized: "Quemar la gosalina crea una zona de fuego que da\xF1a a los enemigos.
+      Hace da\xF1o a los personajes que la atraviesen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380545506746368
+    m_Localized: Iowa puede empujar el gas de Boro para recolocarlo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380518944219136
+    m_Localized: "Iowa puede empujar los bloques de hielo, que avanzar\xE1n haciendo
+      da\xF1o hasta chocar contra una pared o enemigo poderoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380489294684160
+    m_Localized: "Pol puede cargar la gasolina. Esta har\xE1 m\xE1s da\xF1o al quemarse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380452976205824
+    m_Localized: "Pol puede cargar las part\xEDculas del gas de Boro. Este gas har\xE1
+      m\xE1s da\xF1o cuando explote."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380425625149440
+    m_Localized: Cuando Nev congela una zona de Gas, este se condensa formando un
+      charco de gasolina inflamable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380372269408256
+    m_Localized: Un chaco de agua que se pude electrificar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380274084945920
+    m_Localized: Iowa puede romper la gasolina congelada, creando pinchos helados
+      que actuan igual que los pinchos de hielo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10707542220802
+    m_Localized: La habilidad de Nev congela el suelo ha su alrededor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25220358144
+    m_Localized: "Los dedos de Ignacio crean fuego como lo har\xEDa un mechero."
     m_Metadata:
       m_Items: []
   - m_Id: 10707542220806
@@ -62,64 +113,25 @@ MonoBehaviour:
       que anden por estos."
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220807
-    m_Localized: Iowa puede romper la gasolina congelada, creando pinchos helados
-      que actuan igual que los pinchos de hielo.
+  - m_Id: 10707542220805
+    m_Localized: "Pol puede electrificar los charcos de agua. Esto tambi\xE9n hace
+      da\xF1o a los personajes que anden por estos."
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220808
-    m_Localized: Un chaco de agua que se pude electrificar.
+  - m_Id: 10707542220804
+    m_Localized: Al derretir el hielo o el cubo se crea un charco de agua
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220809
-    m_Localized: Cuando Nev congela una zona de Gas, este se condensa formando un
-      charco de gasolina inflamable
+  - m_Id: 252203581442
+    m_Localized: "Los dedos de Ignacio crean fuego como lo har\xEDa un mechero."
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220810
-    m_Localized: "Pol puede cargar las part\xEDculas del gas de Boro. Este gas har\xE1
-      m\xE1s da\xF1o cuando explote."
+  - m_Id: 210707542220802
+    m_Localized: La habilidad de Nev congela el suelo ha su alrededor
     m_Metadata:
       m_Items: []
-  - m_Id: 10707542220811
-    m_Localized: "Pol puede cargar la gasolina. Esta har\xE1 m\xE1s da\xF1o al quemarse"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220812
-    m_Localized: "Iowa puede empujar los bloques de hielo, que avanzar\xE1n haciendo
-      da\xF1o hasta chocar contra una pared o enemigo poderoso."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220813
-    m_Localized: Iowa puede empujar el gas de Boro para recolocarlo.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220814
-    m_Localized: "Quemar la gosalina crea una zona de fuego que da\xF1a a los enemigos.
-      Hace da\xF1o a los personajes que la atraviesen."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220815
-    m_Localized: "Si pol electrocuta a Iowa est\xE1 se lanzar\xE1 hac\xEDa delante
-      destruyendo todo a su paso. Esta habilidad tambi\xE9n da\xF1a a Iowa."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220816
-    m_Localized: Nev puede congelar la gasolina haciendo que se comporte igual que
-      el hielo.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10707542220817
-    m_Localized: "Si el agua entra en contacto con el fuego esta se evaporar\xE1
-      y dejar\xE1 una casilla vac\xEDa."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 97916970606592
-    m_Localized: "Una explosi\xF3n que da\xF1a a los personejes dentro de ella."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 99989174886400
-    m_Localized: "Iowa, el m\xFAsculo de la operaci\xF3n."
+  - m_Id: 382738574090240
+    m_Localized: "Combinaci\xF3n Desconocida."
     m_Metadata:
       m_Items: []
   references:

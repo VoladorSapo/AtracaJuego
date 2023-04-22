@@ -19,8 +19,13 @@ MonoBehaviour:
     m_Key: Continue
     m_Metadata:
       m_Items: []
+  - m_Id: 33259153006592
+    m_Key: NewGame
+    m_Metadata:
+      m_Items: []
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 295055538392399905
   m_KeyGenerator:
     rid: 295055538392399895
   references:
@@ -30,3 +35,19 @@ MonoBehaviour:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
         m_CustomEpoch: 1682130132167
+    - rid: 295055538392399905
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 33259153006592
+          m_TableCodes:
+          - en
+          - es
+          - fr
+        - m_KeyId: 57814294528
+          m_TableCodes:
+          - fr
+          - es
+          - en
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

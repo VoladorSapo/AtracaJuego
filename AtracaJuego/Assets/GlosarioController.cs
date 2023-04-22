@@ -93,7 +93,9 @@ public class GlosarioController : MonoBehaviour
         }
         else
         {
-            extraData.GetComponentsInChildren<TMP_Text>()[0].text = "Combinaci�n Desconocida";
+            _localizedstring.TableReference = "Glosario";
+            _localizedstring.TableEntryReference = "glosario_desc";
+            extraData.GetComponentsInChildren<TMP_Text>()[0].text = _localizedstring.GetLocalizedString();
         }
     }
     public void hideExtraData()
