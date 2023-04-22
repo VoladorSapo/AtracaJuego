@@ -23,7 +23,7 @@ public class GlosarioInfo : MonoBehaviour
     }
     void ChangedActiveScene(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex != 0)
+        if (scene.buildIndex != 0 && scene.buildIndex != 12)
         {
             glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
             glosario.combinaciones = combinacionespermanentes;

@@ -67,4 +67,7 @@ public class Camaraa : MonoBehaviour
         info.combinacionespermanentes = data.combos;
         SceneManager.LoadScene(data.escena);
     }
+    public void GOQuit() {
+        Application.Quit();
+    }
 }

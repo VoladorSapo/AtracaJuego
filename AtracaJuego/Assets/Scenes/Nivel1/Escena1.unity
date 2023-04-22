@@ -6893,7 +6893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8067779804838501190, guid: d1aaca32f3247ac479de76e102d51fd8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 8067779804838501190, guid: d1aaca32f3247ac479de76e102d51fd8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30336,6 +30336,7 @@ MonoBehaviour:
   _maincamera: {fileID: 0}
   _fondoanimator: {fileID: 0}
   _tutorial: {fileID: 0}
+  _sound: {fileID: 0}
 --- !u!4 &1580157668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3380508583256295651, guid: 7c314df28146c1e478da7574ca42248d, type: 3}
