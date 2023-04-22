@@ -21,9 +21,12 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         _music.loop=true;
-        CheckScene();
+        
     }
 
+    void Start(){
+        CheckScene();
+    }
     private IEnumerator WaitTillEnd(int mode, AudioSource a,AudioClip clip){
         switch(mode){
         case 0:
@@ -65,6 +68,9 @@ public class SoundManager : MonoBehaviour
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[5]);
                 break;
             case "Escena3.1(Cocina)":
+                PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[4]);
+                break;
+            case "Escena3.2":
                 PlayMusic(0.25f,SoundGallery.InstanceClip.musicClips[4]);
                 break;
             case "Escena1.2":

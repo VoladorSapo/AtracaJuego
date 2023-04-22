@@ -20,7 +20,7 @@ public class SpawnTile : EventTile
     }
     public override void PressEvent(PlayerBase _player)
     {
-        if (!_player.team && !eventlist.spawnList.Contains(code))
+        if (!_player.team && !eventlist.spawnList.Contains(code) && _player.tag=="Player")
         {
             _SPM.addPlayers(SpawnList);
             eventlist.spawnList.Add(code);

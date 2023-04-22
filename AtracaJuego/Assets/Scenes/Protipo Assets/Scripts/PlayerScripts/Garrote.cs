@@ -14,6 +14,7 @@ public class Garrote : EnemyCharacter
      }
     public override void startTurn()
     {
+        
         GC.setReachablePos(transform.position, MaxDistance, true, 0, team, false, throughTeam);
 
         print(name + "Start");
@@ -46,7 +47,7 @@ public class Garrote : EnemyCharacter
             }
         }
 
-        if (path != null && activated && path.Count >= 0 )
+        if (path != null && activated && path.Count >=2)
         {
 
             print(path.Count);
@@ -92,7 +93,7 @@ public class Garrote : EnemyCharacter
             hasTurn = true;
             ChangeMapShown(0);
         }
-
+        
     }
     public int[] getDistances()
     {

@@ -232,7 +232,8 @@ public class Iowa : PlayablePlayer
             yield return wfs;
         }
         }
-
+        Vector3Int tilePos = GC.grid.WorldToCell(transform.position);
+        sprite.sortingOrder=-(tilePos.y);
         animator.SetInteger("Carga",0);
         vfx.GetComponent<Animator>().SetInteger("Carga",0);
         GC.tiles[x, y].setPlayer(this);

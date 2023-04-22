@@ -144,16 +144,16 @@ public class GlosarioController : MonoBehaviour
         if (!combinaciones[num])
         {
             combinaciones[num] = true;
-            //Añadir algo epicardo
+            //Aï¿½adir algo epicardo
         }
     }
     void LeaveScene(Scene scene)
     {
         if(_info == null)
         {
-            _info = Instantiate(infoprefab).GetComponent<GlosarioInfo>();
+            //_info = Instantiate(infoprefab).GetComponent<GlosarioInfo>();
             SaveController.Save(_GC.nextScene,combinaciones);
-            _info.combinacionespermanentes = combinaciones;
+            //_info.combinacionespermanentes = combinaciones;
         }
     }
     public void showExtraData(int boolnum,string code,int pos)
@@ -188,7 +188,7 @@ public class GlosarioController : MonoBehaviour
         }
         else
         {
-            extraData.GetComponentsInChildren<TMP_Text>()[0].text = "Combinación Desconocida";
+            extraData.GetComponentsInChildren<TMP_Text>()[0].text = "Combinaciï¿½n Desconocida";
         }
     }
     public void hideExtraData()

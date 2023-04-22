@@ -163,9 +163,9 @@ public class CustomTileClass
                 
                 Debug.LogWarning(tileSpriteId);
                 switch(tileSpriteId){
-                    case 3: if(newplayer.tag=="StoneBox"){_PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[2]);
+                    case 3: if(newplayer.tag=="StoneBox"){_PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[0]);
                             tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]);} break;
-                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[4]); 
+                    case 4: _PT.Ground.SetTile(tilePos+og,_PT.tilesPlacasPalancas[2]); 
                             tileState=1; SoundManager.InstanceSound.PlaySound(SoundManager.InstanceSound._hits,SoundGallery.InstanceClip.audioClips[18]); break;
                 }
             }

@@ -10,7 +10,7 @@ public class SoundGallery : MonoBehaviour
     void Awake(){
         if(InstanceClip==null){
             InstanceClip=this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }else{
             Destroy(gameObject);
         }
