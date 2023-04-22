@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tutoriales Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tutoriales
+  m_TableCollectionNameGuidString: f067b3083d2992f4295716159d6573df
+  m_Entries:
+  - m_Id: 41825689600
+    m_Key: tutorial0_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44107390976
+    m_Key: tutorial0_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51120267264
+    m_Key: tutorial0_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54077251584
+    m_Key: tutorial0_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57734684672
+    m_Key: tutorial0_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60347736064
+    m_Key: tutorial0_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62696546304
+    m_Key: tutorial0_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110847156224
+    m_Key: tutorial0_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114135490560
+    m_Key: tutorial0_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116320722944
+    m_Key: tutorial1_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118296240128
+    m_Key: tutorial2_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119839744000
+    m_Key: tutorial3_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121383247872
+    m_Key: tutorial3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122859642880
+    m_Key: tutorial4_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124537364480
+    m_Key: tutorial5_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 722712223744
+    m_Key: tutorial6_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756535091200
+    m_Key: tutorial6_1
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1785820690309447682
+  references:
+    version: 2
+    RefIds:
+    - rid: 1785820690309447682
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1682134414435

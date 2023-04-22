@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tutoriales_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f067b3083d2992f4295716159d6573df, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 41825689600
+    m_Localized: "<link=\u201CSetFondo-12>Your goal is to create a path between groups
+      of ennemies in order to progress in the complex.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44107390976
+    m_Localized: "<link=\u201CSetFondo-13>Your characters can't hurt the ennemies
+      alone, you have to combine their capabilities in a creative way to defeat them.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51120267264
+    m_Localized: "<link=\u201CSetFondo-14>Move the mouse towards the extremities
+      of the screen to see around.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54077251584
+    m_Localized: <link>Click on a character to choose it.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57734684672
+    m_Localized: "<link=\u201CSetFondo-15>The buttons you'll see at the bottom left
+      allow you to change between the \"walking\" and \"attack\" modes. Click on
+      one of the small red or blue cases to execute the corresponding action.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60347736064
+    m_Localized: "<link=\u201CSetFondo-16>The button \"X\" is to deselection a character
+      and be able to choose another one.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62696546304
+    m_Localized: <link>You can also change mode with a right click.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110847156224
+    m_Localized: <link>At the end of your turn, click on the "E" or on "Space" to
+      let the turn to your ennemy.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114135490560
+    m_Localized: "<link=\u201CSetFondo-17>Combine the Boro's gas (green) with Ignacio's
+      flame (rouge) to get over the group of ennemies.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116320722944
+    m_Localized: "<link=\u201CSetFondo-18>Some attacks can interact with the surroundings
+      to create special effects. Go to the cracked wall and use Iowa's attack to
+      break it down.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118296240128
+    m_Localized: "<link=\u201CSetFondo-19>Use Paul's electric attack (dark blue)
+      on the puddle to electrify and attack those who will walk on it!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119839744000
+    m_Localized: "<link=\u201CSetFondo-20>Nev (light blue) can create ice block and
+      freeze everything around it.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121383247872
+    m_Localized: <link>Iowa can push ice blocks in one go, throw them on ennemies
+      and hurt them, she can also defeat them in one go.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122859642880
+    m_Localized: "<link=\u201CSetFondo-21>If you use Paul's electric attack on your
+      defeated teammates, they will regain energy..</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124537364480
+    m_Localized: "<link=\u201CSetFondo-22>If you click on the red book you can access
+      the glossary where you can consult all the possibilities of attack combinations.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 722712223744
+    m_Localized: "<link=\u201CSetFondo-23>Wood boxes can be destroyed by Iowa or
+      burnt by Ignacio's fire, but they are fragile. Metal boxes can't be destroyed
+      or burnt.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756535091200
+    m_Localized: "<link=\u201CSetFondo-24>To open the doors, get in front of them
+      with your teammates.</link>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

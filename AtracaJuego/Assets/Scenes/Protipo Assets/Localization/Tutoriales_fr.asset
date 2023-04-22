@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tutoriales_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: f067b3083d2992f4295716159d6573df, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 41825689600
+    m_Localized: "<link=\u201CSetFondo-12>Ton objectif est de te frayer un chemin
+      entre les groupes d'ennemis afin d'avancer dans le complexe.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44107390976
+    m_Localized: "<link=\u201CSetFondo-13>Tes personnages ne peuvent pas faire du
+      mal aux ennemis seuls, il faudra combiner leurs capacit\xE9s de mani\xE8re
+      cr\xE9ative pour les vaincre.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51120267264
+    m_Localized: "<link=\u201CSetFondo-14>Bouge la souris jusqu'aux bords de l'\xE9cran
+      pour voir aux alentours.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54077251584
+    m_Localized: "<link>Clique sur le personnage pour le s\xE9lectionner.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57734684672
+    m_Localized: "<link=\u201CSetFondo-15>Les touches que tu verras en bas \xE0 gauche
+      permettent d'alterner entre le mode \"marche\" et \"attaque\". Clique sur une
+      des petites cases rouges ou bleues pour faire l'action correspondante.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60347736064
+    m_Localized: "<link=\u201CSetFondo-16>La touche \"X\" sert \xE0 d\xE9selectionner
+      un personnage et \xE0 pouvoir en choisir un autre.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62696546304
+    m_Localized: "<link>Tu peux \xE9galement changer le monde en faisant un clic
+      droit.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110847156224
+    m_Localized: <link>Quand tu as fini, appuie sur la touche "E" ou la touche Espace
+      pour que ce soit le tour de l'ennemi.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114135490560
+    m_Localized: "<link=\u201CSetFondo-17>Combine le gaz de Boro (vert) avec la flamme
+      d'Ignacio (rouge) pour en finir avec ce groupe d'ennemis!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116320722944
+    m_Localized: "<link=\u201CSetFondo-18>Certaines attaques peuvent int\xE9ragir
+      avec ce qu'il y a autour pour cr\xE9er des effets sp\xE9ciaux. Avance jusqu'au
+      mur fissur\xE9 et utilise l'attaque de Iowa (jaune) pour le casser.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118296240128
+    m_Localized: "<link=\u201CSetFondo-19>Utilise l'attaque \xE9lectrique de Paul
+      (bleu fonc\xE9) sur la flaque d'eau pour l'\xE9lectrifier et attaquer ceux
+      qui marchent dedans. Attention \xE0 ne pas blesser tes \xE9quipiers !</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119839744000
+    m_Localized: "<link=\u201CSetFondo-20>Nev (bleu clair) peut cr\xE9er des blocs
+      de glace et congeler tout ce qu'il y a autour.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121383247872
+    m_Localized: <link>Iowa peut pousser les blocs de glace en un coup, les lancer
+      sur les ennemis pour les blesser, et peut les vaincre en un seul coup.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122859642880
+    m_Localized: "<link=\u201CSetFondo-21>Si tu utilises l'attaque \xE9lectrique
+      de Paul sur tes \xE9quipiers vaincus, ils r\xE9cup\xE8reront de l'\xE9nergie.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124537364480
+    m_Localized: "<link=\u201CSetFondo-22>En cliquant sur  le livre rouge., tu peux
+      ouvrir le glossaire o\xF9 tu peux consulter les possibilit\xE9s de combinaisons
+      d'attaques.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 722712223744
+    m_Localized: "<link=\u201CSetFondo-23>Les caisses en bois peuvent \xEAtre d\xE9truites
+      par Iowa ou brul\xE9es par le feu d'Ignacio, mais elles sont fragiles. Les
+      caisses en m\xE9tal, par contre, ne peuvent pas \xEAtre d\xE9truites ni brul\xE9es.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756535091200
+    m_Localized: "<link=\u201CSetFondo-24>Pour ouvrir les portes, mets toi devant
+      avec tes \xE9quipiers.</link>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
