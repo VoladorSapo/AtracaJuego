@@ -452,7 +452,7 @@ public class PlayerBase : MonoBehaviour
                     {
                         if (GC.tiles[x, y].GetPlayer().tag == "IceCube") { MM.Damage(0, x + dx, y + dy); if(GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0){distance = 5;}}
                         if (GC.tiles[x, y].GetPlayer().tag == "StoneBox") { MM.Damage(4, x + dx, y + dy);} // if(GC.tiles[x + dx, y + dy].GetPlayer()!=null){stop=true;}
-                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0 || (GC.tiles[x + dx, y + dy].GetPlayer().isObject && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>=0)) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
+                        if (GC.tiles[x + dx, y + dy].GetPlayer()!=null && (GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>0 || (GC.tiles[x + dx, y + dy].GetPlayer().isObject && GC.tiles[x + dx, y + dy].GetPlayer().currentHealth>=0))) { GC.tiles[x + dx, y + dy].GetPlayer().Push(dx, dy, distance, speed); break; }
                     }
                     if (GC.tiles[x + dx, y + dy].GetTileState() >= 5 && GC.tiles[x + dx, y + dy].GetTileState() != 9) { break; }
                     if (GC.tiles[x + dx, y + dy].GetTileState() == 9) { PT.PlaceAfterBreak(x, y, dx, dy); GC.tiles[x + dx, y + dy].SetTileStats(1, 0, 16, 0); } //16 para que no congele esta pared especifica

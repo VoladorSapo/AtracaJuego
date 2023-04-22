@@ -59,7 +59,7 @@ public class PlayablePlayer : PlayerBase
 
     void OnMouseDown()
     {
-        if (alive && SPM.Activated && SPM.players[SPM.currentPlayer].Mode == 0)
+        if (alive && SPM.Activated && SPM.currentPlayer>=0 && SPM.players[SPM.currentPlayer].Mode == 0)
         {
             print("yotoyroyt" +name+teamNumb);
             CDH.SelectDialogue(GetType().ToString());

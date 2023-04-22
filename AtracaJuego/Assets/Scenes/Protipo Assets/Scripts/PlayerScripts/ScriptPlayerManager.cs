@@ -28,7 +28,9 @@ public class ScriptPlayerManager : MonoBehaviour
     public void setGame()
     {
         players = new List<PlayerBase>();
+        
         players.AddRange(startPlayer);
+        
         for (int i = 0; i < players.Count; i++)
         {
             players[i].setGame();
@@ -151,7 +153,9 @@ public class ScriptPlayerManager : MonoBehaviour
     }
     public void addPlayers(PlayerBase[] newplayers)
     {
+        Debug.LogWarning("h");
         players.AddRange(newplayers);
+        
         for (int i = 0; i < players.Count; i++)
         {
             players[i].teamNumb = i;

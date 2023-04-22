@@ -23,6 +23,7 @@ public class TileSpriteTable : MonoBehaviour
     public int[] GetTileStats(Tile actualTile){
         int[] id=new int[3];
         //[Sprite, caracteristicas]
+        print(actualTile);
         switch(actualTile.name){
             case "sheet_160": id[0]=0; id[1]=0; id[2]=0; break; //0 es que no tiene ningun effecto
             case "sheet_191": id[0]=1; id[1]=8; id[2]=16; break;
@@ -80,7 +81,9 @@ public class TileSpriteTable : MonoBehaviour
             case "ampliacionTileSheetRecepcion_47": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_48": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion_49": id[0] = 1; id[1] = 8; id[2] = 16; break;
-            case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;   
+            case "ampliacionTileSheetRecepcion_50": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "estanteriabaja 1": id[0] = 1; id[1] = 8; id[2] = 16; break;
+            case "estanteriabaja 2 1": id[0] = 1; id[1] = 8; id[2] = 16; break;    
             case "ampliacionTileSheetRecepcion2jardin_10": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_11": id[0] = 1; id[1] = 8; id[2] = 16; break;
             case "ampliacionTileSheetRecepcion2jardin_12": id[0] = 1; id[1] = 8; id[2] = 16; break;

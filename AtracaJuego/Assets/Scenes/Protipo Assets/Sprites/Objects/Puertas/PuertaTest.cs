@@ -59,13 +59,13 @@ public class PuertaTest : ObjectStuff
     }
     public void ResetPanel(int x, int y){
         for(int i=0; i<Posiciones.Length; i++){
-            if(Posiciones[i].x==x && Posiciones[i].y==y){activoPor[i]=3;}
+            if(Posiciones[i].x==x && Posiciones[i].y==y){activoPor[i]=10;}
         }
     }
     private void PorPanel(){
         n=0;
         for(int i=0; i<Posiciones.Length; i++){
-            if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==7){n++; if(activoPor[i]<=0){activoPor[i]=3;}}
+            if(GC.tiles[Posiciones[i].x, Posiciones[i].y].GetTileState()==7){n++; if(activoPor[i]<=0){activoPor[i]=10;}}
         }
         if(n==Posiciones.Length){Activate=true;}
 
