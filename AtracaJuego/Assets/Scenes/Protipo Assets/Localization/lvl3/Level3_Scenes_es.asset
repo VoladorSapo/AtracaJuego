@@ -1,0 +1,673 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Level3_Scenes_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 0a545ba1551aa1e428bba70322bbc3a8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1578442432512
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-5-1\">\xA1Uff!\xBFCu\xE1ntas
+      escaleras quedan?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2128793837568
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-3-5\">Ya casi estamos\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2128793837569
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-3-5\">(En susurros)Voy a tener
+      que dejar de fumar\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2418876096512
+    m_Localized: <link="SetFondo-7"><link="SetAnim-2-1">Venga chicos, si esto no
+      es nada.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2717686702080
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-4-2\">Me est\xE1 entrando
+      un poco de mareo, han sido 33 pisos.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3082008141824
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-3-5\">\xA1Treinta y tres!
+      \xA1Vamos, casi nada!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3082008141825
+    m_Localized: <link="SetFondo-7"><link="SetAnim-2-1">Que panda de #@*!.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3082008141826
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-2-1\">Esto no vale ni para
+      empezar a hacer gl\xFAteos. Este culazo es fruto de un duro entrenamiento.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3082008141827
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-1-2\">\xA1Y que lo digas!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4740322697216
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-2-2\">\xA1\xA1PERVERTIDO!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4740322697217
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-4-0\">\xA1Por aqu\xED!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5025984159744
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-5-1\">Jo, por fin. Descansemos
+      un rato\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414460596224
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-4-1\">Bueno, parece que eso
+      de ah\xED es la puerta de la c\xE1mara acorazada. \xBFC\xF3mo entramos?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414460596225
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-2-1\">\xA1Dej\xE1dmela a m\xED!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5414460596226
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6034252898304
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5754912251905
+    m_Localized: <link="SetFondo-8"><link="SetAnim-5-0">Claro.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5754912251904
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-0\">\xBFNev, puedo hacerte
+      una pregunta personal?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6169053634560
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-0\">\xBFC\xF3mo entraste
+      en la c\xE1rcel?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6400168173568
+    m_Localized: <link="SetFondo-8"><link="SetAnim-3-0">Se que Ignacio fue por un
+      fraude a hacienda y Paul por hackear los servidores del gobierno...</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6400168173569
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-0\">\xBFPero, t\xFA, que
+      eres un trozo de pan que no parece haber roto un plato en su vida?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6843837456384
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6843837456385
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-5-0\">A, yo, pues que mat\xE9
+      a unas 25 personas.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6843837456386
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-5\">\xBFC\xF3mo t\xFA? \xBFt\xFA
+      has\u2026 has\u2026?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8141165043712
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-5\">(En susurros) Mejor
+      me voy de al lado de este, Mal poco a poco, poco a poco sin que se de cuenta\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500544
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500545
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-5-2\">Si, lo cierto es que
+      estaban haciendo algo horrible y \u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500546
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-5-0\">\xBFA donde vas?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500547
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500548
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500549
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-4-0\">Parece que no se abre\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500550
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500551
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-1-2\">\xA1Esa es la fuerza
+      de mi chica!\xA1T\xFA puedes!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500552
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-2\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500553
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-2\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500554
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetSound-2-1\"><link=\"SetAnim-2-2\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500555
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-5\">\xA1Iowa, no se va a
+      abrir por mucho que lo empujes!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217115500556
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-4-0\">A ver debe de haber
+      alg\xFAn sistema o interruptor para abrirla y cerrarla por aqu\xED.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006912
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-3-0\">\xBFIgnacio por qu\xE9
+      no intentas abrirla?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006913
+    m_Localized: "<link=\"SetFondo-9\"><link=\"SetAnim-11-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006914
+    m_Localized: "<link=\"SetFondo-9\"><link=\"SetAnim-11-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006915
+    m_Localized: <link="SetFondo-10"><link="SetAnim-1-8">Pues menos mal que siempre
+      llevo un soplete a mano.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006916
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-3-5\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006917
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-5-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006918
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-4-5\">\xA1Jo\u2026!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006919
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-4-0\">\xBFDe d\xF3nde lo
+      has sacado...?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006920
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-1-0\">Mi padre, que en paz
+      descanse, siempre dec\xEDa que hay que llevar uno encima porque un buen soplete
+      abre hasta el coraz\xF3n de la chica m\xE1s dura.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006921
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-19-0\">\xA1\xBFY ESO QU\xC9
+      TIENE QUE VER?!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006922
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-3-5\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006923
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-5-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006924
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-4-5\">Pe\u2026 pero\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006925
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-5-0\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006926
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-5-0\">\xBFD\xF3nde est\xE1
+      la de amarillo?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006927
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-4-0\">Creo que ha entrado
+      ya en la sala\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558708006928
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-3-5\">\xBFC\xF3mo?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8558712201216
+    m_Localized: "<link=\"SetFondo-10\"><link=\"SetAnim-1-8\">Pichoncita, \xA1ya
+      voy!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490432
+    m_Localized: "<link=\"SetAnim-2-0\">Chicos, no\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490433
+    m_Localized: "<link=\"SetAnim-2-0\">\xA1No entr\xE9is!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490434
+    m_Localized: "<link=\"SetAnim-10-0\">Pero mira t\xFA por donde, por fin han llegado
+      las ratas del gobierno.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490435
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1Cu\xE1nto hab\xE9is tardado!\_</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490436
+    m_Localized: "<link=\"SetAnim-10-0\">Y eso que os lo he puesto hasta f\xE1cil\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490437
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-1-0\">\xA1Iowa!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490438
+    m_Localized: "<link=\"SetAnim-10-0\">\xBFOs gusta mi despacho?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490439
+    m_Localized: "<link=\"SetAnim-10-0\">Sinceramente la puerta acorazada le daba
+      un toque \xFAnico y especial.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9069385490440
+    m_Localized: <link="SetAnim-10-0">Es una pena que de pronto se transforme en
+      una jaula de animales. Jaja.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9373992624129
+    m_Localized: "<link=\"SetAnim-10-0\">Jajaja. Idiotas. Cre\xEDais que hab\xEDais
+      llegado aqu\xED por voluntad propia y que ahora ibais a robar esos documentos.
+      Jajaja.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9373992624128
+    m_Localized: "<link=\"SetFondo-8\"><link=\"SetAnim-4-0\">\xA1Entregadnos todos
+      los archivos que teng\xE1is sobre el proyecto NeoMind!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9373992624130
+    m_Localized: "<link=\"SetAnim-10-0\">Yo, como CEO de SOUT, os conduje hasta aqu\xED
+      para tener los cuerpos de los primeros seres vivos con capacidades aumentadas.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9928177623040
+    m_Localized: "<link=\"SetAnim-5-1\">Marl, \xBFesa es la IA?\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9928177623041
+    m_Localized: "<link=\"SetAnim-3-0\">No tiene pinta, pero\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9928177623042
+    m_Localized: "<link=\"SetAnim-3-0\">Oye t\xFA, thermomix, \xBFqu\xE9 se supone
+      que eres?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9988546240512
+    m_Localized: "<link=\"SetAnim-10-0\">Jajaja, me alegro de que me lo preguntes\u2026
+      \xA1Yo soy el futuro!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9988546240513
+    m_Localized: "<link=\"SetAnim-10-0\">Mi cuerpo ha sido esculpido por los dioses,
+      estos implantes nano cibern\xE9ticos me han dotado de una fuerza capaz de derrotar
+      a todo el ej\xE9rcito del gobierno solo con chasquear los dedos.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9988546240514
+    m_Localized: "<link=\"SetAnim-3-5\">(En susurros) Creo que se ha pasado un poco
+      con tanta grandilocuencia\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11276579250176
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1Pero a\xFAn puedo tener m\xE1s!, vuestros
+      cuerpos albergan una informaci\xF3n muy valiosa con la que podr\xEDamos crear
+      el ej\xE9rcito definitivo. Mezcl\xE1ndolos con la tecnolog\xEDa de SOUT ser\xEDa
+      posible un nuevo mundo.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11276579250177
+    m_Localized: "<link=\"SetAnim-10-0\">Todo este tiempo estabais facilitando nuestro
+      plan, el gobierno parece ser m\xE1s estupido de lo que cre\xEDa. Jaja.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11276579250178
+    m_Localized: "<link=\"SetAnim-4-5\">\xA1\xA1Pe..!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11370858815488
+    m_Localized: "<link=\"SetAnim-4-5\">\xBF\xA1\xA1TODO QUE DEC\xCDAN LOS INFORMES
+      DEL ALMAC\xC9N ERA CIERTO!!?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11370863009792
+    m_Localized: "<link=\"SetAnim-10-0\">Jaja. Esos papelitos que dejamos ah\xED
+      para que nos siguierais como palomas que siguen las migajas de pan no son ni
+      la punta del iceberg de nuestras verdaderas intenciones.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11597577723904
+    m_Localized: "<link=\"SetAnim-4-1\">\xA1Grrr!\xA1Pero no puede ser posible!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13136497221632
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1Mi sue\xF1o es crear un mundo libre!
+      Donde el d\xE9bil pueda fusionarse con la tecnolog\xEDa y luchar por sus ideales.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13136497221633
+    m_Localized: "<link=\"SetAnim-10-0\">Una tierra de libertad verdadera, un mundo
+      de acciones y no de palabras. Donde los hombres sean libres de pensar y actuar
+      por s\xED mismos.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13136497221634
+    m_Localized: "<link=\"SetAnim-1-4\">\xBFTambi\xE9n har\xE1n da\xF1o a las mujeres?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14085966012416
+    m_Localized: "<link=\"SetAnim-10-0\">Jajaja, se que ustedes tambi\xE9n ansi\xE1is
+      esa libertad. O me equivoco, \xBFratas de laboratorio?\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14085966012417
+    m_Localized: "<link=\"SetAnim-10-0\">Si os unis a nosotros nunca m\xE1s deber\xE9is
+      hacer caso a esos peces gordos que se revuelcan entre billetes solo por decir
+      sandeces en teatros de madera y paredes de cart\xF3n piedra.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13607513366530
+    m_Localized: "<link=\"SetAnim-4-1\">\xA1Pero ese mundo no ser\xEDa de libertad
+      ser\xEDa un absoluto caos!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13607513366529
+    m_Localized: "<link=\"SetAnim-1-4\">Cabronazo \xA1piensa en la de mujeres bonitas
+      que morir\xEDan por tus est\xFApidas guerras!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13607513366528
+    m_Localized: "<link=\"SetAnim-3-0\">S\xCD.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12974060216324
+    m_Localized: "<link=\"SetAnim-10-0\">Jajaja, \xA1el pa\xEDs dice!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12974060216323
+    m_Localized: "<link=\"SetAnim-4-0\">Ignacio, \xBFeres consciente que mucha gente
+      morir\xE1 si logran llevar a cabo su plan de destruir el pa\xEDs desde dentro?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12974060216322
+    m_Localized: <link="SetAnim-1-2">Solo hay que salvar a Iowa y reventar a este
+      tipo por ponerle las manos encima.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12974060216321
+    m_Localized: "<link=\"SetAnim-1-0\">Pues a m\xED me da igual.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12974060216320
+    m_Localized: "<link=\"SetAnim-3-5\">Vamos a reventarlos, \xBFc\xF3mo pueden tener
+      intenciones tan perversas\u2026?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19215826296832
+    m_Localized: "<link=\"SetAnim-10-0\">Rodeados de las fuerzas de seguridad m\xE1s
+      potentes del estado por si la naci\xF3n se enfurece por alguna de sus decisiones.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19382935756800
+    m_Localized: "<link=\"SetAnim-10-0\">Dicen que vivimos en la \xE9poca m\xE1s
+      pacifica en la historia de la humanidad. Pero no se dan cuentas de lo que ocurre,
+      uno ya no puede luchar de verdad por sus ideales\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19538615738368
+    m_Localized: "<link=\"SetAnim-10-0\">Y eso\u2026 \xA1Eso es lo que viene a ser
+      por definici\xF3n dictadura!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19538615738369
+    m_Localized: "<link=\"SetAnim-4-1\">\xBFY en qu\xE9 se diferencia SOUT del gobierno?.
+      Ambos ocultan informaci\xF3n a la gente de a pie os rodean de muros blindados
+      y de peones a los que llam\xE1is agentes seguridad.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19965973372928
+    m_Localized: "<link=\"SetAnim-4-1\">Ambos solo miramos por nuestro propio inter\xE9s
+      sin importar a qui\xE9n o a qu\xE9 le hacemos da\xF1o.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20366680399872
+    m_Localized: "<link=\"SetAnim-4-1\">Todo por aparentar ser inalcanzables y estar
+      por encima de todos. \xA1Solo piensas crear otro mundo igual que este solo
+      que en ese t\xFA tendr\xEDas el poder!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20366680399873
+    m_Localized: "<link=\"SetAnim-3-0\">\xBFBueno ya est\xE1 bien no? \xA1MSI gente!
+      \xA1MSI!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20458372079616
+    m_Localized: "<link=\"SetAnim-5-0\">\xBFQu\xE9 es MSI?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20458372079617
+    m_Localized: "<link=\"SetAnim-3-0\">\xA1ME SOBRA INFORMACI\xD3NI!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20949235671043
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1\xA1EL OBJETIVO DE SOUT ES BORRAR EL
+      SISTEMA ACTUAL E IMPRIMIR UN MUNDO EN EL QUE TODAS LAS PERSONAS SEAN LIBRES
+      Y DUE\xD1AS DE SU PROPIO DESTINO!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20949235671042
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1\xA1ES VERDAD QUE SOIS UNOS ZOPENCOS!!\xA1\xA1NO
+      ENTEND\xC9IS NADA!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20949235671041
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1\xA1IMB\xC9CILES!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20949235671040
+    m_Localized: "<link=\"SetAnim-1-4\">\xA1Al ataque!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21102659117056
+    m_Localized: "<link=\"SetAnim-10-0\">\xA1\xA1ESE ES EL FUTURO!!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22063112790016
+    m_Localized: "<link=\"SetAnim-10-1\">\xA1Ag! Jaja ustedes sois la viva imagen
+      de mi sue\xF1o.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22063112790017
+    m_Localized: "<link=\"SetAnim-10-1\">Hombres libres, capaces de decidir vuestro
+      propio destititinooo\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22063112790018
+    m_Localized: "<link=\"SetAnim-5-0\">\xBFDerrotamos a la IA?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23350793478146
+    m_Localized: "<link=\"SetAnim-4-0\">S\xED, los planos y los informes est\xE1n
+      aqu\xED.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23350793478145
+    m_Localized: <link="SetAnim-2-0">Al final parece que todo ha salido bien.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23350793478144
+    m_Localized: "<link=\"SetAnim-1-0\">\xA1\xC1brelo!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23081615630337
+    m_Localized: "<link=\"SetAnim-4-0\">\xA1Ah\xED est\xE1 el malet\xEDn!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23081615630336
+    m_Localized: <link="SetAnim-3-0">No era la IA... Pero si hemos derrotado a un
+      capullo integral.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24203982020608
+    m_Localized: "<link=\"SetAnim-2-1\">\xA1No hay nadie que pueda con mi fuerza
+      bestial!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24203982020609
+    m_Localized: "<link=\"SetAnim-3-0\">Hablando de bestias molar\xEDa un nombre
+      para el equipo\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25099570782208
+    m_Localized: "<link=\"SetAnim-4-0\">Chicos \xBFcre\xE9is que debemos entregarle
+      estos planos al gobierno?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25379834175488
+    m_Localized: "<link=\"SetAnim-1-0\">Bueno podr\xEDamos venderlo e irnos de viaje
+      a un pa\xEDs lejano y recuperar nuestra libertad.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25379834175489
+    m_Localized: "<link=\"SetAnim-5-0\">A mi me molar\xEDa B\xE9lgica o Alemania.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25379834175490
+    m_Localized: "<link=\"SetAnim-3-5\">\xBFPor qu\xE9 uno de esos pa\xEDses?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25432845983744
+    m_Localized: "<link=\"SetAnim-5-0\">Dicen que el clima de all\xED es el ideal.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26039514308608
+    m_Localized: "<link=\"SetAnim-3-0\">T\xFA seguro que tendr\xEDas fr\xEDo.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26039518502912
+    m_Localized: "<link=\"SetAnim-4-0\">Chicos, \xA1mirad mi m\xF3vil!</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26179310460928
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-3-5\">Se est\xE1 liando parda.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29129487425536
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-20-0\">La famosa compa\xF1\xEDa
+      tecnol\xF3gica SOUT ha iniciado un ataque en la plaza del parlamento. Horas
+      antes se ha hecho p\xFAblica la infiltraci\xF3n de agentes del gobierno enmascarados
+      en su sede\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29256096686080
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-21-0\">\xA1Vamos SOUT la victoria
+      es vuestra! #GUERRADELGOBIERNOCONTRASOUT #SOUTWINNER</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29256100880384
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-22-0\">\xA1Fuera gobierno
+      corrupto!\xA1Es hora de que el mundo experimente una nueva era! #GUERRADELGOBIERNOCONTRASOUT 
+      #GOBIERNOALBEEH</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30500517322752
+    m_Localized: "<link=\"SetAnim-1-0\">Puff pues si que se ha liado\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29936660258816
+    m_Localized: "<link=\"SetFondo-7\"><link=\"SetAnim-23-0\">\xA1El gobierno no
+      tiene posibilidades de ganar! #SOUTWINNER #GUERRADELGOBIERNOCONTRASOUT</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31076890189824
+    m_Localized: "<link=\"SetAnim-10-1\">Bip bip\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31076890189825
+    m_Localized: "<link=\"SetAnim-10-1\">Aaaunque mee hay\xE1is vencido los hombres
+      seguir\xE1n luchando en guerras. Y esta guerra ya es nueest\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31214366892032
+    m_Localized: "<link=\"SetAnim-2-2\">\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31732849975296
+    m_Localized: <link="SetAnim-5-0">Tremenda patada.</link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31819810480128
+    m_Localized: "<link=\"SetAnim-5-1\">Guau, tiene pinta que esa chatarra nunca
+      m\xE1s se levantar\xE1.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31819810480129
+    m_Localized: "<link=\"SetAnim-1-0\">\xBFBueno qu\xE9 propon\xE9is que hagamos
+      ahora chicos?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31878539124736
+    m_Localized: "<link=\"SetAnim-4-0\">Bueno pues considerando que estamos en el
+      ojo del hurac\xE1n habr\xE1 que hacer un poco lo de siempre \xBFno?</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31878539124737
+    m_Localized: "<link=\"SetAnim-3-0\">A mi lo de Alemania no me parece mala opci\xF3n.</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31878539124738
+    m_Localized: "<link=\"SetAnim-1-0\">Qu\xE9 remedio\u2026</link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32073087721472
+    m_Localized: "<link=\"SetAnim-11-0\">\xBFA qu\xE9 esperamos</link>"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
