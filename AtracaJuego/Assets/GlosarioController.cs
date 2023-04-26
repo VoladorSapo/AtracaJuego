@@ -164,6 +164,9 @@ public class GlosarioController : MonoBehaviour
                 {
                     switch (baseeffect)
                     {
+                        case 1:
+                            newEntry(14);
+                            break;
                         case 5:
                             newEntry(13);
                             break;

@@ -5103,6 +5103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlosarioController
       objectReference: {fileID: 0}
+    - target: {fileID: 2787355253922993749, guid: 9f98f5bfb9e8c0e47945f5eb88d134e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2787355254081792234, guid: 9f98f5bfb9e8c0e47945f5eb88d134e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7480,6 +7484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeInOut
       objectReference: {fileID: 0}
+    - target: {fileID: 1234452320714884304, guid: 2a6e93f375c956f4988c6ff3bf4db3a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1234452320714884305, guid: 2a6e93f375c956f4988c6ff3bf4db3a1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9789,6 +9797,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1279903405}
     m_Modifications:
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.w
+      value: 64.03023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.x
+      value: 130.41751
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.y
+      value: 5.5186768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232386626530771919, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
+      propertyPath: m_margin.z
+      value: 112.23663
+      objectReference: {fileID: 0}
     - target: {fileID: 5232386627632228584, guid: 8e1fe5458a443b0468884ea574cd61f6, type: 3}
       propertyPath: m_Name
       value: DialogueController

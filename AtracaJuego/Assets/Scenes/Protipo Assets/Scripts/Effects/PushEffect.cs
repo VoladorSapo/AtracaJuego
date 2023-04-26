@@ -11,6 +11,7 @@ public class PushEffect : MonoBehaviour
     public GridController _GC;
     public MapManager _MM;
     private PlaceTiles _PT;
+    [SerializeField] GlosarioController _glosario;
     private bool HayPlayer=false;
     public GameObject IcePrefab;
     [SerializeField] private int distance = 5; //Toma n-1 de tiles (Es decir, si quieres coger 5 tiles, pon distance=6)
@@ -25,6 +26,7 @@ public class PushEffect : MonoBehaviour
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
         _PT = GameObject.Find("TileController").GetComponent<PlaceTiles>();
+        _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
         w = transform.localScale.x;
         h = transform.localScale.y;
         auxDist = distance;
@@ -51,7 +53,7 @@ public class PushEffect : MonoBehaviour
                         case "Player": auxDist = 5; break;
                         case "Enemy": auxDist = 5; break;
                         case "StoneBox": auxDist = 5; speed=48; break;
-                        case "IceCube": auxDist = 1000; speed=75; break;
+                        case "IceCube": auxDist = 1000; speed=75;_glosario.ChangeGlosario(0,3,true,new Vector3(x,y)); break;
                         case "WoodBox": auxDist = 5; break;
                     }
                 HayPlayer=true;
@@ -88,6 +90,7 @@ public class PushEffect : MonoBehaviour
                 if (hayGas)
                 {
                     StartCoroutine(PushGas(0.25f, dist1, dist0, dist_, x, y, 1,list1,list0,list_));
+                    _glosario.ChangeGlosario(1, 3, false, new Vector3(x, y));
                 }
 
                 if(HayPlayer){

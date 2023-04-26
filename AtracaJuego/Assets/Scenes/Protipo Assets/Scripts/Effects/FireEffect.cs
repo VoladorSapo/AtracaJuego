@@ -7,6 +7,8 @@ public class FireEffect : MonoBehaviour
     public GridController _GC;
     public MapManager _MM;
     public ObjectStuff _OS;
+    [SerializeField] GlosarioController _glosario;
+
     // Start is called before the first frame update
 
     void Awake()
@@ -14,6 +16,8 @@ public class FireEffect : MonoBehaviour
         _OS = GameObject.Find("Controller").GetComponent<ObjectStuff>();
         _GC = GameObject.Find("Grid").GetComponent<GridController>();
         _MM = GameObject.Find("MapManager").GetComponent<MapManager>();
+        _glosario = GameObject.Find("GlosarioController").GetComponent<GlosarioController>();
+
     }
     void Start()
     {
@@ -29,7 +33,7 @@ public class FireEffect : MonoBehaviour
 
             switch (p.tag)
             {
-                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1);} break;
+                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1); _glosario.ChangeGlosario(2, 0, true, new Vector3(x, y)); } break;
                 case "WoodBox": CajasQuemables c = p as CajasQuemables; if(!c.Burning){c.Burn();} if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1);} break;
                 default: _GC.tiles[x, y].addEffect(2, true, 0, -1); break;
             }
