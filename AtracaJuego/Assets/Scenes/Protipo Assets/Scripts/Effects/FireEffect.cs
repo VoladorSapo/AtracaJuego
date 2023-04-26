@@ -33,7 +33,7 @@ public class FireEffect : MonoBehaviour
 
             switch (p.tag)
             {
-                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1); _glosario.ChangeGlosario(2, 0, true, new Vector3(x, y)); } break;
+                case "IceCube": IcePrefab o = p as IcePrefab; o.Melt(); if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1); _glosario.ChangeGlosario(0, 2, true, new Vector3(x, y)); } break;
                 case "WoodBox": CajasQuemables c = p as CajasQuemables; if(!c.Burning){c.Burn();} if(_GC.tiles[x,y].GetTileEffect()==1 || _GC.tiles[x,y].GetTileEffect()==7){_GC.tiles[x, y].addEffect(2, true, 0, -1);} break;
                 default: _GC.tiles[x, y].addEffect(2, true, 0, -1); break;
             }
